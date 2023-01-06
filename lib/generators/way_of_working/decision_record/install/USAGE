@@ -1,0 +1,10 @@
+Description:
+    This generator adds Markdown Any Decision Records (MADR) to your project
+
+Example:
+    bin/rails generate way_of_working:decision_record:install
+
+    This will create:
+        docs/decisions/README.md
+        docs/decisions/adr-template.md
+        docs/decisions/0000-use-markdown-any-decision-records.md
