@@ -27,12 +27,12 @@ gem "way_of_working"
 
 And then execute:
 ```bash
-$ bundle
+bundle
 ```
 
 Or install it yourself as:
 ```bash
-$ gem install way_of_working
+gem install way_of_working
 ```
 
 ### Contributing

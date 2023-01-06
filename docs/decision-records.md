@@ -10,7 +10,7 @@ In general we will follow [HDI Ways of Working](https://github.com/HealthDataIns
 
 You can read about the general approach on the [GDS Way page on Architecture Decisions](https://gds-way.cloudapps.digital/standards/architecture-decisions.html) and specifics about MADR is available at <https://adr.github.io/madr/>.
 
-Proposing and reviewing decisions requires an understanding of GitHub and [pull requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests). 
+Proposing and reviewing decisions requires an understanding of GitHub and [pull requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests).
 
 ## Create a new ADR
 
