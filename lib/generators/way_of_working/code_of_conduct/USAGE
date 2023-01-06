@@ -1,0 +1,8 @@
+Description:
+    This adds the Contributor Covenant v2.1 code of conduct to the project
+
+Example:
+    bin/rails generate way_of_working:code_of_conduct --contact-method "foo@bar.com"
+
+    This will create:
+        CODE_OF_CONDUCT.md
