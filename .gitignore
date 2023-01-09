@@ -1,8 +1,2 @@
-/.bundle/
-/doc/
-/log/*.log
-/pkg/
-/tmp/
-/test/dummy/log/*.log
-/test/dummy/tmp/
 megalinter-reports/
+.rubocop-https---raw-githubusercontent-com-NHSDigital-ndr-dev-support-v6-1-9-config-rubocop-ndr-yml

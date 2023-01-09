@@ -6,8 +6,8 @@ module WayOfWorking
 
       # TODO: copy_rubocop_github_workflow_action
 
-      def copy_github_linters_dot_keep_file
-        copy_file '.github/linters/.keep'
+      def copy_github_linters_rubocop_config_file
+        copy_file '.github/linters/.rubocop.yml'
       end
 
       def copy_megalinter_github_workflow_action
@@ -26,10 +26,13 @@ module WayOfWorking
         append_to_file '.gitignore', "megalinter-reports/\n"
       end
 
-      # TODO: Add:
-      # def gitignore_rubocop_cached_file
-      #   append_to_file '.gitignore', ".rubocop-https---raw-githubusercontent-com-NHSDigital-ndr-dev-support-v6-1-9-config-rubocop-ndr-yml\n"
-      # end
+      def gitignore_rubocop_cached_file
+        append_to_file '.gitignore', ".rubocop-https---raw-githubusercontent-com-NHSDigital-ndr-dev-support-v6-1-9-config-rubocop-ndr-yml\n"
+      end
+
+      def copy_rubocop_options_file
+        copy_file '.rubocop'
+      end
 
       private
 
