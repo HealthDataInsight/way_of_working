@@ -63,7 +63,7 @@ ENABLE_LINTERS: # If you use ENABLE_LINTERS variable, all other linters will be 
   - CSS_STYLELINT # in Super-Linter
   - ENV_DOTENV_LINTER # in Super-Linter
   # - GRAPHQL_GRAPHQL_SCHEMA_LINTER
-  - HTML_DJLINT
+  # - HTML_DJLINT # Refuses to see config file
   - HTML_HTMLHINT # in Super-Linter
   - JSON_ESLINT_PLUGIN_JSONC # in Super-Linter
   - JSON_JSONLINT
