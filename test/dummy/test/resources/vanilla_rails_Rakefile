@@ -2,6 +2,5 @@
 # for example lib/tasks/capistrano.rake, and they will automatically be available to Rake.
 
 require_relative "config/application"
-require 'way_of_working/tasks' if Rails.env.development? || Rails.env.test?
 
 Rails.application.load_tasks
