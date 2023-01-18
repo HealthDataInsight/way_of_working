@@ -12,40 +12,36 @@ It builds on the [twelve-factor app](https://12factor.net) methodology and is in
 
 The most significant difference here is that we will be opinionated and make technological and process choices. Of course, users are encouraged to discuss and submit Pull Requests (PRs) if they want changes to the choices made, but by making those choices, we can automate many tedious background tasks that are currently manual.
 
-## WayOfWorking Rails Plugin
+## Installation
 
-As initial support is for Rails projects, support for use of the framework is implemented as a Rails plugin to use Rails generators. Future iterations could potentially use Thor and/or Rails Generators directly (to support non-Rails projects).
+TODO: Replace `UPDATE_WITH_YOUR_GEM_NAME_PRIOR_TO_RELEASE_TO_RUBYGEMS_ORG` with your gem name right after releasing it to RubyGems.org. Please do not do it earlier due to security reasons. Alternatively, replace this section with instructions to install your gem from git if you don't plan to release to RubyGems.org.
 
-### Usage
+Install the gem and add to the application's Gemfile by executing:
 
-This plugin was created using `rails plugin new --skip-action-cable --skip-action-mailer --skip-active-record --skip-active-job way_of_working`.
+    $ bundle add UPDATE_WITH_YOUR_GEM_NAME_PRIOR_TO_RELEASE_TO_RUBYGEMS_ORG
 
-### Installation
-Add this line to your application's Gemfile:
+If bundler is not being used to manage dependencies, install the gem by executing:
 
-```ruby
-gem "way_of_working"
-```
+    $ gem install UPDATE_WITH_YOUR_GEM_NAME_PRIOR_TO_RELEASE_TO_RUBYGEMS_ORG
 
-And then execute:
-```bash
-bundle
-```
+## Usage
 
-Or install it yourself as:
-```bash
-gem install way_of_working
-```
+TODO: Write usage instructions here
 
-### Contributing
+## Development
 
-1. Fork it ( <https://github.com/HealthDataInsight/way_of_working/fork> )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
+After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment. This RubyGem was created using `bundle gem --exe way_of_working`.
 
-Please note that this project is released with a Contributor Code of Conduct. By participating in this project you agree to abide by its terms.
+To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
-### License
+## Contributing
+
+Bug reports and pull requests are welcome on GitHub at https://github.com/HealthDataInsight/way_of_working. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/HealthDataInsight/way_of_working/blob/vanilla_thor/CODE_OF_CONDUCT.md).
+
+## License
+
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+
+## Code of Conduct
+
+Everyone interacting in the WayOfWorking project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/HealthDataInsight/way_of_working/blob/vanilla_thor/CODE_OF_CONDUCT.md).

@@ -1,2 +1,3 @@
+tmp/
 megalinter-reports/
 .rubocop-https---raw-githubusercontent-com-NHSDigital-ndr-dev-support-v6-1-9-config-rubocop-ndr-yml

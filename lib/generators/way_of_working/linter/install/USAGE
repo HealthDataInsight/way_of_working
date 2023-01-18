@@ -1,9 +1,0 @@
-Description:
-    Installs MegaLinter config files into the project
-
-Example:
-    bin/rails generate way_of_working:linter:install
-
-    This will create:
-        .github/workflows/mega-linter.yml
-        .mega-linter.yml

@@ -1,8 +1,0 @@
-Description:
-    This generator adds a new Markdown Any Decision Record (MADR) to your project
-
-Example:
-    bin/rails generate way_of_working:decision_record:new "Title of the decision"
-
-    This will create:
-        docs/decisions/NNNN-title-of-the-decision.md

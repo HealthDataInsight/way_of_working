@@ -1,6 +1,10 @@
-require "way_of_working/version"
-require "way_of_working/railtie"
+# frozen_string_literal: true
+
+require 'thor'
+require_relative 'way_of_working/cli'
+require_relative 'way_of_working/paths'
+require_relative 'way_of_working/version'
 
 module WayOfWorking
-  # Your code goes here...
+  class Error < StandardError; end
 end

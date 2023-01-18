@@ -11,6 +11,9 @@ Layout/SpaceInsideArrayLiteralBrackets:
   Exclude:
     - "config/**/*.rb"
 
+Rails/Date:
+  Enabled: false
+
 Style/Documentation:
   Exclude:
     - "app/helpers/application_helper.rb"
