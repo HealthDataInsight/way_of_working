@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require 'date'
 require 'way_of_working/paths'
 
 module WayOfWorking
@@ -25,6 +26,7 @@ module WayOfWorking
 
       def invoke_decision_record_file
         @decision_date = Date.today.strftime('%Y-%m-%d')
+        @title = name
 
         # from https://raw.githubusercontent.com/adr/madr/3.0.0/template/adr-template.md
         template 'docs/decisions/adr-template.md',
