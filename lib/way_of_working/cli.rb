@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-require_relative 'code_of_conduct/init'
-require_relative 'decision_record/init'
-require_relative 'decision_record/new'
-require_relative 'linter/init'
-require_relative 'rake_tasks/init'
+require_relative 'generators/code_of_conduct/init'
+require_relative 'generators/decision_record/init'
+require_relative 'generators/decision_record/new'
+require_relative 'generators/linter/init'
+require_relative 'generators/rake_tasks/init'
 require_relative 'sub_command_base'
 
 module WayOfWorking
@@ -17,7 +17,7 @@ module WayOfWorking
       invoke_all
     end
 
-    register(CodeOfConduct::Init, 'code_of_conduct',
+    register(Generators::CodeOfConduct::Init, 'code_of_conduct',
              'code_of_conduct --contact-method [CONTACT METHOD]',
              <<~LONGDESC)
                Description:
@@ -30,7 +30,7 @@ module WayOfWorking
                        CODE_OF_CONDUCT.md
              LONGDESC
 
-    register(DecisionRecord::Init, 'decision_record', 'decision_record',
+    register(Generators::DecisionRecord::Init, 'decision_record', 'decision_record',
              <<~LONGDESC)
                Description:
                    This generator adds Markdown Any Decision Records (MADR) to your project
@@ -44,7 +44,7 @@ module WayOfWorking
                        docs/decisions/0000-use-markdown-any-decision-records.md
              LONGDESC
 
-    register(Linter::Init, 'linter', 'linter',
+    register(Generators::Linter::Init, 'linter', 'linter',
              <<~LONGDESC)
                Description:
                    Installs MegaLinter config files into the project
@@ -57,7 +57,7 @@ module WayOfWorking
                        .mega-linter.yml
              LONGDESC
 
-    register(RakeTasks::Init, 'rake_tasks', 'rake_tasks',
+    register(Generators::RakeTasks::Init, 'rake_tasks', 'rake_tasks',
              <<~LONGDESC)
                Description:
                    Installs Way of Working rake tasks into this project
@@ -72,7 +72,7 @@ module WayOfWorking
 
   # This class defines the "new" parent command
   class New < SubCommandBase
-    register(DecisionRecord::New, 'decision_record', 'decision_record [NAME]',
+    register(Generators::DecisionRecord::New, 'decision_record', 'decision_record [NAME]',
              <<~LONGDESC)
                Description:
                    This generator adds a new decision record to your project
