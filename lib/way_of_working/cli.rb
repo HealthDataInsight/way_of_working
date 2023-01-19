@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require_relative 'generators/changelog/init'
 require_relative 'generators/code_of_conduct/init'
 require_relative 'generators/decision_record/init'
 require_relative 'generators/decision_record/new'
@@ -16,6 +17,18 @@ module WayOfWorking
     def all
       invoke_all
     end
+
+    register(Generators::Changelog::Init, 'changelog', 'changelog',
+             <<~LONGDESC)
+               Description:
+                   This adds the Keep a Changelog v1.1 changelog to the project
+
+               Example:
+                   way_of_working init changelog
+
+                   This will create:
+                   CHANGELOG.md
+             LONGDESC
 
     register(Generators::CodeOfConduct::Init, 'code_of_conduct',
              'code_of_conduct --contact-method [CONTACT METHOD]',

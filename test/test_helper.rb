@@ -9,4 +9,4 @@ require 'active_support/testing/autorun'
 
 ActiveSupport.test_order = :random if ActiveSupport.respond_to?(:test_order=)
 
-# require 'mocha/minitest'
+require 'mocha/minitest'
