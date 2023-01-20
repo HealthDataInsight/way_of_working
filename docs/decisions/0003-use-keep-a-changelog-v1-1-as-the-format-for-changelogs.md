@@ -14,6 +14,7 @@ Which should we choose?
 ## Considered Options
 
 * [keep a changelog v1.1.0](https://keepachangelog.com/en/1.1.0/)
+* [github-changelog-generator](https://github.com/github-changelog-generator/github-changelog-generator#github-changelog-generator-)
 * [GNU changelog style guide](https://www.gnu.org/prep/standards/html_node/Style-of-Change-Logs.html#Style-of-Change-Logs)
 * Roll-our-own solution.
 * Have no conventions for common approach to changelogs.
@@ -23,6 +24,7 @@ Which should we choose?
 Chosen option: "keep a changelog", because
 
 * It is an easy to read format, both for people and tooling.
+* It is a human-written, plain English summary of changes, not a commit log dump.
 * It has a well defined structure that makes automation easier.
 * GNU changelog style is inadequate.
 
@@ -31,3 +33,4 @@ Chosen option: "keep a changelog", because
 * Good, because we can programatically create a template changelog for the first time on new and existing projects
 * Good, because scaffolds the changes needed when we tag a new release
 * Good, because we can provide helpers (using existing tooling) than convert the changelog into HTML for inclusion in an end user system
+* Bad, because, unlike fully automated tools like github-changelog-generator, effort is required to turn commit messages into plain English.
