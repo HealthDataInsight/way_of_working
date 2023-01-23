@@ -15,7 +15,8 @@ module WayOfWorking
           case rakefile_type
           when :rails
             inject_into_file RAKEFILE_FILENAME,
-                             "require 'way_of_working/tasks' if Rails.env.development? || Rails.env.test?\n",
+                             "require 'way_of_working/tasks' if Rails.env.development? " \
+                             "|| Rails.env.test?\n",
                              after: RAILS_LOC
           when :bundler
             inject_into_file RAKEFILE_FILENAME,
