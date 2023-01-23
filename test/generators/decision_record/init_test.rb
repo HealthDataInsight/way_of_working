@@ -24,6 +24,7 @@ module WayOfWorking
           end
           assert_file 'docs/decisions/adr-template.md' do |content|
             assert_match('date: {YYYY-MM-DD when the decision was last updated}', content)
+            assert_match('{short title of solved problem and solution}', content)
           end
           assert_file 'docs/decisions/0000-use-markdown-any-decision-records.md'
 
