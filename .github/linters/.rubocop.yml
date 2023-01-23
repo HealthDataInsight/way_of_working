@@ -2,6 +2,9 @@
 require:
   - ndr_dev_support
 
+AllCops:
+  TargetRubyVersion: 2.7
+
 # Ignore rules related to templated files
 Layout/EmptyLines:
   Exclude:
@@ -12,6 +15,9 @@ Layout/SpaceInsideArrayLiteralBrackets:
     - "config/**/*.rb"
 
 Rails/Date:
+  Enabled: false
+
+Rails/TimeZone:
   Enabled: false
 
 Style/Documentation:

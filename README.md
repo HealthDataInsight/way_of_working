@@ -56,7 +56,7 @@ To add [MegaLinter](https://megalinter.io/) to your project, run the following a
 
 to run MegaLinter in your project, run:
 
-    rake ways_of_working:linter:run
+    way_of_working exec linter
 
 ### Initialise All Components
 

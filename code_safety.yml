@@ -88,10 +88,6 @@ file safety:
     comments:
     reviewed_by:
     safe_revision:
-  lib/tasks/linter.rake:
-    comments:
-    reviewed_by:
-    safe_revision:
   lib/way_of_working.rb:
     comments:
     reviewed_by:

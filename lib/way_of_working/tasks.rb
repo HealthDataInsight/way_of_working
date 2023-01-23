@@ -4,5 +4,3 @@ require 'ndr_dev_support/tasks'
 require 'rubocop/rake_task'
 
 RuboCop::RakeTask.new
-
-load 'tasks/linter.rake'
