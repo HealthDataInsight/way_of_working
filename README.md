@@ -26,7 +26,51 @@ If bundler is not being used to manage dependencies, install the gem by executin
 
 ## Usage
 
-TODO: Write usage instructions here
+### Code Of Conduct
+
+To add a [Contributor Covenant](https://www.contributor-covenant.org/version/2/1/code_of_conduct/) Code of Conduct v2.1 to your project, use the following at the command line:
+
+    way_of_working init code_of_conduct --contact-method [CONTACT METHOD]
+
+You will need to enter a contact method, usually an email address. Please thoroughly read the [enforcement guidelines](https://www.contributor-covenant.org/version/2/1/code_of_conduct/#enforcement-guidelines) section of the code and discuss the implications of adopting the code of conduct.
+
+### Decision Records
+
+To add the [Markdown Any Decision Records (MADR)](https://adr.github.io/madr/) v3.0.0 framework to your project, run the following at the command line:
+
+    way_of_working init decision_record
+
+To create a new decision record, run:
+
+    way_of_working new decision_record [NAME]
+
+Where `[NAME]` is the title of your decision record, for example:
+
+    way_of_working new decision_record "Use Markdown Any Decision Records"
+
+### Linter
+
+To add [MegaLinter](https://megalinter.io/) to your project, run the following at the command line:
+
+    way_of_working init linter
+
+to run MegaLinter in your project, run:
+
+    rake ways_of_working:linter:run
+
+### Initialise All Components
+
+To add all the Way of Working components to your project, run:
+
+    way_of_working init all --contact-method [CONTACT METHOD]
+
+Providing the Code of Conduct `[CONTACT METHOD]` described above.
+
+### Help
+
+More help on using the command line tool is found by using:
+
+    way_of_working help
 
 ## Development
 
