@@ -11,7 +11,7 @@
         },
         {
             "pattern": "^adr-template.md"
-        }        
+        }
     ],
     "retryOn429": true,
     "retryCount": 5,
