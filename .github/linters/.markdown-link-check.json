@@ -4,6 +4,9 @@
             "pattern": "^https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests"
         },
         {
+            "pattern": "^https://opensource.org/licenses/MIT"
+        },
+        {
             "pattern": "^0005-example.md"
         },
         {
