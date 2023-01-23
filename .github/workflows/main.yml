@@ -1,23 +1,18 @@
-name: Ruby
+name: Rake Test
 
-on:
-  push:
-    branches:
-      - main
-
-  pull_request:
+on: [push, pull_request]
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  test:
+    runs-on: macos-latest
     name: Ruby ${{ matrix.ruby }}
     strategy:
       matrix:
         ruby:
-          - '2.7.7'
-          - '3.0.5'
-          - '3.1.3'
-          - '3.2.0'
+          - '2.7'
+          - '3.0'
+          - '3.1'
+          - '3.2'
 
     steps:
     - uses: actions/checkout@v3
