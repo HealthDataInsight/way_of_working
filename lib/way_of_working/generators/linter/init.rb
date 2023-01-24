@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require 'thor'
 require 'way_of_working/paths'
 
 module WayOfWorking
@@ -39,7 +40,8 @@ module WayOfWorking
 
         def gitignore_rubocop_cached_file
           append_to_file '.gitignore',
-                         ".rubocop-https---raw-githubusercontent-com-NHSDigital-ndr-dev-support-v6-1-9-config-rubocop-ndr-yml\n"
+                         '.rubocop-https---raw-githubusercontent-com-NHSDigital-' \
+                         "ndr-dev-support-v6-1-9-config-rubocop-ndr-yml\n"
         end
 
         def copy_rubocop_options_file

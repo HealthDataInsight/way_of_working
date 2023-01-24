@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     way_of_working (0.1.0)
-      bundler (>= 2.0)
+      rainbow
       thor (~> 1.2)
 
 GEM
@@ -195,9 +195,11 @@ GEM
 
 PLATFORMS
   arm64-darwin-21
+  arm64-darwin-22
 
 DEPENDENCIES
   activesupport (~> 7.0)
+  bundler (>= 2.0)
   git (~> 1.13)
   minitest (~> 5.0)
   mocha (~> 2.0)
@@ -208,4 +210,4 @@ DEPENDENCIES
   way_of_working!
 
 BUNDLED WITH
-   2.4.4
+   2.4.5

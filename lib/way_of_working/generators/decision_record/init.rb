@@ -17,6 +17,7 @@ module WayOfWorking
 
           # from https://raw.githubusercontent.com/adr/madr/3.0.0/template/adr-template.md
           @decision_date = '{YYYY-MM-DD when the decision was last updated}'
+          @title = '{short title of solved problem and solution}'
           template 'docs/decisions/adr-template.md'
 
           get 'https://raw.githubusercontent.com/adr/madr/3.0.0/template/0000-use-markdown-any-decision-records.md',

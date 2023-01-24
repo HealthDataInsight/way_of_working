@@ -4,11 +4,24 @@ require_relative 'generators/changelog/init'
 require_relative 'generators/code_of_conduct/init'
 require_relative 'generators/decision_record/init'
 require_relative 'generators/decision_record/new'
+require_relative 'generators/linter/exec'
 require_relative 'generators/linter/init'
 require_relative 'generators/rake_tasks/init'
 require_relative 'sub_command_base'
 
 module WayOfWorking
+  # This class defines the exec (i.e. run) parent command
+  class Exec < SubCommandBase
+    register(Generators::Linter::Exec, 'linter', 'linter',
+             <<~LONGDESC)
+               Description:
+                   This runs the linter on this project
+
+               Example:
+                   way_of_working exec linter
+             LONGDESC
+  end
+
   # This class defines the "init" parent command
   class Init < SubCommandBase
     desc 'all --contact-method [CONTACT METHOD]',
@@ -105,5 +118,8 @@ module WayOfWorking
 
     desc 'new [THING]', 'Creates new things'
     subcommand 'new', New
+
+    desc 'exec [COMPONENT]', 'Executes (runs) the specific component'
+    subcommand 'exec', Exec
   end
 end

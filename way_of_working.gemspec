@@ -12,9 +12,10 @@ Gem::Specification.new do |spec|
   # spec.description = "TODO: Write a longer description or delete this line."
   spec.homepage = 'https://github.com/HealthDataInsight/way_of_working'
   spec.license = 'MIT'
-  spec.required_ruby_version = '>= 2.6.0'
+  spec.required_ruby_version = '>= 2.7'
 
   spec.metadata['allowed_push_host'] = "TODO: Set to your gem server 'https://example.com'"
+  spec.metadata['rubygems_mfa_required'] = 'true'
 
   spec.metadata['homepage_uri'] = spec.homepage
   # spec.metadata["source_code_uri"] = "TODO: Put your gem's public repo URL here."
@@ -36,6 +37,6 @@ Gem::Specification.new do |spec|
 
   # For more information and examples about making a new gem, check out our
   # guide at: https://bundler.io/guides/creating_gem.html
-  spec.add_dependency 'bundler', '>= 2.0'
+  spec.add_dependency 'rainbow'
   spec.add_dependency 'thor', '~> 1.2'
 end
