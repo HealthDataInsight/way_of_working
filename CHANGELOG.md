@@ -18,3 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Switched from a Rails Engine to (nearly) vanilla Thor, to support non-rails projects
 - Switched to a cached copy of the Code of Conduct
+
+### Fixed
+
+- Corrected use of relative paths in the rubocop config file
