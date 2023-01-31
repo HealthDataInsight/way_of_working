@@ -1,6 +1,6 @@
 ---
 # These are optional elements. Feel free to remove any of them.
-status: proposed
+status: accepted
 date: 2023-01-19
 ---
 # Use keep a changelog v1.1 as the format for changelogs
