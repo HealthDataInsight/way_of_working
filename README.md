@@ -1,6 +1,7 @@
 # HDI Engineering Way of Working
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
 [![MegaLinter](https://github.com/HealthDataInsight/way_of_working/workflows/MegaLinter/badge.svg?branch=main)](https://github.com/HealthDataInsight/way_of_working/actions?query=workflow%3AMegaLinter+branch%3Amain)
+[![Keep a Changelog v1.1.0 badge][changelog-badge]][changelog]
 
 ## Introduction
 
@@ -89,3 +90,6 @@ The gem is available as open source under the terms of the [MIT License](https:/
 ## Code of Conduct
 
 Everyone interacting in the WayOfWorking project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/HealthDataInsight/way_of_working/blob/main/CODE_OF_CONDUCT.md).
+
+[changelog]: ./CHANGELOG.md
+[changelog-badge]: https://img.shields.io/badge/changelog-Keep%20a%20Changelog%20v1.1.0-%23E05735
