@@ -33,6 +33,9 @@ Style/GlobalStdStream:
   Exclude:
     - "config/environments/production.rb"
 
+Style/OptionalBooleanParameter:
+  Enabled: false
+
 Style/RedundantConstantBase:
   Exclude:
     - "config/environments/production.rb"
