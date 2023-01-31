@@ -1,5 +1,5 @@
 ---
-status: proposed
+status: accepted
 date: 2023-01-05
 ---
 # Use MegaLinter for linting common file formats

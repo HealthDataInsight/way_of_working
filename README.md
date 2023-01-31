@@ -27,6 +27,12 @@ If bundler is not being used to manage dependencies, install the gem by executin
 
 ## Usage
 
+### Changelog
+
+To add a [keep a changelog v1.1.0](https://keepachangelog.com/en/1.1.0/) changelog to your project, use the following at the command line:
+
+    way_of_working init changelog
+
 ### Code Of Conduct
 
 To add a [Contributor Covenant](https://www.contributor-covenant.org/version/2/1/code_of_conduct/) Code of Conduct v2.1 to your project, use the following at the command line:
