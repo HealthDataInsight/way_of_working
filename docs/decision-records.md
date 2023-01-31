@@ -2,11 +2,11 @@
 
 We use Markdown Any Decision Records (MADR) version 3.0.0.
 
-In general we will follow [HDI Ways of Working](https://github.com/HealthDataInsight/way_of_working), so these records will generally cover decisions that:
+In general we will follow the [HDI Way of Working](https://github.com/HealthDataInsight/way_of_working), so these records will generally cover decisions that:
 
-- are not already covered in HDI Ways of Working
-- are covered in HDI Ways of Working, but have specific implementation details which need to be captured
-- diverge from the guidance in HDI Ways of Working
+- are not already covered in the HDI Way of Working
+- are covered in the HDI Way of Working, but have specific implementation details which need to be captured
+- diverge from the guidance in the HDI Way of Working
 
 You can read about the general approach on the [GDS Way page on Architecture Decisions](https://gds-way.cloudapps.digital/standards/architecture-decisions.html) and specifics about MADR is available at <https://adr.github.io/madr/>.
 
