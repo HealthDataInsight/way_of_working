@@ -8,6 +8,10 @@ file safety:
     comments:
     reviewed_by:
     safe_revision:
+  ".github/workflows/main.yml":
+    comments:
+    reviewed_by:
+    safe_revision:
   ".github/workflows/mega-linter.yml":
     comments:
     reviewed_by:
@@ -15,7 +19,7 @@ file safety:
   ".gitignore":
     comments:
     reviewed_by: timgentry
-    safe_revision: 06c13366d3230c19231ebe55082276bf22d4271a
+    safe_revision: c39569969b41ee73a6c5e9d92182278d940ba6bf
   ".mega-linter.yml":
     comments:
     reviewed_by: timgentry
@@ -24,6 +28,14 @@ file safety:
     comments:
     reviewed_by: timgentry
     safe_revision: afae5b82651a66094c570598c0a64d0d5463474c
+  ".ruby-version":
+    comments:
+    reviewed_by: timgentry
+    safe_revision: 6732e509cfd5418c587cebdc08aa30dd9361f756
+  CHANGELOG.md:
+    comments:
+    reviewed_by: timgentry
+    safe_revision: 1cd0f0429c60c0666c1ddb905afbeb3f67a88a0e
   CODE_OF_CONDUCT.md:
     comments:
     reviewed_by: timgentry
@@ -43,23 +55,23 @@ file safety:
   README.md:
     comments:
     reviewed_by: timgentry
-    safe_revision: 951c906586f076b1170fe47d21dbf2ff420d6e7e
+    safe_revision: 1cd0f0429c60c0666c1ddb905afbeb3f67a88a0e
   Rakefile:
     comments:
     reviewed_by:
     safe_revision:
   bin/console:
     comments:
-    reviewed_by:
-    safe_revision:
+    reviewed_by: timgentry
+    safe_revision: f96fc0fbe2d380210ac5a12d04db8140ebd5ea56
   bin/setup:
     comments:
-    reviewed_by:
-    safe_revision:
+    reviewed_by: timgentry
+    safe_revision: f96fc0fbe2d380210ac5a12d04db8140ebd5ea56
   bin/test:
     comments:
-    reviewed_by:
-    safe_revision:
+    reviewed_by: timgentry
+    safe_revision: 50f34ef4f776c94ead81d272a7ae94b6048dcb03
   docs/decision-records.md:
     comments:
     reviewed_by: timgentry
@@ -76,6 +88,10 @@ file safety:
     comments:
     reviewed_by: timgentry
     safe_revision: a42fe51d1068cfcfc85201e18e67528e3355a8e7
+  docs/decisions/0003-use-keep-a-changelog-v1-1-as-the-format-for-changelogs.md:
+    comments:
+    reviewed_by: timgentry
+    safe_revision: 1cd0f0429c60c0666c1ddb905afbeb3f67a88a0e
   docs/decisions/README.md:
     comments:
     reviewed_by: timgentry
@@ -86,13 +102,17 @@ file safety:
     safe_revision: 0a36b6f057fc1183e71703b4a7ee52e7e5c538a2
   exe/way_of_working:
     comments:
-    reviewed_by:
-    safe_revision:
+    reviewed_by: timgentry
+    safe_revision: d18d9c039e0cb95e33b24b789e9ee855b1e7a1b1
   lib/way_of_working.rb:
+    comments:
+    reviewed_by: timgentry
+    safe_revision: f96fc0fbe2d380210ac5a12d04db8140ebd5ea56
+  lib/way_of_working/cli.rb:
     comments:
     reviewed_by:
     safe_revision:
-  lib/way_of_working/cli.rb:
+  lib/way_of_working/generators/changelog/init.rb:
     comments:
     reviewed_by:
     safe_revision:
@@ -108,11 +128,23 @@ file safety:
     comments:
     reviewed_by:
     safe_revision:
+  lib/way_of_working/generators/linter/exec.rb:
+    comments:
+    reviewed_by:
+    safe_revision:
   lib/way_of_working/generators/linter/init.rb:
     comments:
     reviewed_by:
     safe_revision:
   lib/way_of_working/generators/rake_tasks/init.rb:
+    comments:
+    reviewed_by:
+    safe_revision:
+  lib/way_of_working/git/repo_reader.rb:
+    comments:
+    reviewed_by:
+    safe_revision:
+  lib/way_of_working/git/summary_tag.rb:
     comments:
     reviewed_by:
     safe_revision:
@@ -160,6 +192,10 @@ file safety:
     comments:
     reviewed_by: timgentry
     safe_revision: f96fc0fbe2d380210ac5a12d04db8140ebd5ea56
+  test/generators/changelog/init_test.rb:
+    comments:
+    reviewed_by:
+    safe_revision:
   test/generators/code_of_conduct/init_test.rb:
     comments:
     reviewed_by:
@@ -172,6 +208,10 @@ file safety:
     comments:
     reviewed_by: timgentry
     safe_revision: 173b77440f8786646ff9a1e83595500c18820dbb
+  test/generators/linter/exec_test.rb:
+    comments:
+    reviewed_by:
+    safe_revision:
   test/generators/linter/init_test.rb:
     comments:
     reviewed_by: timgentry
@@ -180,14 +220,18 @@ file safety:
     comments:
     reviewed_by: timgentry
     safe_revision: 173b77440f8786646ff9a1e83595500c18820dbb
+  test/git/summary_tag_test.rb:
+    comments:
+    reviewed_by:
+    safe_revision:
   test/resources/empty_Rakefile:
     comments:
     reviewed_by: timgentry
     safe_revision: f96fc0fbe2d380210ac5a12d04db8140ebd5ea56
   test/resources/vanilla_bundler_Rakefile:
     comments:
-    reviewed_by:
-    safe_revision:
+    reviewed_by: timgentry
+    safe_revision: f96fc0fbe2d380210ac5a12d04db8140ebd5ea56
   test/resources/vanilla_rails_Rakefile:
     comments:
     reviewed_by: timgentry
@@ -200,6 +244,306 @@ file safety:
     comments:
     reviewed_by: timgentry
     safe_revision: f96fc0fbe2d380210ac5a12d04db8140ebd5ea56
+  vendor/cache/actionpack-7.0.4.1.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/actionview-7.0.4.1.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/activesupport-7.0.4.1.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/addressable-2.8.1.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/ast-2.4.2.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/brakeman-5.4.0.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/builder-3.2.4.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/bundler-audit-0.9.1.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/capistrano-2.15.9.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/capybara-3.38.0.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/capybara-screenshot-1.0.26.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/cgi-0.3.6.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/charlock_holmes-0.7.7.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/coderay-1.1.3.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/concurrent-ruby-1.1.10.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/crass-1.0.6.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/docile-1.4.0.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/erubi-1.12.0.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/git-1.13.1.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/github-linguist-7.24.1.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/highline-2.1.0.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/i18n-1.12.0.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/json-2.6.3.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/launchy-2.5.2.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/loofah-2.19.1.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/matrix-0.4.2.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/method_source-1.0.0.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/mini_mime-1.1.2.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/minitest-5.15.0.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/mocha-2.0.2.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/ndr_dev_support-7.0.0.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/net-scp-4.0.0.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/net-sftp-4.0.0.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/net-ssh-7.0.1.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/net-ssh-gateway-2.0.0.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/nokogiri-1.14.0-arm64-darwin.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/nokogiri-1.14.0-x86_64-linux.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/nokogiri-1.14.0.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/parallel-1.22.1.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/parser-3.2.0.0.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/prometheus-client-4.0.0.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/pry-0.14.2.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/public_suffix-5.0.1.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/racc-1.6.2.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/rack-2.2.6.2.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/rack-test-2.0.2.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/rails-dom-testing-2.0.3.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/rails-html-sanitizer-1.4.4.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/railties-7.0.4.1.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/rainbow-3.1.1.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/rake-13.0.6.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/rchardet-1.8.0.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/regexp_parser-2.6.1.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/rexml-3.2.5.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/rubocop-1.43.0.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/rubocop-ast-1.24.1.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/rubocop-rails-2.17.4.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/rubocop-rake-0.6.0.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/ruby-progressbar-1.11.0.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/ruby2_keywords-0.0.5.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/rubyzip-2.3.2.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/rugged-1.5.0.1.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/selenium-webdriver-4.7.1.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/show_me_the_cookies-6.0.0.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/simplecov-0.22.0.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/simplecov-html-0.12.3.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/simplecov_json_formatter-0.1.4.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/thor-1.2.1.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/tzinfo-2.0.5.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/unicode-display_width-2.4.2.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/webdrivers-5.2.0.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/websocket-1.2.9.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/with_clean_rbenv-0.1.0.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/xpath-3.2.0.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
+  vendor/cache/zeitwerk-2.6.6.gem:
+    comments:
+    reviewed_by:
+    safe_revision:
   way_of_working.gemspec:
     comments:
     reviewed_by:
