@@ -3,11 +3,11 @@ file safety:
   ".github/linters/.markdown-link-check.json":
     comments:
     reviewed_by: timgentry
-    safe_revision: 9d7f9ac4e476edb14683a93b61a3f540a176d3e0
-  ".github/linters/.rubocop.yml":
+    safe_revision: e2e50ef71c8a958e81cae42d7a9d8dd82fc8b85e
+  ".github/linters/rubocop_defaults.yml":
     comments:
-    reviewed_by:
-    safe_revision:
+    reviewed_by: timgentry
+    safe_revision: cc244844e78615bb9637b06062ca73a9862e70e2
   ".github/workflows/main.yml":
     comments:
     reviewed_by:
@@ -27,7 +27,7 @@ file safety:
   ".rubocop":
     comments:
     reviewed_by: timgentry
-    safe_revision: afae5b82651a66094c570598c0a64d0d5463474c
+    safe_revision: 07a7ffc22d7bed33c7c99c53198e7f7f9473c732
   ".ruby-version":
     comments:
     reviewed_by: timgentry
@@ -35,7 +35,7 @@ file safety:
   CHANGELOG.md:
     comments:
     reviewed_by: timgentry
-    safe_revision: 1cd0f0429c60c0666c1ddb905afbeb3f67a88a0e
+    safe_revision: 07a7ffc22d7bed33c7c99c53198e7f7f9473c732
   CODE_OF_CONDUCT.md:
     comments:
     reviewed_by: timgentry
@@ -164,7 +164,7 @@ file safety:
     comments:
     reviewed_by:
     safe_revision:
-  lib/way_of_working/templates/.github/linters/.rubocop.yml:
+  lib/way_of_working/templates/.github/linters/rubocop_defaults.yml:
     comments:
     reviewed_by:
     safe_revision:

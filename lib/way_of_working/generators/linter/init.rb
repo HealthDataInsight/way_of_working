@@ -19,7 +19,7 @@ module WayOfWorking
         # TODO: copy_rubocop_github_workflow_action
 
         def copy_github_linters_rubocop_config_file
-          copy_file '.github/linters/.rubocop.yml'
+          copy_file '.github/linters/rubocop_defaults.yml'
         end
 
         def copy_megalinter_github_workflow_action
@@ -39,9 +39,7 @@ module WayOfWorking
         end
 
         def gitignore_rubocop_cached_file
-          append_to_file '.gitignore',
-                         '.rubocop-https---raw-githubusercontent-com-NHSDigital-' \
-                         "ndr-dev-support-v6-1-9-config-rubocop-ndr-yml\n"
+          append_to_file '.gitignore', ".rubocop-https---*\n"
         end
 
         def copy_rubocop_options_file
