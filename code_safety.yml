@@ -245,145 +245,145 @@ file safety:
     reviewed_by: timgentry
     safe_revision: f96fc0fbe2d380210ac5a12d04db8140ebd5ea56
   vendor/cache/actionpack-7.0.4.1.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (3077efbe995fafbb046bc046c600f72ea8dd56ac02b55e45d481252e521e02bd)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/actionview-7.0.4.1.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (a2c39b956494963973b363bb1608e8a6292628682d54c06cfefd7f18f05cd6dd)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/activesupport-7.0.4.1.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (eb601f737e67459c6553e05036e5c672a94aec90252b75c6ea1a866749d215c8)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/addressable-2.8.1.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (bc724a176ef02118c8a3ed6b5c04c39cf59209607ffcce77b91d0261dbadedfa)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/ast-2.4.2.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (1e280232e6a33754cde542bc5ef85520b74db2aac73ec14acef453784447cc12)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/brakeman-5.4.0.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (bab990760949e999c5d52b297d8badda376754eb296c91abf829def733ed9d51)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/builder-3.2.4.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (99caf08af60c8d7f3a6b004029c4c3c0bdaebced6c949165fe98f1db27fbbc10)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/bundler-audit-0.9.1.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (bdc716fc21cd8652a6507b137e5bc51f5e0e4f6f106a114ab004c89d0200bd3d)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/capistrano-2.15.9.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (b577a2b5f2ec499b069d074b794c139ec604da09712944df92689bfc20db79a6)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/capybara-3.38.0.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (7b6cc957d0a962cbbd1a9618603f024fd7fb261b4c16c5e3af682a313f4a6188)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/capybara-screenshot-1.0.26.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (816b9370a07752097c82a05f568aaf5d3b7f45c3db5d3aab2014071e1b3c0c77)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/cgi-0.3.6.gem:
     comments:
     reviewed_by:
     safe_revision:
   vendor/cache/charlock_holmes-0.7.7.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (1790eca3f661ffa6bbf5866c53c7191e4b8472626fc4997ff9dbe7c425e2cb43)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/coderay-1.1.3.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (dc530018a4684512f8f38143cd2a096c9f02a1fc2459edcfe534787a7fc77d4b)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/concurrent-ruby-1.1.10.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (244cb1ca0d91ec2c15ca2209507c39fb163336994428e16fbd3f465c87bd8e68)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/crass-1.0.6.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (dc516022a56e7b3b156099abc81b6d2b08ea1ed12676ac7a5657617f012bd45d)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/docile-1.4.0.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (5f1734bde23721245c20c3d723e76c104208e1aa01277a69901ce770f0ebb8d3)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/erubi-1.12.0.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (27bedb74dfb1e04ff60674975e182d8ca787f2224f2e8143268c7696f42e4723)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/git-1.13.1.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (6e44afbc3d920a51c9e45c84469caa65a5a9d229bb34d867fb0a656e69d90fce)
+    reviewed_by: Tim Gentry
+    safe_revision: 1cd0f0429c60c0666c1ddb905afbeb3f67a88a0e
   vendor/cache/github-linguist-7.24.1.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (8528f447a5f555f6ed3047463e90a216a6481c44e4cd146163f224a7171eb212)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/highline-2.1.0.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (d63d7f472f8ffaa143725161ae6fb06895b5cb7527e0b4dac5ad1e4902c80cb9)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/i18n-1.12.0.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (91e3cc1b97616d308707eedee413d82ee021d751c918661fb82152793e64aced)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/json-2.6.3.gem:
     comments:
     reviewed_by:
     safe_revision:
   vendor/cache/launchy-2.5.2.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (8aa0441655aec5514008e1d04892c2de3ba57bd337afb984568da091121a241b)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/loofah-2.19.1.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (6c6469efdefe3496010000a346f9d3bf710e11ac4661e353cf56852326fb1023)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/matrix-0.4.2.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (71083ccbd67a14a43bfa78d3e4dc0f4b503b9cc18e5b4b1d686dc0f9ef7c4cc0)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/method_source-1.0.0.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (d779455a2b5666a079ce58577bfad8534f571af7cec8107f4dce328f0981dede)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/mini_mime-1.1.2.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (a54aec0cc7438a03a850adb00daca2bdb60747f839e28186994df057cea87151)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/minitest-5.15.0.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (6d2d5bfa301257ef2c2fe8818abeaa0932ed54735c8ed039459cb4f85029ae1b)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/mocha-2.0.2.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (8f06259828754d87847223c5a34005e5836f7bd645361d9ce1191204a1b66f0d)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/ndr_dev_support-7.0.0.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (9d130c8638a5cf9f3adf22de8274eb472f3f52dfc6c42dc7fe6b24bfa2b333d3)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/net-scp-4.0.0.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (b32ded0d48c88ce70844a063e4e14efb44a95e51a9e0c0bfb0c54b4313b622ea)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/net-sftp-4.0.0.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (65bb91c859c2f93b09826757af11b69af931a3a9155050f50d1b06d384526364)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/net-ssh-7.0.1.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (59a7607d93b7c97979df51afbaa97ac6e6fcd315778151c0b521ca13178ae3e2)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/net-ssh-gateway-2.0.0.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (1d9cb51de52e2d64982f4c136c30435e914c05a980814a91055c89e183397bd0)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/nokogiri-1.14.0-arm64-darwin.gem:
     comments:
     reviewed_by:
@@ -397,153 +397,153 @@ file safety:
     reviewed_by:
     safe_revision:
   vendor/cache/parallel-1.22.1.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (ebdf1f0c51f182df38522f70ba770214940bef998cdb6e00f36492b29699761f)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/parser-3.2.0.0.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (4398811625bc158ac16edb6f48639f8a920f65b92c0fd342c8420c907dab687e)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/prometheus-client-4.0.0.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (7011c694579542e38a75a7433d38f608bff56fe508784f4e697681ec2aca6186)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/pry-0.14.2.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (c4fe54efedaca1d351280b45b8849af363184696fcac1c72e0415f9bdac4334d)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/public_suffix-5.0.1.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (65603917ff4ecb32f499f42c14951aeed2380054fa7fc51758fc0a8d455fe043)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/racc-1.6.2.gem:
     comments:
     reviewed_by:
     safe_revision:
   vendor/cache/rack-2.2.6.2.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (4be320c0fdea6651f0247dbd4182c1bd8acc06606a6b8935a19ad6a504347763)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/rack-test-2.0.2.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (adadd0e957f63a34199a9fdf905a920a0b0a50795735095b4ac4bd3c13385466)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/rails-dom-testing-2.0.3.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (b140c4f39f6e609c8113137b9a60dfc2ecb89864e496f87f23a68b3b8f12d8d1)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/rails-html-sanitizer-1.4.4.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (895d0c87a2b6623891e85c1d507c7f16acda4e77d94692f537df35ba71398bd5)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/railties-7.0.4.1.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (013c03dc18f12e122b569596a7e1d27305c85ac5ac2ec39c29225a833dd20a61)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/rainbow-3.1.1.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (039491aa3a89f42efa1d6dec2fc4e62ede96eb6acd95e52f1ad581182b79bc6a)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/rake-13.0.6.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (5ce4bf5037b4196c24ac62834d8db1ce175470391026bd9e557d669beeb19097)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/rchardet-1.8.0.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (693acd5253d5ade81a51940697955f6dd4bb2f0d245bda76a8e23deec70a52c7)
+    reviewed_by: Tim Gentry
+    safe_revision: 1cd0f0429c60c0666c1ddb905afbeb3f67a88a0e
   vendor/cache/regexp_parser-2.6.1.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (4e7b6a95c3b207c2d5274ff5f6334e7a564bf4f0e871028137dccd751eeb4766)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/rexml-3.2.5.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (a33c3bf95fda7983ec7f05054f3a985af41dbc25a0339843bd2479e93cabb123)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/rubocop-1.43.0.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (d08127ff6d99b7217b9ac27b51be872270bc7f19151706d799e18a5e4777adc6)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/rubocop-ast-1.24.1.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (6dd194309d48ebb1c558329ffd46a04e2fdf1652d8cde574f963c392fe52bfdd)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/rubocop-rails-2.17.4.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (8004149a14372d3d6cededd000357879fa7eb0421403a7a26bc717e2a98bbedb)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/rubocop-rake-0.6.0.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (56b6f22189af4b33d4f4e490a555c09f1281b02f4d48c3a61f6e8fe5f401d8db)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/ruby-progressbar-1.11.0.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (cc127db3866dc414ffccbf92928a241e585b3aa2b758a5563e74a6ee0f57d50a)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/ruby2_keywords-0.0.5.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (ffd13740c573b7301cf7a2e61fc857b2a8e3d3aff32545d6f8300d8bae10e3ef)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/rubyzip-2.3.2.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (3f57e3935dc2255c414484fbf8d673b4909d8a6a57007ed754dde39342d2373f)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/rugged-1.5.0.1.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (1d947f2b19a2bb1d9fb4e3c7d6e8b8def3ed18f5aee21a8c7f8edb3fce66010a)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/selenium-webdriver-4.7.1.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (e4fdd5ea7bf7d343b349582ba6540f422a80c3d420b20f06441a810713effead)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/show_me_the_cookies-6.0.0.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (7c47c199f718f0510ee8d61b1da0ac36e4ad05890c473764bcaf7d4f895b7c0d)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/simplecov-0.22.0.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (fe2622c7834ff23b98066bb0a854284b2729a569ac659f82621fc22ef36213a5)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/simplecov-html-0.12.3.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (4b1aad33259ffba8b29c6876c12db70e5750cb9df829486e4c6e5da4fa0aa07b)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/simplecov_json_formatter-0.1.4.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (529418fbe8de1713ac2b2d612aa3daa56d316975d307244399fa4838c601b428)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/thor-1.2.1.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (b1752153dc9c6b8d3fcaa665e9e1a00a3e73f28da5e238b81c404502e539d446)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/tzinfo-2.0.5.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (c5352fd901544d396745d013f46a04ae2ed081ce806d942099825b7c2b09a167)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/unicode-display_width-2.4.2.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (6a10205d1a19ca790c4e53064ba93f09d9eb234bf6bd135d9deb6001c21428be)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/webdrivers-5.2.0.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (8387bdeed5df329b85bd5303a2198c91418e5887e2d71298de677a9bc249b35b)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/websocket-1.2.9.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (884b12dee993217795bb5f58acc89c0121c88bdc99df4d1636c0505dca352b36)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/with_clean_rbenv-0.1.0.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (c36f5974e490bb2aff6895796d2c1fdad5d6a2729cce410d9ab62da1e2c1c4dc)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/xpath-3.2.0.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (6dfda79d91bb3b949b947ecc5919f042ef2f399b904013eb3ef6d20dd3a4082e)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/zeitwerk-2.6.6.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (bb397b50c31127f8dab372fa9b21da1e7c453c5b57da172ed858136c6283f826)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   way_of_working.gemspec:
     comments:
     reviewed_by:
