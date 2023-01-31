@@ -1,6 +1,9 @@
 {
     "ignorePatterns": [
         {
+            "pattern": "^https://img.shields.io/badge/changelog-Keep%20a%20Changelog%20v1.1.0-%23E05735"
+        },
+        {
             "pattern": "^https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests"
         },
         {
