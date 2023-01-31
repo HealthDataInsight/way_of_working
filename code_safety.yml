@@ -289,9 +289,9 @@ file safety:
     reviewed_by: Tim Gentry
     safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/cgi-0.3.6.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (c5e2c301437116b28fdfbb565452b9c1ee597901e68611367b4126b5d10feca3)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/charlock_holmes-0.7.7.gem:
     comments: SHA-256 hash matches published version on rubygems.org (1790eca3f661ffa6bbf5866c53c7191e4b8472626fc4997ff9dbe7c425e2cb43)
     reviewed_by: Tim Gentry
@@ -333,9 +333,9 @@ file safety:
     reviewed_by: Tim Gentry
     safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/json-2.6.3.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (86aaea16adf346a2b22743d88f8dcceeb1038843989ab93cda44b5176c845459)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/launchy-2.5.2.gem:
     comments: SHA-256 hash matches published version on rubygems.org (8aa0441655aec5514008e1d04892c2de3ba57bd337afb984568da091121a241b)
     reviewed_by: Tim Gentry
@@ -385,17 +385,17 @@ file safety:
     reviewed_by: Tim Gentry
     safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/nokogiri-1.14.0-arm64-darwin.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (5c0cd4eeb8501526e7e2aaba93b60ebf3dda37bfda665691196d4e9bb87adb1a)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/nokogiri-1.14.0-x86_64-linux.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (faa88b2bca46adaa3420c6e27eb8eb71f5b8d9f454ed7488a194a00c5ef52fbe)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/nokogiri-1.14.0.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (55ca6e87ae85e944a5901dd5a6cacbb961eaaf8b8dd3901b57475665396914bb)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/parallel-1.22.1.gem:
     comments: SHA-256 hash matches published version on rubygems.org (ebdf1f0c51f182df38522f70ba770214940bef998cdb6e00f36492b29699761f)
     reviewed_by: Tim Gentry
@@ -417,9 +417,9 @@ file safety:
     reviewed_by: Tim Gentry
     safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/racc-1.6.2.gem:
-    comments:
-    reviewed_by:
-    safe_revision:
+    comments: SHA-256 hash matches published version on rubygems.org (58d26b3666382396fea84d33dc0639b7ee8d704156a52f8f22681f07b2f94f26)
+    reviewed_by: Tim Gentry
+    safe_revision: f16ae0522884e553c27d35e5e3ed515a2eeaa05e
   vendor/cache/rack-2.2.6.2.gem:
     comments: SHA-256 hash matches published version on rubygems.org (4be320c0fdea6651f0247dbd4182c1bd8acc06606a6b8935a19ad6a504347763)
     reviewed_by: Tim Gentry
