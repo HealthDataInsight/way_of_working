@@ -12,10 +12,6 @@ module WayOfWorking
 
         source_root ::WayOfWorking.source_root
 
-        def invoke_dependencies
-          invoke RakeTasks::Init
-        end
-
         # TODO: copy_rubocop_github_workflow_action
 
         def copy_github_linters_rubocop_config_file
