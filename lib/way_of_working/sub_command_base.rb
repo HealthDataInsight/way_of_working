@@ -5,7 +5,7 @@ require 'thor'
 # This class enables subcommands to work correctly with help. See:
 # https://github.com/rails/thor/wiki/Subcommands#subcommands-that-work-correctly-with-help
 class SubCommandBase < Thor
-  def self.banner(command, _namespace = nil, _subcommand: false)
+  def self.banner(command, _namespace = nil, _subcommand = false)
     "#{basename} #{subcommand_prefix} #{command.usage}"
   end
 
