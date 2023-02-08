@@ -59,7 +59,7 @@ module WayOfWorking
         end
 
         def dashed_name
-          name.downcase.gsub(/[\s_]/, '-').gsub(/-+/, '-')
+          name.downcase.gsub(/[\s_\(\)]/, '-').gsub(/-+/, '-')
         end
       end
     end
