@@ -1,3 +1,8 @@
+---
+# Configuration for the Jekyll template "Just the Docs"
+parent: Decision Records
+nav_order: 0
+---
 # Use Markdown Any Decision Records
 
 ## Context and Problem Statement
