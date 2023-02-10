@@ -4,7 +4,7 @@ nav_order: 100
 ---
 # Decision Records
 
-We use Markdown Any Decision Records (MADR) version 3.0.0.
+We use [Markdown Any Decision Records (MADR)](https://adr.github.io/madr/) version 3.0.0.
 
 In general projects will follow the [HDI Way of Working](https://github.com/HealthDataInsight/way_of_working) and so decisions captured within those projects will generally cover decisions that:
 
@@ -15,7 +15,6 @@ In general projects will follow the [HDI Way of Working](https://github.com/Heal
 {: .note }
 The decisions captured here represent the decisions behind the Way of Working itself.
 
-
 You can read about the general approach to capturing decisions on the [GDS Way page on Architecture Decisions](https://gds-way.cloudapps.digital/standards/architecture-decisions.html) and specifics about MADR are available at <https://adr.github.io/madr/>.
 
 Proposing and reviewing decisions requires an understanding of GitHub and [pull requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests).
@@ -24,7 +23,7 @@ Proposing and reviewing decisions requires an understanding of GitHub and [pull 
 
 ### Adding Markdown Any Decision Records to your project
 
-To add the [Markdown Any Decision Records (MADR)](https://adr.github.io/madr/) v3.0.0 framework to your project, run the following at the command line:
+To add the MADR v3.0.0 framework to your project, run the following at the command line:
 
     way_of_working init decision_record
 
