@@ -10,7 +10,6 @@ gemspec
 
 gem 'activesupport', '~> 7.0'
 gem 'bundler', '>= 2.0'
-gem 'git', '~> 1.13'
 gem 'minitest', '~> 5.0'
 gem 'mocha', '~> 2.0'
 gem 'ndr_dev_support', '>= 3.1.3'

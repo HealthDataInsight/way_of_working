@@ -2,7 +2,8 @@ PATH
   remote: .
   specs:
     way_of_working (0.1.0)
-      rainbow
+      git (~> 1.13)
+      rainbow (~> 3.1)
       thor (~> 1.2)
 
 GEM
@@ -197,13 +198,13 @@ GEM
 
 PLATFORMS
   arm64-darwin-21
+  arm64-darwin-22
   ruby
   x86_64-linux
 
 DEPENDENCIES
   activesupport (~> 7.0)
   bundler (>= 2.0)
-  git (~> 1.13)
   minitest (~> 5.0)
   mocha (~> 2.0)
   ndr_dev_support (>= 3.1.3)
