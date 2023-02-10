@@ -20,6 +20,7 @@ module WayOfWorking
           run_generator
 
           assert_file '.github/linters/rubocop_defaults.yml'
+          assert_file '.github/linters/.markdown-link-check.json'
           assert_file '.github/workflows/mega-linter.yml'
           assert_file '.mega-linter.yml'
           assert_file '.rubocop'

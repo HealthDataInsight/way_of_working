@@ -18,6 +18,10 @@ module WayOfWorking
           copy_file '.github/linters/rubocop_defaults.yml'
         end
 
+        def copy_github_linters_markdown_link_check_config_file
+          copy_file '.github/linters/.markdown-link-check.json'
+        end
+
         def copy_megalinter_github_workflow_action
           copy_file '.github/workflows/mega-linter.yml'
         end
