@@ -58,9 +58,20 @@ exclude:
 color_scheme: light
 
 callouts:
+  highlight:
+    color: yellow
+  important:
+    title: Important
+    color: blue
+  new:
+    title: New
+    color: green
   note:
     title: Note
     color: purple
+  warning:
+    title: Warning
+    color: red
 
 aux_links:
   "Way of Working on GitHub":
