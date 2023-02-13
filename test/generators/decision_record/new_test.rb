@@ -23,7 +23,7 @@ module WayOfWorking
           end
         end
 
-        test 'file are created with incrementalnumbers and revoked' do
+        test 'file are created with incremental numbers and revoked' do
           run_generator [FIRST_TITLE]
 
           assert_file FIRST_FILENAME do |content|
@@ -41,6 +41,15 @@ module WayOfWorking
 
           run_generator [SECOND_TITLE], behavior: :revoke
           assert_no_file SECOND_FILENAME
+        end
+
+        test 'filename does not contain brackets' do
+          run_generator ['Title (Has) Brackets']
+
+          assert_file 'docs/decisions/0000-title-has-brackets.md' do |content|
+            assert_match('# Title (Has) Brackets', content)
+            assert_match("date: #{Date.today.strftime('%Y-%m-%d')}", content)
+          end
         end
       end
     end

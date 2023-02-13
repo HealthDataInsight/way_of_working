@@ -2,6 +2,10 @@
 require:
   - ndr_dev_support
 
+inherit_mode:
+  merge:
+    - Exclude
+
 AllCops:
   TargetRubyVersion: 2.7
 
@@ -28,6 +32,9 @@ Style/Documentation:
 Style/GlobalStdStream:
   Exclude:
     - "config/environments/production.rb"
+
+Style/OptionalBooleanParameter:
+  Enabled: false
 
 Style/RedundantConstantBase:
   Exclude:

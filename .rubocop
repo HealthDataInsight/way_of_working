@@ -1,1 +1,1 @@
---config .github/linters/.rubocop.yml
+--config .github/linters/rubocop_defaults.yml

@@ -1,11 +1,17 @@
 ---
+# Configuration for the Jekyll template "Just the Docs"
+nav_order: 100
+parent: Decision Records
+
 # These are optional elements. Feel free to remove any of them.
-status: {proposed | rejected | accepted | deprecated | … | superseded by [ADR-0005](0005-example.md)}
-date: {YYYY-MM-DD when the decision was last updated}
-deciders: {list everyone involved in the decision}
-consulted: {list everyone whose opinions are sought (typically subject-matter experts); and with whom there is a two-way communication}
-informed: {list everyone who is kept up-to-date on progress; and with whom there is a one-way communication}
+# status: {proposed | rejected | accepted | deprecated | … | superseded by [ADR-0005](0005-example.md)}
+# date: {YYYY-MM-DD when the decision was last updated}
+# deciders: {list everyone involved in the decision}
+# consulted: {list everyone whose opinions are sought (typically subject-matter experts); and with whom there is a two-way communication}
+# informed: {list everyone who is kept up-to-date on progress; and with whom there is a one-way communication}
 ---
+<!-- we need to disable MD025, because we use the different heading "ADR Template" in the homepage (see above) than it is foreseen in the template -->
+<!-- markdownlint-disable-next-line MD025 -->
 # {short title of solved problem and solution}
 
 ## Context and Problem Statement
@@ -74,6 +80,6 @@ Chosen option: "{title of option 1}", because
 
 {You might want to provide additional evidence/confidence for the decision outcome here and/or
  document the team agreement on the decision and/or
- define when this decision when and how the decision should be realized and if/when it should be re-visited and/or
+ define when and how this decision should be realized and if/when it should be re-visited and/or
  how the decision is validated.
- Links to other decisions and resources might here appear as well.}
+ Links to other decisions and resources might appear here as well.}

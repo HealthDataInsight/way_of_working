@@ -20,7 +20,7 @@ module WayOfWorking
 
         # Run RuboCop
         def prep_and_run_rubocop
-          puts Rainbow('Running RuboCop...').yellow
+          say(Rainbow('Running RuboCop...').yellow)
 
           @rubocop_ok = run_rubocop(ARGV[2..])
         end
@@ -33,14 +33,14 @@ module WayOfWorking
           # We only want reports created in the working directory
           command.prepend('env', "GITHUB_WORKSPACE=\"#{Dir.pwd}\"")
 
-          puts Rainbow("\nRunning MegaLinter...").yellow
+          say(Rainbow("\nRunning MegaLinter...").yellow)
 
           @megalinter_ok = run_megalinter(command)
         end
 
         # We run this last to enable all the linters to run first
         def run_last
-          puts Rainbow("\nTotal time taken: #{(Time.now - @start_time).to_i} seconds").yellow
+          say(Rainbow("\nTotal time taken: #{(Time.now - @start_time).to_i} seconds").yellow)
 
           if !@rubocop_ok || !@megalinter_ok
             abort(Rainbow("\nLinter failed!").red)
