@@ -5,7 +5,7 @@ nav_order: 2
 
 # Changelog
 
-We use [keep a changelog](https://keepachangelog.com/en/1.1.0/) version 1.1.0. It has a well defined structure that makes it an easy to *read* format, both for people and tooling.
+We use [keep a changelog](https://keepachangelog.com/en/1.1.0/) version 1.1.0. It has a well-defined structure that makes it an easy to *read* format for people and tooling.
 
 To quote from their website:
 
@@ -28,19 +28,21 @@ Grouping changes into a clear set of change types:
 > * `Security` in case of vulnerabilities.
 
 {: .important }
-Unlike automatic tools like github-changelog-generator, keep a changelog is a human-written, plain English summary of changes. It is **not** a commit log dump and please do not use it as such.
+Unlike automatic tools like github-changelog-generator, keep a changelog is a human-written, plain English summary of changes. It is **not** a commit log dump; please do not use it as such.
 
-We recommend that you and your team get into the habit of updating the changelog within your Pull Requests, which avoids the need to add to the changelog much later, at release.
+We recommend that you and your team update the changelog within your Pull Requests, which avoids the need to add to the changelog much later, at release. Please read the [keep a changelog](https://keepachangelog.com/en/1.1.0/) website. It's a single page with lots of important advice about the benefits and dangers of an incomplete changelog, but as it says in the FAQs, you can always revisit and improve a changelog over time.
 
-The Way of Working command line tool scaffolds a new changelog on both new and longstanding projects.
+The Way of Working command line tool scaffolds a new changelog on new and longstanding projects.
 
-On longstanding git-based projects, it reads the release tags and scaffolds a changlog with the expected changes of a [semantically versioned](https://semver.org) project. For example, a patch or minor version change won't contain a scaffolded `Removed` section. Please use the links within the scaffolded changelog to view all the commits between releases to document historical changes.
+On longstanding git-based projects, it reads the release tags and scaffolds a changelog with the expected changes of a [semantically versioned](https://semver.org) project. So, for example, a patch or minor version change won't contain a scaffolded `Removed` section.
+
+Please use the links within the scaffolded changelog to view all the commits between releases to document historical changes.
 
 {: .note }
-There is no tooling to support the continued scaffolding of new releases to an existing changelog, because the expectation is that you are updating it day-to-day.
+There is no tooling to support the continued scaffolding of new releases to an existing changelog because the expectation is that you are updating it day-to-day.
 
 {: .highlight }
-We want to provide tooling (including a Rails helper method) that reads the changlog and converts it to HTML for inclusion within the project website. Ideally it could also be given a last logged in date, to highlight all the changes since a user last logged in. If you want to contribute this functionality, fork the repository and create a Pull Request.
+We want to provide tooling (including a Rails helper method) that reads the changelog and converts it to HTML for inclusion within the project website. Developers could also give it a last-logged-in date to highlight all the changes since a user last logged in. If you would like to contribute to this functionality, let us know.
 
 ## Usage
 
