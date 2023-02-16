@@ -31,15 +31,15 @@ module WayOfWorking
       private
 
       def ensure_versions_are_valid_and_increasing!(tags)
-        pervious_version = nil
+        previous_version = nil
         tags.each do |tag|
           next if tag.version.nil?
 
-          if pervious_version && tag.version <= pervious_version
+          if previous_version && tag.version <= previous_version
             raise 'Tag versions are not incremental over time'
           end
 
-          pervious_version = tag.version
+          previous_version = tag.version
         end
       end
 
