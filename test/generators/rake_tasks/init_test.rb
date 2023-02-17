@@ -41,6 +41,21 @@ module WayOfWorking
           end
         end
 
+        test 'Rubocopped Rails Rakefile is amended' do
+          # A rubocopped filename must be (lower) snake case
+          prepare_rakefile 'rubocopped_vanilla_rails_rakefile'
+
+          assert_file 'Rakefile' do |content|
+            refute_match("require 'way_of_working/tasks' if Rails.env.development? || Rails.env.test?\n", content)
+          end
+
+          run_generator
+
+          assert_file 'Rakefile' do |content|
+            assert_match("require 'way_of_working/tasks' if Rails.env.development? || Rails.env.test?\n", content)
+          end
+        end
+
         test 'Bundler Rakefile is amended and revoked' do
           prepare_rakefile 'vanilla_bundler_Rakefile'
 
@@ -58,6 +73,21 @@ module WayOfWorking
 
           assert_file 'Rakefile' do |content|
             refute_match("require 'way_of_working/tasks'\n", content)
+          end
+        end
+
+        test 'Rubocopped Bundler Rakefile is amended' do
+          # A rubocopped filename must be (lower) snake case
+          prepare_rakefile 'rubocopped_vanilla_bundler_rakefile'
+
+          assert_file 'Rakefile' do |content|
+            refute_match("require 'way_of_working/tasks'\n", content)
+          end
+
+          run_generator
+
+          assert_file 'Rakefile' do |content|
+            assert_match("require 'way_of_working/tasks'\n", content)
           end
         end
 
