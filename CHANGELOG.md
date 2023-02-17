@@ -7,12 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.0] - 2023-02-17
+
 ### Added
 
 - Added Markdown Any Decision Records (MADR) with generator commands
 - Added Contributor Covenant Code of Conduct with generator command
 - Added MegaLinter for linting common file formats with generator command and rake task
 - Added Keep a Changelog with generator command
+- Added GitHub Pages documentation site
 
 ### Change
 
@@ -22,3 +25,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 - Corrected use of relative paths in the rubocop config file
+
+[unreleased]: https://github.com/HealthDataInsight/way_of_working/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/HealthDataInsight/way_of_working/releases/tag/v1.0.0
