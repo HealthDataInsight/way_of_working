@@ -7,7 +7,7 @@ file safety:
   ".github/linters/rubocop_defaults.yml":
     comments:
     reviewed_by: timgentry
-    safe_revision: cc244844e78615bb9637b06062ca73a9862e70e2
+    safe_revision: 8974bca6a8cbdac496c1601bbc0ab6d10b7e955e
   ".github/workflows/main.yml":
     comments:
     reviewed_by: brian.shand
@@ -19,7 +19,7 @@ file safety:
   ".gitignore":
     comments:
     reviewed_by: timgentry
-    safe_revision: d65734d0d9391ae6be55cef85c0f09549864cf1b
+    safe_revision: b707b0685a8c8be78a79b13ceca58c71a923de22
   ".mega-linter.yml":
     comments:
     reviewed_by: timgentry
@@ -186,8 +186,8 @@ file safety:
     safe_revision: 6732e509cfd5418c587cebdc08aa30dd9361f756
   lib/way_of_working/git/repo_reader.rb:
     comments:
-    reviewed_by: brian.shand
-    safe_revision: 1cd0f0429c60c0666c1ddb905afbeb3f67a88a0e
+    reviewed_by: timgentry
+    safe_revision: 9e121c9a4fea4f893f6dd67c15ba235c137d16fd
   lib/way_of_working/git/summary_tag.rb:
     comments:
     reviewed_by: brian.shand
@@ -267,7 +267,7 @@ file safety:
   test/generators/rake_tasks/init_test.rb:
     comments:
     reviewed_by: timgentry
-    safe_revision: 173b77440f8786646ff9a1e83595500c18820dbb
+    safe_revision: 69d497b8f97040050d47dd0357e6f5ebeafd3766
   test/git/summary_tag_test.rb:
     comments:
     reviewed_by: timgentry
@@ -276,6 +276,14 @@ file safety:
     comments:
     reviewed_by: timgentry
     safe_revision: f96fc0fbe2d380210ac5a12d04db8140ebd5ea56
+  test/resources/rubocopped_vanilla_bundler_rakefile:
+    comments:
+    reviewed_by: timgentry
+    safe_revision: 69d497b8f97040050d47dd0357e6f5ebeafd3766
+  test/resources/rubocopped_vanilla_rails_rakefile:
+    comments:
+    reviewed_by: timgentry
+    safe_revision: 69d497b8f97040050d47dd0357e6f5ebeafd3766
   test/resources/vanilla_bundler_Rakefile:
     comments:
     reviewed_by: timgentry
