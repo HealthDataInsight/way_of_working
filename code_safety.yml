@@ -35,7 +35,7 @@ file safety:
   CHANGELOG.md:
     comments:
     reviewed_by: timgentry
-    safe_revision: 07a7ffc22d7bed33c7c99c53198e7f7f9473c732
+    safe_revision: 57d4f8c81e9125ff209667a855f47b3fd0406f2d
   CODE_OF_CONDUCT.md:
     comments:
     reviewed_by: brian.shand
@@ -235,7 +235,7 @@ file safety:
   lib/way_of_working/version.rb:
     comments:
     reviewed_by: timgentry
-    safe_revision: f96fc0fbe2d380210ac5a12d04db8140ebd5ea56
+    safe_revision: 57d4f8c81e9125ff209667a855f47b3fd0406f2d
   test/generators/changelog/init_test.rb:
     comments:
     reviewed_by: timgentry
