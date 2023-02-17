@@ -8,8 +8,8 @@ module WayOfWorking
         include Thor::Actions
 
         RAKEFILE_FILENAME = 'Rakefile'
-        RAILS_LOC = "require_relative \"config/application\"\n"
-        BUNDLER_LOC = "require \"bundler/gem_tasks\"\n"
+        RAILS_LOC = %r{require_relative ["']config/application["']\n}.freeze
+        BUNDLER_LOC = %r{require ["']bundler/gem_tasks["']\n}.freeze
 
         def add_to_rakefile
           case rakefile_type
@@ -34,8 +34,8 @@ module WayOfWorking
         def rakefile_type
           content = File.read(File.expand_path(RAKEFILE_FILENAME, destination_root))
 
-          return :rails if content.include?(RAILS_LOC)
-          return :bundler if content.include?(BUNDLER_LOC)
+          return :rails if content.match?(RAILS_LOC)
+          return :bundler if content.match?(BUNDLER_LOC)
 
           :other
         rescue Errno::ENOENT

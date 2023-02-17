@@ -7,7 +7,7 @@ inherit_mode:
     - Exclude
 
 AllCops:
-  TargetRubyVersion: 2.7
+  TargetRubyVersion: 2.6
 
 # Ignore rules related to templated files
 Layout/EmptyLines:

@@ -2,6 +2,7 @@
 /.yardoc
 /_yardoc/
 /coverage/
+/Gemfile.lock
 /pkg/
 /tmp/
 megalinter-reports/
