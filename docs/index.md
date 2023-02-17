@@ -20,3 +20,15 @@ It is an opinionated approach intending to support rapid development, across num
 It builds on the [twelve-factor app](https://12factor.net) methodology and is intended to be compatible with the [NHS Digital Software Engineering Quality Framework](https://github.com/NHSDigital/software-engineering-quality-framework) and other frameworks like [the GDS Way](https://gds-way.cloudapps.digital).
 
 The most significant difference here is that we will be opinionated and make technological and process choices. Of course, users are encouraged to discuss and submit Pull Requests (PRs) if they want changes to the choices made, but by making those choices, we can automate many tedious background tasks that are currently manual.
+
+## Installation
+
+HDI Way of Working can be installed at the command line on any machine with Ruby installed.
+
+If you have a Ruby based project, using Bundler to manage dependencies, then install the gem and add to the application's Gemfile by executing:
+
+    bundle add way_of_working
+
+Otherwise install the gem by executing:
+
+    gem install way_of_working
