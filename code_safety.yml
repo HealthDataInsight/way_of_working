@@ -43,11 +43,11 @@ file safety:
   Gemfile:
     comments:
     reviewed_by: brian.shand
-    safe_revision: '00108ab44839049643d4e7d73800d4096a32a93a'
+    safe_revision: '00108ab44839049643d4e7d73800d4096a32a93a' #DevSkim: ignore DS173237
   Gemfile.lock:
     comments:
     reviewed_by: brian.shand
-    safe_revision: '00108ab44839049643d4e7d73800d4096a32a93a'
+    safe_revision: '00108ab44839049643d4e7d73800d4096a32a93a' #DevSkim: ignore DS173237
   LICENSE.txt:
     comments:
     reviewed_by: timgentry
@@ -295,4 +295,4 @@ file safety:
   way_of_working.gemspec:
     comments:
     reviewed_by: brian.shand
-    safe_revision: '00108ab44839049643d4e7d73800d4096a32a93a'
+    safe_revision: '00108ab44839049643d4e7d73800d4096a32a93a' #DevSkim: ignore DS173237
