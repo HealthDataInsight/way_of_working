@@ -1,4 +1,8 @@
 ---
+# Configuration for the Jekyll template "Just the Docs"
+nav_order: 2
+parent: Decision Records
+
 status: accepted
 date: 2023-01-05
 ---

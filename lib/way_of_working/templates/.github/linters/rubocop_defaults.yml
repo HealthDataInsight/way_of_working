@@ -1,0 +1,55 @@
+---
+require:
+  - ndr_dev_support
+
+inherit_mode:
+  merge:
+    - Exclude
+
+AllCops:
+  TargetRubyVersion: 2.7
+
+# Ignore rules related to templated files
+Layout/EmptyLines:
+  Exclude:
+    - "config/**/*.rb"
+
+Layout/SpaceInsideArrayLiteralBrackets:
+  Exclude:
+    - "config/**/*.rb"
+
+Rails/Date:
+  Enabled: false
+
+Rails/TimeZone:
+  Enabled: false
+
+Style/Documentation:
+  Exclude:
+    - "app/helpers/application_helper.rb"
+    - "config/**/*.rb"
+
+Style/GlobalStdStream:
+  Exclude:
+    - "config/environments/production.rb"
+
+Style/OptionalBooleanParameter:
+  Enabled: false
+
+Style/RedundantConstantBase:
+  Exclude:
+    - "config/environments/production.rb"
+
+Style/RedundantFetchBlock:
+  Exclude:
+    - "config/puma.rb"
+
+Style/StringLiterals:
+  Exclude:
+    - "config.ru"
+    - "config/**/*.rb"
+    - "Rakefile"
+
+Style/SymbolArray:
+  Exclude:
+    - "config/initializers/filter_parameter_logging.rb"
