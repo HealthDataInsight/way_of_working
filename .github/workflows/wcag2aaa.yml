@@ -35,6 +35,7 @@ jobs:
       # Start server
       - name: Start server in the background
         run: |
+          cd docs
           bundle exec jekyll serve &
           sleep 10
 
