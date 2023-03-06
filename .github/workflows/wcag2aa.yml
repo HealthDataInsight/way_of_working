@@ -13,10 +13,6 @@ jobs:
   test_accessibility:
     name: Test Accessibility
     runs-on: ubuntu-latest
-    # env:
-    #   RACK_MINI_PROFILER: "off"
-    #   RAILS_ENV: test
-    #   RAILS_MASTER_KEY: ${{ secrets.RAILS_MASTER_KEY }}
     defaults:
       run:
         working-directory: ./docs
@@ -27,20 +23,19 @@ jobs:
       - name: Set up Chrome
         uses: browser-actions/setup-chrome@latest
 
-      - name: Set up Ruby
+      - name: Set up Ruby and install gems
         uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
 
-      - name: Install gems and build website
-        run: |
-          bundle install
-        # bundle exec jekyll build --trace
-        # yarn install --pure-lockfile
+      # - name: Install gems and build website
+      #   run: |
+      #     bundle install
 
       - name: Start server in the background
         run: |
           bundle exec jekyll serve --detach --no-watch --port 3000
         # sleep 5
-        # npx http-server docs/_site/ -p 3000 &
         # curl http://127.0.0.1:3000/changelog.html -o changelog.html
         # cd docs
 
