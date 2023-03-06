@@ -1,6 +1,5 @@
 ---
 name: "WCAG 2.1 AAA "
-on: [push]
 on:
   push:
     branches:
