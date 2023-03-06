@@ -36,8 +36,8 @@ jobs:
       - name: Start server in the background
         run: |
           cd docs
-          bundle exec jekyll serve &
-          sleep 10
+          bundle exec jekyll serve --detach --no-watch
+          # sleep 10
 
       # Run Pa11y
       - name: Run accessibility tests
