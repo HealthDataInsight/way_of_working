@@ -23,18 +23,22 @@ jobs:
       - name: Set up Chrome
         uses: browser-actions/setup-chrome@latest
 
-      - name: Set up Ruby and install gems
+      - name: Set up Ruby
         uses: ruby/setup-ruby@v1
-        with:
-          bundler-cache: true
-          cache-version: <working-directory>
+        # with:
+        #   bundler-cache: true
+        #   cache-version: <working-directory>
+
+      # bundler-cache has issues with the working-directory
+      - name: Install gems
+        run: |
+          bundle install
 
       - name: Start server in the background
         run: |
           bundle exec jekyll serve --detach --no-watch --port 3000
         # sleep 5
         # curl http://127.0.0.1:3000/changelog.html -o changelog.html
-        # cd docs
 
       # - name: Upload built webpage
       #   uses: actions/upload-artifact@v3
