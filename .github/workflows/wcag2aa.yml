@@ -1,13 +1,12 @@
 ---
 name: "WCAG 2.1 AA "
-on: [push]
-# on:
-#   push:
-#     branches:
-#       - "main"
-#   pull_request:
-#     branches:
-#       - "main"
+on:
+  push:
+    branches:
+      - "main"
+  pull_request:
+    branches:
+      - "main"
 
 jobs:
   test_accessibility:
