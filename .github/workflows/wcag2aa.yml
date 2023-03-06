@@ -35,11 +35,10 @@ jobs:
 
       # Start server
       - name: Start server in the background
-        run: |
-          # cd docs
-          # bundle exec jekyll serve --detach --no-watch --port 3000
-          npx http-server docs/_site/ -p 3000 &
-          # sleep 10
+        run: npx http-server docs/_site/ -p 3000 &
+        # cd docs
+        # bundle exec jekyll serve --detach --no-watch --port 3000
+        # sleep 10
 
       # Run Pa11y
       - name: Run accessibility tests
