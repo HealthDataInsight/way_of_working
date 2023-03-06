@@ -1,0 +1,43 @@
+.site-footer {
+  color: #535253 !important;
+}
+
+body, footer p {
+  color: #5A5760 !important;
+}
+
+a {
+  color: #573fb4 !important;
+}
+
+::selection {
+  background: #573fb4 !important;
+}
+
+p.highlight {
+  background: #fffbe7 !important;
+}
+
+p.important {
+  background: #d7e6fe !important;
+}
+
+p.note {
+  background: #e3ddfd !important;
+}
+
+div.highlight {
+  background: #f5f6fa !important;
+
+  code {
+    color: #55525A !important;
+  }
+}
+
+p.highlight, p.important, p.note {
+  color: #46434a !important;
+}
+
+.language-plaintext {
+  color: #55525a !important;
+}

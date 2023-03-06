@@ -1,0 +1,44 @@
+---
+name: "WCAG 2.1 AAA "
+on: [push]
+# on:
+#   push:
+#     branches:
+#       - "main"
+#   pull_request:
+#     branches:
+#       - "main"
+
+jobs:
+  test_accessibility:
+    name: Test Accessibility
+    runs-on: ubuntu-latest
+    env:
+      RACK_MINI_PROFILER: "off"
+      RAILS_ENV: test
+      RAILS_MASTER_KEY: ${{ secrets.RAILS_MASTER_KEY }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Set up Chrome
+      - uses: browser-actions/setup-chrome@latest
+
+      - name: Setup Ruby and install gems
+        uses: ruby/setup-ruby@v1
+
+      - name: Bundle install
+        run: |
+          cd docs
+          bundle install
+
+      # Start server
+      - name: Start server in the background
+        run: |
+          bundle exec jekyll serve &
+          sleep 10
+
+      # Run Pa11y
+      - name: Run accessibility tests
+        run: |
+          npx pa11y --debug --standard WCAG2AAA "http://localhost:4000/changelog.html"
