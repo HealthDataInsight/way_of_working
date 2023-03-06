@@ -32,7 +32,7 @@ jobs:
           cd docs
           bundle install
           bundle exec jekyll build --trace
-          npm install http-server pa11y
+          yarn install --pure-lockfile
 
       - name: Start server in the background
         run: |
