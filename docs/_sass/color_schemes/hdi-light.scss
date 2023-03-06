@@ -1,43 +1,51 @@
-.site-footer {
-  color: #535253 !important;
+$a11y-dark-grey: #55525a;
+$a11y-darker-grey: #46434a;
+$a11y-light-blue: #d7e6fe;
+$a11y-light-grey: #f5f6fa;
+$a11y-light-purple: #e3ddfd;
+$a11y-light-yellow: #fffbe7;
+$a11y-purple: #573fb4;
+
+body, .site-footer {
+  color: $a11y-dark-grey !important;
 }
 
-body, footer p {
-  color: #5A5760 !important;
+footer p {
+  color: $a11y-dark-grey;
 }
 
 a {
-  color: #573fb4 !important;
+  color: $a11y-purple !important;
 }
 
 ::selection {
-  background: #573fb4 !important;
+  background: $a11y-purple !important;
 }
 
 p.highlight {
-  background: #fffbe7 !important;
+  background: $a11y-light-yellow !important;
 }
 
 p.important {
-  background: #d7e6fe !important;
+  background: $a11y-light-blue !important;
 }
 
 p.note {
-  background: #e3ddfd !important;
+  background: $a11y-light-purple !important;
 }
 
 div.highlight {
-  background: #f5f6fa !important;
+  background: $a11y-light-grey;
 
   code {
-    color: #55525A !important;
+    color: $a11y-dark-grey;
   }
 }
 
 p.highlight, p.important, p.note {
-  color: #46434a !important;
+  color: $a11y-darker-grey;
 }
 
 .language-plaintext {
-  color: #55525a !important;
+  color: $a11y-dark-grey !important;
 }

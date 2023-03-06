@@ -13,32 +13,38 @@ jobs:
   test_accessibility:
     name: Test Accessibility
     runs-on: ubuntu-latest
-    env:
-      RACK_MINI_PROFILER: "off"
-      RAILS_ENV: test
-      RAILS_MASTER_KEY: ${{ secrets.RAILS_MASTER_KEY }}
+    defaults:
+      run:
+        working-directory: ./docs
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # Set up Chrome
-      - uses: browser-actions/setup-chrome@latest
+      - name: Set up Chrome
+        uses: browser-actions/setup-chrome@latest
 
-      - name: Setup Ruby and install gems
+      - name: Set up Ruby
         uses: ruby/setup-ruby@v1
+        # with:
+        #   bundler-cache: true
+        #   cache-version: <working-directory>
 
-      - name: Build
+      # bundler-cache has issues with the working-directory
+      - name: Install gems
         run: |
-          cd docs
           bundle install
-          bundle exec jekyll build --trace
 
-      # Start server
       - name: Start server in the background
-        run: npx http-server docs/_site/ -p 3000 &
-        # cd docs
-        # bundle exec jekyll serve --detach --no-watch --port 3000
-        # sleep 10
+        run: |
+          bundle exec jekyll serve --detach --no-watch --port 3000
+        # sleep 5
+        # curl http://127.0.0.1:3000/changelog.html -o changelog.html
+
+      # - name: Upload built webpage
+      #   uses: actions/upload-artifact@v3
+      #   with:
+      #     name: built-page
+      #     path: changelog.html
 
       # Run Pa11y
       - name: Run accessibility tests

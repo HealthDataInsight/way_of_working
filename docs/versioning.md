@@ -1,6 +1,5 @@
 ---
 layout: page
-nav_order: 8
 ---
 
 # Versioning
