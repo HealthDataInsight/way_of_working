@@ -42,4 +42,4 @@ jobs:
       # Run Pa11y
       - name: Run accessibility tests
         run: |
-          npx pa11y --debug --standard WCAG2AAA "http://localhost:4000/changelog.html"
+          npx pa11y --debug --standard WCAG2AAA "http://0.0.0.0:4000/changelog.html"
