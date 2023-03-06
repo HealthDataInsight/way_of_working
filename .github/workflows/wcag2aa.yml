@@ -24,7 +24,7 @@ jobs:
       - name: Set up Chrome
         uses: browser-actions/setup-chrome@latest
 
-      - name: Setup Ruby
+      - name: Set up Ruby
         uses: ruby/setup-ruby@v1
 
       - name: Install gems and build website
@@ -32,20 +32,21 @@ jobs:
           cd docs
           bundle install
           bundle exec jekyll build --trace
+          npm install http-server pa11y
 
       - name: Start server in the background
         run: |
           npx http-server docs/_site/ -p 3000 &
           sleep 10
-          curl http://127.0.0.1:3000/changelog.html -o changelog.html
+        # curl http://127.0.0.1:3000/changelog.html -o changelog.html
         # cd docs
         # bundle exec jekyll serve --detach --no-watch --port 3000
 
-      - name: Upload built webpage
-        uses: actions/upload-artifact@v3
-        with:
-          name: built-page
-          path: changelog.html
+      # - name: Upload built webpage
+      #   uses: actions/upload-artifact@v3
+      #   with:
+      #     name: built-page
+      #     path: changelog.html
 
       # Run Pa11y
       - name: Run accessibility tests
