@@ -36,10 +36,10 @@ jobs:
       - name: Start server in the background
         run: |
           cd docs
-          bundle exec jekyll serve --detach --no-watch
+          bundle exec jekyll serve --detach --no-watch --port 3000
           # sleep 10
 
       # Run Pa11y
       - name: Run accessibility tests
         run: |
-          npx pa11y --debug --standard WCAG2AA "http://0.0.0.0:4000/changelog.html"
+          npx pa11y --debug --standard WCAG2AA "http://0.0.0.0:3000/changelog.html"
