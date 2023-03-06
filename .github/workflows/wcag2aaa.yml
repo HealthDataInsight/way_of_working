@@ -27,19 +27,21 @@ jobs:
       - name: Setup Ruby and install gems
         uses: ruby/setup-ruby@v1
 
-      - name: Bundle install
+      - name: Build
         run: |
           cd docs
           bundle install
+          bundle exec jekyll build --trace
 
       # Start server
       - name: Start server in the background
         run: |
-          cd docs
-          bundle exec jekyll serve --detach --no-watch --port 3000
+          # cd docs
+          # bundle exec jekyll serve --detach --no-watch --port 3000
+          npx http-server docs/_site/ -p 3000 &
           # sleep 10
 
       # Run Pa11y
       - name: Run accessibility tests
         run: |
-          npx pa11y --debug --standard WCAG2AAA "http://0.0.0.0:3000/changelog.html"
+          npx pa11y --debug --standard WCAG2AAA "http://127.0.0.1:3000/changelog.html"
