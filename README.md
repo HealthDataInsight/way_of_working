@@ -4,7 +4,7 @@
 [![Keep a Changelog v1.1.0 badge][changelog-badge]][changelog]
 [![Gem Version](https://badge.fury.io/rb/way_of_working.svg)](https://badge.fury.io/rb/way_of_working)
 [![WCAG 2.1 AA ](https://github.com/HealthDataInsight/way_of_working/actions/workflows/wcag2aa.yml/badge.svg)](https://github.com/HealthDataInsight/way_of_working/actions/workflows/wcag2aa.yml)
-[![WCAG 2.1 AAA ](https://github.com/HealthDataInsight/way_of_working/actions/workflows/wcag2aa.yml/badge.svg)](https://github.com/HealthDataInsight/way_of_working/actions/workflows/wcag2aaa.yml)
+[![WCAG 2.1 AAA ](https://github.com/HealthDataInsight/way_of_working/actions/workflows/wcag2aaa.yml/badge.svg)](https://github.com/HealthDataInsight/way_of_working/actions/workflows/wcag2aaa.yml)
 
 ## Introduction
 
