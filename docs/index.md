@@ -6,7 +6,7 @@ layout: home
 # layout: page
 nav_order: 1
 permalink: /
-title: Introduction
+title: Home
 ---
 
 # The HDI Way of Working

@@ -14,6 +14,8 @@ It builds on the [twelve-factor app](https://12factor.net) methodology and is in
 
 The most significant difference here is that we will be opinionated and make technological and process choices. Of course, users are encouraged to discuss and submit Pull Requests (PRs) if they want changes to the choices made, but by making those choices, we can automate many tedious background tasks that are currently manual.
 
+It consists of a GitHub Pages website, available at https://healthdatainsight.github.io/way_of_working, and command line tool.
+
 ## Installation
 
 Install the gem and add to the application's Gemfile by executing:
