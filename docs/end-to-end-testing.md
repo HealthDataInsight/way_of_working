@@ -1,6 +1,5 @@
 ---
 layout: page
-nav_order: 6
 ---
 
 # End-to-End Testing

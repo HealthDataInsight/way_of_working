@@ -1,3 +1,4 @@
+---
 # Welcome to Jekyll!
 #
 # This config file is meant for settings that affect your whole blog, values
@@ -55,7 +56,7 @@ exclude:
 #   - vendor/gems/
 #   - vendor/ruby/
 
-color_scheme: light
+color_scheme: hdi-light
 
 callouts:
   highlight:
@@ -81,7 +82,6 @@ favicon_ico: "https://healthdatainsight.org.uk/wp-content/uploads/2020/11/croppe
 search_enabled: false
 
 # Footer
-footer_content: "Copyright &copy; 2023 Health Data Insight CIC. Distributed by an <a href=\"https://github.com/healthdatainsight/way_of_working/tree/main/LICENSE.txt\">MIT license.</a>"
 gh_edit_link: true # show or hide edit this page link
 gh_edit_link_text: "Edit this page on GitHub."
 gh_edit_repository: "https://github.com/healthdatainsight/way_of_working" # the github URL for your repo

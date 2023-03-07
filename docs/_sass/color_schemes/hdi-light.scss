@@ -1,0 +1,51 @@
+$a11y-dark-grey: #55525a;
+$a11y-darker-grey: #46434a;
+$a11y-light-blue: #d7e6fe;
+$a11y-light-grey: #f5f6fa;
+$a11y-light-purple: #e3ddfd;
+$a11y-light-yellow: #fffbe7;
+$a11y-purple: #573fb4;
+
+body, .site-footer {
+  color: $a11y-dark-grey !important;
+}
+
+footer p {
+  color: $a11y-dark-grey;
+}
+
+a {
+  color: $a11y-purple !important;
+}
+
+::selection {
+  background: $a11y-purple !important;
+}
+
+p.highlight {
+  background: $a11y-light-yellow !important;
+}
+
+p.important {
+  background: $a11y-light-blue !important;
+}
+
+p.note {
+  background: $a11y-light-purple !important;
+}
+
+div.highlight {
+  background: $a11y-light-grey;
+
+  code {
+    color: $a11y-dark-grey;
+  }
+}
+
+p.highlight, p.important, p.note {
+  color: $a11y-darker-grey;
+}
+
+.language-plaintext {
+  color: $a11y-dark-grey !important;
+}

@@ -1,6 +1,5 @@
 ---
 layout: page
-nav_order: 4
 ---
 
 # Code of Conduct
@@ -24,7 +23,7 @@ To add a [Contributor Covenant](https://www.contributor-covenant.org/version/2/1
 
     way_of_working init code_of_conduct --contact-method [CONTACT METHOD]
 
-You will need to enter a contact method, usually an email address. 
+You will need to enter a contact method, usually an email address.
 
 {: .note }
 We recommend that you use the HDI code of conduct email address as the contact method.
