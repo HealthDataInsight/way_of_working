@@ -3,7 +3,7 @@
 [![MegaLinter](https://github.com/HealthDataInsight/way_of_working/workflows/MegaLinter/badge.svg?branch=main)](https://github.com/HealthDataInsight/way_of_working/actions?query=workflow%3AMegaLinter+branch%3Amain)
 [![Keep a Changelog v1.1.0 badge][changelog-badge]][changelog]
 [![Gem Version](https://badge.fury.io/rb/way_of_working.svg)](https://badge.fury.io/rb/way_of_working)
-[![WCAG 2.1 AA ](https://github.com/HealthDataInsight/way_of_working/actions/workflows/wcag2aa.yml/badge.svg)](https://github.com/HealthDataInsight/way_of_working/actions/workflows/wcag2aa.yml)
+<br />[![WCAG 2.1 AA ](https://github.com/HealthDataInsight/way_of_working/actions/workflows/wcag2aa.yml/badge.svg)](https://github.com/HealthDataInsight/way_of_working/actions/workflows/wcag2aa.yml)
 [![WCAG 2.1 AAA ](https://github.com/HealthDataInsight/way_of_working/actions/workflows/wcag2aaa.yml/badge.svg)](https://github.com/HealthDataInsight/way_of_working/actions/workflows/wcag2aaa.yml)
 
 ## Introduction
@@ -15,6 +15,8 @@ It is an opinionated approach intending to support rapid development, across num
 It builds on the [twelve-factor app](https://12factor.net) methodology and is intended to be compatible with the [NHS Digital Software Engineering Quality Framework](https://github.com/NHSDigital/software-engineering-quality-framework) and other frameworks like [the GDS Way](https://gds-way.cloudapps.digital).
 
 The most significant difference here is that we will be opinionated and make technological and process choices. Of course, users are encouraged to discuss and submit Pull Requests (PRs) if they want changes to the choices made, but by making those choices, we can automate many tedious background tasks that are currently manual.
+
+It consists of a GitHub Pages website, available at https://healthdatainsight.github.io/way_of_working, and command line tool.
 
 ## Installation
 
