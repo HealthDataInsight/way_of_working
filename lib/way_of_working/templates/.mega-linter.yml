@@ -59,7 +59,7 @@ ENABLE_LINTERS:  # If you use ENABLE_LINTERS variable, all other linters will be
   # - VBDOTNET_DOTNET_FORMAT
 
   ### Formats
-  - CSS_SCSS_LINT
+  # - CSS_SCSS_LINT  # Deprecated in favour of stylelint
   - CSS_STYLELINT  # in Super-Linter
   - ENV_DOTENV_LINTER  # in Super-Linter
   # - GRAPHQL_GRAPHQL_SCHEMA_LINTER
