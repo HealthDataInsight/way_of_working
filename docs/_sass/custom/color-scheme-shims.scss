@@ -1,0 +1,66 @@
+// $body-background-color
+// $body-heading-color
+.site-title {
+  color: $body-heading-color;
+}
+
+// $body-text-color
+.site-footer {
+  color: $body-text-color;
+}
+
+// $link-color
+.nav-list .nav-list-item .nav-list-expander {
+  color: $link-color;
+}
+
+.main-content .anchor-heading svg {
+  color: $link-color;
+}
+
+// $nav-child-link-color
+.nav-list .nav-list-item > .nav-list .nav-list-item .nav-list-link {
+  color: $nav-child-link-color;
+}
+
+// $sidebar-color
+// $base-button-color
+// $btn-primary-color
+// $code-background-color
+// $feedback-color
+// $table-background-color
+// $search-background-color
+// $search-result-preview-color
+
+// $highlight-background-color
+p.highlight, blockquote.highlight {
+  background: $highlight-background-color;
+  color: $body-heading-color;
+}
+
+// $important-background-color
+p.important, blockquote.important {
+  background: $important-background-color;
+  color: $body-heading-color;
+}
+
+p.note, blockquote.note {
+  background: $note-background-color;
+  color: $body-heading-color;
+}
+
+// footer p {
+//   color: $a11y-dark-grey;
+// }
+
+// div.highlight {
+//   background: $a11y-light-grey;
+
+//   code {
+//     color: $a11y-dark-grey;
+//   }
+// }
+
+// .language-plaintext {
+//   color: $a11y-dark-grey !important;
+// }
