@@ -11,6 +11,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Added Cypress end-to-end testing
 - Adopted Semantic Versioning
+- Added pa11y automated accessibility testing
+- Added dark mode support to our GitHub pages theme
+- Added alex inclusive language testing
 
 ## [1.0.0] - 2023-02-17
 
