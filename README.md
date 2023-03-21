@@ -60,6 +60,16 @@ Where `[NAME]` is the title of your decision record, for example:
 
     way_of_working new decision_record "Use Markdown Any Decision Records"
 
+### Inclusive Language
+
+To add [alex](https://alexjs.com) to your project, run the following at the command line:
+
+    way_of_working init inclusive_language
+
+to run alex in your project, run:
+
+    way_of_working exec inclusive_language
+
 ### Linter
 
 To add [MegaLinter](https://megalinter.io/) to your project, run the following at the command line:
