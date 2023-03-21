@@ -12,6 +12,10 @@ module WayOfWorking
 
         source_root ::WayOfWorking.source_root
 
+        def copy_inclusive_language_github_workflow_action
+          copy_file '.github/workflows/inclusive-language.yml'
+        end
+
         def copy_alexrc_file
           copy_file '.alexrc'
         end

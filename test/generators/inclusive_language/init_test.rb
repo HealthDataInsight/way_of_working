@@ -19,10 +19,12 @@ module WayOfWorking
         test 'file is created and revoked' do
           run_generator
 
+          assert_file '.github/workflows/inclusive-language.yml'
           assert_file '.alexrc'
 
           run_generator [], behavior: :revoke
 
+          assert_no_file '.github/workflows/inclusive-language.yml'
           assert_no_file '.alexrc'
         end
       end
