@@ -11,7 +11,7 @@ date: 2023-01-31
 
 ## Context and Problem Statement
 
-There is enormous variation in the way changelogs are written. We want to adopt a standardised approach that enables them to be easily read by other contributors and be machine readable for conversion to HTML for end-users. We want one that isn't just a dump of version control commit logs.
+There is enormous variation in the way changelogs are written. We want to adopt a standardised approach that enables them to be read by other contributors and be machine readable for conversion to HTML for end-users. We want one that isn't a dump of version control commit logs.
 
 Which should we choose?
 
@@ -27,7 +27,7 @@ Which should we choose?
 
 Chosen option: "keep a changelog", because
 
-* It is an easy to read format, both for people and tooling.
+* It is an accessible format, both for people and tooling.
 * It is a human-written, plain English summary of changes, not a commit log dump.
 * It has a well defined structure that makes automation easier.
 * GNU changelog style is inadequate.

@@ -37,7 +37,7 @@ We should provide tooling around the edges that:
 ## Decision Outcome
 
 Chosen option: "Pa11y" because:
-* it is a simple tool that we have already used as part of a GitHub workflow,
+* it is a tool that we have already used as part of a GitHub workflow,
 * we can run it twice to measure AA and AAA compliance,
 * it runs [HTML_CodeSniffer](https://squizlabs.github.io/HTML_CodeSniffer/), [aXe](https://www.deque.com/axe/) or both as "test runners"
 

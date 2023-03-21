@@ -6,7 +6,7 @@ layout: page
 
 We have adopted [Semantic Versioning](https://www.cypress.io) for end-to-end web application testing.
 
-Semantic Versioning, or "semver" for short, is a versioning system developers use to communicate clearly and effectively about the changes made to their software. Semver consists of three numbers separated by dots, with each number representing a different aspect of the software's version. The first number indicates a major release, the second number indicates a minor release, and the third number indicates a patch release.
+Semantic Versioning, or "semver" for short, is a versioning system developers use to communicate effectively about the changes made to their software. Semver consists of three numbers separated by dots, with each number representing a different aspect of the software's version. The first number indicates a major release, the second number indicates a minor release, and the third number indicates a patch release.
 
 From the website:
 

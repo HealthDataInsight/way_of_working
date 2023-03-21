@@ -4,7 +4,7 @@ layout: page
 
 # Changelog
 
-We use [keep a changelog](https://keepachangelog.com/en/1.1.0/) version 1.1.0. It has a well-defined structure that makes it an easy to *read* format for people and tooling.
+We use [keep a changelog](https://keepachangelog.com/en/1.1.0/) version 1.1.0. It has a well-defined structure that makes it an accessible format for people and tooling.
 
 To quote from their website:
 

@@ -11,7 +11,7 @@ date: 2023-03-03
 
 ## Context and Problem Statement
 
-Many solutions are specific to the technology they are testing. We want to adopt an approach that enables contributors to easily read and write tests across projects without the brittleness of some solutions.
+Many solutions are specific to the technology they are testing. We want to adopt an approach that enables contributors to read and write tests across projects without the brittleness of some solutions.
 
 Which should we choose?
 
@@ -26,9 +26,9 @@ We should provide tooling around the edges that initially scaffolds the tool int
 ## Decision Outcome
 
 Chosen option: "Cypress" because:
-* Although tests need to be written in JavaScript or TypeScript, the tested web application can be in any language. It also has a new experimental feature, where non-developers can click and record tests by simply interacting with the tested app.
+* Although tests need to be written in JavaScript or TypeScript, the tested web application can be in any language. It also has a new experimental feature, where non-developers can click and record tests by interacting with the tested app.
 * Debugging (both the tested application and the tests themselves) is effortless, with "time travel" showing you what the app looked like at each test step.
-* It can be easily integrated into a Rails application using [cypress-rails](https://github.com/testdouble/cypress-rails). [CypressOnRails](https://github.com/shakacode/cypress-on-rails) was also considered.
+* It can be integrated into a Rails application using [cypress-rails](https://github.com/testdouble/cypress-rails). [CypressOnRails](https://github.com/shakacode/cypress-on-rails) was also considered.
 
 ### Consequences
 
