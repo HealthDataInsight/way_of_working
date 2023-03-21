@@ -12,7 +12,7 @@ date: 2023-01-05
 
 We want to consistently manage the running of a large number of linters against our codebase containing a wide range of file formats, providing projects with a preconfigured GitHub Action.
 
-We also want to store our standard linter configurations centrally, so that contributors can comment on, and propose changes to, our coding standards. With coding standards we can move more easily between projects. There are several tools which orchestrate this task. Which one should we adopt?
+We also want to store our standard linter configurations centrally, so that contributors can comment on, and propose changes to, our coding standards. With coding standards we can move more quickly between projects. There are several tools which orchestrate this task. Which one should we adopt?
 
 ## Considered Options
 
