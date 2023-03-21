@@ -1,12 +1,13 @@
 ---
 name: "Inclusive Language"
-on:
-  push:
-    branches:
-      - "main"
-  pull_request:
-    branches:
-      - "main"
+on: [push]
+# on:
+#   push:
+#     branches:
+#       - "main"
+#   pull_request:
+#     branches:
+#       - "main"
 
 # permissions: read-all
 
