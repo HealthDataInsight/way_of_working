@@ -1,12 +1,11 @@
 ---
 name: "WCAG 2.1 AAA "
 on:
-  push:
-    branches:
-      - "main"
-  pull_request:
-    branches:
-      - "main"
+  workflow_run:
+    workflows:
+      - "WCAG 2.1 AA "
+    types:
+      - completed
 
 # permissions: read-all
 
