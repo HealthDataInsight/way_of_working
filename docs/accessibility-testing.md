@@ -20,7 +20,7 @@ Despite the limitations, automated testing can catch straightforward accessibili
 
 ### Manual Approach
 
-Follow the [pa11y instructions](https://github.com/pa11y/pa11y#command-line-interface) to install and tun pa11y locally.
+Follow the [pa11y instructions](https://github.com/pa11y/pa11y#command-line-interface) to install and run pa11y locally.
 
 ### Automatic Approach
 
