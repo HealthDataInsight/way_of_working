@@ -1,8 +1,10 @@
 # HDI Engineering Way of Working
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
-[![MegaLinter](https://github.com/HealthDataInsight/way_of_working/workflows/MegaLinter/badge.svg?branch=main)](https://github.com/HealthDataInsight/way_of_working/actions?query=workflow%3AMegaLinter+branch%3Amain)
 [![Keep a Changelog v1.1.0 badge][changelog-badge]][changelog]
 [![Gem Version](https://badge.fury.io/rb/way_of_working.svg)](https://badge.fury.io/rb/way_of_working)
+<br />
+[![MegaLinter](https://github.com/HealthDataInsight/way_of_working/workflows/MegaLinter/badge.svg?branch=main)](https://github.com/HealthDataInsight/way_of_working/actions?query=workflow%3AMegaLinter+branch%3Amain)
+[![Inclusive Language](https://github.com/HealthDataInsight/way_of_working/actions/workflows/inclusive-language.yml/badge.svg)](https://github.com/HealthDataInsight/way_of_working/actions/workflows/inclusive-language.yml)
 <br />[![WCAG 2.1 AA ](https://github.com/HealthDataInsight/way_of_working/actions/workflows/wcag2aa.yml/badge.svg)](https://github.com/HealthDataInsight/way_of_working/actions/workflows/wcag2aa.yml)
 [![WCAG 2.1 AAA ](https://github.com/HealthDataInsight/way_of_working/actions/workflows/wcag2aaa.yml/badge.svg)](https://github.com/HealthDataInsight/way_of_working/actions/workflows/wcag2aaa.yml)
 
