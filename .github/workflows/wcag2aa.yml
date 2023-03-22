@@ -8,7 +8,7 @@ on:
     branches:
       - "main"
 
-# permissions: read-all
+permissions: read-all
 
 jobs:
   test_accessibility:
@@ -49,5 +49,4 @@ jobs:
 
       # Run Pa11y
       - name: Run accessibility tests
-        run: |
-          npx pa11y --debug --standard WCAG2AA "http://127.0.0.1:3000/changelog.html"
+        run: 'npx pa11y --debug --standard WCAG2AA "http://127.0.0.1:3000/changelog.html"'  # DevSkim: ignore DS137138

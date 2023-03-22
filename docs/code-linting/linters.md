@@ -69,7 +69,7 @@ The following tables detail the linters that we are currently using:
 
 | Format           | Linter                            | Details                                                                                                 |
 |:-----------------|:----------------------------------|:--------------------------------------------------------------------------------------------------------|
-| CSS              | ~~CSS_SCSS_LINT~~                 | Not Used (scss-lint recommends using stylelint) |
+| CSS              | ~~CSS_SCSS_LINT~~                 | Not Used (scss-lint recommends using stylelint)                                                         |
 | CSS              | CSS_STYLELINT                     | [stylelint](https://megalinter.io/latest/descriptors/css_stylelint/)                                    |
 | ENV              | ENV_DOTENV_LINTER                 | [dotenv-linter](https://megalinter.io/latest/descriptors/env_dotenv_linter/)                            |
 | GraphQL          | ~~GRAPHQL_GRAPHQL_SCHEMA_LINTER~~ | Not Used                                                                                                |
