@@ -8,7 +8,7 @@ gemspec
 # Start debugger with binding.b [https://github.com/ruby/debug]
 # gem 'debug', '>= 1.0.0'
 
-gem 'activesupport', '~> 7.0'
+gem 'activesupport', '~> 7.0', '>= 7.0.4.3'
 gem 'bundler', '>= 2.0'
 gem 'minitest', '~> 5.0'
 gem 'mocha', '~> 2.0'
