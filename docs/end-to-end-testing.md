@@ -20,7 +20,7 @@ Overall, writing end-to-end tests for web applications is critical to ensuring t
 
 In order to not delay the decision to adopt Cypress, the automated Rails initialisation tooling will be added later. For now, please follow the [cypress-rails](https://github.com/testdouble/cypress-rails) instructions.
 
-For information on using cypress, visit <https://github.com/testdouble/cypress-rails#usage](https://github.com/testdouble/cypress-rails#usage>.
+For information on using cypress, visit <https://github.com/testdouble/cypress-rails#usage>.
 
 ### Adding Cypress to other projects
 
