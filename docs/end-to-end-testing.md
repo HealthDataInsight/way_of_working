@@ -20,6 +20,16 @@ Overall, writing end-to-end tests for web applications is critical to ensuring t
 
 In order to not delay the decision to adopt Cypress, the automated Rails initialisation tooling will be added later. For now, please follow the [cypress-rails](https://github.com/testdouble/cypress-rails) instructions.
 
+For information on using cypress, visit <https://github.com/testdouble/cypress-rails#usage](https://github.com/testdouble/cypress-rails#usage>.
+
 ### Adding Cypress to other projects
 
 To add Cypress to non-Rails projects, please follow the official instructions on [installing Cypress](https://docs.cypress.io/guides/getting-started/installing-cypress).
+
+### Writing tests
+
+The Cypress documentation is excellent, but here are a few good starting points:
+
+* [Writing Your First End-to-End Test](https://docs.cypress.io/guides/end-to-end-testing/writing-your-first-end-to-end-test)
+* [Introduction to Cypress](https://docs.cypress.io/guides/core-concepts/introduction-to-cypress)
+* [Best Practices](https://docs.cypress.io/guides/references/best-practices)
