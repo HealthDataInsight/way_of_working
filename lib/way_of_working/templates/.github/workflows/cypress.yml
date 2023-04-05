@@ -1,0 +1,56 @@
+---
+name: "Cypress"
+
+on: [push]
+
+permissions: read-all
+
+jobs:
+  test:
+    name: End-to-end Tests
+
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: ./rails_app
+
+    services:
+
+    env:
+      CYPRESS_RAILS_TRANSACTIONAL_SERVER: false
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Set up Chrome
+      - uses: browser-actions/setup-chrome@latest
+
+      # - name: Setup Node
+      #   uses: actions/setup-node@v3
+      #   with:
+      #     node-version: 18.x
+      #     cache: yarn
+
+      ## START: App Server Steps
+      ## END: App Server Steps
+
+      # Run Cypress
+      - name: Run end-to-end tests
+        run: bundle exec rake cypress:run
+
+      # Store videos and any screenshots
+      - uses: actions/upload-artifact@v3
+        # NOTE: screenshots will be generated only if E2E test failed
+        # thus we store screenshots only on failures
+        if: failure()
+        with:
+          name: cypress-screenshots
+          path: rails_app/tmp/cypress_screenshots
+      # Test run video was always captured, so this action uses "always()" condition
+      - uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: cypress-videos
+          path: rails_app/tmp/cypress_videos

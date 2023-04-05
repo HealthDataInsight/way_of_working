@@ -4,6 +4,7 @@ require_relative 'generators/changelog/init'
 require_relative 'generators/code_of_conduct/init'
 require_relative 'generators/decision_record/init'
 require_relative 'generators/decision_record/new'
+require_relative 'generators/end_to_end_tests/init'
 require_relative 'generators/inclusive_language/exec'
 require_relative 'generators/inclusive_language/init'
 require_relative 'generators/linter/exec'
@@ -79,6 +80,18 @@ module WayOfWorking
                        docs/decisions/README.md
                        docs/decisions/adr-template.md
                        docs/decisions/0000-use-markdown-any-decision-records.md
+             LONGDESC
+
+    register(Generators::EndToEndTests::Init, 'end_to_end_tests', 'end_to_end_tests',
+             <<~LONGDESC)
+               Description:
+                   This class generates the cypress GitHub workflow
+
+               Example:
+                   way_of_working init end_to_end_tests
+
+                   This will create:
+                       .github/workflows/cypress.yml
              LONGDESC
 
     register(Generators::Linter::Init, 'linter', 'linter',
