@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'way_of_working/generators/app_server/rails'
+require 'way_of_working/generators/helpers'
 require 'way_of_working/paths'
 
 module WayOfWorking
@@ -9,6 +10,7 @@ module WayOfWorking
       # This class generates the cypress GitHub workflow
       class Init < Thor::Group
         include Thor::Actions
+        include WayOfWorking::Generators::Helpers
 
         argument :file_name, type: :string
         source_root ::WayOfWorking.source_root
@@ -19,12 +21,6 @@ module WayOfWorking
           else
             say 'Unidentified application type'
           end
-        end
-
-        private
-
-        def rails_app?
-          File.exist?('Gemfile')
         end
       end
     end
