@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Added Cypress end-to-end testing
+- Added Cypress end-to-end testing with generator command
 - Adopted Semantic Versioning
 - Added pa11y automated accessibility testing
 - Added dark mode support to our GitHub pages theme
