@@ -2,7 +2,7 @@
 
 require 'active_support/concern'
 require 'rainbow'
-require 'thor'
+require 'thor/actions'
 require 'way_of_working/generators/helpers/shell'
 require 'yaml'
 

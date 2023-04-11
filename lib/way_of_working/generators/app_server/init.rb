@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'way_of_working/generators/app_server/rails'
-require 'way_of_working/generators/helpers'
+require 'way_of_working/generators/helpers/shell'
 require 'way_of_working/paths'
 
 module WayOfWorking
@@ -10,7 +10,7 @@ module WayOfWorking
       # This class generates the cypress GitHub workflow
       class Init < Thor::Group
         include Thor::Actions
-        include WayOfWorking::Generators::Helpers
+        include WayOfWorking::Generators::Helpers::Shell
 
         argument :file_name, type: :string
         source_root ::WayOfWorking.source_root
