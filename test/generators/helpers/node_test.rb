@@ -111,9 +111,9 @@ module WayOfWorking
           self.generator_class = NodePackageManagerTester
 
           copy WayOfWorking.root.join('test', 'resources', 'cypress_yarn.lock'),
-               destination_root.join('yarn.lock')
+               destination_root.join(generator_class::DEFAULT_YARN_LOCK_FILE)
 
-          assert_file 'yarn.lock'
+          assert_file generator_class::DEFAULT_YARN_LOCK_FILE
 
           stdout = run_generator
           assert_match('node_package_manager: :yarn', stdout)
@@ -125,9 +125,9 @@ module WayOfWorking
           copy WayOfWorking.root.join('test', 'resources', 'cypress_yarn.lock'),
                destination_root.join('custom_location_yarn.lock')
           copy WayOfWorking.root.join('test', 'resources', 'custom_location_yarnrc.yml'),
-               destination_root.join('.yarnrc.yml')
+               destination_root.join(generator_class::YARNRC_FILENAME)
 
-          assert_file '.yarnrc.yml'
+          assert_file generator_class::YARNRC_FILENAME
           assert_file 'custom_location_yarn.lock'
 
           stdout = run_generator

@@ -18,6 +18,7 @@ module WayOfWorking
 
         YARNRC_FILENAME = '.yarnrc.yml'
         NVMRC_FILENAME = '.nvmrc'
+        DEFAULT_YARN_LOCK_FILE = 'yarn.lock'
 
         private
 
@@ -26,7 +27,7 @@ module WayOfWorking
         end
 
         def yarn_package_manager_used?
-          yarn_lock_file = 'yarn.lock'
+          yarn_lock_file = DEFAULT_YARN_LOCK_FILE
 
           # Check if there is a yarnrc file that specifies a different lock file name
           if file_exist?(YARNRC_FILENAME)
@@ -91,7 +92,7 @@ module WayOfWorking
             # Install dependencies
             install_nvm
 
-            create_file('.nvmrc', 'lts/*') unless file_exist?('.nvmrc')
+            create_file(NVMRC_FILENAME, 'lts/*') unless file_exist?(NVMRC_FILENAME)
 
             say 'Installing node...'
             system('. $NVM_DIR/nvm.sh && nvm use')
