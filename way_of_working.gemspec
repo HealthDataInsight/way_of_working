@@ -37,7 +37,9 @@ Gem::Specification.new do |spec|
 
   # For more information and examples about making a new gem, check out our
   # guide at: https://bundler.io/guides/creating_gem.html
+  spec.add_dependency 'activesupport', '>= 5.2'
   spec.add_dependency 'git', '~> 1.13'
+  spec.add_dependency 'railties', '>= 5.2'
   spec.add_dependency 'rainbow', '~> 3.1'
   spec.add_dependency 'thor', '~> 1.2'
 end
