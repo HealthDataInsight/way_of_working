@@ -88,6 +88,7 @@ module WayOfWorking
         def add_database_service_to_workflow
           return unless database_configured?
 
+          uncomment_lines file_name, /\bservices:\n/
           inject_into_file file_name, POSTGRES_SERVICE, after: /^\s{4}services:\n/
 
           # class_option :test_framework, type: :string

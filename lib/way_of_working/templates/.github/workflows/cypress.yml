@@ -15,7 +15,7 @@ jobs:
       run:
         working-directory: ./rails_app
 
-    services:
+    # services:
 
     env:
       CYPRESS_RAILS_TRANSACTIONAL_SERVER: false

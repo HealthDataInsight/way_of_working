@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'active_support/concern'
-require 'rainbow'
 require 'thor/actions'
 require 'way_of_working/generators/helpers/shell'
 require 'yaml'
@@ -11,8 +9,6 @@ module WayOfWorking
     module Helpers
       # Node helper methods for generators
       module Node
-        extend ActiveSupport::Concern
-
         include Thor::Actions
         include WayOfWorking::Generators::Helpers::Shell
 

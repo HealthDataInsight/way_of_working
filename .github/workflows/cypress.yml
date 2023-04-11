@@ -15,7 +15,7 @@ jobs:
       run:
         working-directory: ./rails_app
 
-    services:
+    # services:
 
     env:
       DATABASE_URL: postgres://rails:password@localhost:5432/rails_test?pool=5

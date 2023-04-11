@@ -7,8 +7,6 @@ module WayOfWorking
     module Helpers
       # File helper methods for generators
       module Shell
-        extend ActiveSupport::Concern
-
         include Thor::Actions
 
         PERMITTED_CLI_TOOLS = %i[brew node nvm].freeze
