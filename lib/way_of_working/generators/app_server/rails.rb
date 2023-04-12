@@ -59,7 +59,7 @@ module WayOfWorking
 
         DATABASE_STEPS = <<-RUBY
       - name: Inject configuration
-      run: cp config/database.yml{.ci,}
+        run: cp config/database.yml{.ci,}
       # Add or replace database setup steps here
       - name: Set up test database
         run: |
