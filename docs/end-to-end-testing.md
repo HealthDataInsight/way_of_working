@@ -18,9 +18,11 @@ Overall, writing end-to-end tests for web applications is critical to ensuring t
 
 ### Adding Cypress to your Rails project
 
-In order to not delay the decision to adopt Cypress, the automated Rails initialisation tooling will be added later. For now, please follow the [cypress-rails](https://github.com/testdouble/cypress-rails) instructions.
+To add a [Cypress](https://www.cypress.io) and [cypress-rails](https://github.com/testdouble/cypress-rails) to your Rails project, use the following at the command line:
 
-For information on using cypress, visit <https://github.com/testdouble/cypress-rails#usage>.
+    way_of_working init end_to_end_tests
+
+For further information on using cypress in a Rails project, visit <https://github.com/testdouble/cypress-rails#usage>.
 
 ### Adding Cypress to other projects
 
