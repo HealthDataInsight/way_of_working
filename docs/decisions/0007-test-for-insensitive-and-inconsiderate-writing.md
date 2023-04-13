@@ -4,7 +4,7 @@ nav_order: 7
 parent: Decision Records
 
 # These are optional elements. Feel free to remove any of them.
-status: proposed
+status: accepted
 date: 2023-03-21
 ---
 # Test for insensitive and inconsiderate writing
