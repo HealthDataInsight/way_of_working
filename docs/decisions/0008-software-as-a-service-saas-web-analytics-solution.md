@@ -17,6 +17,7 @@ When we are in the position to use a hosted web analytics solution, we should us
 
 ## Considered Options
 
+<!--alex ignore simple -->
 * [Simple Analytics](https://www.simpleanalytics.com) The privacy-first Google Analytics alternative.
 * [Cabin](https://withcabin.com) is a privacy-first, carbon conscious web analytics solution.
 * [Google Analytics](https://marketingplatform.google.com/about/analytics/) gives you the tools, free of charge, to understand the customer journey and improve marketing ROI.
