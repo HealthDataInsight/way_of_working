@@ -4,7 +4,7 @@ layout: page
 
 # README Badges
 
-Badges at the top of a project's README file are a powerful tool for providing immediate, concise, and easily digestible information about a project.
+Badges at the top of a project's README file are a powerful tool for providing immediate, concise, and digestible information about a project.
 
 They are an important feature, as they communicate crucial insights such as the build status, test coverage, package version, licensing information, or even the platform compatibility of the project, all at a glance. Badges allow developers to quickly gauge the project's health, and maintenance level, without delving into the project's codebase or documentation.
 
