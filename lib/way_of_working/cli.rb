@@ -9,6 +9,7 @@ require_relative 'generators/inclusive_language/init'
 require_relative 'generators/linter/exec'
 require_relative 'generators/linter/init'
 require_relative 'generators/rake_tasks/init'
+require_relative 'generators/readme_badge/init'
 require_relative 'sub_command_base'
 
 module WayOfWorking
@@ -116,6 +117,18 @@ module WayOfWorking
 
                    This will amend or create:
                        Rakefile
+             LONGDESC
+
+    register(Generators::ReadmeBadge::Init, 'readme_badge', 'readme_badge',
+             <<~LONGDESC)
+               Description:
+                   Installs Way of Working readme badge and badge holder into this project
+
+               Example:
+                   way_of_working init readme_badge
+
+                   This will amend or create:
+                       README.md
              LONGDESC
   end
 
