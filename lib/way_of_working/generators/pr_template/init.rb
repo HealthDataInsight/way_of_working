@@ -6,7 +6,7 @@ require 'way_of_working/paths'
 module WayOfWorking
   module Generators
     module PrTemplate
-      # This generator add the Pull Request template to a project
+      # This generator adds the Pull Request template to a project
       class Init < Thor::Group
         include Thor::Actions
 

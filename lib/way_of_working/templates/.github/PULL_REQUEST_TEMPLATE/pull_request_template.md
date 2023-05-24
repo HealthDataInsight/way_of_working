@@ -19,7 +19,7 @@ e.g. This includes a migration, model and controller for user authentication. I'
 
 ## Testing?
 
-{Including tests along with code updates is essential as it prevents merging code without tests or failing tests, which could pose risks if overlooked. It's equally important to describe how you've tested harder-to-test codes, like infrastructure code, and to communicate any untested conditions or edge cases and their associated risks to the reviewer.}
+{Including tests along with code updates is essential as it prevents merging code without tests or failing tests, which could pose risks if overlooked. It's equally important to describe how you've tested harder-to-test code, like infrastructure code, and to communicate any untested conditions or edge cases and their associated risks to the reviewer.}
 
 ## Screenshots (optional)
 
