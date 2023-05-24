@@ -18,11 +18,11 @@ module WayOfWorking
         test 'files are created and revoked' do
           run_generator
 
-          assert_file '.github/PULL_REQUEST_TEMPLATE/pull_request_template.md'
+          assert_file '.github/pull_request_template.md'
 
           run_generator [], behavior: :revoke
 
-          assert_no_file '.github/PULL_REQUEST_TEMPLATE/pull_request_template.md'
+          assert_no_file '.github/pull_request_template.md'
         end
       end
     end
