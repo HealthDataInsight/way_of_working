@@ -4,7 +4,7 @@ nav_order: 9
 parent: Decision Records
 
 # These are optional elements. Feel free to remove any of them.
-status: proposed
+status: accepted
 date: 2023-05-24
 ---
 # Pull Request guidlines and template
