@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'test_helper'
-require 'way_of_working/generators/decision_record/init'
+require 'way_of_working/generators/end_to_end_tests/init'
 
 module WayOfWorking
   module Generators
@@ -10,7 +10,13 @@ module WayOfWorking
       class InitTest < Rails::Generators::TestCase
         tests WayOfWorking::Generators::EndToEndTests::Init
         destination WayOfWorking.root.join('tmp/generators')
-        setup :prepare_destination
+
+        setup do
+          prepare_destination
+
+          Init.any_instance.stubs(:url).
+            returns('https://github.com/HealthDataInsight/way_of_working')
+        end
 
         test 'generator runs without errors' do
           stub_out_install_cypress_npm_package
@@ -96,6 +102,30 @@ module WayOfWorking
 
           assert_no_file Init::CYPRESS_WORKFLOW_FILE
           assert_no_file WayOfWorking::Generators::AppServer::Rails::CI_DATABASE_CONFIG_FILE
+        end
+
+        test 'config initializer not copied without rails' do
+        end
+
+        test 'config initializer copied with rails' do
+        end
+
+        test 'run_bundle_install' do
+          # ???
+        end
+
+        test 'gitignore changes are created and revoked' do
+          run_generator
+
+          # assert_file '.gitignore' do |content|
+          #   assert_match("node_modules/\n", content)
+          # end
+
+          run_generator [], behavior: :revoke
+
+          assert_file '.gitignore' do |content|
+            refute_match("node_modules/\n", content)
+          end
         end
 
         private

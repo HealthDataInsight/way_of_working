@@ -5,9 +5,9 @@ require 'rails/generators/actions'
 require 'yaml'
 
 require 'way_of_working/generators/app_server/init'
+require 'way_of_working/generators/helpers/git'
 require 'way_of_working/generators/helpers/node'
 require 'way_of_working/generators/helpers/shell'
-require 'way_of_working/git/repo_reader'
 require 'way_of_working/paths'
 
 module WayOfWorking
@@ -17,6 +17,7 @@ module WayOfWorking
       class Init < Thor::Group
         include Thor::Actions
         include WayOfWorking::Generators::Helpers::Node
+        include WayOfWorking::Generators::Helpers::Git
         include WayOfWorking::Generators::Helpers::Shell
         include ::Rails::Generators::Actions
 
@@ -55,15 +56,59 @@ module WayOfWorking
           end
         end
 
+        def copy_rails_config_initializer
+          return unless rails_app?
+
+          copy_file 'config/initializers/cypress_rails.rb'
+        end
+
+        def add_test_badge_to_README
+          # way_of_working init readme_badge
+          invoke Generators::ReadmeBadge::Init, []
+
+          # [![Cypress](#{url}/actions/workflows/cypress.yml/badge.svg)](#{url}/actions/workflows/cypress.yml)
+        end
+
+        def run_bundle_install
+          return unless rails_app?
+
+          system('bundle install')
+          system('bundle exec rake cypress:init')
+        end
+
+        def create_gitignore_if_missing
+          create_file_if_missing '.gitignore'
+        end
+
+        def gitignore_node_modules_folder
+          case behavior
+          when :invoke
+            append_to_file '.gitignore', "node_modules/\n"
+          when :revoke
+            # Do nothing
+          end
+        end
+
         private
+
+        def create_file_if_missing(path)
+          path = File.join(destination_root, path)
+          return if behavior == :revoke || File.exist?(path)
+
+          File.open(path, 'w', &:write)
+        end
 
         def invoke_cypress_github_workflow_action
           copy_file CYPRESS_WORKFLOW_FILE
 
           invoke Generators::AppServer::Init, [CYPRESS_WORKFLOW_FILE]
+
+          # TODO: Add Cypress code to workflow file
         end
 
         def revoke_cypress_github_workflow_action
+          # TODO: Remove Cypress code to workflow file
+
           # This is called to allow the AppServer code to do its own revoke
           invoke Generators::AppServer::Init, [CYPRESS_WORKFLOW_FILE]
 
