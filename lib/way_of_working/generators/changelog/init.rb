@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
+require 'way_of_working/generators/helpers/git'
 require 'way_of_working/paths'
-require 'way_of_working/git/repo_reader'
 
 module WayOfWorking
   module Generators
@@ -9,6 +9,7 @@ module WayOfWorking
       # This class fetches the CODE_OF_CONDUCT.md and inserts the contact method
       class Init < Thor::Group
         include Thor::Actions
+        include WayOfWorking::Generators::Helpers::Git
 
         source_root ::WayOfWorking.source_root
 
@@ -91,18 +92,6 @@ module WayOfWorking
           text += ' (if any)' unless likely
           text += "\n\n"
           text
-        end
-
-        def repo_reader
-          @repo_reader ||= ::WayOfWorking::Git::RepoReader.new(::Git.open('.'))
-        end
-
-        def summary_tags
-          @summary_tags ||= repo_reader.summary_tags.reverse
-        end
-
-        def url
-          @url ||= repo_reader.likely_upstream_remote_url
         end
       end
     end
