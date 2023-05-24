@@ -19,6 +19,9 @@ module WayOfWorking
         test 'files are created and revoked' do
           run_generator
 
+          assert_file '.github/ISSUE_TEMPLATE/decision-record.md' do |content|
+            assert_match('name: Decision Record', content)
+          end
           assert_file 'docs/decisions/README.md' do |content|
             assert_match('This directory contains decision records for the project', content)
           end
@@ -30,6 +33,7 @@ module WayOfWorking
 
           run_generator [], behavior: :revoke
 
+          assert_no_file '.github/ISSUE_TEMPLATE/decision-record.md'
           assert_no_file 'docs/decisions/README.md'
           assert_no_file 'docs/decisions/adr-template.md'
           assert_no_file 'docs/decisions/0000-use-markdown-any-decision-records.md'

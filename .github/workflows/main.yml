@@ -1,6 +1,6 @@
 name: Rake Test
 
-on: [push, pull_request]
+on: push
 
 permissions: read-all
 

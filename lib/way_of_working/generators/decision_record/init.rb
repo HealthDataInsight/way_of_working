@@ -11,6 +11,10 @@ module WayOfWorking
 
         source_root ::WayOfWorking.source_root
 
+        def copy_decision_record_issue_template
+          copy_file '.github/ISSUE_TEMPLATE/decision-record.md'
+        end
+
         # Templates are from https://github.com/adr/madr/tree/3.0.0/template
         def create_decision_record_files
           copy_file 'docs/decisions/README.md'
