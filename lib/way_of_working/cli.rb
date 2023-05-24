@@ -8,6 +8,7 @@ require_relative 'generators/inclusive_language/exec'
 require_relative 'generators/inclusive_language/init'
 require_relative 'generators/linter/exec'
 require_relative 'generators/linter/init'
+require_relative 'generators/pr_template/init'
 require_relative 'generators/rake_tasks/init'
 require_relative 'generators/readme_badge/init'
 require_relative 'sub_command_base'
@@ -105,6 +106,18 @@ module WayOfWorking
 
                    This will create:
                        .alexrc
+             LONGDESC
+
+    register(Generators::PrTemplate::Init, 'pr_template', 'pr_template',
+             <<~LONGDESC)
+               Description:
+                   Installs the Pull Request template into the project
+
+               Example:
+                   way_of_working init pr_template
+
+                   This will create:
+                       .github/PULL_REQUEST_TEMPLATE/pull_request_template.md
              LONGDESC
 
     register(Generators::RakeTasks::Init, 'rake_tasks', 'rake_tasks',

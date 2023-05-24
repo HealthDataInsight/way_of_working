@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Decided on Cabin as our Software-as-a-Service (SaaS) Web Analytics Solution
 - Added a Decision Record issue template
 - Added a panel for README badges and an HDI Way of Working badge
+- Added a Pull Request template and communications guidelines
 
 ## [1.0.0] - 2023-02-17
 
