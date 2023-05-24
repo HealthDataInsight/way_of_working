@@ -117,7 +117,7 @@ module WayOfWorking
                    way_of_working init pr_template
 
                    This will create:
-                       .github/PULL_REQUEST_TEMPLATE/pull_request_template.md
+                       .github/pull_request_template.md
              LONGDESC
 
     register(Generators::RakeTasks::Init, 'rake_tasks', 'rake_tasks',

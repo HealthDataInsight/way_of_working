@@ -13,7 +13,7 @@ module WayOfWorking
         source_root ::WayOfWorking.source_root
 
         def copy_pr_template_action
-          copy_file '.github/PULL_REQUEST_TEMPLATE/pull_request_template.md'
+          copy_file '.github/pull_request_template.md'
         end
       end
     end
