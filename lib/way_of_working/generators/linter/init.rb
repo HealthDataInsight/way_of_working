@@ -6,7 +6,7 @@ require 'way_of_working/paths'
 module WayOfWorking
   module Generators
     module Linter
-      # This generator add the MADR files to the doc/decisions folder
+      # This generator initialises the linter
       class Init < Thor::Group
         include Thor::Actions
 

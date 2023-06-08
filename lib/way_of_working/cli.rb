@@ -6,6 +6,7 @@ require_relative 'generators/decision_record/init'
 require_relative 'generators/decision_record/new'
 require_relative 'generators/inclusive_language/exec'
 require_relative 'generators/inclusive_language/init'
+require_relative 'generators/linter/document'
 require_relative 'generators/linter/exec'
 require_relative 'generators/linter/init'
 require_relative 'generators/pr_template/init'
@@ -14,6 +15,18 @@ require_relative 'generators/readme_badge/init'
 require_relative 'sub_command_base'
 
 module WayOfWorking
+  # This class defines the document parent command
+  class Document < SubCommandBase
+    register(Generators::Linter::Document, 'linter', 'linter',
+             <<~LONGDESC)
+               Description:
+                   This documents the linter on this project
+
+               Example:
+                   way_of_working document linter
+             LONGDESC
+  end
+
   # This class defines the exec (i.e. run) parent command
   class Exec < SubCommandBase
     register(Generators::Linter::Exec, 'linter', 'linter',
@@ -170,5 +183,8 @@ module WayOfWorking
 
     desc 'exec [COMPONENT]', 'Executes (runs) the specific component'
     subcommand 'exec', Exec
+
+    desc 'document [COMPONENT]', 'Documents the specific component'
+    subcommand 'document', Document
   end
 end
