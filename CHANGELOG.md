@@ -19,6 +19,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added a panel for README badges and an HDI Way of Working badge
 - Added a Pull Request template and communications guidelines
 
+### Fixed
+
+- A Changelog can now be created in project that hasn't been initialised as a git repository
+
 ## [1.0.0] - 2023-02-17
 
 ### Added

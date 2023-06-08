@@ -99,6 +99,8 @@ module WayOfWorking
 
         def summary_tags
           @summary_tags ||= repo_reader.summary_tags.reverse
+        rescue ArgumentError
+          []
         end
 
         def url
