@@ -16,10 +16,12 @@ The following tables detail the linters that we are currently using:
 | Bash         | BASH_SHELLCHECK                     | [shellcheck](https://megalinter.io/latest/descriptors/bash_shellcheck/)         |
 | Bash         | BASH_SHFMT                          | [shfmt](https://megalinter.io/latest/descriptors/bash_shfmt/)                   |
 | C            | C_CPPLINT                           | [cpplint](https://megalinter.io/latest/descriptors/c_cpplint/)                  |
+| C#           | ~~CSHARP_CSHARPIER~~                | Not Used                                                                        |
+| C#           | CSHARP_DOTNET_FORMAT                | [dotnet-format](https://megalinter.io/latest/descriptors/csharp_dotnet_format/) |
+| C++          | CPP_CPPLINT                         | [cpplint](https://megalinter.io/latest/descriptors/cpp_cpplint/)                |
+| Clojure      | ~~CLOJURE_CLJSTYLE~~                | Not Used                                                                        |
 | Clojure      | ~~CLOJURE_CLJ_KONDO~~               | Not Used                                                                        |
 | CoffeeScript | COFFEE_COFFEELINT                   | [coffeelint](https://megalinter.io/latest/descriptors/coffee_coffeelint/)       |
-| C++          | CPP_CPPLINT                         | [cpplint](https://megalinter.io/latest/descriptors/cpp_cpplint/)                |
-| C#           | CSHARP_DOTNET_FORMAT                | [dotnet-format](https://megalinter.io/latest/descriptors/csharp_dotnet_format/) |
 | Dart         | DART_DARTANALYZER                   | [dartanalyzer](https://megalinter.io/latest/descriptors/dart_dartanalyzer/)     |
 | Go           | GO_GOLANGCI_LINT                    | [golangci-lint](https://megalinter.io/latest/descriptors/go_golangci_lint/)     |
 | Go           | GO_REVIVE                           | [revive](https://megalinter.io/latest/descriptors/go_revive/)                   |
@@ -47,6 +49,7 @@ The following tables detail the linters that we are currently using:
 | Python       | PYTHON_MYPY                         | [mypy](https://megalinter.io/latest/descriptors/python_mypy/)                   |
 | Python       | PYTHON_PYLINT                       | [pylint](https://megalinter.io/latest/descriptors/python_pylint/)               |
 | Python       | PYTHON_PYRIGHT                      | [pyright](https://megalinter.io/latest/descriptors/python_pyright/)             |
+| Python       | ~~PYTHON_RUFF~~                     | Not Used                                                                        |
 | R            | R_LINTR                             | [lintr](https://megalinter.io/latest/descriptors/r_lintr/)                      |
 | Raku         | ~~RAKU_RAKU~~                       | Not Used                                                                        |
 | Ruby         | ~~RUBY_RUBOCOP~~                    | Not Used (RuboCop is used directly)                                             |
@@ -55,8 +58,8 @@ The following tables detail the linters that we are currently using:
 | Salesforce   | ~~SALESFORCE_SFDX_SCANNER_AURA~~    | Not Used                                                                        |
 | Salesforce   | ~~SALESFORCE_SFDX_SCANNER_LWC~~     | Not Used                                                                        |
 | Scala        | SCALA_SCALAFIX                      | [scalafix](https://megalinter.io/latest/descriptors/scala_scalafix/)            |
-| SQL          | SQL_SQL_LINT                        | [sql-lint](https://megalinter.io/latest/descriptors/sql_sql_lint/)              |
 | SQL          | SQL_SQLFLUFF                        | [sqlfluff](https://megalinter.io/latest/descriptors/sql_sqlfluff/)              |
+| SQL          | SQL_SQL_LINT                        | [sql-lint](https://megalinter.io/latest/descriptors/sql_sql_lint/)              |
 | SQL          | SQL_TSQLLINT                        | [tsqllint](https://megalinter.io/latest/descriptors/sql_tsqllint/)              |
 | Swift        | SWIFT_SWIFTLINT                     | [swiftlint](https://megalinter.io/latest/descriptors/swift_swiftlint/)          |
 | TSX          | TSX_ESLINT                          | [eslint](https://megalinter.io/latest/descriptors/tsx_eslint/)                  |
@@ -90,12 +93,13 @@ The following tables detail the linters that we are currently using:
 | reStructuredText | ~~RST_RSTFMT~~                    | Not Used                                                                                                |
 | reStructuredText | ~~RST_RST_LINT~~                  | Not Used                                                                                                |
 | XML              | XML_XMLLINT                       | [xmllint](https://megalinter.io/latest/descriptors/xml_xmllint/)                                        |
+| YAML             | ~~YAML_PRETTIER~~                 | Not Used                                                                                                |
 | YAML             | YAML_V8R                          | [v8r](https://megalinter.io/latest/descriptors/yaml_v8r/)                                               |
 | YAML             | YAML_YAMLLINT                     | [yamllint](https://megalinter.io/latest/descriptors/yaml_yamllint/)                                     |
 
-## Tooling
+## Tooling formats
 
-| Tooling Format | Linter                            | Details                                                                                             |
+| Tooling format | Linter                            | Details                                                                                             |
 |:---------------|:----------------------------------|:----------------------------------------------------------------------------------------------------|
 | GitHub Action  | ACTION_ACTIONLINT                 | [actionlint](https://megalinter.io/latest/descriptors/action_actionlint/)                           |
 | Ansible        | ANSIBLE_ANSIBLE_LINT              | [ansible-lint](https://megalinter.io/latest/descriptors/ansible_ansible_lint/)                      |
@@ -105,35 +109,35 @@ The following tables detail the linters that we are currently using:
 | Dockerfile     | DOCKERFILE_HADOLINT               | [hadolint](https://megalinter.io/latest/descriptors/dockerfile_hadolint/)                           |
 | EditorConfig   | EDITORCONFIG_EDITORCONFIG_CHECKER | [editorconfig-checker](https://megalinter.io/latest/descriptors/editorconfig_editorconfig_checker/) |
 | Gherkin        | ~~GHERKIN_GHERKIN_LINT~~          | Not Used                                                                                            |
+| Kubernetes     | ~~KUBERNETES_HELM~~               | Not Used                                                                                            |
 | Kubernetes     | KUBERNETES_KUBECONFORM            | [kubeconform](https://megalinter.io/latest/descriptors/kubernetes_kubeconform/)                     |
-| Kubernetes     | KUBERNETES_KUBEVAL                | [kubeval](https://megalinter.io/latest/descriptors/kubernetes_kubeval/)                             |
-| OpenAPI        | OPENAPI_SPECTRAL                  | [spectral](https://megalinter.io/latest/descriptors/openapi_spectral/)                              |
+| Kubernetes     | ~~KUBERNETES_KUBESCAPE~~          | Not Used                                                                                            |
+| Openapi        | OPENAPI_SPECTRAL                  | [spectral](https://megalinter.io/latest/descriptors/openapi_spectral/)                              |
 | Puppet         | PUPPET_PUPPET_LINT                | [puppet-lint](https://megalinter.io/latest/descriptors/puppet_puppet_lint/)                         |
 | Snakemake      | ~~SNAKEMAKE_LINT~~                | Not Used                                                                                            |
 | Snakemake      | ~~SNAKEMAKE_SNAKEFMT~~            | Not Used                                                                                            |
 | Tekton         | ~~TEKTON_TEKTON_LINT~~            | Not Used                                                                                            |
-| Terraform      | TERRAFORM_CHECKOV                 | [checkov](https://megalinter.io/latest/descriptors/terraform_checkov/)                              |
-| Terraform      | TERRAFORM_KICS                    | [kics](https://megalinter.io/latest/descriptors/terraform_kics/)                                    |
 | Terraform      | TERRAFORM_TERRAFORM_FMT           | [terraform-fmt](https://megalinter.io/latest/descriptors/terraform_terraform_fmt/)                  |
 | Terraform      | TERRAFORM_TERRAGRUNT              | [terragrunt](https://megalinter.io/latest/descriptors/terraform_terragrunt/)                        |
 | Terraform      | TERRAFORM_TERRASCAN               | [terrascan](https://megalinter.io/latest/descriptors/terraform_terrascan/)                          |
 | Terraform      | TERRAFORM_TFLINT                  | [tflint](https://megalinter.io/latest/descriptors/terraform_tflint/)                                |
 
-## Code quality checkers
+## Other
 
-| Code quality check | Linter                | Details                                                                       |
-|:-------------------|:----------------------|:------------------------------------------------------------------------------|
-| Duplication        | COPYPASTE_JSCPD       | [jscpd](https://megalinter.io/latest/descriptors/copypaste_jscpd/)            |
-| Repository         | REPOSITORY_CHECKOV    | [checkov](https://megalinter.io/latest/descriptors/repository_checkov/)       |
-| Repository         | REPOSITORY_DEVSKIM    | [devskim](https://megalinter.io/latest/descriptors/repository_devskim/)       |
-| Repository         | REPOSITORY_DUSTILOCK  | [dustilock](https://megalinter.io/latest/descriptors/repository_dustilock/)   |
-| Repository         | REPOSITORY_GITLEAKS   | [gitleaks](https://megalinter.io/latest/descriptors/repository_gitleaks/)     |
-| Repository         | REPOSITORY_GIT_DIFF   | [git_diff](https://megalinter.io/latest/descriptors/repository_git_diff/)     |
-| Repository         | REPOSITORY_GOODCHECK  | [goodcheck](https://megalinter.io/latest/descriptors/repository_goodcheck/)   |
-| Repository         | REPOSITORY_SECRETLINT | [secretlint](https://megalinter.io/latest/descriptors/repository_secretlint/) |
-| Repository         | REPOSITORY_SEMGREP    | [semgrep](https://megalinter.io/latest/descriptors/repository_semgrep/)       |
-| Repository         | REPOSITORY_SYFT       | [syft](https://megalinter.io/latest/descriptors/repository_syft/)             |
-| Repository         | REPOSITORY_TRIVY      | [trivy](https://megalinter.io/latest/descriptors/repository_trivy/)           |
-| Spelling           | ~~SPELL_CSPELL~~      | Not Used                                                                      |
-| Spelling           | SPELL_MISSPELL        | [misspell](https://megalinter.io/latest/descriptors/spell_misspell/)          |
-| Spelling           | SPELL_PROSELINT       | [proselint](https://megalinter.io/latest/descriptors/spell_proselint/)        |
+| Other      | Linter                | Details                                                                       |
+|:-----------|:----------------------|:------------------------------------------------------------------------------|
+| Copypaste  | COPYPASTE_JSCPD       | [jscpd](https://megalinter.io/latest/descriptors/copypaste_jscpd/)            |
+| Repository | REPOSITORY_CHECKOV    | [checkov](https://megalinter.io/latest/descriptors/repository_checkov/)       |
+| Repository | REPOSITORY_DEVSKIM    | [devskim](https://megalinter.io/latest/descriptors/repository_devskim/)       |
+| Repository | REPOSITORY_DUSTILOCK  | [dustilock](https://megalinter.io/latest/descriptors/repository_dustilock/)   |
+| Repository | REPOSITORY_GITLEAKS   | [gitleaks](https://megalinter.io/latest/descriptors/repository_gitleaks/)     |
+| Repository | REPOSITORY_GIT_DIFF   | [git_diff](https://megalinter.io/latest/descriptors/repository_git_diff/)     |
+| Repository | ~~REPOSITORY_KICS~~   | Not Used                                                                      |
+| Repository | REPOSITORY_SECRETLINT | [secretlint](https://megalinter.io/latest/descriptors/repository_secretlint/) |
+| Repository | REPOSITORY_SEMGREP    | [semgrep](https://megalinter.io/latest/descriptors/repository_semgrep/)       |
+| Repository | REPOSITORY_SYFT       | [syft](https://megalinter.io/latest/descriptors/repository_syft/)             |
+| Repository | REPOSITORY_TRIVY      | [trivy](https://megalinter.io/latest/descriptors/repository_trivy/)           |
+| Spelling   | ~~SPELL_CSPELL~~      | Not Used                                                                      |
+| Spelling   | SPELL_PROSELINT       | [proselint](https://megalinter.io/latest/descriptors/spell_proselint/)        |
+| Spelling   | ~~SPELL_VALE~~        | Not Used                                                                      |
+
