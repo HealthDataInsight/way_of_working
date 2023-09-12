@@ -18,6 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added a Decision Record issue template
 - Added a panel for README badges and an HDI Way of Working badge
 - Added a Pull Request template and communications guidelines
+- Added Swiftlint build phase to Xcode projects
 
 ### Fixed
 

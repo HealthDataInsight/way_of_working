@@ -18,6 +18,8 @@ We have chosen not to use the version of [RuboCop](https://rubocop.org) packaged
 
 When you add the Way of Working linter to your project, it will copy our per-language organisational code styles (where they differ from defaults) into `.github/linters` and will copy the GitHub Actions workflow files into `.github/workflow`, so that linting automatically runs when you commit to GitHub.
 
+If you add the Way of Working linter to your Xcode project, it will automatically add a Swiftlint build phase to the project config file.
+
 {: .important }
 If you disagree with any of the linters or linting styles that they apply, please fork the repository and create a pull request with your desired changes. The current coding standards are only intended as a starting point. A Full list of the linters we are currently using can be found [here](linters.md).
 
