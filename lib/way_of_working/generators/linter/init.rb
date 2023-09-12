@@ -12,6 +12,31 @@ module WayOfWorking
 
         source_root ::WayOfWorking.source_root
 
+        LINTING_BUILD_PHASE =
+          "				2F0882F42AAB152D00DB0B2B /* ShellScript */,\n"
+        LINTING_BUILD_PHASE_DETAILS = <<~CONFIG
+          /* Begin PBXShellScriptBuildPhase section */
+          \t\t2F0882F42AAB152D00DB0B2B /* ShellScript */ = {
+          \t\t\tisa = PBXShellScriptBuildPhase;
+          \t\t\tbuildActionMask = 2147483647;
+          \t\t\tfiles = (
+          \t\t\t);
+          \t\t\tinputFileListPaths = (
+          \t\t\t);
+          \t\t\tinputPaths = (
+          \t\t\t);
+          \t\t\toutputFileListPaths = (
+          \t\t\t);
+          \t\t\toutputPaths = (
+          \t\t\t);
+          \t\t\trunOnlyForDeploymentPostprocessing = 0;
+          \t\t\tshellPath = /bin/sh;
+          \t\t\tshellScript = "if [[ \\"$(uname -m)\\" == arm64 ]]; then\\n    export PATH=\\"/opt/homebrew/bin:$PATH\\"\\nfi\\n\\nif which swiftlint > /dev/null; then\\n  swiftlint\\nelse\\n  echo \\"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\\"\\nfi\\n";
+          \t\t};
+          /* End PBXShellScriptBuildPhase section */
+
+        CONFIG
+
         # TODO: copy_rubocop_github_workflow_action
 
         def copy_github_linters_rubocop_config_file
@@ -46,7 +71,24 @@ module WayOfWorking
           copy_file '.rubocop'
         end
 
+        def inject_swiftlint_into_xcode_project_build_process
+          return unless xcode_project_file && File.exist?(xcode_project_file)
+
+          inject_into_file xcode_project_file,
+                           LINTING_BUILD_PHASE,
+                           after: "buildPhases = (\n"
+
+          inject_into_file xcode_project_file,
+                           LINTING_BUILD_PHASE_DETAILS,
+                           after: "/* End PBXResourcesBuildPhase section */\n\n"
+        end
+
         private
+
+        def xcode_project_file
+          puts Dir.glob(File.join(destination_root)).inspect
+          Dir.glob(File.join(destination_root, '*.xcodeproj/project.pbxproj')).first
+        end
 
         def create_file_if_missing(path)
           path = File.join(destination_root, path)
