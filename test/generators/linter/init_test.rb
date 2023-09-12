@@ -42,6 +42,34 @@ module WayOfWorking
             refute_match(".rubocop-https---*\n", content)
           end
         end
+
+        test 'swiftlint build phase added to xcode project' do
+          prepare_xcode_project
+
+          run_generator
+
+          assert_file 'XcodeApp.xcodeproj/project.pbxproj' do |content|
+            assert_match(Init::LINTING_BUILD_PHASE, content)
+            assert_match(Init::LINTING_BUILD_PHASE_DETAILS, content)
+          end
+
+          run_generator [], behavior: :revoke
+
+          assert_file 'XcodeApp.xcodeproj/project.pbxproj' do |content|
+            refute_match(Init::LINTING_BUILD_PHASE, content)
+            refute_match(Init::LINTING_BUILD_PHASE_DETAILS, content)
+          end
+        end
+
+      private
+
+        # This method will copy a vanilla Rakefile into the destination folder
+        def prepare_xcode_project
+          xcode_project_destination_directory = destination_root.join('XcodeApp.xcodeproj')
+          FileUtils.mkdir(xcode_project_destination_directory)
+          FileUtils.copy WayOfWorking.root.join('test', 'resources', 'XcodeApp.xcodeproj', 'project.pbxproj'),
+                         xcode_project_destination_directory.join('project.pbxproj')
+        end
       end
     end
   end
