@@ -18,11 +18,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added a Decision Record issue template
 - Added a panel for README badges and an HDI Way of Working badge
 - Added a Pull Request template and communications guidelines
+- Added a document command to update the list of used and available linters
 - Added Swiftlint build phase to Xcode projects
+
+### Change
+
+- Bumped GitHub Pages gem dependencies
+
+### Security
+
+- Addressed known dependabot vulnerabilities
 
 ### Fixed
 
 - A Changelog can now be created in project that hasn't been initialised as a git repository
+- Fixed the way active_support is used in this (non-rails) project
 
 ## [1.0.0] - 2023-02-17
 

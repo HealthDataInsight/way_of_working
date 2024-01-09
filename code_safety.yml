@@ -27,7 +27,7 @@ file safety:
   ".github/pull_request_template.md":
     comments:
     reviewed_by: timgentry
-    safe_revision: af9fc45197c286a76dc9abec6ec0fd006ee8647a
+    safe_revision: 81415b0700789e329a54afeb8f4df7e90382757a
   ".github/workflows/inclusive-language.yml":
     comments:
     reviewed_by: timgentry
@@ -67,7 +67,7 @@ file safety:
   CHANGELOG.md:
     comments:
     reviewed_by: timgentry
-    safe_revision: 444ab8ecd988f85fe1c5d56ae3582e4fbe7705a3
+    safe_revision: 847e3df2e6920a243ad1d8e2fb56419150d01d0b
   CODE_OF_CONDUCT.md:
     comments:
     reviewed_by: timgentry
@@ -114,12 +114,12 @@ file safety:
     safe_revision: bfff11bf026610401b997b8413fa98b87e8a12df
   docs/Gemfile:
     comments:
-    reviewed_by: brian.shand
-    safe_revision: bfff11bf026610401b997b8413fa98b87e8a12df
+    reviewed_by: timgentry
+    safe_revision: bd0511afad7fa68b4a41c5cb9d813027d6fc9b77
   docs/Gemfile.lock:
     comments:
-    reviewed_by: brian.shand
-    safe_revision: bfff11bf026610401b997b8413fa98b87e8a12df
+    reviewed_by: timgentry
+    safe_revision: 1705f034f7f9b7b0121817d96b02c5b81d5c029e
   docs/_config.yml:
     comments:
     reviewed_by: timgentry
@@ -167,7 +167,7 @@ file safety:
   docs/code-linting/index.md:
     comments:
     reviewed_by: timgentry
-    safe_revision: 94300f9dcb8fb72816adbc2138bce3a0f95ce46e
+    safe_revision: 847e3df2e6920a243ad1d8e2fb56419150d01d0b
   docs/code-linting/linters.md:
     comments:
     reviewed_by: timgentry
@@ -274,8 +274,8 @@ file safety:
     safe_revision: 1cd0f0429c60c0666c1ddb905afbeb3f67a88a0e
   lib/way_of_working/generators/changelog/init.rb:
     comments:
-    reviewed_by: brian.shand
-    safe_revision: 1cd0f0429c60c0666c1ddb905afbeb3f67a88a0e
+    reviewed_by: timgentry
+    safe_revision: 444ab8ecd988f85fe1c5d56ae3582e4fbe7705a3
   lib/way_of_working/generators/code_of_conduct/init.rb:
     comments:
     reviewed_by: brian.shand
@@ -384,10 +384,10 @@ file safety:
     comments:
     reviewed_by: timgentry
     safe_revision: c8647a1969cd83d11933fe32acc55a2bc1a29c8f
-  lib/way_of_working/templates/docs/code-linting/linters.md:
+  lib/way_of_working/templates/docs/code-linting/linters.md.tt:
     comments:
-    reviewed_by: timgentry
-    safe_revision: 9a0ca86054d828e858a98edc058ef07fdb5f7ba1
+    reviewed_by:
+    safe_revision:
   lib/way_of_working/templates/docs/decisions/README.md:
     comments:
     reviewed_by: timgentry
@@ -403,7 +403,7 @@ file safety:
   test/generators/changelog/init_test.rb:
     comments:
     reviewed_by: timgentry
-    safe_revision: 1cd0f0429c60c0666c1ddb905afbeb3f67a88a0e
+    safe_revision: 6d9fc0871848ee362e8471bd78aa4815867aeded
   test/generators/code_of_conduct/init_test.rb:
     comments:
     reviewed_by: timgentry
@@ -435,7 +435,7 @@ file safety:
   test/generators/linter/init_test.rb:
     comments:
     reviewed_by: timgentry
-    safe_revision: 8424e6e3bf1c78f136ed1512d33878a2fc439463
+    safe_revision: 8e6b9abcfb2e8a657f210590ef06aec1e90ebde9
   test/generators/pr_template/init_test.rb:
     comments:
     reviewed_by: timgentry
@@ -451,7 +451,11 @@ file safety:
   test/git/summary_tag_test.rb:
     comments:
     reviewed_by: timgentry
-    safe_revision: 1cd0f0429c60c0666c1ddb905afbeb3f67a88a0e
+    safe_revision: 6d9fc0871848ee362e8471bd78aa4815867aeded
+  test/resources/XcodeApp.xcodeproj/project.pbxproj:
+    comments:
+    reviewed_by: timgentry
+    safe_revision: 8e6b9abcfb2e8a657f210590ef06aec1e90ebde9
   test/resources/empty_Rakefile:
     comments:
     reviewed_by: timgentry
@@ -487,4 +491,4 @@ file safety:
   way_of_working.gemspec:
     comments:
     reviewed_by: timgentry
-    safe_revision: 8974bca6a8cbdac496c1601bbc0ab6d10b7e955e
+    safe_revision: 6d9fc0871848ee362e8471bd78aa4815867aeded
