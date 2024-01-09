@@ -1,8 +1,10 @@
 # frozen_string_literal: true
 
+require 'active_support'
+require 'active_support/core_ext'
+
 require 'test_helper'
 require 'way_of_working/generators/changelog/init'
-require 'active_support/core_ext'
 
 module WayOfWorking
   module Generators

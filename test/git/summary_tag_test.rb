@@ -1,7 +1,9 @@
 # frozen_string_literal: true
 
-require 'test_helper'
+require 'active_support'
 require 'active_support/core_ext'
+
+require 'test_helper'
 require 'way_of_working/git/repo_reader'
 
 module WayOfWorking
