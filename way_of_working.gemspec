@@ -39,6 +39,7 @@ Gem::Specification.new do |spec|
   # guide at: https://bundler.io/guides/creating_gem.html
   spec.add_dependency 'activesupport'
   spec.add_dependency 'git', '~> 1.13'
+  spec.add_dependency 'nokogiri'
   spec.add_dependency 'rainbow', '~> 3.1'
   spec.add_dependency 'thor', '~> 1.2'
 end
