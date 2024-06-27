@@ -1,4 +1,3 @@
-<!-- markdownlint-disable-file no-duplicate-heading -->
 # Changelog
 
 All notable changes to this project will be documented in this file.

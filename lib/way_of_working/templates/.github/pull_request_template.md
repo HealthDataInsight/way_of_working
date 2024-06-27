@@ -26,7 +26,7 @@ e.g. This includes a migration, model and controller for user authentication. I'
 {Screenshots can significantly aid the review process, especially for UI-related changes, by offering before-and-after views. Even for backend code, a snapshot of the outcome, such as a CLI tool output, can be insightful. For infrastructure code, consider including the result of operations like a Terraform plan, preferably in a collapsible section, to avoid cluttering the comment space.
 
 Here’s how to do it in GitHub:
-```html
+```
 <details>
   <summary>Terraform Plan</summary>
 
