@@ -37,9 +37,16 @@ Gem::Specification.new do |spec|
 
   # For more information and examples about making a new gem, check out our
   # guide at: https://bundler.io/guides/creating_gem.html
-  spec.add_dependency 'activesupport'
+  spec.add_dependency 'activesupport', '>= 6.0'
+  spec.add_dependency 'base64', '~> 0.2'
+  spec.add_dependency 'bigdecimal', '~> 3.1'
+  spec.add_dependency 'faraday-multipart', '~> 1.0'
+  spec.add_dependency 'faraday-retry', '~> 2.2'
   spec.add_dependency 'git', '~> 1.13'
+  spec.add_dependency 'mutex_m', '~> 0.2'
   spec.add_dependency 'nokogiri'
+  spec.add_dependency 'octokit', '~> 9.1'
+  spec.add_dependency 'ostruct', '~> 0.6'
   spec.add_dependency 'rainbow', '~> 3.1'
   spec.add_dependency 'thor', '~> 1.2'
 end

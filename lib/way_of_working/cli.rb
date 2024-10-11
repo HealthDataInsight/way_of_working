@@ -4,6 +4,7 @@ require_relative 'generators/changelog/init'
 require_relative 'generators/code_of_conduct/init'
 require_relative 'generators/decision_record/init'
 require_relative 'generators/decision_record/new'
+require_relative 'generators/github/audit'
 require_relative 'generators/inclusive_language/exec'
 require_relative 'generators/inclusive_language/init'
 require_relative 'generators/linter/document'
@@ -15,6 +16,18 @@ require_relative 'generators/readme_badge/init'
 require_relative 'sub_command_base'
 
 module WayOfWorking
+  # This class defines the audit parent command
+  class Audit < SubCommandBase
+    register(Generators::Github::Audit, 'github', 'github',
+             <<~LONGDESC)
+               Description:
+                   This audits github
+
+               Example:
+                   way_of_working audit github
+             LONGDESC
+  end
+
   # This class defines the document parent command
   class Document < SubCommandBase
     register(Generators::Linter::Document, 'linter', 'linter',
@@ -175,6 +188,9 @@ module WayOfWorking
 
   # This class defines the top level interface
   class CLI < Thor
+    desc 'audit [COMPONENT]', 'Audit Way of Working components'
+    subcommand 'audit', Audit
+
     desc 'init [COMPONENT]', 'Initialises Way of Working components'
     subcommand 'init', Init
 
