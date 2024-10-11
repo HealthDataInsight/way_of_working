@@ -6,9 +6,9 @@ module WayOfWorking
   module Github
     module Rules
       # The namespace for WayOfWorking GitHub rules
-      module WayOfWorking
+      module InclusiveLanguage
         # This rule checks for the Inclusive Language workflow action and README badge.
-        class InclusiveLanguageGithubAction < ::WayOfWorking::Github::Rules::Base
+        class GithubAction < ::WayOfWorking::Github::Rules::Base
           def valid?
             response = @client.workflows(@repo_name)
 
