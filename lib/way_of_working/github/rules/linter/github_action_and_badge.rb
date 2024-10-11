@@ -6,9 +6,9 @@ module WayOfWorking
   module Github
     module Rules
       # The namespace for WayOfWorking GitHub rules
-      module WayOfWorking
+      module Linter
         # This rule checks for the MegaLinter workflow action and README badge.
-        class MegaLinterGithubAction < ::WayOfWorking::Github::Rules::Base
+        class GithubActionAndBadge < ::WayOfWorking::Github::Rules::Base
           def valid?
             response = @client.workflows(@repo_name)
 
@@ -28,7 +28,7 @@ module WayOfWorking
           end
         end
 
-        Registry.register(MegaLinterGithubAction, 'MegaLinter GitHub Action and README badge')
+        Registry.register(GithubActionAndBadge, 'MegaLinter GitHub Action and README badge')
       end
     end
   end

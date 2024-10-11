@@ -30,7 +30,7 @@ module WayOfWorking
           end
         end
 
-        Registry.register(InclusiveLanguageGithubAction,
+        Registry.register(GithubActionAndBadge,
                           'Inclusive Language GitHub Action and README badge')
       end
     end
