@@ -9,7 +9,7 @@ module WayOfWorking
   class Error < StandardError; end
 end
 
-# Magically load way_of_working plugins.
+# Automatically load way_of_working plugins.
 Gem::Specification.
   select { |gemspec| gemspec.name =~ /\Away_of_working-/ }.
   collect(&:name).uniq. # multiple versions of a single gem may be installed at once
