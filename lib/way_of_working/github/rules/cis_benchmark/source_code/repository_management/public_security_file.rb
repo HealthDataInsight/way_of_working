@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'wow_bot/rules/cis_benchmark/base'
+require 'way_of_working/github/rules/cis_benchmark/base'
 
 module WayOfWorking
   module Github
@@ -10,7 +10,7 @@ module WayOfWorking
         module SourceCode
           module RepositoryManagement
             # This rule checks all public repositories contain a SECURITY.md file.
-            class PublicSecurityFile < ::WowBot::Rules::CisBenchmark::Base
+            class PublicSecurityFile < ::WayOfWorking::Github::Rules::CisBenchmark::Base
               def tags
                 super << :cis_level1
               end
