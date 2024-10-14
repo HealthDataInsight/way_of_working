@@ -1,4 +1,5 @@
 require 'octokit'
+require_relative 'rules/registry'
 
 module WayOfWorking
   module Github

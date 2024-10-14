@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require_relative 'unknown'
+
 module WayOfWorking
   module Github
     module Rules
@@ -30,5 +32,3 @@ module WayOfWorking
     end
   end
 end
-
-require_relative 'all'
