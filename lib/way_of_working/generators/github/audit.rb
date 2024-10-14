@@ -3,6 +3,8 @@
 require 'git'
 require 'rainbow'
 require 'thor'
+require 'way_of_working/github/auditor'
+require 'way_of_working/github/rules/all'
 
 module WayOfWorking
   module Generators
@@ -13,30 +15,70 @@ module WayOfWorking
 
         desc 'This runs the github audit on this project'
 
-        def run_first
+        def check_for_github_token_environment_variables
+          @github_token = ENV.fetch('GITHUB_TOKEN', nil)
+          return unless @github_token.nil?
+
+          abort(Rainbow("\nMissing GITHUB_TOKEN environment variable").red)
+        end
+
+        def check_for_github_organisation_environment_variables
+          @github_organisation = ENV.fetch('GITHUB_ORGANISATION', nil)
+          return unless @github_organisation.nil?
+
+          abort(Rainbow("\nMissing GITHUB_ORGANISATION environment variable").red)
+        end
+
+        def start_timer
           @start_time = Time.now
+        end
 
-          git_base = ::Git.open('.')
-          remotes = git_base.remotes.map(&:url)
-          @github_remotes = remotes.select { |url| url.start_with?('https://github.com/') }
-
-          abort(Rainbow("\nGitHub is not an upstream repository!").red) if @github_remotes.empty?
+        def check_github_organisation_remotes
+          if github_organisation_remotes.empty?
+            abort(Rainbow("\nGitHub is not an upstream repository.").red)
+          end
 
           # say(Rainbow("Limiting audit to #{path}\n").yellow) if path
           say "\nRunning..."
         end
 
-        def prep_and_run_alex
-          @github_remotes.each do |url|
-            matchdata = url.match(%r{\Ahttps://github.com/([^/]+)/([^/]+)\.git})
+        def prep_audit
+          @auditor = ::WayOfWorking::Github::Auditor.new(@github_token, @github_organisation)
 
-            organisation = matchdata[1]
-            repo_name = matchdata[2]
-
-            say(Rainbow("\nRepo: #{organisation}/#{repo_name}").yellow)
+          # Loop though all the repos
+          @repositories = @auditor.repositories # .to_a[20..]
+          @repositories = @repositories.select do |repo|
+            github_organisation_remotes.include?(repo.name)
           end
+        rescue Octokit::Unauthorized
+          abort(Rainbow("\nGITHUB_TOKEN has expired or does not have sufficient permission").red)
+        end
 
+        def run_audit
           @audit_ok = true
+          @repositories.each do |repo|
+            if repo.archived?
+              say(Rainbow("\nSkipping archived repo: #{repo.name}").yellow)
+
+              next
+            end
+
+            say("#{repo.name} [#{repo.private? ? 'Private' : 'Public'}] #{repo.description} #{repo.language} #{repo.topics.join(',')}")
+
+            @auditor.audit(repo) do |rule|
+              case rule.status
+              when :not_applicable
+                # Do nothing
+              when :passed
+                puts "✅ #{rule.tags.inspect} Passed #{rule.name}"
+              when :failed
+                puts "❌ #{rule.tags.inspect} Failed #{rule.name}: #{rule.errors.to_sentence}"
+                @audit_ok = false
+              else
+                puts "Unknown response #{rule.status.inspect}"
+              end
+            end
+          end
         end
 
         def run_last
@@ -51,8 +93,22 @@ module WayOfWorking
 
         private
 
-        def run_alex(arguments)
-          system(*arguments)
+        # This method returns the repo names for all upstream repositories
+        # hosted on GitHub, for the given organisation
+        def github_organisation_remotes
+          @github_organisation_remotes ||= begin
+            all_remote_urls = ::Git.open('.').remotes.map(&:url)
+
+            organisation_remote_urls = all_remote_urls.select do |url|
+              url.start_with?("https://github.com/#{@github_organisation}")
+            end
+
+            organisation_remote_urls.map do |url|
+              matchdata = url.match(%r{\Ahttps://github.com/([^/]+)/([^/]+)\.git})
+
+              matchdata[2]
+            end
+          end
         end
       end
     end
