@@ -224,10 +224,6 @@ file safety:
     comments:
     reviewed_by: brian.shand
     safe_revision: bfff11bf026610401b997b8413fa98b87e8a12df
-  docs/decisions/index.md:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 94300f9dcb8fb72816adbc2138bce3a0f95ce46e
   docs/end-to-end-testing.md:
     comments:
     reviewed_by: timgentry
