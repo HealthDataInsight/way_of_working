@@ -1,0 +1,2 @@
+export GITHUB_TOKEN=<Your GitHub PAT token goes here>
+export GITHUB_ORGANISATION=<Your GitHub organisation goes here>
