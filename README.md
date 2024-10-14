@@ -46,20 +46,6 @@ To add a [Contributor Covenant](https://www.contributor-covenant.org/version/2/1
 
 You will need to enter a contact method, usually an email address. Please thoroughly read the [enforcement guidelines](https://www.contributor-covenant.org/version/2/1/code_of_conduct/#enforcement-guidelines) section of the code and discuss the implications of adopting the code of conduct.
 
-### Decision Records
-
-To add the [Markdown Any Decision Records (MADR)](https://adr.github.io/madr/) v3.0.0 framework to your project, run the following at the command line:
-
-    way_of_working init decision_record
-
-To create a new decision record, run:
-
-    way_of_working new decision_record [NAME]
-
-Where `[NAME]` is the title of your decision record, for example:
-
-    way_of_working new decision_record "Use Markdown Any Decision Records"
-
 ### Linter
 
 To add [MegaLinter](https://megalinter.io/) to your project, run the following at the command line:
