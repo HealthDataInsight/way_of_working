@@ -352,10 +352,6 @@ file safety:
     comments:
     reviewed_by: timgentry
     safe_revision: af9fc45197c286a76dc9abec6ec0fd006ee8647a
-  lib/way_of_working/templates/.github/workflows/inclusive-language.yml:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: fd5667379c1f14a71bb4de661515ca53d9f10941
   lib/way_of_working/templates/.github/workflows/mega-linter.yml:
     comments:
     reviewed_by: timgentry
