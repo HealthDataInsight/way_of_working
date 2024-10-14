@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require 'thor'
 require_relative 'generators/changelog/init'
 require_relative 'generators/code_of_conduct/init'
 require_relative 'generators/decision_record/init'
