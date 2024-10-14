@@ -332,10 +332,6 @@ file safety:
     comments:
     reviewed_by: brian.shand
     safe_revision: f4dda256b8f5754c38ccc64e63252024b24d9406
-  lib/way_of_working/templates/.alexrc:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 7fc8c5bcd4a83faea1e0d6a950d7b2a2c0abcbf7
   lib/way_of_working/templates/.github/ISSUE_TEMPLATE/decision-record.md:
     comments:
     reviewed_by: timgentry
