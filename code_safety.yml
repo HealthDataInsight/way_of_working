@@ -280,14 +280,6 @@ file safety:
     comments:
     reviewed_by: brian.shand
     safe_revision: 173b77440f8786646ff9a1e83595500c18820dbb
-  lib/way_of_working/generators/decision_record/init.rb:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 19320285fb5d2dbd29bb4ec4b0f41ce2288e1c2e
-  lib/way_of_working/generators/decision_record/new.rb:
-    comments:
-    reviewed_by: brian.shand
-    safe_revision: 8424e6e3bf1c78f136ed1512d33878a2fc439463
   lib/way_of_working/generators/linter/document.rb:
     comments:
     reviewed_by:
@@ -332,10 +324,6 @@ file safety:
     comments:
     reviewed_by: brian.shand
     safe_revision: f4dda256b8f5754c38ccc64e63252024b24d9406
-  lib/way_of_working/templates/.github/ISSUE_TEMPLATE/decision-record.md:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 19320285fb5d2dbd29bb4ec4b0f41ce2288e1c2e
   lib/way_of_working/templates/.github/linters/.markdown-link-check.json:
     comments:
     reviewed_by: timgentry
@@ -372,14 +360,6 @@ file safety:
     comments:
     reviewed_by:
     safe_revision:
-  lib/way_of_working/templates/docs/decisions/README.md:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: f96fc0fbe2d380210ac5a12d04db8140ebd5ea56
-  lib/way_of_working/templates/docs/decisions/adr-template.md.tt:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 8424e6e3bf1c78f136ed1512d33878a2fc439463
   lib/way_of_working/version.rb:
     comments:
     reviewed_by: timgentry
