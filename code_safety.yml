@@ -288,14 +288,6 @@ file safety:
     comments:
     reviewed_by: brian.shand
     safe_revision: 8424e6e3bf1c78f136ed1512d33878a2fc439463
-  lib/way_of_working/generators/inclusive_language/exec.rb:
-    comments:
-    reviewed_by:
-    safe_revision:
-  lib/way_of_working/generators/inclusive_language/init.rb:
-    comments:
-    reviewed_by:
-    safe_revision:
   lib/way_of_working/generators/linter/document.rb:
     comments:
     reviewed_by:
@@ -416,14 +408,6 @@ file safety:
     comments:
     reviewed_by: timgentry
     safe_revision: 7e78ccc7707113c8813323c5044813f52fdeb82a
-  test/generators/inclusive_language/exec_test.rb:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 7fc8c5bcd4a83faea1e0d6a950d7b2a2c0abcbf7
-  test/generators/inclusive_language/init_test.rb:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 7fc8c5bcd4a83faea1e0d6a950d7b2a2c0abcbf7
   test/generators/linter/document_test.rb:
     comments:
     reviewed_by: timgentry

@@ -4,8 +4,6 @@ require_relative 'generators/changelog/init'
 require_relative 'generators/code_of_conduct/init'
 require_relative 'generators/decision_record/init'
 require_relative 'generators/decision_record/new'
-require_relative 'generators/inclusive_language/exec'
-require_relative 'generators/inclusive_language/init'
 require_relative 'generators/linter/document'
 require_relative 'generators/linter/exec'
 require_relative 'generators/linter/init'
@@ -36,15 +34,6 @@ module WayOfWorking
 
                Example:
                    way_of_working exec linter
-             LONGDESC
-
-    register(Generators::InclusiveLanguage::Exec, 'inclusive_language', 'inclusive_language',
-             <<~LONGDESC)
-               Description:
-                   This runs inclusive language tests on this project
-
-               Example:
-                   way_of_working exec inclusive_language
              LONGDESC
   end
 
@@ -107,18 +96,6 @@ module WayOfWorking
                    This will create:
                        .github/workflows/mega-linter.yml
                        .mega-linter.yml
-             LONGDESC
-
-    register(Generators::InclusiveLanguage::Init, 'inclusive_language', 'inclusive_language',
-             <<~LONGDESC)
-               Description:
-                   Installs alex config file into the project
-
-               Example:
-                   way_of_working init inclusive_language
-
-                   This will create:
-                       .alexrc
              LONGDESC
 
     register(Generators::PrTemplate::Init, 'pr_template', 'pr_template',

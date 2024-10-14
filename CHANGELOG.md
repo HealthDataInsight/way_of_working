@@ -13,7 +13,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Adopted Semantic Versioning
 - Added pa11y automated accessibility testing
 - Added dark mode support to our GitHub pages theme
-- Added alex inclusive language testing
 - Decided on Cabin as our Software-as-a-Service (SaaS) Web Analytics Solution
 - Added a Decision Record issue template
 - Added a panel for README badges and an HDI Way of Working badge
