@@ -232,10 +232,6 @@ file safety:
     comments:
     reviewed_by: timgentry
     safe_revision: b9682563cac35fac517dafd009154453d3ae2bb2
-  docs/inclusive-language.md:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 7fc8c5bcd4a83faea1e0d6a950d7b2a2c0abcbf7
   docs/index.md:
     comments:
     reviewed_by: timgentry
@@ -372,14 +368,6 @@ file safety:
     comments:
     reviewed_by: timgentry
     safe_revision: 173b77440f8786646ff9a1e83595500c18820dbb
-  test/generators/decision_record/init_test.rb:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 19320285fb5d2dbd29bb4ec4b0f41ce2288e1c2e
-  test/generators/decision_record/new_test.rb:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 7e78ccc7707113c8813323c5044813f52fdeb82a
   test/generators/linter/document_test.rb:
     comments:
     reviewed_by: timgentry

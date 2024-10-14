@@ -3,8 +3,6 @@
 require 'thor'
 require_relative 'generators/changelog/init'
 require_relative 'generators/code_of_conduct/init'
-require_relative 'generators/decision_record/init'
-require_relative 'generators/decision_record/new'
 require_relative 'generators/linter/document'
 require_relative 'generators/linter/exec'
 require_relative 'generators/linter/init'
@@ -72,20 +70,6 @@ module WayOfWorking
                        CODE_OF_CONDUCT.md
              LONGDESC
 
-    register(Generators::DecisionRecord::Init, 'decision_record', 'decision_record',
-             <<~LONGDESC)
-               Description:
-                   This generator adds Markdown Any Decision Records (MADR) to your project
-
-               Example:
-                   way_of_working init decision_record
-
-                   This will create:
-                       docs/decisions/README.md
-                       docs/decisions/adr-template.md
-                       docs/decisions/0000-use-markdown-any-decision-records.md
-             LONGDESC
-
     register(Generators::Linter::Init, 'linter', 'linter',
              <<~LONGDESC)
                Description:
@@ -138,17 +122,6 @@ module WayOfWorking
 
   # This class defines the "new" parent command
   class New < SubCommandBase
-    register(Generators::DecisionRecord::New, 'decision_record', 'decision_record [NAME]',
-             <<~LONGDESC)
-               Description:
-                   This generator adds a new decision record to your project
-
-               Example:
-                   way_of_working new decision_record "Title of the decision"
-
-                   This will create:
-                       docs/decisions/NNNN-title-of-the-decision.md
-             LONGDESC
   end
 
   # This class defines the top level interface
