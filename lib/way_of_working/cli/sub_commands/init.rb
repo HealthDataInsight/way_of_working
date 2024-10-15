@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-require_relative '../generators/code_of_conduct/init'
-require_relative '../generators/linter/init'
-require_relative '../generators/pr_template/init'
-require_relative '../generators/rake_tasks/init'
-require_relative '../generators/readme_badge/init'
+require 'way_of_working/generators/code_of_conduct/init'
+require 'way_of_working/generators/linter/init'
+require 'way_of_working/generators/pr_template/init'
+require 'way_of_working/generators/rake_tasks/init'
+require 'way_of_working/generators/readme_badge/init'
 require_relative 'base'
 
 module WayOfWorking

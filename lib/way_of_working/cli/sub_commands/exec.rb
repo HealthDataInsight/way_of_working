@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative '../generators/linter/exec'
+require 'way_of_working/generators/linter/exec'
 require_relative 'base'
 
 module WayOfWorking
