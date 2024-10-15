@@ -160,10 +160,6 @@ file safety:
     comments:
     reviewed_by: timgentry
     safe_revision: 4830ed99a857f3bf781bcf21bff6a2d5510fbcc7
-  docs/changelog.md:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 4830ed99a857f3bf781bcf21bff6a2d5510fbcc7
   docs/code-linting/index.md:
     comments:
     reviewed_by: timgentry
@@ -264,10 +260,6 @@ file safety:
     comments:
     reviewed_by: brian.shand
     safe_revision: 1cd0f0429c60c0666c1ddb905afbeb3f67a88a0e
-  lib/way_of_working/generators/changelog/init.rb:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 444ab8ecd988f85fe1c5d56ae3582e4fbe7705a3
   lib/way_of_working/generators/code_of_conduct/init.rb:
     comments:
     reviewed_by: brian.shand
@@ -308,10 +300,26 @@ file safety:
     comments:
     reviewed_by: brian.shand
     safe_revision: d18d9c039e0cb95e33b24b789e9ee855b1e7a1b1
-  lib/way_of_working/sub_command_base.rb:
+  lib/way_of_working/sub_commands/base.rb:
     comments:
-    reviewed_by: brian.shand
-    safe_revision: b0d52c8acb3db4757e9771cb45b22eb6e163c6e1
+    reviewed_by:
+    safe_revision:
+  lib/way_of_working/sub_commands/document.rb:
+    comments:
+    reviewed_by:
+    safe_revision:
+  lib/way_of_working/sub_commands/exec.rb:
+    comments:
+    reviewed_by:
+    safe_revision:
+  lib/way_of_working/sub_commands/init.rb:
+    comments:
+    reviewed_by:
+    safe_revision:
+  lib/way_of_working/sub_commands/new.rb:
+    comments:
+    reviewed_by:
+    safe_revision:
   lib/way_of_working/tasks.rb:
     comments:
     reviewed_by: brian.shand
@@ -356,10 +364,6 @@ file safety:
     comments:
     reviewed_by: timgentry
     safe_revision: 57d4f8c81e9125ff209667a855f47b3fd0406f2d
-  test/generators/changelog/init_test.rb:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 6d9fc0871848ee362e8471bd78aa4815867aeded
   test/generators/code_of_conduct/init_test.rb:
     comments:
     reviewed_by: timgentry
