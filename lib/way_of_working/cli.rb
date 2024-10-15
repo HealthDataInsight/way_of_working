@@ -112,7 +112,7 @@ module WayOfWorking
   end
 
   # This class defines the top level interface
-  class CLI < Thor
+  class Cli < Thor
     desc 'init [COMPONENT]', 'Initialises Way of Working components'
     subcommand 'init', Init
 
