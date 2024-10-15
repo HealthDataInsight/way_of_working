@@ -2,24 +2,24 @@
 
 require 'thor'
 
-require_relative 'cli/sub_commands/document'
-require_relative 'cli/sub_commands/exec'
-require_relative 'cli/sub_commands/init'
-require_relative 'cli/sub_commands/new'
+require_relative 'sub_commands/document'
+require_relative 'sub_commands/exec'
+require_relative 'sub_commands/init'
+require_relative 'sub_commands/new'
 
 module WayOfWorking
   # This class defines the top level interface
   class Cli < Thor
     desc 'init [COMPONENT]', 'Initialises Way of Working components'
-    subcommand 'init', SubCommands::Init
+    subcommand 'init', ::WayOfWorking::SubCommands::Init
 
     desc 'new [THING]', 'Creates new things'
-    subcommand 'new', SubCommands::New
+    subcommand 'new', ::WayOfWorking::SubCommands::New
 
     desc 'exec [COMPONENT]', 'Executes (runs) the specific component'
-    subcommand 'exec', SubCommands::Exec
+    subcommand 'exec', ::WayOfWorking::SubCommands::Exec
 
     desc 'document [COMPONENT]', 'Documents the specific component'
-    subcommand 'document', SubCommands::Document
+    subcommand 'document', ::WayOfWorking::SubCommands::Document
   end
 end
