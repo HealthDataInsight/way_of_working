@@ -1,5 +1,4 @@
 require 'test_helper'
-require 'way_of_working/generators/code_of_conduct/init'
 
 module WayOfWorking
   module Generators

@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'git'
-require_relative 'summary_tag'
 
 module WayOfWorking
   module Git

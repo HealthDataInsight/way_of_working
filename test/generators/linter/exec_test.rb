@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'test_helper'
-require 'way_of_working/generators/linter/exec'
 
 module WayOfWorking
   module Generators

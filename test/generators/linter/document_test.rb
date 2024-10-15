@@ -1,5 +1,4 @@
 require 'test_helper'
-require 'way_of_working/generators/linter/document'
 
 module WayOfWorking
   module Generators

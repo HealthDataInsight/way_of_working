@@ -1,5 +1,4 @@
 require 'test_helper'
-require 'way_of_working/generators/linter/init'
 
 module WayOfWorking
   module Generators
@@ -61,7 +60,7 @@ module WayOfWorking
           end
         end
 
-      private
+        private
 
         # This method will copy a vanilla Rakefile into the destination folder
         def prepare_xcode_project

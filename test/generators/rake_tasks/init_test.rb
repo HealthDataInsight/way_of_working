@@ -2,7 +2,6 @@
 
 require 'test_helper'
 require 'way_of_working/paths'
-require 'way_of_working/generators/rake_tasks/init'
 
 module WayOfWorking
   module Generators
