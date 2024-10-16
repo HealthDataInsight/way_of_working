@@ -16,19 +16,6 @@ module WayOfWorking
         invoke_all
       end
 
-      register(WayOfWorking::Generators::CodeOfConduct::Init, 'code_of_conduct',
-               'code_of_conduct --contact-method [CONTACT METHOD]',
-               <<~LONGDESC)
-                 Description:
-                     This adds the Contributor Covenant v2.1 code of conduct to the project
-
-                 Example:
-                     way_of_working init code_of_conduct --contact-method "foo@bar.com"
-
-                     This will create:
-                         CODE_OF_CONDUCT.md
-               LONGDESC
-
       register(WayOfWorking::Generators::RakeTasks::Init, 'rake_tasks', 'rake_tasks',
                <<~LONGDESC)
                  Description:

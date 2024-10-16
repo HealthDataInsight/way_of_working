@@ -25,6 +25,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - MADR Decision Records moved to a separate plugin
 - MegaLinter moved to a separate plugin
+- Contributor Covenant Code of Conduct to a separate plugin
 
 ### Security
 
