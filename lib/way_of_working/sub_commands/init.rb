@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require 'way_of_working/generators/code_of_conduct/init'
 require 'way_of_working/generators/rake_tasks/init'
 require 'way_of_working/generators/readme_badge/init'
 require_relative 'base'

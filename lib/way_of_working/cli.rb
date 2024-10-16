@@ -2,7 +2,6 @@
 
 require 'thor'
 
-require_relative 'sub_commands/document'
 require_relative 'sub_commands/exec'
 require_relative 'sub_commands/init'
 require_relative 'sub_commands/new'
