@@ -16,8 +16,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Decided on Cabin as our Software-as-a-Service (SaaS) Web Analytics Solution
 - Added a panel for README badges and an HDI Way of Working badge
 - Added a Pull Request template and communications guidelines
-- Added a document command to update the list of used and available linters
-- Added Swiftlint build phase to Xcode projects
 - Added a plugin system for new functionality
 
 ### Change
@@ -27,6 +25,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 
 - MADR Decision Records moved to a separate plugin
+- MegaLinter moved to a separate plugin
 
 ### Security
 
@@ -41,6 +40,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Added Markdown Any Decision Records (MADR) with generator commands
 - Added Contributor Covenant Code of Conduct with generator command
 - Added MegaLinter for linting common file formats with generator command and rake task
 - Added Keep a Changelog with generator command
