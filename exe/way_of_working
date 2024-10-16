@@ -2,4 +2,4 @@
 
 require 'way_of_working'
 
-WayOfWorking::CLI.start(ARGV)
+WayOfWorking::Cli.start(ARGV)
