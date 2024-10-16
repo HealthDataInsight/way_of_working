@@ -40,16 +40,6 @@ To add a [Contributor Covenant](https://www.contributor-covenant.org/version/2/1
 
 You will need to enter a contact method, usually an email address. Please thoroughly read the [enforcement guidelines](https://www.contributor-covenant.org/version/2/1/code_of_conduct/#enforcement-guidelines) section of the code and discuss the implications of adopting the code of conduct.
 
-### Linter
-
-To add [MegaLinter](https://megalinter.io/) to your project, run the following at the command line:
-
-    way_of_working init linter
-
-to run MegaLinter in your project, run:
-
-    way_of_working exec linter
-
 ### Initialise All Components
 
 To add all the Way of Working components to your project, run:
