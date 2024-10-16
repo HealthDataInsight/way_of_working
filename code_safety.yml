@@ -160,10 +160,6 @@ file safety:
     comments:
     reviewed_by: timgentry
     safe_revision: 4830ed99a857f3bf781bcf21bff6a2d5510fbcc7
-  docs/code-linting/index.md:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 847e3df2e6920a243ad1d8e2fb56419150d01d0b
   docs/code-linting/linters.md:
     comments:
     reviewed_by: timgentry
@@ -264,18 +260,6 @@ file safety:
     comments:
     reviewed_by: brian.shand
     safe_revision: 173b77440f8786646ff9a1e83595500c18820dbb
-  lib/way_of_working/generators/linter/document.rb:
-    comments:
-    reviewed_by:
-    safe_revision:
-  lib/way_of_working/generators/linter/exec.rb:
-    comments:
-    reviewed_by: brian.shand
-    safe_revision: 33c3bd28b246dcab7405c55e23107f52451ba8bf
-  lib/way_of_working/generators/linter/init.rb:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 9a0ca86054d828e858a98edc058ef07fdb5f7ba1
   lib/way_of_working/generators/pr_template/init.rb:
     comments:
     reviewed_by:
@@ -300,6 +284,10 @@ file safety:
     comments:
     reviewed_by: brian.shand
     safe_revision: d18d9c039e0cb95e33b24b789e9ee855b1e7a1b1
+  lib/way_of_working/sub_commands/audit.rb:
+    comments:
+    reviewed_by:
+    safe_revision:
   lib/way_of_working/sub_commands/base.rb:
     comments:
     reviewed_by:
@@ -324,30 +312,10 @@ file safety:
     comments:
     reviewed_by: brian.shand
     safe_revision: f4dda256b8f5754c38ccc64e63252024b24d9406
-  lib/way_of_working/templates/.github/linters/.markdown-link-check.json:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 8424e6e3bf1c78f136ed1512d33878a2fc439463
-  lib/way_of_working/templates/.github/linters/rubocop_defaults.yml:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: d65734d0d9391ae6be55cef85c0f09549864cf1b
   lib/way_of_working/templates/.github/pull_request_template.md:
     comments:
     reviewed_by: timgentry
     safe_revision: af9fc45197c286a76dc9abec6ec0fd006ee8647a
-  lib/way_of_working/templates/.github/workflows/mega-linter.yml:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 0bec387ac06b7a038870c559989d766af2eeedd9
-  lib/way_of_working/templates/.mega-linter.yml:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 4ce005ff2909ed3bb4c98c31960610c3bd85c974
-  lib/way_of_working/templates/.rubocop:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: d65734d0d9391ae6be55cef85c0f09549864cf1b
   lib/way_of_working/templates/CODE_OF_CONDUCT.md.tt:
     comments:
     reviewed_by: timgentry
@@ -356,10 +324,6 @@ file safety:
     comments:
     reviewed_by: timgentry
     safe_revision: c8647a1969cd83d11933fe32acc55a2bc1a29c8f
-  lib/way_of_working/templates/docs/code-linting/linters.md.tt:
-    comments:
-    reviewed_by:
-    safe_revision:
   lib/way_of_working/version.rb:
     comments:
     reviewed_by: timgentry
@@ -368,18 +332,6 @@ file safety:
     comments:
     reviewed_by: timgentry
     safe_revision: 173b77440f8786646ff9a1e83595500c18820dbb
-  test/generators/linter/document_test.rb:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 9a0ca86054d828e858a98edc058ef07fdb5f7ba1
-  test/generators/linter/exec_test.rb:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 8f9c72f5e59e3972f4e4d629dc72ecf783e2f056
-  test/generators/linter/init_test.rb:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 8e6b9abcfb2e8a657f210590ef06aec1e90ebde9
   test/generators/pr_template/init_test.rb:
     comments:
     reviewed_by: timgentry
