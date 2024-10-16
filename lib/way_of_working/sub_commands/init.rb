@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'way_of_working/generators/code_of_conduct/init'
-require 'way_of_working/generators/linter/init'
 require 'way_of_working/generators/pr_template/init'
 require 'way_of_working/generators/rake_tasks/init'
 require 'way_of_working/generators/readme_badge/init'
@@ -29,19 +28,6 @@ module WayOfWorking
 
                      This will create:
                          CODE_OF_CONDUCT.md
-               LONGDESC
-
-      register(WayOfWorking::Generators::Linter::Init, 'linter', 'linter',
-               <<~LONGDESC)
-                 Description:
-                     Installs MegaLinter config files into the project
-
-                 Example:
-                     way_of_working init linter
-
-                     This will create:
-                         .github/workflows/mega-linter.yml
-                         .mega-linter.yml
                LONGDESC
 
       register(WayOfWorking::Generators::PrTemplate::Init, 'pr_template', 'pr_template',
