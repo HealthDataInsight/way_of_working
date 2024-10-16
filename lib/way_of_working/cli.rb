@@ -18,8 +18,5 @@ module WayOfWorking
 
     desc 'exec [COMPONENT]', 'Executes (runs) the specific component'
     subcommand 'exec', ::WayOfWorking::SubCommands::Exec
-
-    desc 'document [COMPONENT]', 'Documents the specific component'
-    subcommand 'document', ::WayOfWorking::SubCommands::Document
   end
 end

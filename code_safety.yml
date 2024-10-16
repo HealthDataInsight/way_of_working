@@ -164,10 +164,6 @@ file safety:
     comments:
     reviewed_by: timgentry
     safe_revision: 9a0ca86054d828e858a98edc058ef07fdb5f7ba1
-  docs/code-of-conduct.md:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 4830ed99a857f3bf781bcf21bff6a2d5510fbcc7
   docs/decisions/0000-use-markdown-any-decision-records.md:
     comments:
     reviewed_by: brian.shand
@@ -228,10 +224,6 @@ file safety:
     comments:
     reviewed_by: timgentry
     safe_revision: eda36b003bc0e54efa33bce4352365b29a7eebd5
-  docs/pull-request-template-and-guidelines.md:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 7c767caadd9916c15281a30fe6b2e0302fa81d4e
   docs/readme-badges.md:
     comments:
     reviewed_by: timgentry
@@ -256,14 +248,6 @@ file safety:
     comments:
     reviewed_by: brian.shand
     safe_revision: 1cd0f0429c60c0666c1ddb905afbeb3f67a88a0e
-  lib/way_of_working/generators/code_of_conduct/init.rb:
-    comments:
-    reviewed_by: brian.shand
-    safe_revision: 173b77440f8786646ff9a1e83595500c18820dbb
-  lib/way_of_working/generators/pr_template/init.rb:
-    comments:
-    reviewed_by:
-    safe_revision:
   lib/way_of_working/generators/rake_tasks/init.rb:
     comments:
     reviewed_by: timgentry
@@ -292,10 +276,6 @@ file safety:
     comments:
     reviewed_by:
     safe_revision:
-  lib/way_of_working/sub_commands/document.rb:
-    comments:
-    reviewed_by:
-    safe_revision:
   lib/way_of_working/sub_commands/exec.rb:
     comments:
     reviewed_by:
@@ -312,14 +292,6 @@ file safety:
     comments:
     reviewed_by: brian.shand
     safe_revision: f4dda256b8f5754c38ccc64e63252024b24d9406
-  lib/way_of_working/templates/.github/pull_request_template.md:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: af9fc45197c286a76dc9abec6ec0fd006ee8647a
-  lib/way_of_working/templates/CODE_OF_CONDUCT.md.tt:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 4830ed99a857f3bf781bcf21bff6a2d5510fbcc7
   lib/way_of_working/templates/README.md:
     comments:
     reviewed_by: timgentry
@@ -328,14 +300,6 @@ file safety:
     comments:
     reviewed_by: timgentry
     safe_revision: 57d4f8c81e9125ff209667a855f47b3fd0406f2d
-  test/generators/code_of_conduct/init_test.rb:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 173b77440f8786646ff9a1e83595500c18820dbb
-  test/generators/pr_template/init_test.rb:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: af9fc45197c286a76dc9abec6ec0fd006ee8647a
   test/generators/rake_tasks/init_test.rb:
     comments:
     reviewed_by: timgentry
