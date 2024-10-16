@@ -2,6 +2,7 @@
 
 require 'pathname'
 
+# The Way of Working namespace
 module WayOfWorking
   # Mixin that provides a couple of pathname convenience methods
   module Paths
