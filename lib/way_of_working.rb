@@ -18,6 +18,6 @@ Gem::Specification.
   collect(&:name).uniq. # multiple versions of a single gem may be installed at once
   each do |name|
   require "#{name.gsub('-', '/')}/plugin"
-rescue LoadError
-  warn(Rainbow("Failed to load #{name} plugin.\n").red)
+  # rescue LoadError
+  #   warn(Rainbow("Failed to load #{name} plugin.\n").red)
 end
