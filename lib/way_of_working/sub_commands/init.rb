@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'way_of_working/generators/code_of_conduct/init'
-require 'way_of_working/generators/pr_template/init'
 require 'way_of_working/generators/rake_tasks/init'
 require 'way_of_working/generators/readme_badge/init'
 require_relative 'base'
@@ -28,18 +27,6 @@ module WayOfWorking
 
                      This will create:
                          CODE_OF_CONDUCT.md
-               LONGDESC
-
-      register(WayOfWorking::Generators::PrTemplate::Init, 'pr_template', 'pr_template',
-               <<~LONGDESC)
-                 Description:
-                     Installs the Pull Request template into the project
-
-                 Example:
-                     way_of_working init pr_template
-
-                     This will create:
-                         .github/pull_request_template.md
                LONGDESC
 
       register(WayOfWorking::Generators::RakeTasks::Init, 'rake_tasks', 'rake_tasks',

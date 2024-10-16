@@ -15,7 +15,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added dark mode support to our GitHub pages theme
 - Decided on Cabin as our Software-as-a-Service (SaaS) Web Analytics Solution
 - Added a panel for README badges and an HDI Way of Working badge
-- Added a Pull Request template and communications guidelines
 - Added a plugin system for new functionality
 
 ### Change
