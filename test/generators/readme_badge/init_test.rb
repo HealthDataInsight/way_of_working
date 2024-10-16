@@ -1,5 +1,4 @@
 require 'test_helper'
-require 'way_of_working/generators/readme_badge/init'
 
 module WayOfWorking
   module Generators

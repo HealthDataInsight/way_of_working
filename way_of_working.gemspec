@@ -49,4 +49,5 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'ostruct', '~> 0.6'
   spec.add_dependency 'rainbow', '~> 3.1'
   spec.add_dependency 'thor', '~> 1.2'
+  spec.add_dependency 'zeitwerk', '~> 2.6.18'
 end

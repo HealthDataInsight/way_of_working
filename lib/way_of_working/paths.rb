@@ -2,9 +2,10 @@
 
 require 'pathname'
 
-# Mixin that provides a couple of pathname convenience methods
+# The Way of Working namespace
 module WayOfWorking
-  class << self
+  # Mixin that provides a couple of pathname convenience methods
+  module Paths
     def root
       Pathname.new(File.expand_path('../..', __dir__))
     end
@@ -13,4 +14,6 @@ module WayOfWorking
       root.join('lib', 'way_of_working', 'templates')
     end
   end
+
+  extend Paths
 end
