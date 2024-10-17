@@ -1,10 +1,13 @@
 # frozen_string_literal: true
 
-require 'thor'
 require_relative 'way_of_working/cli'
 require_relative 'way_of_working/paths'
-require_relative 'way_of_working/version'
+require 'zeitwerk'
 
+loader = Zeitwerk::Loader.for_gem
+loader.setup
+
+# This is the namespace for everything associated with the Way of Working
 module WayOfWorking
   class Error < StandardError; end
 end

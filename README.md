@@ -32,54 +32,6 @@ If bundler is not being used to manage dependencies, install the gem by executin
 
 ## Usage
 
-### Changelog
-
-To add a [keep a changelog v1.1.0](https://keepachangelog.com/en/1.1.0/) changelog to your project, use the following at the command line:
-
-    way_of_working init changelog
-
-### Code Of Conduct
-
-To add a [Contributor Covenant](https://www.contributor-covenant.org/version/2/1/code_of_conduct/) Code of Conduct v2.1 to your project, use the following at the command line:
-
-    way_of_working init code_of_conduct --contact-method [CONTACT METHOD]
-
-You will need to enter a contact method, usually an email address. Please thoroughly read the [enforcement guidelines](https://www.contributor-covenant.org/version/2/1/code_of_conduct/#enforcement-guidelines) section of the code and discuss the implications of adopting the code of conduct.
-
-### Decision Records
-
-To add the [Markdown Any Decision Records (MADR)](https://adr.github.io/madr/) v3.0.0 framework to your project, run the following at the command line:
-
-    way_of_working init decision_record
-
-To create a new decision record, run:
-
-    way_of_working new decision_record [NAME]
-
-Where `[NAME]` is the title of your decision record, for example:
-
-    way_of_working new decision_record "Use Markdown Any Decision Records"
-
-### Inclusive Language
-
-To add [alex](https://alexjs.com) to your project, run the following at the command line:
-
-    way_of_working init inclusive_language
-
-to run alex in your project, run:
-
-    way_of_working exec inclusive_language
-
-### Linter
-
-To add [MegaLinter](https://megalinter.io/) to your project, run the following at the command line:
-
-    way_of_working init linter
-
-to run MegaLinter in your project, run:
-
-    way_of_working exec linter
-
 ### Initialise All Components
 
 To add all the Way of Working components to your project, run:

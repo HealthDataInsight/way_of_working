@@ -160,22 +160,10 @@ file safety:
     comments:
     reviewed_by: timgentry
     safe_revision: 4830ed99a857f3bf781bcf21bff6a2d5510fbcc7
-  docs/changelog.md:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 4830ed99a857f3bf781bcf21bff6a2d5510fbcc7
-  docs/code-linting/index.md:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 847e3df2e6920a243ad1d8e2fb56419150d01d0b
   docs/code-linting/linters.md:
     comments:
     reviewed_by: timgentry
     safe_revision: 9a0ca86054d828e858a98edc058ef07fdb5f7ba1
-  docs/code-of-conduct.md:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 4830ed99a857f3bf781bcf21bff6a2d5510fbcc7
   docs/decisions/0000-use-markdown-any-decision-records.md:
     comments:
     reviewed_by: brian.shand
@@ -224,18 +212,10 @@ file safety:
     comments:
     reviewed_by: brian.shand
     safe_revision: bfff11bf026610401b997b8413fa98b87e8a12df
-  docs/decisions/index.md:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 94300f9dcb8fb72816adbc2138bce3a0f95ce46e
   docs/end-to-end-testing.md:
     comments:
     reviewed_by: timgentry
     safe_revision: b9682563cac35fac517dafd009154453d3ae2bb2
-  docs/inclusive-language.md:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 7fc8c5bcd4a83faea1e0d6a950d7b2a2c0abcbf7
   docs/index.md:
     comments:
     reviewed_by: timgentry
@@ -244,10 +224,6 @@ file safety:
     comments:
     reviewed_by: timgentry
     safe_revision: eda36b003bc0e54efa33bce4352365b29a7eebd5
-  docs/pull-request-template-and-guidelines.md:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 7c767caadd9916c15281a30fe6b2e0302fa81d4e
   docs/readme-badges.md:
     comments:
     reviewed_by: timgentry
@@ -272,46 +248,6 @@ file safety:
     comments:
     reviewed_by: brian.shand
     safe_revision: 1cd0f0429c60c0666c1ddb905afbeb3f67a88a0e
-  lib/way_of_working/generators/changelog/init.rb:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 444ab8ecd988f85fe1c5d56ae3582e4fbe7705a3
-  lib/way_of_working/generators/code_of_conduct/init.rb:
-    comments:
-    reviewed_by: brian.shand
-    safe_revision: 173b77440f8786646ff9a1e83595500c18820dbb
-  lib/way_of_working/generators/decision_record/init.rb:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 19320285fb5d2dbd29bb4ec4b0f41ce2288e1c2e
-  lib/way_of_working/generators/decision_record/new.rb:
-    comments:
-    reviewed_by: brian.shand
-    safe_revision: 8424e6e3bf1c78f136ed1512d33878a2fc439463
-  lib/way_of_working/generators/inclusive_language/exec.rb:
-    comments:
-    reviewed_by:
-    safe_revision:
-  lib/way_of_working/generators/inclusive_language/init.rb:
-    comments:
-    reviewed_by:
-    safe_revision:
-  lib/way_of_working/generators/linter/document.rb:
-    comments:
-    reviewed_by:
-    safe_revision:
-  lib/way_of_working/generators/linter/exec.rb:
-    comments:
-    reviewed_by: brian.shand
-    safe_revision: 33c3bd28b246dcab7405c55e23107f52451ba8bf
-  lib/way_of_working/generators/linter/init.rb:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 9a0ca86054d828e858a98edc058ef07fdb5f7ba1
-  lib/way_of_working/generators/pr_template/init.rb:
-    comments:
-    reviewed_by:
-    safe_revision:
   lib/way_of_working/generators/rake_tasks/init.rb:
     comments:
     reviewed_by: timgentry
@@ -332,114 +268,34 @@ file safety:
     comments:
     reviewed_by: brian.shand
     safe_revision: d18d9c039e0cb95e33b24b789e9ee855b1e7a1b1
-  lib/way_of_working/sub_command_base.rb:
+  lib/way_of_working/sub_commands/base.rb:
     comments:
-    reviewed_by: brian.shand
-    safe_revision: b0d52c8acb3db4757e9771cb45b22eb6e163c6e1
+    reviewed_by:
+    safe_revision:
+  lib/way_of_working/sub_commands/exec.rb:
+    comments:
+    reviewed_by:
+    safe_revision:
+  lib/way_of_working/sub_commands/init.rb:
+    comments:
+    reviewed_by:
+    safe_revision:
+  lib/way_of_working/sub_commands/new.rb:
+    comments:
+    reviewed_by:
+    safe_revision:
   lib/way_of_working/tasks.rb:
     comments:
     reviewed_by: brian.shand
     safe_revision: f4dda256b8f5754c38ccc64e63252024b24d9406
-  lib/way_of_working/templates/.alexrc:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 7fc8c5bcd4a83faea1e0d6a950d7b2a2c0abcbf7
-  lib/way_of_working/templates/.github/ISSUE_TEMPLATE/decision-record.md:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 19320285fb5d2dbd29bb4ec4b0f41ce2288e1c2e
-  lib/way_of_working/templates/.github/linters/.markdown-link-check.json:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 8424e6e3bf1c78f136ed1512d33878a2fc439463
-  lib/way_of_working/templates/.github/linters/rubocop_defaults.yml:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: d65734d0d9391ae6be55cef85c0f09549864cf1b
-  lib/way_of_working/templates/.github/pull_request_template.md:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: af9fc45197c286a76dc9abec6ec0fd006ee8647a
-  lib/way_of_working/templates/.github/workflows/inclusive-language.yml:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: fd5667379c1f14a71bb4de661515ca53d9f10941
-  lib/way_of_working/templates/.github/workflows/mega-linter.yml:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 0bec387ac06b7a038870c559989d766af2eeedd9
-  lib/way_of_working/templates/.mega-linter.yml:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 4ce005ff2909ed3bb4c98c31960610c3bd85c974
-  lib/way_of_working/templates/.rubocop:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: d65734d0d9391ae6be55cef85c0f09549864cf1b
-  lib/way_of_working/templates/CODE_OF_CONDUCT.md.tt:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 4830ed99a857f3bf781bcf21bff6a2d5510fbcc7
   lib/way_of_working/templates/README.md:
     comments:
     reviewed_by: timgentry
     safe_revision: c8647a1969cd83d11933fe32acc55a2bc1a29c8f
-  lib/way_of_working/templates/docs/code-linting/linters.md.tt:
-    comments:
-    reviewed_by:
-    safe_revision:
-  lib/way_of_working/templates/docs/decisions/README.md:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: f96fc0fbe2d380210ac5a12d04db8140ebd5ea56
-  lib/way_of_working/templates/docs/decisions/adr-template.md.tt:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 8424e6e3bf1c78f136ed1512d33878a2fc439463
   lib/way_of_working/version.rb:
     comments:
     reviewed_by: timgentry
     safe_revision: 57d4f8c81e9125ff209667a855f47b3fd0406f2d
-  test/generators/changelog/init_test.rb:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 6d9fc0871848ee362e8471bd78aa4815867aeded
-  test/generators/code_of_conduct/init_test.rb:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 173b77440f8786646ff9a1e83595500c18820dbb
-  test/generators/decision_record/init_test.rb:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 19320285fb5d2dbd29bb4ec4b0f41ce2288e1c2e
-  test/generators/decision_record/new_test.rb:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 7e78ccc7707113c8813323c5044813f52fdeb82a
-  test/generators/inclusive_language/exec_test.rb:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 7fc8c5bcd4a83faea1e0d6a950d7b2a2c0abcbf7
-  test/generators/inclusive_language/init_test.rb:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 7fc8c5bcd4a83faea1e0d6a950d7b2a2c0abcbf7
-  test/generators/linter/document_test.rb:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 9a0ca86054d828e858a98edc058ef07fdb5f7ba1
-  test/generators/linter/exec_test.rb:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 8f9c72f5e59e3972f4e4d629dc72ecf783e2f056
-  test/generators/linter/init_test.rb:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 8e6b9abcfb2e8a657f210590ef06aec1e90ebde9
-  test/generators/pr_template/init_test.rb:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: af9fc45197c286a76dc9abec6ec0fd006ee8647a
   test/generators/rake_tasks/init_test.rb:
     comments:
     reviewed_by: timgentry
