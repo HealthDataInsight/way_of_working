@@ -8,8 +8,8 @@ module WayOfWorking
         include Thor::Actions
 
         RAKEFILE_FILENAME = 'Rakefile'
-        RAILS_LOC = %r{require_relative ["']config/application["']\n}.freeze
-        BUNDLER_LOC = %r{require ["']bundler/gem_tasks["']\n}.freeze
+        RAILS_LOC = %r{require_relative ["']config/application["']\n}
+        BUNDLER_LOC = %r{require ["']bundler/gem_tasks["']\n}
 
         def add_to_rakefile
           case rakefile_type
