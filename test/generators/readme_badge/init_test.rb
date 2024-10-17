@@ -21,15 +21,17 @@ module WayOfWorking
           run_generator
 
           assert_file 'README.md' do |content|
-            assert_match("<!-- HDI Way of Working: Badge Holder Start -->\n", content)
-            assert_match("<!-- HDI Way of Working: Badge Holder End -->\n", content)
+            assert_match("<!-- Way of Working: Main Badge Holder Start -->\n", content)
+            assert_match("<!-- Way of Working: Additional Badge Holder Start -->\n", content)
+            assert_match("<!-- Way of Working: Badge Holder End -->\n", content)
           end
 
           run_generator [], behavior: :revoke
 
           assert_file 'README.md' do |content|
-            refute_match("<!-- HDI Way of Working: Badge Holder Start -->\n", content)
-            refute_match("<!-- HDI Way of Working: Badge Holder End -->\n", content)
+            refute_match("<!-- Way of Working: Main Badge Holder Start -->\n", content)
+            refute_match("<!-- Way of Working: Additional Badge Holder Start -->\n", content)
+            refute_match("<!-- Way of Working: Badge Holder End -->\n", content)
           end
         end
 
@@ -37,22 +39,25 @@ module WayOfWorking
           prepare_readme 'test_README.md'
 
           assert_file 'README.md' do |content|
-            refute_match("<!-- HDI Way of Working: Badge Holder Start -->\n", content)
-            refute_match("<!-- HDI Way of Working: Badge Holder End -->\n", content)
+            refute_match("<!-- Way of Working: Main Badge Holder Start -->\n", content)
+            refute_match("<!-- Way of Working: Additional Badge Holder Start -->\n", content)
+            refute_match("<!-- Way of Working: Badge Holder End -->\n", content)
           end
 
           run_generator
 
           assert_file 'README.md' do |content|
-            assert_match("<!-- HDI Way of Working: Badge Holder Start -->\n", content)
-            assert_match("<!-- HDI Way of Working: Badge Holder End -->\n", content)
+            assert_match("<!-- Way of Working: Main Badge Holder Start -->\n", content)
+            assert_match("<!-- Way of Working: Additional Badge Holder Start -->\n", content)
+            assert_match("<!-- Way of Working: Badge Holder End -->\n", content)
           end
 
           run_generator [], behavior: :revoke
 
           assert_file 'README.md' do |content|
-            refute_match("<!-- HDI Way of Working: Badge Holder Start -->\n", content)
-            refute_match("<!-- HDI Way of Working: Badge Holder End -->\n", content)
+            refute_match("<!-- Way of Working: Main Badge Holder Start -->\n", content)
+            refute_match("<!-- Way of Working: Additional Badge Holder Start -->\n", content)
+            refute_match("<!-- Way of Working: Badge Holder End -->\n", content)
           end
         end
 
