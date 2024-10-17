@@ -100,62 +100,6 @@ file safety:
     comments:
     reviewed_by: timgentry
     safe_revision: 50f34ef4f776c94ead81d272a7ae94b6048dcb03
-  docs/.gitignore:
-    comments:
-    reviewed_by: brian.shand
-    safe_revision: bfff11bf026610401b997b8413fa98b87e8a12df
-  docs/.ruby-version:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: fd5667379c1f14a71bb4de661515ca53d9f10941
-  docs/404.md:
-    comments:
-    reviewed_by: brian.shand
-    safe_revision: bfff11bf026610401b997b8413fa98b87e8a12df
-  docs/Gemfile:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: bd0511afad7fa68b4a41c5cb9d813027d6fc9b77
-  docs/Gemfile.lock:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 1705f034f7f9b7b0121817d96b02c5b81d5c029e
-  docs/_config.yml:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 94300f9dcb8fb72816adbc2138bce3a0f95ce46e
-  docs/_includes/components/sidebar.html:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 94300f9dcb8fb72816adbc2138bce3a0f95ce46e
-  docs/_includes/footer_custom.html:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 94300f9dcb8fb72816adbc2138bce3a0f95ce46e
-  docs/_sass/color_schemes/hdi-light.scss:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 45e816105cd176477fc3a907927f0b688818024e
-  docs/_sass/custom/OneDarkJekyll.scss:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 0bec387ac06b7a038870c559989d766af2eeedd9
-  docs/_sass/custom/a11y-colours.scss:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 45e816105cd176477fc3a907927f0b688818024e
-  docs/_sass/custom/color-scheme-shims.scss:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 45e816105cd176477fc3a907927f0b688818024e
-  docs/_sass/custom/custom.scss:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: c8da92e6bd4a88c8d580009732f5630fb8c55b99
-  docs/_sass/custom/setup.scss:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 45e816105cd176477fc3a907927f0b688818024e
   docs/accessibility-testing.md:
     comments:
     reviewed_by: timgentry
@@ -165,10 +109,6 @@ file safety:
     reviewed_by: timgentry
     safe_revision: 9a0ca86054d828e858a98edc058ef07fdb5f7ba1
   docs/decisions/0000-use-markdown-any-decision-records.md:
-    comments:
-    reviewed_by: brian.shand
-    safe_revision: bfff11bf026610401b997b8413fa98b87e8a12df
-  docs/decisions/0001-adoption-of-an-off-the-shelf-code-of-conduct.md:
     comments:
     reviewed_by: brian.shand
     safe_revision: bfff11bf026610401b997b8413fa98b87e8a12df
@@ -220,10 +160,6 @@ file safety:
     comments:
     reviewed_by: timgentry
     safe_revision: 4830ed99a857f3bf781bcf21bff6a2d5510fbcc7
-  docs/pa11y.json:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: eda36b003bc0e54efa33bce4352365b29a7eebd5
   docs/readme-badges.md:
     comments:
     reviewed_by: timgentry
@@ -268,10 +204,6 @@ file safety:
     comments:
     reviewed_by: brian.shand
     safe_revision: d18d9c039e0cb95e33b24b789e9ee855b1e7a1b1
-  lib/way_of_working/sub_commands/audit.rb:
-    comments:
-    reviewed_by:
-    safe_revision:
   lib/way_of_working/sub_commands/base.rb:
     comments:
     reviewed_by:
