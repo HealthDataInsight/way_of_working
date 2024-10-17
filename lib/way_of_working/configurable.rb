@@ -11,19 +11,19 @@ module WayOfWorking
       module_function
 
       def organisation_abbreviation=(value)
-        @organisation_abbreviation = value
+        @@organisation_abbreviation = value
       end
 
       def organisation_gem_version=(version)
-        @organisation_gem_version = version
+        @@organisation_gem_version = version
       end
 
       def main_badge_name
-        [@organisation_abbreviation, 'Way of Working'].compact.join(' ')
+        [@@organisation_abbreviation, 'Way of Working'].compact.join(' ')
       end
 
       def main_badge_version
-        @organisation_gem_version || WayOfWorking::VERSION
+        @@organisation_gem_version || WayOfWorking::VERSION
       end
     end
   end
