@@ -92,26 +92,10 @@ file safety:
     comments:
     reviewed_by: timgentry
     safe_revision: 50f34ef4f776c94ead81d272a7ae94b6048dcb03
-  docs/accessibility-testing.md:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 4830ed99a857f3bf781bcf21bff6a2d5510fbcc7
   docs/decisions/0000-use-markdown-any-decision-records.md:
     comments:
     reviewed_by: brian.shand
     safe_revision: bfff11bf026610401b997b8413fa98b87e8a12df
-  docs/decisions/0004-end-to-end-aka-system-testing.md:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 4830ed99a857f3bf781bcf21bff6a2d5510fbcc7
-  docs/decisions/0005-standardised-approach-to-versioning.md:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 5df320642196850793a8f3c9edd3dc1b9c1cac68
-  docs/decisions/0006-standard-approach-to-automated-accessibility-testing.md:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: fd5667379c1f14a71bb4de661515ca53d9f10941
   docs/decisions/0007-test-for-insensitive-and-inconsiderate-writing.md:
     comments:
     reviewed_by: timgentry
@@ -132,10 +116,6 @@ file safety:
     comments:
     reviewed_by: brian.shand
     safe_revision: bfff11bf026610401b997b8413fa98b87e8a12df
-  docs/end-to-end-testing.md:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: b9682563cac35fac517dafd009154453d3ae2bb2
   docs/index.md:
     comments:
     reviewed_by: timgentry
@@ -144,10 +124,6 @@ file safety:
     comments:
     reviewed_by: timgentry
     safe_revision: c8647a1969cd83d11933fe32acc55a2bc1a29c8f
-  docs/versioning.md:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 9c1a3630d32509f50be45574a879e61726c22a1c
   exe/way_of_working:
     comments:
     reviewed_by: timgentry
