@@ -104,10 +104,6 @@ file safety:
     comments:
     reviewed_by: brian.shand
     safe_revision: bfff11bf026610401b997b8413fa98b87e8a12df
-  docs/index.md:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 4830ed99a857f3bf781bcf21bff6a2d5510fbcc7
   docs/readme-badges.md:
     comments:
     reviewed_by: timgentry

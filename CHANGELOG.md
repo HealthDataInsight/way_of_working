@@ -12,16 +12,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added a panel for README badges and an HDI Way of Working badge
 - Added a plugin system for new functionality
 
-### Change
-
-- Bumped GitHub Pages gem dependencies
-
 ### Removed
 
 - Moved MADR Decision Records to a separate plugin
 - Moved Contributor Covenant Code of Conduct to a separate plugin
 - Moved MegaLinter to a separate plugin
 - Moved Keep a Changelog to a separate plugin
+- Removed GitHub Pages
 
 ### Security
 
