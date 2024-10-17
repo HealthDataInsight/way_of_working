@@ -40,14 +40,6 @@ file safety:
     comments:
     reviewed_by: timgentry
     safe_revision: 0bec387ac06b7a038870c559989d766af2eeedd9
-  ".github/workflows/wcag2aa.yml":
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 0bec387ac06b7a038870c559989d766af2eeedd9
-  ".github/workflows/wcag2aaa.yml":
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 0bec387ac06b7a038870c559989d766af2eeedd9
   ".gitignore":
     comments:
     reviewed_by: timgentry
@@ -104,22 +96,10 @@ file safety:
     comments:
     reviewed_by: timgentry
     safe_revision: 4830ed99a857f3bf781bcf21bff6a2d5510fbcc7
-  docs/code-linting/linters.md:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 9a0ca86054d828e858a98edc058ef07fdb5f7ba1
   docs/decisions/0000-use-markdown-any-decision-records.md:
     comments:
     reviewed_by: brian.shand
     safe_revision: bfff11bf026610401b997b8413fa98b87e8a12df
-  docs/decisions/0002-use-megalinter-for-linting-common-file-formats.md:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 4830ed99a857f3bf781bcf21bff6a2d5510fbcc7
-  docs/decisions/0003-use-keep-a-changelog-v1-1-as-the-format-for-changelogs.md:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 4830ed99a857f3bf781bcf21bff6a2d5510fbcc7
   docs/decisions/0004-end-to-end-aka-system-testing.md:
     comments:
     reviewed_by: timgentry
