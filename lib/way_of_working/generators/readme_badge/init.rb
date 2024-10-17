@@ -6,7 +6,7 @@ require 'way_of_working/paths'
 module WayOfWorking
   module Generators
     module ReadmeBadge
-      HOLDER_END_TAG = "<!-- HDI Way of Working: Badge Holder End -->\n"
+      HOLDER_END_TAG = "<!-- Way of Working: Badge Holder End -->\n"
 
       # This generator adds the alexrc file
       class Init < Thor::Group
@@ -21,14 +21,22 @@ module WayOfWorking
         def insert_badge_holder_into_readme
           content = <<~MARKDOWN + HOLDER_END_TAG
 
-            <!-- HDI Way of Working: Badge Holder Start -->
-            [![HDI Way of Working](https://img.shields.io/badge/HDI-Way%20of%20Working-8169e3?labelColor=000)](https://healthdatainsight.github.io/way_of_working/)
+            <!-- Way of Working: Main Badge Holder Start -->
+            #{main_badge}
+            <!-- Way of Working: Additional Badge Holder Start -->
           MARKDOWN
 
-          insert_into_file 'README.md', "#{content}\n", after: /^#\s.*?\n/
+          insert_into_file 'README.md', content, after: /^#\s.*?\n/
         end
 
         private
+
+        def main_badge
+          shield_url = 'https://img.shields.io/badge/' \
+                       "#{WayOfWorking.main_badge_name.gsub(' ', '_')}-" \
+                       "v#{WayOfWorking.main_badge_version}-%238169e3?labelColor=black"
+          "![#{WayOfWorking.main_badge_name} Badge](#{shield_url})"
+        end
 
         def template_if_missing(path)
           destination_path = File.join(destination_root, path)

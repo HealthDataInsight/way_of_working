@@ -18,11 +18,11 @@ module WayOfWorking
         @organisation_gem_version = version
       end
 
-      def way_of_working_badge_name
+      def main_badge_name
         [@organisation_abbreviation, 'Way of Working'].compact.join(' ')
       end
 
-      def way_of_working_badge_version
+      def main_badge_version
         @organisation_gem_version || WayOfWorking::VERSION
       end
     end
