@@ -9,7 +9,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Added Cypress end-to-end testing
 - Adopted Semantic Versioning
 - Decided on Cabin as our Software-as-a-Service (SaaS) Web Analytics Solution
 - Added a panel for README badges and an HDI Way of Working badge
