@@ -96,10 +96,6 @@ file safety:
     comments:
     reviewed_by: brian.shand
     safe_revision: bfff11bf026610401b997b8413fa98b87e8a12df
-  docs/decisions/0009-pull-request-guidlines-and-template.md:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 7c767caadd9916c15281a30fe6b2e0302fa81d4e
   docs/decisions/README.md:
     comments:
     reviewed_by: timgentry
