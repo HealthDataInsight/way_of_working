@@ -33,9 +33,9 @@ module WayOfWorking
 
         def main_badge
           shield_url = 'https://img.shields.io/badge/' \
-                       "#{WayOfWorking.main_badge_name.gsub(' ', '_')}-" \
-                       "v#{WayOfWorking.main_badge_version}-%238169e3?labelColor=black"
-          "![#{WayOfWorking.main_badge_name} Badge](#{shield_url})"
+                       "#{WayOfWorking::Configuration.main_badge_name.gsub(' ', '_')}-" \
+                       "v#{WayOfWorking::Configuration.main_badge_version}-%238169e3?labelColor=black"
+          "![#{WayOfWorking::Configuration.main_badge_name} Badge](#{shield_url})"
         end
 
         def template_if_missing(path)
