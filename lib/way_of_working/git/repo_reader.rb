@@ -35,9 +35,7 @@ module WayOfWorking
         tags.each do |tag|
           next if tag.version.nil?
 
-          if previous_version && tag.version <= previous_version
-            raise 'Tag versions are not incremental over time'
-          end
+          raise 'Tag versions are not incremental over time' if previous_version && tag.version <= previous_version
 
           previous_version = tag.version
         end

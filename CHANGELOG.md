@@ -9,21 +9,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Added Cypress end-to-end testing
-- Adopted Semantic Versioning
-- Added pa11y automated accessibility testing
-- Added dark mode support to our GitHub pages theme
-- Added alex inclusive language testing
-- Decided on Cabin as our Software-as-a-Service (SaaS) Web Analytics Solution
-- Added a Decision Record issue template
-- Added a panel for README badges and an HDI Way of Working badge
-- Added a Pull Request template and communications guidelines
-- Added a document command to update the list of used and available linters
-- Added Swiftlint build phase to Xcode projects
+- Added a panel for README badges and a Way of Working badge
+- Added a plugin system for new functionality
 
-### Change
+### Removed
 
-- Bumped GitHub Pages gem dependencies
+- Moved MADR Decision Records to a separate plugin
+- Moved Contributor Covenant Code of Conduct to a separate plugin
+- Moved MegaLinter to a separate plugin
+- Moved Keep a Changelog to a separate plugin
+- Removed GitHub Pages
 
 ### Security
 
