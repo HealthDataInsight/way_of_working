@@ -104,10 +104,6 @@ file safety:
     comments:
     reviewed_by: brian.shand
     safe_revision: bfff11bf026610401b997b8413fa98b87e8a12df
-  docs/readme-badges.md:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: c8647a1969cd83d11933fe32acc55a2bc1a29c8f
   exe/way_of_working:
     comments:
     reviewed_by: timgentry
@@ -124,11 +120,7 @@ file safety:
     comments:
     reviewed_by: brian.shand
     safe_revision: 1cd0f0429c60c0666c1ddb905afbeb3f67a88a0e
-  lib/way_of_working/generators/rake_tasks/init.rb:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 69d497b8f97040050d47dd0357e6f5ebeafd3766
-  lib/way_of_working/generators/readme_badge/init.rb:
+  lib/way_of_working/configuration.rb:
     comments:
     reviewed_by:
     safe_revision:
@@ -144,6 +136,38 @@ file safety:
     comments:
     reviewed_by: brian.shand
     safe_revision: d18d9c039e0cb95e33b24b789e9ee855b1e7a1b1
+  lib/way_of_working/rake_tasks.rb:
+    comments:
+    reviewed_by:
+    safe_revision:
+  lib/way_of_working/rake_tasks/generators/init.rb:
+    comments:
+    reviewed_by:
+    safe_revision:
+  lib/way_of_working/readme_badge.rb:
+    comments:
+    reviewed_by:
+    safe_revision:
+  lib/way_of_working/readme_badge/generators/init.rb:
+    comments:
+    reviewed_by:
+    safe_revision:
+  lib/way_of_working/readme_badge/github_audit_rule.rb:
+    comments:
+    reviewed_by:
+    safe_revision:
+  lib/way_of_working/readme_badge/paths.rb:
+    comments:
+    reviewed_by:
+    safe_revision:
+  lib/way_of_working/readme_badge/templates/README.md:
+    comments:
+    reviewed_by:
+    safe_revision:
+  lib/way_of_working/readme_badge/templates/docs/way_of_working/readme-badges.md.tt:
+    comments:
+    reviewed_by:
+    safe_revision:
   lib/way_of_working/sub_commands/base.rb:
     comments:
     reviewed_by:
@@ -164,22 +188,10 @@ file safety:
     comments:
     reviewed_by: brian.shand
     safe_revision: f4dda256b8f5754c38ccc64e63252024b24d9406
-  lib/way_of_working/templates/README.md:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: c8647a1969cd83d11933fe32acc55a2bc1a29c8f
   lib/way_of_working/version.rb:
     comments:
     reviewed_by: timgentry
     safe_revision: 57d4f8c81e9125ff209667a855f47b3fd0406f2d
-  test/generators/rake_tasks/init_test.rb:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 69d497b8f97040050d47dd0357e6f5ebeafd3766
-  test/generators/readme_badge/init_test.rb:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: c8647a1969cd83d11933fe32acc55a2bc1a29c8f
   test/git/summary_tag_test.rb:
     comments:
     reviewed_by: timgentry
@@ -216,6 +228,14 @@ file safety:
     comments:
     reviewed_by: timgentry
     safe_revision: 8f9c72f5e59e3972f4e4d629dc72ecf783e2f056
+  test/way_of_working/rake_tasks/generators/init_test.rb:
+    comments:
+    reviewed_by:
+    safe_revision:
+  test/way_of_working/readme_badge/generators/init_test.rb:
+    comments:
+    reviewed_by:
+    safe_revision:
   test/way_of_working_test.rb:
     comments:
     reviewed_by: timgentry
