@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require_relative 'way_of_working/cli'
-require_relative 'way_of_working/paths'
+require 'way_of_working/cli'
+require 'way_of_working/paths'
 require 'zeitwerk'
 
 # Require "internal" plugins
