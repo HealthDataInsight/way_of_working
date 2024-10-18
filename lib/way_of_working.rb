@@ -1,8 +1,11 @@
 # frozen_string_literal: true
 
-require_relative 'way_of_working/cli'
-require_relative 'way_of_working/paths'
+require 'way_of_working/cli'
+require 'way_of_working/paths'
 require 'zeitwerk'
+
+# Require "internal" plugin(s) here
+require 'way_of_working/readme_badge'
 
 loader = Zeitwerk::Loader.for_gem
 loader.setup
@@ -18,6 +21,4 @@ Gem::Specification.
   collect(&:name).uniq. # multiple versions of a single gem may be installed at once
   each do |name|
   require "#{name.gsub('-', '/')}/plugin"
-rescue LoadError
-  warn(Rainbow("Failed to load #{name} plugin.\n").red)
 end
