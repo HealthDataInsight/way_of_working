@@ -9,8 +9,6 @@ loader.setup
 
 # This is the namespace for everything associated with the Way of Working
 module WayOfWorking
-  include Configurable
-
   class Error < StandardError; end
 end
 
