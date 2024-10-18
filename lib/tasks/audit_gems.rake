@@ -5,7 +5,7 @@ GEM_VERSION_PLATFORM_REGEXP = /
   (?:-(java|(?:aarch|arm|x)(?:86)?(?:_)?(?:64)?-(?:darwin|linux|mingw32|mingw-ucrt)))?
   \.gem
   \z
-/ix.freeze
+/ix
 
 namespace :audit do
   desc 'This tasks audits vendored gems, comparing file digests with published ones'
@@ -21,7 +21,7 @@ namespace :audit do
     git_user_name = git_base.config('user.name')
     failed = false
 
-    Dir['vendor/cache/*.gem'].sort.each do |path|
+    Dir['vendor/cache/*.gem'].each do |path|
       file_digest = Digest::SHA256.file(path).hexdigest
       file_name = File.basename(path)
       matchdata = GEM_VERSION_PLATFORM_REGEXP.match(file_name)
