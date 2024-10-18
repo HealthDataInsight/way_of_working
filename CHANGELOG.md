@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Added a panel for README badges and an HDI Way of Working badge
+- Added a panel for README badges and a Way of Working badge
 - Added a plugin system for new functionality
 
 ### Removed
