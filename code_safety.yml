@@ -136,14 +136,6 @@ file safety:
     comments:
     reviewed_by: brian.shand
     safe_revision: d18d9c039e0cb95e33b24b789e9ee855b1e7a1b1
-  lib/way_of_working/rake_tasks.rb:
-    comments:
-    reviewed_by:
-    safe_revision:
-  lib/way_of_working/rake_tasks/generators/init.rb:
-    comments:
-    reviewed_by:
-    safe_revision:
   lib/way_of_working/readme_badge.rb:
     comments:
     reviewed_by:
@@ -228,10 +220,6 @@ file safety:
     comments:
     reviewed_by: timgentry
     safe_revision: 8f9c72f5e59e3972f4e4d629dc72ecf783e2f056
-  test/way_of_working/rake_tasks/generators/init_test.rb:
-    comments:
-    reviewed_by:
-    safe_revision:
   test/way_of_working/readme_badge/generators/init_test.rb:
     comments:
     reviewed_by:
