@@ -61,6 +61,18 @@ module WayOfWorking
           end
         end
 
+        test 'Wayof Working documentation is created and revoked' do
+          assert_no_file 'docs/way_of_working/readme-badges.md'
+
+          run_generator
+
+          assert_file 'docs/way_of_working/readme-badges.md'
+
+          run_generator [], behavior: :revoke
+
+          assert_no_file 'docs/way_of_working/readme-badges.md'
+        end
+
         private
 
         # This method will copy a vanilla Rakefile into the destination folder

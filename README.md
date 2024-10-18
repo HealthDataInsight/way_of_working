@@ -1,5 +1,10 @@
 # Way of Working
 
+<!-- Way of Working: Main Badge Holder Start -->
+![Way of Working Badge](https://img.shields.io/badge/Way_of_Working-v2.0.0-%238169e3?labelColor=black)
+<!-- Way of Working: Additional Badge Holder Start -->
+<!-- Way of Working: Badge Holder End -->
+
 [![Gem Version](https://badge.fury.io/rb/way_of_working.svg)](https://badge.fury.io/rb/way_of_working)
 <br />
 [![MegaLinter](https://github.com/HealthDataInsight/way_of_working/workflows/MegaLinter/badge.svg?branch=main)](https://github.com/HealthDataInsight/way_of_working/actions?query=workflow%3AMegaLinter+branch%3Amain)

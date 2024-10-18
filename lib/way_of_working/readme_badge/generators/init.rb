@@ -29,6 +29,10 @@ module WayOfWorking
           insert_into_file 'README.md', content, after: /^#\s.*?\n/
         end
 
+        def copy_way_of_working_documentation
+          template 'docs/way_of_working/readme-badges.md'
+        end
+
         private
 
         def main_badge
