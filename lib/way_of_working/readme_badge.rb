@@ -2,6 +2,8 @@
 
 require_relative 'readme_badge/generators/init'
 
+require_relative 'readme_badge/github_audit_rule' if WayOfWorking.const_defined?('GithubAudit::Rules::Base')
+
 module WayOfWorking
   module SubCommands
     # This reopens the "way_of_working init" sub command
