@@ -1,11 +1,11 @@
 require 'test_helper'
 
 module WayOfWorking
-  module Generators
-    module ReadmeBadge
+  module ReadmeBadge
+    module Generators
       # This class tests the ReadmeBadge::Init Thor Group (generator)
       class InitTest < Rails::Generators::TestCase
-        tests WayOfWorking::Generators::ReadmeBadge::Init
+        tests WayOfWorking::ReadmeBadge::Generators::Init
         destination WayOfWorking.root.join('tmp/generators')
         setup :prepare_destination
 

@@ -4,8 +4,8 @@ require 'thor'
 require 'way_of_working/paths'
 
 module WayOfWorking
-  module Generators
-    module ReadmeBadge
+  module ReadmeBadge
+    module Generators
       HOLDER_END_TAG = "<!-- Way of Working: Badge Holder End -->\n"
 
       # This generator adds the alexrc file

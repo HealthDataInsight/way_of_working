@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'way_of_working/generators/rake_tasks/init'
-require 'way_of_working/generators/readme_badge/init'
+require 'way_of_working/readme_badge/generators/init'
 require_relative 'base'
 
 module WayOfWorking
@@ -27,7 +27,7 @@ module WayOfWorking
                          Rakefile
                LONGDESC
 
-      register(WayOfWorking::Generators::ReadmeBadge::Init, 'readme_badge', 'readme_badge',
+      register(ReadmeBadge::Generators::Init, 'readme_badge', 'readme_badge',
                <<~LONGDESC)
                  Description:
                      Installs Way of Working readme badge and badge holder into this project
