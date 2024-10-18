@@ -3,11 +3,11 @@
 require 'test_helper'
 
 module WayOfWorking
-  module Generators
-    module RakeTasks
+  module RakeTasks
+    module Generators
       # This class tests the RakeTasks::Init Thor Group (generator)
       class InitTest < Rails::Generators::TestCase
-        tests WayOfWorking::Generators::RakeTasks::Init
+        tests WayOfWorking::RakeTasks::Generators::Init
         destination WayOfWorking.root.join('tmp/generators')
         setup :prepare_destination
 
