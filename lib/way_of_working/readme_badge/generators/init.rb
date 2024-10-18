@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'thor'
-require 'way_of_working/paths'
+require 'way_of_working/readme_badge/paths'
 
 module WayOfWorking
   module ReadmeBadge
@@ -12,7 +12,7 @@ module WayOfWorking
       class Init < Thor::Group
         include Thor::Actions
 
-        source_root ::WayOfWorking.source_root
+        source_root ::WayOfWorking::ReadmeBadge.source_root
 
         def create_template_readme_if_missing
           template_if_missing 'README.md'

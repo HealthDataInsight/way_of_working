@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'way_of_working/generators/rake_tasks/init'
-require 'way_of_working/readme_badge/generators/init'
 require_relative 'base'
 
 module WayOfWorking
@@ -25,18 +24,6 @@ module WayOfWorking
 
                      This will amend or create:
                          Rakefile
-               LONGDESC
-
-      register(ReadmeBadge::Generators::Init, 'readme_badge', 'readme_badge',
-               <<~LONGDESC)
-                 Description:
-                     Installs Way of Working readme badge and badge holder into this project
-
-                 Example:
-                     way_of_working init readme_badge
-
-                     This will amend or create:
-                         README.md
                LONGDESC
     end
   end
