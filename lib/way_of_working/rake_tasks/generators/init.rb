@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 module WayOfWorking
-  module Generators
-    module RakeTasks
+  module RakeTasks
+    module Generators
       # This generator installs way of working rake tasks into this project
       class Init < Thor::Group
         include Thor::Actions

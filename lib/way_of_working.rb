@@ -5,6 +5,7 @@ require 'way_of_working/paths'
 require 'zeitwerk'
 
 # Require "internal" plugins
+require_relative 'way_of_working/rake_tasks'
 require_relative 'way_of_working/readme_badge'
 
 loader = Zeitwerk::Loader.for_gem
