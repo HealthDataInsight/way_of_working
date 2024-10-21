@@ -21,14 +21,14 @@ There are subcommands that plugins hook into whcih enable them to add GitHub act
 
 Below is a list of plugins that have been implemented so far:
 
-| Feature               | Plugin                                                | Description                                                                    |
-| --------------------- | ----------------------------------------------------- | ------------------------------------------------------------------------------ |
-| Changelog             | [way_of_working-changelog-keepachangelog]             | Implements [keepachangelog v1.1]                                               |
-| Code Linting          | [way_of_working-code_linting-hdi]                     | Implements a combination of [MegaLinter] and [RuboCop] built on NDRS standards |
-| Code of Conduct       | [way_of_working-code_of_conduct-contributor_covenant] | Implements [Contributor Covenant v2.1]                                         |
-| Decision Records      | [way_of_working-decision_record-madr]                 | Implements [MADR v3]                                                           |
-| Inclusive Language    | [way_of_working-inclusive_language-alex]              | Implements [alex]                                                              |
-| Pull Request Template | [way_of_working-pull_request_template-hdi]            | Implements a bespoke PR template                                               |
+| Feature               | Plugin                                 | Description                                                                    |
+| --------------------- | -------------------------------------- | ------------------------------------------------------------------------------ |
+| Changelog             | [changelog-keepachangelog]             | Implements [keepachangelog v1.1]                                               |
+| Code Linting          | [code_linting-hdi]                     | Implements a combination of [MegaLinter] and [RuboCop] built on NDRS standards |
+| Code of Conduct       | [code_of_conduct-contributor_covenant] | Implements [Contributor Covenant v2.1]                                         |
+| Decision Records      | [decision_record-madr]                 | Implements [MADR v3]                                                           |
+| Inclusive Language    | [inclusive_language-alex]              | Implements [alex]                                                              |
+| Pull Request Template | [pull_request_template-hdi]            | Implements a bespoke PR template                                               |
 
 ## Installation
 
@@ -91,9 +91,9 @@ Everyone interacting in the WayOfWorking project's codebases, issue trackers, ch
 [MADR v3]: https://adr.github.io/madr/
 [MegaLinter]: https://megalinter.io/
 [RuboCop]: https://rubocop.org
-[way_of_working-changelog-keepachangelog]: https://github.com/HealthDataInsight/way_of_working-changelog-keepachangelog
-[way_of_working-code_linting-hdi]: https://github.com/HealthDataInsight/way_of_working-code_linting-hdi
-[way_of_working-code_of_conduct-contributor_covenant]: https://github.com/HealthDataInsight/way_of_working-code_of_conduct-contributor_covenant
-[way_of_working-decision_record-madr]: https://github.com/HealthDataInsight/way_of_working-decision_record-madr
-[way_of_working-inclusive_language-alex]: https://github.com/HealthDataInsight/way_of_working-inclusive_language-alex
-[way_of_working-pull_request_template-hdi]: https://github.com/HealthDataInsight/way_of_working-pull_request_template-hdi
+[changelog-keepachangelog]: https://github.com/HealthDataInsight/way_of_working-changelog-keepachangelog
+[code_linting-hdi]: https://github.com/HealthDataInsight/way_of_working-code_linting-hdi
+[code_of_conduct-contributor_covenant]: https://github.com/HealthDataInsight/way_of_working-code_of_conduct-contributor_covenant
+[decision_record-madr]: https://github.com/HealthDataInsight/way_of_working-decision_record-madr
+[inclusive_language-alex]: https://github.com/HealthDataInsight/way_of_working-inclusive_language-alex
+[pull_request_template-hdi]: https://github.com/HealthDataInsight/way_of_working-pull_request_template-hdi
