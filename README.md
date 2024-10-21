@@ -17,7 +17,7 @@ This tool underpins the Way of Working framework, used to describe a consistent,
 It consists command line tool that uses a modular, plugin-based system to gain functionality, allowing for organisations to pick and choose different solutions for the same feature.
 Organisations can create their own gem which defines the specific plugin dependencies which form their way of working. See the [Way of Working for HDI](https://github.com/HealthDataInsight/way_of_working-for-hdi) as an example.
 
-There are subcommands that plugins hook into whcih enable them to add GitHub actions, configuration and other files to a project and GitHub pages outlining the tooling choice and thinking behind it.
+There are subcommands that plugins hook into which enable them to add GitHub actions, configuration and other files to a project and GitHub pages outlining the tooling choice and thinking behind it.
 
 Below is a list of plugins that have been implemented so far:
 
