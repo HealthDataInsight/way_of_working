@@ -23,7 +23,7 @@ file safety:
   ".github/linters/rubocop_defaults.yml":
     comments:
     reviewed_by: timgentry
-    safe_revision: 8974bca6a8cbdac496c1601bbc0ab6d10b7e955e
+    safe_revision: e136e6fb3abdc99545ef0b8da050b3331a4737fd
   ".github/pull_request_template.md":
     comments:
     reviewed_by: timgentry
@@ -31,23 +31,23 @@ file safety:
   ".github/workflows/inclusive-language.yml":
     comments:
     reviewed_by: timgentry
-    safe_revision: fd5667379c1f14a71bb4de661515ca53d9f10941
+    safe_revision: e136e6fb3abdc99545ef0b8da050b3331a4737fd
   ".github/workflows/main.yml":
     comments:
     reviewed_by: timgentry
-    safe_revision: fd5667379c1f14a71bb4de661515ca53d9f10941
+    safe_revision: e136e6fb3abdc99545ef0b8da050b3331a4737fd
   ".github/workflows/mega-linter.yml":
     comments:
     reviewed_by: timgentry
-    safe_revision: 0bec387ac06b7a038870c559989d766af2eeedd9
+    safe_revision: e136e6fb3abdc99545ef0b8da050b3331a4737fd
   ".gitignore":
     comments:
     reviewed_by: timgentry
-    safe_revision: b707b0685a8c8be78a79b13ceca58c71a923de22
+    safe_revision: e136e6fb3abdc99545ef0b8da050b3331a4737fd
   ".mega-linter.yml":
     comments:
     reviewed_by: timgentry
-    safe_revision: 4ce005ff2909ed3bb4c98c31960610c3bd85c974
+    safe_revision: e136e6fb3abdc99545ef0b8da050b3331a4737fd
   ".rubocop":
     comments:
     reviewed_by: timgentry
@@ -55,11 +55,11 @@ file safety:
   ".ruby-version":
     comments:
     reviewed_by: timgentry
-    safe_revision: fd5667379c1f14a71bb4de661515ca53d9f10941
+    safe_revision: 720ad0fe1167e39fb0e85fa2355809fdfce1a370
   CHANGELOG.md:
     comments:
     reviewed_by: timgentry
-    safe_revision: 847e3df2e6920a243ad1d8e2fb56419150d01d0b
+    safe_revision: 971bde10ebd029020c75fc2572fae46a4268eb03
   CODE_OF_CONDUCT.md:
     comments:
     reviewed_by: timgentry
@@ -67,7 +67,7 @@ file safety:
   Gemfile:
     comments:
     reviewed_by: timgentry
-    safe_revision: 0bec387ac06b7a038870c559989d766af2eeedd9
+    safe_revision: 3530bbc21f30419e40a8f6eb73b42b3e8c906921
   LICENSE.txt:
     comments:
     reviewed_by: timgentry
@@ -75,7 +75,7 @@ file safety:
   README.md:
     comments:
     reviewed_by: timgentry
-    safe_revision: 0bec387ac06b7a038870c559989d766af2eeedd9
+    safe_revision: ba2afca5c5fa823b23a6b0ea5c533cb7eee8e4e8
   Rakefile:
     comments:
     reviewed_by: brian.shand
@@ -107,11 +107,11 @@ file safety:
   exe/way_of_working:
     comments:
     reviewed_by: timgentry
-    safe_revision: d18d9c039e0cb95e33b24b789e9ee855b1e7a1b1
+    safe_revision: bdbb7c9aed37d5be109e2bbc2c2fc9adc849aa16
   lib/tasks/audit_gems.rake:
     comments:
-    reviewed_by: brian.shand
-    safe_revision: f4dda256b8f5754c38ccc64e63252024b24d9406
+    reviewed_by: timgentry
+    safe_revision: e136e6fb3abdc99545ef0b8da050b3331a4737fd
   lib/way_of_working.rb:
     comments:
     reviewed_by: timgentry
@@ -127,7 +127,7 @@ file safety:
   lib/way_of_working/git/repo_reader.rb:
     comments:
     reviewed_by: timgentry
-    safe_revision: 9e121c9a4fea4f893f6dd67c15ba235c137d16fd
+    safe_revision: e136e6fb3abdc99545ef0b8da050b3331a4737fd
   lib/way_of_working/git/summary_tag.rb:
     comments:
     reviewed_by: brian.shand
@@ -154,28 +154,28 @@ file safety:
     safe_revision:
   lib/way_of_working/readme_badge/templates/README.md:
     comments:
-    reviewed_by:
-    safe_revision:
+    reviewed_by: timgentry
+    safe_revision: 573e46b243ed291512bf9c0fdaa9048d956ac326
   lib/way_of_working/readme_badge/templates/docs/way_of_working/readme-badges.md.tt:
     comments:
-    reviewed_by:
-    safe_revision:
+    reviewed_by: timgentry
+    safe_revision: 573e46b243ed291512bf9c0fdaa9048d956ac326
   lib/way_of_working/sub_commands/base.rb:
     comments:
     reviewed_by:
     safe_revision:
   lib/way_of_working/sub_commands/exec.rb:
     comments:
-    reviewed_by:
-    safe_revision:
+    reviewed_by: timgentry
+    safe_revision: bdbb7c9aed37d5be109e2bbc2c2fc9adc849aa16
   lib/way_of_working/sub_commands/init.rb:
     comments:
-    reviewed_by:
-    safe_revision:
+    reviewed_by: timgentry
+    safe_revision: 573e46b243ed291512bf9c0fdaa9048d956ac326
   lib/way_of_working/sub_commands/new.rb:
     comments:
-    reviewed_by:
-    safe_revision:
+    reviewed_by: timgentry
+    safe_revision: bdbb7c9aed37d5be109e2bbc2c2fc9adc849aa16
   lib/way_of_working/tasks.rb:
     comments:
     reviewed_by: brian.shand
@@ -183,11 +183,11 @@ file safety:
   lib/way_of_working/version.rb:
     comments:
     reviewed_by: timgentry
-    safe_revision: 57d4f8c81e9125ff209667a855f47b3fd0406f2d
+    safe_revision: c52b1f9d005355bd436acf2c97012d26892a33fc
   test/git/summary_tag_test.rb:
     comments:
     reviewed_by: timgentry
-    safe_revision: 6d9fc0871848ee362e8471bd78aa4815867aeded
+    safe_revision: bdbb7c9aed37d5be109e2bbc2c2fc9adc849aa16
   test/resources/XcodeApp.xcodeproj/project.pbxproj:
     comments:
     reviewed_by: timgentry
@@ -207,7 +207,7 @@ file safety:
   test/resources/test_README.md:
     comments:
     reviewed_by: timgentry
-    safe_revision: c8647a1969cd83d11933fe32acc55a2bc1a29c8f
+    safe_revision: 81415b0700789e329a54afeb8f4df7e90382757a
   test/resources/vanilla_bundler_Rakefile:
     comments:
     reviewed_by: timgentry
@@ -219,11 +219,11 @@ file safety:
   test/test_helper.rb:
     comments:
     reviewed_by: timgentry
-    safe_revision: 8f9c72f5e59e3972f4e4d629dc72ecf783e2f056
+    safe_revision: 573e46b243ed291512bf9c0fdaa9048d956ac326
   test/way_of_working/readme_badge/generators/init_test.rb:
     comments:
-    reviewed_by:
-    safe_revision:
+    reviewed_by: timgentry
+    safe_revision: 573e46b243ed291512bf9c0fdaa9048d956ac326
   test/way_of_working_test.rb:
     comments:
     reviewed_by: timgentry
