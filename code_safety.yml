@@ -114,16 +114,16 @@ file safety:
     safe_revision: e136e6fb3abdc99545ef0b8da050b3331a4737fd
   lib/way_of_working.rb:
     comments:
-    reviewed_by: timgentry
-    safe_revision: f96fc0fbe2d380210ac5a12d04db8140ebd5ea56
+    reviewed_by: shilpigoeldev
+    safe_revision: 573e46b243ed291512bf9c0fdaa9048d956ac326
   lib/way_of_working/cli.rb:
     comments:
-    reviewed_by: brian.shand
-    safe_revision: 1cd0f0429c60c0666c1ddb905afbeb3f67a88a0e
+    reviewed_by: shilpigoeldev
+    safe_revision: bdbb7c9aed37d5be109e2bbc2c2fc9adc849aa16
   lib/way_of_working/configuration.rb:
     comments:
-    reviewed_by:
-    safe_revision:
+    reviewed_by: shilpigoeldev
+    safe_revision: 573e46b243ed291512bf9c0fdaa9048d956ac326
   lib/way_of_working/git/repo_reader.rb:
     comments:
     reviewed_by: timgentry
@@ -134,24 +134,24 @@ file safety:
     safe_revision: 1cd0f0429c60c0666c1ddb905afbeb3f67a88a0e
   lib/way_of_working/paths.rb:
     comments:
-    reviewed_by: brian.shand
-    safe_revision: d18d9c039e0cb95e33b24b789e9ee855b1e7a1b1
+    reviewed_by: shilpigoeldev
+    safe_revision: bdbb7c9aed37d5be109e2bbc2c2fc9adc849aa16
   lib/way_of_working/readme_badge.rb:
     comments:
-    reviewed_by:
-    safe_revision:
+    reviewed_by: shilpigoeldev
+    safe_revision: 573e46b243ed291512bf9c0fdaa9048d956ac326
   lib/way_of_working/readme_badge/generators/init.rb:
     comments:
-    reviewed_by:
-    safe_revision:
+    reviewed_by: shilpigoeldev
+    safe_revision: 573e46b243ed291512bf9c0fdaa9048d956ac326
   lib/way_of_working/readme_badge/github_audit_rule.rb:
     comments:
-    reviewed_by:
-    safe_revision:
+    reviewed_by: shilpigoeldev
+    safe_revision: 573e46b243ed291512bf9c0fdaa9048d956ac326
   lib/way_of_working/readme_badge/paths.rb:
     comments:
-    reviewed_by:
-    safe_revision:
+    reviewed_by: shilpigoeldev
+    safe_revision: 573e46b243ed291512bf9c0fdaa9048d956ac326
   lib/way_of_working/readme_badge/templates/README.md:
     comments:
     reviewed_by: timgentry
@@ -162,8 +162,8 @@ file safety:
     safe_revision: 573e46b243ed291512bf9c0fdaa9048d956ac326
   lib/way_of_working/sub_commands/base.rb:
     comments:
-    reviewed_by:
-    safe_revision:
+    reviewed_by: shilpigoeldev
+    safe_revision: bdbb7c9aed37d5be109e2bbc2c2fc9adc849aa16
   lib/way_of_working/sub_commands/exec.rb:
     comments:
     reviewed_by: timgentry
@@ -230,5 +230,5 @@ file safety:
     safe_revision: f96fc0fbe2d380210ac5a12d04db8140ebd5ea56
   way_of_working.gemspec:
     comments:
-    reviewed_by: timgentry
-    safe_revision: 6d9fc0871848ee362e8471bd78aa4815867aeded
+    reviewed_by: shilpigoeldev
+    safe_revision: bdbb7c9aed37d5be109e2bbc2c2fc9adc849aa16
