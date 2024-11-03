@@ -7,11 +7,9 @@ module WayOfWorking
   module ReadmeBadge
     # This rule checks for a README and Way of Working badge.
     class GithubAuditRule < ::WayOfWorking::Audit::Github::Rules::Base
-      def valid?
+      def validate
         @errors << 'No README' if readme_content.nil?
         @errors << 'No Way of Working README Badge' unless readme_way_of_working_badge?
-
-        @errors.empty? ? :passed : :failed
       end
 
       private
