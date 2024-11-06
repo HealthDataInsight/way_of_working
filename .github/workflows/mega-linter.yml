@@ -9,7 +9,10 @@ on:
   pull_request:
     branches: [master, main]
 
-permissions: read-all
+permissions:
+  contents: read
+  issues: write
+  pull-requests: write
 
 env:  # Comment env block if you do not want to apply fixes
   # Apply linter fixes configuration
