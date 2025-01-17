@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.1] - 2025-01-22
+
 ### Removed
 
 - Removed completely unused test resource file
@@ -58,6 +60,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Corrected use of relative paths in the rubocop config file
 
-[unreleased]: https://github.com/HealthDataInsight/way_of_working/compare/v2.0.0...HEAD
+[unreleased]: https://github.com/HealthDataInsight/way_of_working/compare/v2.0.1...HEAD
+[2.0.1]: https://github.com/HealthDataInsight/way_of_working/compare/v2.0.0...v2.0.1
 [2.0.0]: https://github.com/HealthDataInsight/way_of_working/compare/v1.0.0...v2.0.0
 [1.0.0]: https://github.com/HealthDataInsight/way_of_working/releases/tag/v1.0.0
