@@ -34,12 +34,12 @@ file safety:
     safe_revision: e136e6fb3abdc99545ef0b8da050b3331a4737fd
   ".github/workflows/main.yml":
     comments:
-    reviewed_by: timgentry
-    safe_revision: e136e6fb3abdc99545ef0b8da050b3331a4737fd
+    reviewed_by: shilpigoeldev
+    safe_revision: a332d01447a4c74991ee7cf1d4e64a9e6b5d32c8
   ".github/workflows/mega-linter.yml":
     comments:
-    reviewed_by: timgentry
-    safe_revision: e136e6fb3abdc99545ef0b8da050b3331a4737fd
+    reviewed_by: shilpigoeldev
+    safe_revision: a332d01447a4c74991ee7cf1d4e64a9e6b5d32c8
   ".gitignore":
     comments:
     reviewed_by: timgentry
@@ -58,8 +58,8 @@ file safety:
     safe_revision: 720ad0fe1167e39fb0e85fa2355809fdfce1a370
   CHANGELOG.md:
     comments:
-    reviewed_by: timgentry
-    safe_revision: 971bde10ebd029020c75fc2572fae46a4268eb03
+    reviewed_by: shilpigoeldev
+    safe_revision: a332d01447a4c74991ee7cf1d4e64a9e6b5d32c8
   CODE_OF_CONDUCT.md:
     comments:
     reviewed_by: timgentry
@@ -74,8 +74,8 @@ file safety:
     safe_revision: 50f34ef4f776c94ead81d272a7ae94b6048dcb03
   README.md:
     comments:
-    reviewed_by: timgentry
-    safe_revision: ba2afca5c5fa823b23a6b0ea5c533cb7eee8e4e8
+    reviewed_by: shilpigoeldev
+    safe_revision: 3b8ad6e7a3079bbde987a48cfe0fc56d87d423a6
   Rakefile:
     comments:
     reviewed_by: brian.shand
@@ -139,7 +139,7 @@ file safety:
   lib/way_of_working/readme_badge.rb:
     comments:
     reviewed_by: shilpigoeldev
-    safe_revision: 573e46b243ed291512bf9c0fdaa9048d956ac326
+    safe_revision: a332d01447a4c74991ee7cf1d4e64a9e6b5d32c8
   lib/way_of_working/readme_badge/generators/init.rb:
     comments:
     reviewed_by: shilpigoeldev
@@ -147,7 +147,7 @@ file safety:
   lib/way_of_working/readme_badge/github_audit_rule.rb:
     comments:
     reviewed_by: shilpigoeldev
-    safe_revision: 573e46b243ed291512bf9c0fdaa9048d956ac326
+    safe_revision: a332d01447a4c74991ee7cf1d4e64a9e6b5d32c8
   lib/way_of_working/readme_badge/paths.rb:
     comments:
     reviewed_by: shilpigoeldev
@@ -182,16 +182,8 @@ file safety:
     safe_revision: f4dda256b8f5754c38ccc64e63252024b24d9406
   lib/way_of_working/version.rb:
     comments:
-    reviewed_by: timgentry
-    safe_revision: c52b1f9d005355bd436acf2c97012d26892a33fc
-  test/git/summary_tag_test.rb:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: bdbb7c9aed37d5be109e2bbc2c2fc9adc849aa16
-  test/resources/XcodeApp.xcodeproj/project.pbxproj:
-    comments:
-    reviewed_by: timgentry
-    safe_revision: 8e6b9abcfb2e8a657f210590ef06aec1e90ebde9
+    reviewed_by: shilpigoeldev
+    safe_revision: a332d01447a4c74991ee7cf1d4e64a9e6b5d32c8
   test/resources/empty_Rakefile:
     comments:
     reviewed_by: timgentry
@@ -220,10 +212,18 @@ file safety:
     comments:
     reviewed_by: timgentry
     safe_revision: 573e46b243ed291512bf9c0fdaa9048d956ac326
+  test/way_of_working/git/summary_tag_test.rb:
+    comments:
+    reviewed_by: shilpigoeldev
+    safe_revision: a332d01447a4c74991ee7cf1d4e64a9e6b5d32c8
   test/way_of_working/readme_badge/generators/init_test.rb:
     comments:
     reviewed_by: timgentry
     safe_revision: 573e46b243ed291512bf9c0fdaa9048d956ac326
+  test/way_of_working/zeitwerk_loader_test.rb:
+    comments:
+    reviewed_by: shilpigoeldev
+    safe_revision: a332d01447a4c74991ee7cf1d4e64a9e6b5d32c8
   test/way_of_working_test.rb:
     comments:
     reviewed_by: timgentry
@@ -231,4 +231,4 @@ file safety:
   way_of_working.gemspec:
     comments:
     reviewed_by: shilpigoeldev
-    safe_revision: bdbb7c9aed37d5be109e2bbc2c2fc9adc849aa16
+    safe_revision: a332d01447a4c74991ee7cf1d4e64a9e6b5d32c8
