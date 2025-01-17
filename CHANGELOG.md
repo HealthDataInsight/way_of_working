@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [2.0.1] - 2025-01-22
+## [2.0.1] - 2025-01-17
 
 ### Removed
 
@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 - Corrected the badge rule brittle loading and signature
+- Resolved YAML linting issues
 
 ## [2.0.0] - 2024-10-24
 
