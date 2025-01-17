@@ -3,7 +3,7 @@
 # More info at https://megalinter.io
 name: MegaLinter
 
-on:
+on:  # yamllint disable-line rule:truthy
   # Trigger mega-linter at every push. Action will also be visible from Pull Requests to master
   push:  # Comment this line to trigger action only on pull-requests (not recommended if you don't pay for GH Actions)
   pull_request:
@@ -44,7 +44,7 @@ jobs:
         env:
           # All available variables are described in documentation
           # https://megalinter.io/configuration/
-          VALIDATE_ALL_CODEBASE: true # Set ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }} to validate only diff with main branch
+          VALIDATE_ALL_CODEBASE: true  # Set ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }} to validate only diff with main branch
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # ADD YOUR CUSTOM ENV VARIABLES HERE TO OVERRIDE VALUES OF .mega-linter.yml AT THE ROOT OF YOUR REPOSITORY
 
