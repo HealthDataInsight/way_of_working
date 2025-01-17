@@ -1,6 +1,7 @@
+---
 name: Rake Test
 
-on: push
+on: push  # yamllint disable-line rule:truthy
 
 permissions: read-all
 

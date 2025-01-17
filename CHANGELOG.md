@@ -7,6 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.1] - 2025-01-17
+
+### Removed
+
+- Removed completely unused test resource file
+
+### Fixed
+
+- Corrected the badge rule brittle loading and signature
+- Resolved YAML linting issues
+
+## [2.0.0] - 2024-10-24
+
 ### Added
 
 - Added a panel for README badges and a Way of Working badge
@@ -48,5 +61,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Corrected use of relative paths in the rubocop config file
 
-[unreleased]: https://github.com/HealthDataInsight/way_of_working/compare/v1.0.0...HEAD
+[unreleased]: https://github.com/HealthDataInsight/way_of_working/compare/v2.0.1...HEAD
+[2.0.1]: https://github.com/HealthDataInsight/way_of_working/compare/v2.0.0...v2.0.1
+[2.0.0]: https://github.com/HealthDataInsight/way_of_working/compare/v1.0.0...v2.0.0
 [1.0.0]: https://github.com/HealthDataInsight/way_of_working/releases/tag/v1.0.0

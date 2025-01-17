@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   # spec.description = "TODO: Write a longer description or delete this line."
   spec.homepage = 'https://healthdatainsight.github.io/way_of_working'
   spec.license = 'MIT'
-  spec.required_ruby_version = '>= 2.6'
+  spec.required_ruby_version = '>= 3.1'
 
   spec.metadata['allowed_push_host'] = 'https://rubygems.org'
   spec.metadata['rubygems_mfa_required'] = 'true'
