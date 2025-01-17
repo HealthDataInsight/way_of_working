@@ -3,13 +3,11 @@
 require_relative 'readme_badge/generators/init'
 
 # If way_of_working-audit-github is used we can add a rule
-github_audit_used =
-  begin
-    require 'way_of_working/audit/github/rules/registry'
-  rescue LoadError
-    false
-  end
-require_relative 'readme_badge/github_audit_rule' if github_audit_used
+begin
+  require 'way_of_working/audit/github/rules/registry'
+  require_relative 'readme_badge/github_audit_rule'
+rescue LoadError # rubocop:disable Lint/SuppressedException
+end
 
 module WayOfWorking
   module SubCommands
