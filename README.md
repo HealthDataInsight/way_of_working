@@ -21,14 +21,15 @@ There are subcommands that plugins hook into which enable them to add GitHub act
 
 Below is a list of plugins that have been implemented so far:
 
-| Feature               | Plugin                                 | Description                                                                    |
-| --------------------- | -------------------------------------- | ------------------------------------------------------------------------------ |
-| Changelog             | [changelog-keepachangelog]             | Implements [keepachangelog v1.1]                                               |
-| Code Linting          | [code_linting-hdi]                     | Implements a combination of [MegaLinter] and [RuboCop] built on NDRS standards |
-| Code of Conduct       | [code_of_conduct-contributor_covenant] | Implements [Contributor Covenant v2.1]                                         |
-| Decision Records      | [decision_record-madr]                 | Implements [MADR v3]                                                           |
-| Inclusive Language    | [inclusive_language-alex]              | Implements [alex]                                                              |
-| Pull Request Template | [pull_request_template-hdi]            | Implements a bespoke PR template                                               |
+| Feature               | Plugin                                 | Description                                                                            |
+| --------------------- | -------------------------------------- | ---------------------------------------------------------------------------------------|
+| Audit                 | [audit-github]                         | A framework for rules to check for incorrect content and configuration of GitHub repos |
+| Changelog             | [changelog-keepachangelog]             | Implements [keepachangelog v1.1]                                                       |
+| Code Linting          | [code_linting-hdi]                     | Implements a combination of [MegaLinter] and [RuboCop] built on NDRS standards         |
+| Code of Conduct       | [code_of_conduct-contributor_covenant] | Implements [Contributor Covenant v2.1]                                                 |
+| Decision Records      | [decision_record-madr]                 | Implements [MADR v3]                                                                   |
+| Inclusive Language    | [inclusive_language-alex]              | Implements [alex]                                                                      |
+| Pull Request Template | [pull_request_template-hdi]            | Implements a bespoke PR template                                                       |
 
 ## Installation
 
@@ -91,6 +92,7 @@ Everyone interacting in the WayOfWorking project's codebases, issue trackers, ch
 [MADR v3]: https://adr.github.io/madr/
 [MegaLinter]: https://megalinter.io/
 [RuboCop]: https://rubocop.org
+[audit-github]: https://github.com/HealthDataInsight/way_of_working-audit-github
 [changelog-keepachangelog]: https://github.com/HealthDataInsight/way_of_working-changelog-keepachangelog
 [code_linting-hdi]: https://github.com/HealthDataInsight/way_of_working-code_linting-hdi
 [code_of_conduct-contributor_covenant]: https://github.com/HealthDataInsight/way_of_working-code_of_conduct-contributor_covenant
