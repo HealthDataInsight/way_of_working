@@ -30,6 +30,7 @@ Below is a list of plugins that have been implemented so far:
 | Decision Records      | [decision_record-madr]                 | Implements [MADR v3]                                                                   |
 | Inclusive Language    | [inclusive_language-alex]              | Implements [alex]                                                                      |
 | Pull Request Template | [pull_request_template-hdi]            | Implements a bespoke PR template                                                       |
+| Versioning            | [versioning-semver]                    | Implements [Semantic Versioning v2.0.0]                                                |
 
 ## Installation
 
@@ -92,6 +93,7 @@ Everyone interacting in the WayOfWorking project's codebases, issue trackers, ch
 [MADR v3]: https://adr.github.io/madr/
 [MegaLinter]: https://megalinter.io/
 [RuboCop]: https://rubocop.org
+[Semantic Versioning v2.0.0]: https://semver.org/spec/v2.0.0.html
 [audit-github]: https://github.com/HealthDataInsight/way_of_working-audit-github
 [changelog-keepachangelog]: https://github.com/HealthDataInsight/way_of_working-changelog-keepachangelog
 [code_linting-hdi]: https://github.com/HealthDataInsight/way_of_working-code_linting-hdi
@@ -99,3 +101,4 @@ Everyone interacting in the WayOfWorking project's codebases, issue trackers, ch
 [decision_record-madr]: https://github.com/HealthDataInsight/way_of_working-decision_record-madr
 [inclusive_language-alex]: https://github.com/HealthDataInsight/way_of_working-inclusive_language-alex
 [pull_request_template-hdi]: https://github.com/HealthDataInsight/way_of_working-pull_request_template-hdi
+[versioning-semver]: https://github.com/HealthDataInsight/way_of_working-versioning-semver
