@@ -58,10 +58,10 @@ module WayOfWorking
 
       def likely_upstream_remote
         remotes = @base.remotes
-        return remotes.first if remotes.count == 1
+        return remotes.first if remotes.one?
 
         remotes = remotes.reject { |remote| remote.name == 'origin' }
-        return remotes.first if remotes.count == 1
+        return remotes.first if remotes.one?
 
         remotes.last
       end
