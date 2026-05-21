@@ -12,6 +12,11 @@ loader = Zeitwerk::Loader.for_gem
 # from Zeitwerk's file-to-constant expectations so downstream apps can
 # `require 'way_of_working/tasks'` from their Rakefile.
 loader.ignore(File.expand_path('way_of_working/tasks.rb', __dir__))
+# github_audit_rule.rb is loaded conditionally (only when the
+# way_of_working-audit-github plugin is present — see readme_badge.rb) and
+# requires a constant from that plugin at the top of the file. Exclude it
+# from Zeitwerk's eager-load walk so its absence doesn't break the loader.
+loader.ignore(File.expand_path('way_of_working/readme_badge/github_audit_rule.rb', __dir__))
 loader.setup
 
 # This is the namespace for everything associated with the Way of Working
