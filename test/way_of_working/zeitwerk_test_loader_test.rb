@@ -3,7 +3,9 @@
 require 'test_helper'
 
 module WayOfWorking
-  class ZeitwerkLoaderTest < Minitest::Test
+  # Eager-loads the test/ tree under an ad-hoc Zeitwerk loader to guarantee
+  # every test file declares the constant Zeitwerk expects.
+  class ZeitwerkTestLoaderTest < Minitest::Test
     def setup
       @root = Pathname.new(File.expand_path('../..', __dir__))
 

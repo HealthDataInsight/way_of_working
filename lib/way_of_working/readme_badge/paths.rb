@@ -3,9 +3,10 @@
 require 'pathname'
 
 module WayOfWorking
-  # Mixin that provides a couple of pathname convenience methods
+  # Namespace for the internal ReadmeBadge plugin
   module ReadmeBadge
-    class << self
+    # Mixin that provides a couple of pathname convenience methods
+    module Paths
       def root
         Pathname.new(File.expand_path('../../..', __dir__))
       end
@@ -14,5 +15,7 @@ module WayOfWorking
         root.join('lib', 'way_of_working', 'readme_badge', 'templates')
       end
     end
+
+    extend Paths
   end
 end
