@@ -1,0 +1,9 @@
+# Lychee configuration for MegaLinter (SPELL_LYCHEE).
+# Reference: https://lychee.cli.rs/guides/config/
+
+# Retry transient network failures (e.g. TLS hiccups from CI runners).
+max_retries = 3
+retry_wait_time = 5
+
+# Per-request timeout (seconds).
+timeout = 20
