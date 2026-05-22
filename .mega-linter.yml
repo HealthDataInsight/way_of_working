@@ -3,127 +3,65 @@
 # See all available variables at https://megalinter.io/configuration/
 # and in linters documentation
 
-APPLY_FIXES: none  # all, none, or list of linter keys
-ENABLE_LINTERS:  # All other linters will be disabled by default
-  ### Languages
-  - BASH_EXEC  # in Super-Linter
-  - BASH_SHELLCHECK  # in Super-Linter
-  - BASH_SHFMT  # in Super-Linter
+APPLY_FIXES: none # all, none, or list of linter keys
+ENABLE_LINTERS: # All other linters will be disabled by default
+  - ACTION_ACTIONLINT
+  - API_SPECTRAL
+  - ARM_ARM_TTK
+  - BASH_EXEC
+  - BASH_SHELLCHECK
+  - BASH_SHFMT
+  - BICEP_BICEP_LINTER
   - C_CLANG_FORMAT
+  - C_CPPCHECK
   - C_CPPLINT
-  # - CLOJURE_CLJ_KONDO  # in Super-Linter
-  # - CLOJURE_CLJSTYLE
-  - COFFEE_COFFEELINT  # in Super-Linter
+  - CLOUDFORMATION_CFN_LINT
+  - COPYPASTE_JSCPD
   - CPP_CLANG_FORMAT
-  - CPP_CPPLINT  # in Super-Linter
-  - CSHARP_CSHARPIER
-  - CSHARP_DOTNET_FORMAT  # in Super-Linter
-  - CSHARP_ROSLYNATOR
-  - DART_DARTANALYZER  # in Super-Linter
-  - GO_GOLANGCI_LINT  # in Super-Linter
-  - GO_REVIVE
-  # - GROOVY_NPM_GROOVY_LINT  # in Super-Linter
-  - JAVA_CHECKSTYLE  # in Super-Linter
-  - JAVA_PMD
-  - JAVASCRIPT_ES  # in Super-Linter
-  # - JAVASCRIPT_PRETTIER
-  - JAVASCRIPT_STANDARD  # in Super-Linter
-  - JSX_ESLINT
-  - KOTLIN_DETEKT
-  - KOTLIN_KTLINT  # in Super-Linter
-  # - LUA_LUACHECK  # in Super-Linter
-  # - LUA_SELENE
-  # - LUA_STYLUA
-  - MAKEFILE_CHECKMAKE
-  # - PERL_PERLCRITIC  # in Super-Linter
-  # - PHP_BUILTIN
-  # - PHP_PHPCS  # in Super-Linter
-  # - PHP_PHPCSFIXER
-  # - PHP_PHPLINT  # in Super-Linter
-  # - PHP_PHPSTAN  # in Super-Linter
-  # - PHP_PSALM  # in Super-Linter
-  # - POWERSHELL_POWERSHELL
-  # - POWERSHELL_POWERSHELL_FORMATTER
-  - PYTHON_BANDIT
-  - PYTHON_BLACK  # in Super-Linter
-  - PYTHON_FLAKE8  # in Super-Linter
-  - PYTHON_ISORT  # in Super-Linter
-  - PYTHON_MYPY
-  - PYTHON_PYLINT  # in Super-Linter
-  - PYTHON_PYRIGHT
-  - PYTHON_RUFF
-  - R_LINTR  # in Super-Linter
-  # - RAKU_RAKU  # in Super-Linter
-  # - RUBY_RUBOCOP  # in Super-Linter
-  - RUST_CLIPPY  # in Super-Linter
-  # - SALESFORCE_LIGHTNING_FLOW_SCANNER
-  # - SALESFORCE_SFDX_SCANNER_APEX
-  # - SALESFORCE_SFDX_SCANNER_AURA
-  # - SALESFORCE_SFDX_SCANNER_LWC
-  - SCALA_SCALAFIX
-  - SQL_SQLFLUFF  # in Super-Linter
-  - SQL_TSQLLINT
-  - SWIFT_SWIFTLINT
-  - TSX_ESLINT
-  - TYPESCRIPT_ES  # in Super-Linter
-  # - TYPESCRIPT_PRETTIER
-  - TYPESCRIPT_STANDARD  # in Super-Linter
-  # - VBDOTNET_DOTNET_FORMAT
-
-  ### Formats
-  - CSS_STYLELINT  # in Super-Linter
-  - ENV_DOTENV_LINTER  # in Super-Linter
-  # - GRAPHQL_GRAPHQL_SCHEMA_LINTER
-  # - HTML_DJLINT # Refuses to see config file
-  - HTML_HTMLHINT  # in Super-Linter
-  - JSON_ESLINT_PLUGIN_JSONC  # in Super-Linter
+  - CPP_CPPCHECK
+  - CPP_CPPLINT
+  - CREDENTIALS_SECRETLINT
+  - CSS_SCSSLINT
+  - CSS_STYLELINT
+  - DOCKERFILE_DOCKERFILELINT
+  - DOCKERFILE_HADOLINT
+  - ENV_DOTENV_LINTER
+  - GHERKIN_GHERKIN_LINT
+  - GIT_GIT_DIFF
+  - GRAPHQL_GRAPHQL_SCHEMA_LINTER
+  - HTML_DJLINT
+  - HTML_HTMLHINT
+  - JAVASCRIPT_ES
+  - JSON_ESLINT_PLUGIN_JSONC
   - JSON_JSONLINT
   - JSON_NPM_PACKAGE_JSON_LINT
-  # - JSON_PRETTIER
+  - JSON_PRETTIER
   - JSON_V8R
-  # - LATEX_CHKTEX  # in Super-Linter
-  - MARKDOWN_MARKDOWNLINT  # in Super-Linter
+  - KOTLIN_DETEKT
+  - KOTLIN_KTLINT
+  - MAKEFILE_CHECKMAKE
   - MARKDOWN_MARKDOWN_LINK_CHECK
   - MARKDOWN_MARKDOWN_TABLE_FORMATTER
+  - MARKDOWN_MARKDOWNLINT
   - MARKDOWN_REMARK_LINT
-  # - PROTOBUF_PROTOLINT  # in Super-Linter
-  # - RST_RSTCHECK
-  # - RST_RSTFMT
-  # - RST_RST_LINT
-  - XML_XMLLINT  # in Super-Linter
-  # - YAML_PRETTIER
-  - YAML_V8R
-  - YAML_YAMLLINT  # in Super-Linter
-
-  ### Tooling
-  - ACTION_ACTIONLINT  # in Super-Linter
-  - ANSIBLE_ANSIBLE_LINT  # in Super-Linter
-  - API_SPECTRAL
-  - ARM_ARM_TTK  # in Super-Linter
-  # - BICEP_BICEP_LINTER
-  - CLOUDFORMATION_CFN_LINT  # in Super-Linter
-  - DOCKERFILE_HADOLINT  # in Super-Linter
-  - EDITORCONFIG_EDITORCONFIG_CHECKER  # in Super-Linter
-  # - GHERKIN_GHERKIN_LINT  # in Super-Linter
-  - KUBERNETES_HELM
-  - KUBERNETES_KUBECONFORM
-  - KUBERNETES_KUBESCAPE
-  - PUPPET_PUPPET_LINT
-  # - SNAKEMAKE_LINT  # in Super-Linter
-  # - SNAKEMAKE_SNAKEFMT  # in Super-Linter
-  # - TEKTON_TEKTON_LINT  # in Super-Linter
-  - TERRAFORM_TERRAFORM_FMT  # in Super-Linter
-  - TERRAFORM_TERRAGRUNT  # in Super-Linter
-  - TERRAFORM_TERRASCAN  # in Super-Linter
-  - TERRAFORM_TFLINT  # in Super-Linter
-
-  ### Code quality checkers
-  - COPYPASTE_JSCPD  # in Super-Linter
+  - OPENAPI_SPECTRAL
+  - PROTOBUF_PROTOLINT
+  - PYTHON_BANDIT
+  - PYTHON_BLACK
+  - PYTHON_FLAKE8
+  - PYTHON_ISORT
+  - PYTHON_MYPY
+  - PYTHON_PYLINT
+  - PYTHON_PYRIGHT
+  - PYTHON_RUFF
+  - PYTHON_RUFF_FORMAT
+  - R_LINTR
   - REPOSITORY_CHECKOV
   - REPOSITORY_DEVSKIM
   - REPOSITORY_DUSTILOCK
   - REPOSITORY_GIT_DIFF
-  - REPOSITORY_GITLEAKS  # in Super-Linter
+  - REPOSITORY_GITLEAKS
+  - REPOSITORY_GOODCHECK
   - REPOSITORY_GRYPE
   - REPOSITORY_KICS
   - REPOSITORY_LS_LINT
@@ -133,10 +71,24 @@ ENABLE_LINTERS:  # All other linters will be disabled by default
   - REPOSITORY_TRIVY
   - REPOSITORY_TRIVY_SBOM
   - REPOSITORY_TRUFFLEHOG
-  # - SPELL_CSPELL
   - SPELL_LYCHEE
+  - SPELL_MISSPELL
   - SPELL_PROSELINT
   - SPELL_VALE
+  - SQL_SQL_LINT
+  - SQL_SQLFLUFF
+  - SQL_TSQLLINT
+  - SWIFT_SWIFTLINT
+  - TERRAFORM_CHECKOV
+  - TERRAFORM_KICS
+  - TERRAFORM_TERRAFORM_FMT
+  - TERRAFORM_TERRAGRUNT
+  - TERRAFORM_TERRASCAN
+  - TERRAFORM_TFLINT
+  - XML_XMLLINT
+  - YAML_PRETTIER
+  - YAML_V8R
+  - YAML_YAMLLINT
 
 SHOW_ELAPSED_TIME: false
 FILEIO_REPORTER: false
