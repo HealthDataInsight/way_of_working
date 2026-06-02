@@ -66,7 +66,7 @@ Some features are bundled with this gem rather than shipped as separate plugins.
 
 #### Changelog
 
-Keeping a curated, human-readable changelog makes it easy for users and contributors to see what has changed between releases without trawling through the commit history.
+Keeping a curated, human-readable changelog helps users and contributors quickly see what has changed between releases without trawling through the commit history.
 
 This feature uses [Keep a Changelog v1.1][keepachangelog v1.1] to generate a `CHANGELOG.md`, seeding it with sections derived from your git tags and commit messages where possible. Enable it by requiring it:
 
