@@ -10,12 +10,21 @@ module WayOfWorking
         class Base
           attr_accessor :errors, :name, :rulesets, :warnings
 
-          def initialize(client, name, repo, rulesets)
+          class << self
+            # Stores and return the source root for this class
+            def source_root(path = nil)
+              @source_root = path if path
+              @source_root ||= nil
+            end
+          end
+
+          def initialize(client, name, repo, rulesets, fix = false)
             @client = client
             @name = name
             @repo = repo
             @repo_name = repo.full_name
             @rulesets = rulesets
+            @fix = fix
             @errors = []
             @warnings = []
           end
@@ -34,6 +43,15 @@ module WayOfWorking
 
           def tags
             self.class.tags
+          end
+
+          private
+
+          def repo_file_contents(path)
+            response = @client.contents(@repo_name, path: path)
+            Base64.decode64(response.content).force_encoding('UTF-8')
+          rescue Octokit::NotFound
+            nil
           end
         end
 
@@ -54,17 +72,17 @@ module WayOfWorking
               end
             end
 
-            def rule(rule_name, client, repo)
+            def rule(rule_name, *args)
               klass = Registry.rules.fetch(rule_name, Unknown)
 
-              klass.new(client, repo)
+              klass.new(*args)
             end
           end
         end
 
         # This is a stub handler for rules that aren't in the registry.
         class Unknown < Base
-          def initialize(client, repo_name)
+          def initialize(*args)
             super
             raise 'Error: Unknown client'
           end
