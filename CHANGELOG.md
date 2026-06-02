@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Bundled the Decision Records (MADR) feature into this gem. It is opt in and replaces the separate `way_of_working-decision_record-madr` plugin gem.
 - Bundled the Inclusive Language (alex) feature into this gem. It is opt in and replaces the separate `way_of_working-inclusive_language-alex` plugin gem.
 
 ## [2.0.1] - 2025-01-17
