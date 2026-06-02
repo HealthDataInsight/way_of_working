@@ -15,6 +15,14 @@ module WayOfWorking
   module DecisionRecord
     module Madr
       class GithubAuditRuleTest < Minitest::Test
+        # The stub classes define WayOfWorking::Audit purely for this test. Remove it and
+        # unload the stub afterwards so each test starts without the registry already defined,
+        # regardless of the order the suite runs in.
+        def teardown
+          WayOfWorking.send(:remove_const, :Audit) if WayOfWorking.const_defined?(:Audit, false)
+          $LOADED_FEATURES.reject! { |path| path.end_with?('test/way_of_working/audit_github_stub_classes.rb') }
+        end
+
         def test_the_rule_is_registered
           # Check that the GitHub audit registry is unavailable by default
           refute Object.const_defined?('WayOfWorking::Audit::Github::Rules::Registry')
