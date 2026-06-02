@@ -28,9 +28,11 @@ Below is a list of plugins that have been implemented so far:
 | Code Linting          | [code_linting-hdi]                     | Implements a combination of [MegaLinter] and [RuboCop] built on NDRS standards         |
 | Code of Conduct       | [code_of_conduct-contributor_covenant] | Implements [Contributor Covenant v2.1]                                                 |
 | Decision Records      | [decision_record-madr]                 | Implements [MADR v3]                                                                   |
-| Inclusive Language    | [inclusive_language-alex]              | Implements [alex]                                                                      |
+| Inclusive Language    | Built-in (inclusive_language/alex)     | Implements [alex] — bundled, opt in by `require` (see [Built-in Features](#built-in-features)) |
 | Pull Request Template | [pull_request_template-hdi]            | Implements a bespoke PR template                                                       |
 | Versioning            | [versioning-semver]                    | Implements [Semantic Versioning v2.0.0]                                                |
+
+Some features are **Built-in** — they ship inside this gem and are enabled by requiring them (see [Built-in Features](#built-in-features)); the others are separate plugin gems that you add as dependencies.
 
 ## Installation
 
@@ -57,6 +59,30 @@ way_of_working init all --contact-method [CONTACT METHOD]
 ```
 
 You will need to provide the Code of Conduct `[CONTACT METHOD]`, usually an email address, for community leaders to receive reports of unacceptable behavior.
+
+### Built-in Features
+
+Some features are bundled with this gem rather than shipped as separate plugins. These built-in features are **opt in**: enable one by requiring it wherever you load Way of Working — for example in your organisation's Way of Working gem, or in your project's `Rakefile`.
+
+#### Inclusive Language
+
+Using insensitive and inconsiderate language can cause harm to others, create barriers to communication, and damage relationships. It can make people feel excluded, disrespected, and devalued, and may perpetuate negative stereotypes and biases.
+
+This feature uses [alex] for automated testing of inclusive language, both at the command line and as a GitHub workflow. Enable it by requiring it:
+
+```ruby
+require 'way_of_working/inclusive_language/alex'
+```
+
+Once required, two subcommands become available:
+
+```bash
+# Add the alex config, .alexignore, GitHub Action and documentation to your project
+way_of_working init inclusive_language
+
+# Run the inclusive language checks
+way_of_working exec inclusive_language
+```
 
 ### Help
 
@@ -99,6 +125,5 @@ Everyone interacting in the WayOfWorking project's codebases, issue trackers, ch
 [code_linting-hdi]: https://github.com/HealthDataInsight/way_of_working-code_linting-hdi
 [code_of_conduct-contributor_covenant]: https://github.com/HealthDataInsight/way_of_working-code_of_conduct-contributor_covenant
 [decision_record-madr]: https://github.com/HealthDataInsight/way_of_working-decision_record-madr
-[inclusive_language-alex]: https://github.com/HealthDataInsight/way_of_working-inclusive_language-alex
 [pull_request_template-hdi]: https://github.com/HealthDataInsight/way_of_working-pull_request_template-hdi
 [versioning-semver]: https://github.com/HealthDataInsight/way_of_working-versioning-semver
