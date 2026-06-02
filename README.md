@@ -27,7 +27,7 @@ Below is a list of plugins that have been implemented so far:
 | Changelog             | [changelog-keepachangelog]             | Implements [keepachangelog v1.1]                                                       |
 | Code Linting          | [code_linting-hdi]                     | Implements a combination of [MegaLinter] and [RuboCop] built on NDRS standards         |
 | Code of Conduct       | [code_of_conduct-contributor_covenant] | Implements [Contributor Covenant v2.1]                                                 |
-| Decision Records      | [decision_record-madr]                 | Implements [MADR v3]                                                                   |
+| Decision Records      | Built-in (decision_record/madr)        | Implements [MADR v3] — bundled, opt in by `require` (see [Built-in Features](#built-in-features)) |
 | Inclusive Language    | Built-in (inclusive_language/alex)     | Implements [alex] — bundled, opt in by `require` (see [Built-in Features](#built-in-features)) |
 | Pull Request Template | [pull_request_template-hdi]            | Implements a bespoke PR template                                                       |
 | Versioning            | [versioning-semver]                    | Implements [Semantic Versioning v2.0.0]                                                |
@@ -63,6 +63,26 @@ You will need to provide the Code of Conduct `[CONTACT METHOD]`, usually an emai
 ### Built-in Features
 
 Some features are bundled with this gem rather than shipped as separate plugins. These built-in features are **opt in**: enable one by requiring it wherever you load Way of Working — for example in your organisation's Way of Working gem, or in your project's `Rakefile`.
+
+#### Decision Records
+
+Recording the context and reasoning behind significant decisions helps current and future contributors understand why a project is the way it is, avoids relitigating settled questions, and onboards newcomers faster.
+
+This feature uses [Markdown Any Decision Records (MADR)][MADR v3] to capture decisions as version-controlled Markdown alongside your code. Enable it by requiring it:
+
+```ruby
+require 'way_of_working/decision_record/madr'
+```
+
+Once required, two subcommands become available:
+
+```bash
+# Add the decision records index, template and first record to your project
+way_of_working init decision_record
+
+# Create a new decision record
+way_of_working new decision_record "Title of the decision"
+```
 
 #### Inclusive Language
 
@@ -124,6 +144,5 @@ Everyone interacting in the WayOfWorking project's codebases, issue trackers, ch
 [changelog-keepachangelog]: https://github.com/HealthDataInsight/way_of_working-changelog-keepachangelog
 [code_linting-hdi]: https://github.com/HealthDataInsight/way_of_working-code_linting-hdi
 [code_of_conduct-contributor_covenant]: https://github.com/HealthDataInsight/way_of_working-code_of_conduct-contributor_covenant
-[decision_record-madr]: https://github.com/HealthDataInsight/way_of_working-decision_record-madr
 [pull_request_template-hdi]: https://github.com/HealthDataInsight/way_of_working-pull_request_template-hdi
 [versioning-semver]: https://github.com/HealthDataInsight/way_of_working-versioning-semver
