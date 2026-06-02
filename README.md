@@ -24,7 +24,7 @@ Below is a list of plugins that have been implemented so far:
 | Feature               | Plugin                                 | Description                                                                            |
 | --------------------- | -------------------------------------- | ---------------------------------------------------------------------------------------|
 | Audit                 | [audit-github]                         | A framework for rules to check for incorrect content and configuration of GitHub repos |
-| Changelog             | [changelog-keepachangelog]             | Implements [keepachangelog v1.1]                                                       |
+| Changelog             | Built-in (changelog/keepachangelog)    | Implements [keepachangelog v1.1] — bundled, opt in by `require` (see [Built-in Features](#built-in-features)) |
 | Code Linting          | [code_linting-hdi]                     | Implements a combination of [MegaLinter] and [RuboCop] built on NDRS standards         |
 | Code of Conduct       | [code_of_conduct-contributor_covenant] | Implements [Contributor Covenant v2.1]                                                 |
 | Decision Records      | Built-in (decision_record/madr)        | Implements [MADR v3] — bundled, opt in by `require` (see [Built-in Features](#built-in-features)) |
@@ -63,6 +63,23 @@ You will need to provide the Code of Conduct `[CONTACT METHOD]`, usually an emai
 ### Built-in Features
 
 Some features are bundled with this gem rather than shipped as separate plugins. These built-in features are **opt in**: enable one by requiring it wherever you load Way of Working — for example in your organisation's Way of Working gem, or in your project's `Rakefile`.
+
+#### Changelog
+
+Keeping a curated, human-readable changelog makes it easy for users and contributors to see what has changed between releases without trawling through the commit history.
+
+This feature uses [Keep a Changelog v1.1][keepachangelog v1.1] to generate a `CHANGELOG.md`, seeding it with sections derived from your git tags and commit messages where possible. Enable it by requiring it:
+
+```ruby
+require 'way_of_working/changelog/keepachangelog'
+```
+
+Once required, a subcommand becomes available:
+
+```bash
+# Add a Keep a Changelog CHANGELOG.md and documentation to your project
+way_of_working init changelog
+```
 
 #### Decision Records
 
@@ -141,7 +158,6 @@ Everyone interacting in the WayOfWorking project's codebases, issue trackers, ch
 [RuboCop]: https://rubocop.org
 [Semantic Versioning v2.0.0]: https://semver.org/spec/v2.0.0.html
 [audit-github]: https://github.com/HealthDataInsight/way_of_working-audit-github
-[changelog-keepachangelog]: https://github.com/HealthDataInsight/way_of_working-changelog-keepachangelog
 [code_linting-hdi]: https://github.com/HealthDataInsight/way_of_working-code_linting-hdi
 [code_of_conduct-contributor_covenant]: https://github.com/HealthDataInsight/way_of_working-code_of_conduct-contributor_covenant
 [pull_request_template-hdi]: https://github.com/HealthDataInsight/way_of_working-pull_request_template-hdi
