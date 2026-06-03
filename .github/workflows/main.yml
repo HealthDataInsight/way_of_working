@@ -1,27 +1,44 @@
 ---
-name: Rake Test
+name: Ruby Tests
 
-on: push  # yamllint disable-line rule:truthy
+on:  # yamllint disable-line rule:truthy
+  push:
+    branches:
+      - main
+
+  pull_request:
 
 permissions: read-all
 
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
     name: Ruby ${{ matrix.ruby }}
     strategy:
       matrix:
         ruby:
+          - '3.2'
           - '3.3'
           - '3.4'
           - '4.0'
 
     steps:
       - uses: actions/checkout@v6
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
+      - name: Set up Ruby via mise
+        uses: jdx/mise-action@v2
         with:
-          ruby-version: ${{ matrix.ruby }}
-          bundler-cache: true
+          tool_versions: |
+            ruby ${{ matrix.ruby }}
+      - name: Cache bundler
+        uses: actions/cache@v4
+        with:
+          path: vendor/bundle
+          key: bundle-${{ runner.os }}-${{ matrix.ruby }}-${{ hashFiles('Gemfile.lock') }}
+          restore-keys: |
+            bundle-${{ runner.os }}-${{ matrix.ruby }}-
+      - name: Install gems
+        run: |
+          bundle config set --local path vendor/bundle
+          bundle install --jobs 4
       - name: Run the default task
         run: bundle exec rake

@@ -24,13 +24,15 @@ Below is a list of plugins that have been implemented so far:
 | Feature               | Plugin                                 | Description                                                                            |
 | --------------------- | -------------------------------------- | ---------------------------------------------------------------------------------------|
 | Audit                 | [audit-github]                         | A framework for rules to check for incorrect content and configuration of GitHub repos |
-| Changelog             | [changelog-keepachangelog]             | Implements [keepachangelog v1.1]                                                       |
+| Changelog             | Built-in (changelog/keepachangelog)    | Implements [keepachangelog v1.1] — bundled, opt in by `require` (see [Built-in Features](#built-in-features)) |
 | Code Linting          | [code_linting-hdi]                     | Implements a combination of [MegaLinter] and [RuboCop] built on NDRS standards         |
 | Code of Conduct       | [code_of_conduct-contributor_covenant] | Implements [Contributor Covenant v2.1]                                                 |
-| Decision Records      | [decision_record-madr]                 | Implements [MADR v3]                                                                   |
-| Inclusive Language    | [inclusive_language-alex]              | Implements [alex]                                                                      |
+| Decision Records      | Built-in (decision_record/madr)        | Implements [MADR v3] — bundled, opt in by `require` (see [Built-in Features](#built-in-features)) |
+| Inclusive Language    | Built-in (inclusive_language/alex)     | Implements [alex] — bundled, opt in by `require` (see [Built-in Features](#built-in-features)) |
 | Pull Request Template | [pull_request_template-hdi]            | Implements a bespoke PR template                                                       |
 | Versioning            | [versioning-semver]                    | Implements [Semantic Versioning v2.0.0]                                                |
+
+Some features are **Built-in** — they ship inside this gem and are enabled by requiring them (see [Built-in Features](#built-in-features)); the others are separate plugin gems that you add as dependencies.
 
 ## Installation
 
@@ -57,6 +59,67 @@ way_of_working init all --contact-method [CONTACT METHOD]
 ```
 
 You will need to provide the Code of Conduct `[CONTACT METHOD]`, usually an email address, for community leaders to receive reports of unacceptable behavior.
+
+### Built-in Features
+
+Some features are bundled with this gem rather than shipped as separate plugins. These built-in features are **opt in**: enable one by requiring it wherever you load Way of Working — for example in your organisation's Way of Working gem, or in your project's `Rakefile`.
+
+#### Changelog
+
+Keeping a curated, human-readable changelog helps users and contributors quickly see what has changed between releases without trawling through the commit history.
+
+This feature uses [Keep a Changelog v1.1][keepachangelog v1.1] to generate a `CHANGELOG.md`, seeding it with sections derived from your git tags and commit messages where possible. Enable it by requiring it:
+
+```ruby
+require 'way_of_working/changelog/keepachangelog'
+```
+
+Once required, a subcommand becomes available:
+
+```bash
+# Add a Keep a Changelog CHANGELOG.md and documentation to your project
+way_of_working init changelog
+```
+
+#### Decision Records
+
+Recording the context and reasoning behind significant decisions helps current and future contributors understand why a project is the way it is, avoids relitigating settled questions, and onboards newcomers faster.
+
+This feature uses [Markdown Any Decision Records (MADR)][MADR v3] to capture decisions as version-controlled Markdown alongside your code. Enable it by requiring it:
+
+```ruby
+require 'way_of_working/decision_record/madr'
+```
+
+Once required, two subcommands become available:
+
+```bash
+# Add the decision records index, template and first record to your project
+way_of_working init decision_record
+
+# Create a new decision record
+way_of_working new decision_record "Title of the decision"
+```
+
+#### Inclusive Language
+
+Using insensitive and inconsiderate language can cause harm to others, create barriers to communication, and damage relationships. It can make people feel excluded, disrespected, and devalued, and may perpetuate negative stereotypes and biases.
+
+This feature uses [alex] for automated testing of inclusive language, both at the command line and as a GitHub workflow. Enable it by requiring it:
+
+```ruby
+require 'way_of_working/inclusive_language/alex'
+```
+
+Once required, two subcommands become available:
+
+```bash
+# Add the alex config, .alexignore, GitHub Action and documentation to your project
+way_of_working init inclusive_language
+
+# Run the inclusive language checks
+way_of_working exec inclusive_language
+```
 
 ### Help
 
@@ -95,10 +158,7 @@ Everyone interacting in the WayOfWorking project's codebases, issue trackers, ch
 [RuboCop]: https://rubocop.org
 [Semantic Versioning v2.0.0]: https://semver.org/spec/v2.0.0.html
 [audit-github]: https://github.com/HealthDataInsight/way_of_working-audit-github
-[changelog-keepachangelog]: https://github.com/HealthDataInsight/way_of_working-changelog-keepachangelog
 [code_linting-hdi]: https://github.com/HealthDataInsight/way_of_working-code_linting-hdi
 [code_of_conduct-contributor_covenant]: https://github.com/HealthDataInsight/way_of_working-code_of_conduct-contributor_covenant
-[decision_record-madr]: https://github.com/HealthDataInsight/way_of_working-decision_record-madr
-[inclusive_language-alex]: https://github.com/HealthDataInsight/way_of_working-inclusive_language-alex
 [pull_request_template-hdi]: https://github.com/HealthDataInsight/way_of_working-pull_request_template-hdi
 [versioning-semver]: https://github.com/HealthDataInsight/way_of_working-versioning-semver
