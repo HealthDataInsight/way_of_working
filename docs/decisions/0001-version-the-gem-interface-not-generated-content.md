@@ -25,7 +25,7 @@ towards numbers like v14. How should we version the gem as the standards its fea
 * Existing users should not have their generated artefacts change underneath them without opting in.
 * The gem recommends Semantic Versioning to its own users (via the `versioning-semver` feature), so
   it should model correct SemVer rather than abandon it.
-* Per-feature history should remain easy to follow even though all features share one version.
+* Each feature's history should remain possible to trace even though all features share one version.
 
 ## Considered Options
 
