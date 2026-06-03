@@ -9,11 +9,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Bundled the Changelog (Keep a Changelog) feature into this gem. It is opt in and replaces the separate `way_of_working-changelog-keepachangelog` plugin gem.
-- Bundled the Code of Conduct (Contributor Covenant) feature into this gem. It is opt in and replaces the separate `way_of_working-code_of_conduct-contributor_covenant` plugin gem.
-- Bundled the Decision Records (MADR) feature into this gem. It is opt in and replaces the separate `way_of_working-decision_record-madr` plugin gem.
-- Bundled the Inclusive Language (alex) feature into this gem. It is opt in and replaces the separate `way_of_working-inclusive_language-alex` plugin gem.
-- Bundled the Pull Request Template (HDI) feature into this gem. It is opt in and replaces the separate `way_of_working-pull_request_template-hdi` plugin gem.
+- **Changelog:** bundled the Keep a Changelog feature into this gem. It is opt in and replaces the separate `way_of_working-changelog-keepachangelog` plugin gem.
+- **Code of Conduct:** bundled the Contributor Covenant feature into this gem. It is opt in and replaces the separate `way_of_working-code_of_conduct-contributor_covenant` plugin gem.
+- **Decision Records:** bundled the MADR feature into this gem. It is opt in and replaces the separate `way_of_working-decision_record-madr` plugin gem.
+- **Inclusive Language:** bundled the alex feature into this gem. It is opt in and replaces the separate `way_of_working-inclusive_language-alex` plugin gem.
+- **Pull Request Template:** bundled the HDI feature into this gem. It is opt in and replaces the separate `way_of_working-pull_request_template-hdi` plugin gem.
+- **Versioning:** documented the versioning policy in [ADR-0001](docs/decisions/0001-version-the-gem-interface-not-generated-content.md) and `CONTRIBUTING.md` — SemVer governs the gem's interface, not generated content; standard refreshes are minor, and drastic upgrades ship as additive variants.
 
 ## [2.0.1] - 2025-01-17
 

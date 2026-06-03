@@ -34,6 +34,8 @@ Below is a list of plugins that have been implemented so far:
 
 Some features are **Built-in** — they ship inside this gem and are enabled by requiring them (see [Built-in Features](#built-in-features)); the others are separate plugin gems that you add as dependencies.
 
+The standard versions cited above (Contributor Covenant v2.1, MADR v3, and so on) describe the content a feature generates, not the gem's interface. They advance through **minor** releases — see [Versioning Policy](#versioning-policy).
+
 ## Installation
 
 Install the gem and add to the application's Gemfile by executing:
@@ -174,9 +176,25 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 When creating plugins, the convention is to create them within the WayOfWorking and feature namespaces. E.g. 
 
+### Versioning Policy
+
+This project follows [Semantic Versioning][Semantic Versioning v2.0.0], but SemVer governs the gem's **public interface** — the CLI commands and their options, the require paths of built-in features, and the plugin registration API — not the content of the artefacts its generators emit.
+
+Consequently:
+
+- Refreshing the standard a feature embeds (e.g. a new Contributor Covenant or MADR version) is **new behaviour → MINOR**.
+- A bug fix in generation is **PATCH**.
+- **MAJOR** is reserved for breaking the interface above (renaming or removing a command or option, moving a require path, or changing the plugin API).
+
+For a standard update drastic enough to surprise existing users, we add a **new variant** under the feature's `category/variant` namespace rather than mutating the existing one, so both coexist and consumers opt in by require path. This keeps the change additive (MINOR) and leaves existing users untouched.
+
+See [ADR-0001](docs/decisions/0001-version-the-gem-interface-not-generated-content.md) for the full rationale and [`CONTRIBUTING.md`](CONTRIBUTING.md) for the version-bump checklist.
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at <https://github.com/HealthDataInsight/way_of_working>. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/HealthDataInsight/way_of_working/blob/main/CODE_OF_CONDUCT.md).
+
+See [`CONTRIBUTING.md`](CONTRIBUTING.md) for development setup, the versioning policy and the release process.
 
 ## License
 
