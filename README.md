@@ -26,7 +26,7 @@ Below is a list of plugins that have been implemented so far:
 | Audit                 | [audit-github]                         | A framework for rules to check for incorrect content and configuration of GitHub repos |
 | Changelog             | Built-in (changelog/keepachangelog)    | Implements [keepachangelog v1.1] — bundled, opt in by `require` (see [Built-in Features](#built-in-features)) |
 | Code Linting          | [code_linting-hdi]                     | Implements a combination of [MegaLinter] and [RuboCop] built on NDRS standards         |
-| Code of Conduct       | [code_of_conduct-contributor_covenant] | Implements [Contributor Covenant v2.1]                                                 |
+| Code of Conduct       | Built-in (code_of_conduct/contributor_covenant) | Implements [Contributor Covenant v2.1] — bundled, opt in by `require` (see [Built-in Features](#built-in-features)) |
 | Decision Records      | Built-in (decision_record/madr)        | Implements [MADR v3] — bundled, opt in by `require` (see [Built-in Features](#built-in-features)) |
 | Inclusive Language    | Built-in (inclusive_language/alex)     | Implements [alex] — bundled, opt in by `require` (see [Built-in Features](#built-in-features)) |
 | Pull Request Template | Built-in (pull_request_template/hdi)   | Implements a bespoke PR template — bundled, opt in by `require` (see [Built-in Features](#built-in-features)) |
@@ -80,6 +80,25 @@ Once required, a subcommand becomes available:
 # Add a Keep a Changelog CHANGELOG.md and documentation to your project
 way_of_working init changelog
 ```
+
+#### Code of Conduct
+
+A code of conduct sets clear expectations for acceptable behaviour within a community or project, helping to create a safer, more welcoming and inclusive environment and giving maintainers a basis for addressing inappropriate behaviour.
+
+This feature installs the [Contributor Covenant v2.1] code of conduct along with its accompanying documentation. Enable it by requiring it:
+
+```ruby
+require 'way_of_working/code_of_conduct/contributor_covenant'
+```
+
+Once required, a subcommand becomes available:
+
+```bash
+# Add the Contributor Covenant code of conduct and documentation to your project
+way_of_working init code_of_conduct --contact-method [CONTACT METHOD]
+```
+
+You will need to provide a `[CONTACT METHOD]`, usually an email address, for community leaders to receive reports of unacceptable behavior.
 
 #### Decision Records
 
@@ -176,5 +195,4 @@ Everyone interacting in the WayOfWorking project's codebases, issue trackers, ch
 [Semantic Versioning v2.0.0]: https://semver.org/spec/v2.0.0.html
 [audit-github]: https://github.com/HealthDataInsight/way_of_working-audit-github
 [code_linting-hdi]: https://github.com/HealthDataInsight/way_of_working-code_linting-hdi
-[code_of_conduct-contributor_covenant]: https://github.com/HealthDataInsight/way_of_working-code_of_conduct-contributor_covenant
 [versioning-semver]: https://github.com/HealthDataInsight/way_of_working-versioning-semver
