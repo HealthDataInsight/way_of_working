@@ -23,7 +23,7 @@ Below is a list of plugins that have been implemented so far:
 
 | Feature               | Plugin                                 | Description                                                                            |
 | --------------------- | -------------------------------------- | ---------------------------------------------------------------------------------------|
-| Audit                 | [audit-github]                         | A framework for rules to check for incorrect content and configuration of GitHub repos |
+| Audit                 | Built-in (audit/github)                | A framework for rules to check for incorrect content and configuration of GitHub repos — bundled, opt in by `require` (see [Built-in Features](#built-in-features)) |
 | Changelog             | Built-in (changelog/keepachangelog)    | Implements [keepachangelog v1.1] — bundled, opt in by `require` (see [Built-in Features](#built-in-features)) |
 | Code Linting          | [code_linting-hdi]                     | Implements a combination of [MegaLinter] and [RuboCop] built on NDRS standards         |
 | Code of Conduct       | Built-in (code_of_conduct/contributor_covenant) | Implements [Contributor Covenant v2.1] — bundled, opt in by `require` (see [Built-in Features](#built-in-features)) |
@@ -65,6 +65,47 @@ You will need to provide the Code of Conduct `[CONTACT METHOD]`, usually an emai
 ### Built-in Features
 
 Some features are bundled with this gem rather than shipped as separate plugins. These built-in features are **opt in**: enable one by requiring it wherever you load Way of Working — for example in your organisation's Way of Working gem, or in your project's `Rakefile`.
+
+#### Audit
+
+Auditing your GitHub repositories against a consistent set of rules catches missing or misconfigured files and repository settings across an organisation, keeping projects aligned with your way of working. Many of the other built-in features register their own rules to check that they have been adopted properly.
+
+This feature provides a registry and auditing tool for GitHub repositories; rules can check for both missing/incorrect files and mis-configuration of the repository itself. Enable it by requiring it:
+
+```ruby
+require 'way_of_working/audit/github'
+```
+
+The audit needs two environment variables:
+
+- `GITHUB_ORGANISATION`: the name of your organisation being scanned (as used in the GitHub URL)
+- `GITHUB_TOKEN`: a PAT token with sufficient permission to access repositories and their configuration
+
+Once required, a subcommand becomes available. By default it runs only against repositories configured as git remotes in your current project:
+
+```bash
+# Audit this project's GitHub repositories
+way_of_working exec audit_github
+```
+
+Flags let you widen or narrow the scope:
+
+```bash
+# Audit every repository in the organisation
+way_of_working exec audit_github --all
+
+# Filter to repositories carrying a topic
+way_of_working exec audit_github --all --topic way-of-working
+
+# Audit one or more repositories by name (implies the whole organisation)
+way_of_working exec audit_github --name structured_store other_repo
+
+# Audit only public repositories
+way_of_working exec audit_github --all --public
+
+# Attempt to automatically fix issues where rules support it
+way_of_working exec audit_github --fix
+```
 
 #### Changelog
 
@@ -211,6 +252,5 @@ Everyone interacting in the WayOfWorking project's codebases, issue trackers, ch
 [MegaLinter]: https://megalinter.io/
 [RuboCop]: https://rubocop.org
 [Semantic Versioning v2.0.0]: https://semver.org/spec/v2.0.0.html
-[audit-github]: https://github.com/HealthDataInsight/way_of_working-audit-github
 [code_linting-hdi]: https://github.com/HealthDataInsight/way_of_working-code_linting-hdi
 [versioning-semver]: https://github.com/HealthDataInsight/way_of_working-versioning-semver

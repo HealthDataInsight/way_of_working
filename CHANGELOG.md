@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- **Audit:** bundled the GitHub audit feature into this gem. It is opt in and replaces the separate `way_of_working-audit-github` plugin gem.
 - **Changelog:** bundled the Keep a Changelog feature into this gem. It is opt in and replaces the separate `way_of_working-changelog-keepachangelog` plugin gem.
 - **Code of Conduct:** bundled the Contributor Covenant feature into this gem. It is opt in and replaces the separate `way_of_working-code_of_conduct-contributor_covenant` plugin gem.
 - **Decision Records:** bundled the MADR feature into this gem. It is opt in and replaces the separate `way_of_working-decision_record-madr` plugin gem.
