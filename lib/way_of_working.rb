@@ -19,6 +19,7 @@ loader.ignore(File.expand_path('way_of_working/tasks.rb', __dir__))
 loader.ignore(File.expand_path('way_of_working/changelog/keepachangelog/github_audit_rule.rb', __dir__))
 loader.ignore(File.expand_path('way_of_working/decision_record/madr/github_audit_rule.rb', __dir__))
 loader.ignore(File.expand_path('way_of_working/inclusive_language/alex/github_audit_rule.rb', __dir__))
+loader.ignore(File.expand_path('way_of_working/pull_request_template/hdi/github_audit_rule.rb', __dir__))
 loader.ignore(File.expand_path('way_of_working/readme_badge/github_audit_rule.rb', __dir__))
 loader.setup
 
