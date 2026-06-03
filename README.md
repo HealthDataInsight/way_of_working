@@ -30,7 +30,7 @@ Below is a list of plugins that have been implemented so far:
 | Decision Records      | Built-in (decision_record/madr)        | Implements [MADR v3] — bundled, opt in by `require` (see [Built-in Features](#built-in-features)) |
 | Inclusive Language    | Built-in (inclusive_language/alex)     | Implements [alex] — bundled, opt in by `require` (see [Built-in Features](#built-in-features)) |
 | Pull Request Template | Built-in (pull_request_template/hdi)   | Implements a bespoke PR template — bundled, opt in by `require` (see [Built-in Features](#built-in-features)) |
-| Versioning            | [versioning-semver]                    | Implements [Semantic Versioning v2.0.0]                                                |
+| Versioning            | Built-in (versioning/semver)           | Implements [Semantic Versioning v2.0.0] — bundled, opt in by `require` (see [Built-in Features](#built-in-features)) |
 
 Some features are **Built-in** — they ship inside this gem and are enabled by requiring them (see [Built-in Features](#built-in-features)); the others are separate plugin gems that you add as dependencies.
 
@@ -200,6 +200,23 @@ Once required, a subcommand becomes available:
 way_of_working init pull_request_template
 ```
 
+#### Versioning
+
+A shared versioning standard makes software changes easy to communicate and releases predictable to manage across projects, so consumers can reason about compatibility at a glance.
+
+This feature documents [Semantic Versioning v2.0.0] as the project's versioning standard. Enable it by requiring it:
+
+```ruby
+require 'way_of_working/versioning/semver'
+```
+
+Once required, a subcommand becomes available:
+
+```bash
+# Add the Semantic Versioning documentation to your project
+way_of_working init versioning
+```
+
 ### Help
 
 More help on using the command line tool is found by using:
@@ -253,4 +270,3 @@ Everyone interacting in the WayOfWorking project's codebases, issue trackers, ch
 [RuboCop]: https://rubocop.org
 [Semantic Versioning v2.0.0]: https://semver.org/spec/v2.0.0.html
 [code_linting-hdi]: https://github.com/HealthDataInsight/way_of_working-code_linting-hdi
-[versioning-semver]: https://github.com/HealthDataInsight/way_of_working-versioning-semver
