@@ -23,7 +23,7 @@ file safety:
   ".github/linters/rubocop_defaults.yml":
     comments:
     reviewed_by: timgentry
-    safe_revision: e136e6fb3abdc99545ef0b8da050b3331a4737fd
+    safe_revision: a358d6d91594dcacdf45a3c4429f386df1acf861
   ".github/pull_request_template.md":
     comments:
     reviewed_by: timgentry
@@ -31,15 +31,15 @@ file safety:
   ".github/workflows/inclusive-language.yml":
     comments:
     reviewed_by: timgentry
-    safe_revision: e136e6fb3abdc99545ef0b8da050b3331a4737fd
+    safe_revision: a358d6d91594dcacdf45a3c4429f386df1acf861
   ".github/workflows/main.yml":
     comments:
-    reviewed_by: shilpigoeldev
-    safe_revision: a332d01447a4c74991ee7cf1d4e64a9e6b5d32c8
+    reviewed_by: timgentry
+    safe_revision: a358d6d91594dcacdf45a3c4429f386df1acf861
   ".github/workflows/mega-linter.yml":
     comments:
-    reviewed_by: shilpigoeldev
-    safe_revision: a332d01447a4c74991ee7cf1d4e64a9e6b5d32c8
+    reviewed_by: timgentry
+    safe_revision: 850d1ad013c692beb482edef7210cbb8b2178067
   ".gitignore":
     comments:
     reviewed_by: timgentry
@@ -47,11 +47,11 @@ file safety:
   ".mega-linter.yml":
     comments:
     reviewed_by: timgentry
-    safe_revision: e136e6fb3abdc99545ef0b8da050b3331a4737fd
+    safe_revision: 850d1ad013c692beb482edef7210cbb8b2178067
   ".mise.toml":
     comments:
-    reviewed_by:
-    safe_revision:
+    reviewed_by: timgentry
+    safe_revision: a358d6d91594dcacdf45a3c4429f386df1acf861
   ".rubocop":
     comments:
     reviewed_by: timgentry
@@ -59,7 +59,7 @@ file safety:
   ".ruby-version":
     comments:
     reviewed_by: timgentry
-    safe_revision: 720ad0fe1167e39fb0e85fa2355809fdfce1a370
+    safe_revision: 0c9e1c025cf51e9bfa28d3a594055006edf9d000
   CHANGELOG.md:
     comments:
     reviewed_by: shilpigoeldev
@@ -70,20 +70,20 @@ file safety:
     safe_revision: 4830ed99a857f3bf781bcf21bff6a2d5510fbcc7
   CONTRIBUTING.md:
     comments:
-    reviewed_by:
-    safe_revision:
+    reviewed_by: timgentry
+    safe_revision: 05b4cd23bbfee89ec82e83c0763b3636c0d1c3af
   Gemfile:
     comments:
     reviewed_by: timgentry
-    safe_revision: 3530bbc21f30419e40a8f6eb73b42b3e8c906921
+    safe_revision: 0c9e1c025cf51e9bfa28d3a594055006edf9d000
   LICENSE.txt:
     comments:
     reviewed_by: timgentry
     safe_revision: 50f34ef4f776c94ead81d272a7ae94b6048dcb03
   README.md:
     comments:
-    reviewed_by: shilpigoeldev
-    safe_revision: 3b8ad6e7a3079bbde987a48cfe0fc56d87d423a6
+    reviewed_by: timgentry
+    safe_revision: 703ce590ebf5c0bbb731a95dd6622b6d99c809f9
   Rakefile:
     comments:
     reviewed_by: brian.shand
@@ -106,8 +106,8 @@ file safety:
     safe_revision: bfff11bf026610401b997b8413fa98b87e8a12df
   docs/decisions/0001-version-the-gem-interface-not-generated-content.md:
     comments:
-    reviewed_by:
-    safe_revision:
+    reviewed_by: timgentry
+    safe_revision: 05b4cd23bbfee89ec82e83c0763b3636c0d1c3af
   docs/decisions/README.md:
     comments:
     reviewed_by: timgentry
@@ -126,36 +126,36 @@ file safety:
     safe_revision: e136e6fb3abdc99545ef0b8da050b3331a4737fd
   lib/way_of_working.rb:
     comments:
-    reviewed_by: shilpigoeldev
-    safe_revision: 573e46b243ed291512bf9c0fdaa9048d956ac326
+    reviewed_by: timgentry
+    safe_revision: 05b4cd23bbfee89ec82e83c0763b3636c0d1c3af
   lib/way_of_working/audit/github.rb:
     comments:
-    reviewed_by:
-    safe_revision:
+    reviewed_by: timgentry
+    safe_revision: 05b4cd23bbfee89ec82e83c0763b3636c0d1c3af
   lib/way_of_working/audit/github/auditor.rb:
     comments:
-    reviewed_by:
-    safe_revision:
+    reviewed_by: timgentry
+    safe_revision: 05b4cd23bbfee89ec82e83c0763b3636c0d1c3af
   lib/way_of_working/audit/github/generators/exec.rb:
     comments:
-    reviewed_by:
-    safe_revision:
+    reviewed_by: timgentry
+    safe_revision: 05b4cd23bbfee89ec82e83c0763b3636c0d1c3af
   lib/way_of_working/audit/github/rules/base.rb:
     comments:
-    reviewed_by:
-    safe_revision:
+    reviewed_by: timgentry
+    safe_revision: 05b4cd23bbfee89ec82e83c0763b3636c0d1c3af
   lib/way_of_working/audit/github/rules/registry.rb:
     comments: Identical to file reviewed in way_of_working-audit-github@4f2b65e6f3eda6c9213348886916aa391cd2e295
     reviewed_by: shilpigoeldev
     safe_revision: 05b4cd23bbfee89ec82e83c0763b3636c0d1c3af
   lib/way_of_working/audit/github/rules/unknown.rb:
     comments:
-    reviewed_by:
-    safe_revision:
+    reviewed_by: timgentry
+    safe_revision: 05b4cd23bbfee89ec82e83c0763b3636c0d1c3af
   lib/way_of_working/changelog/keepachangelog.rb:
     comments:
-    reviewed_by:
-    safe_revision:
+    reviewed_by: timgentry
+    safe_revision: a358d6d91594dcacdf45a3c4429f386df1acf861
   lib/way_of_working/changelog/keepachangelog/generators/init.rb:
     comments:
     reviewed_by:
@@ -174,12 +174,12 @@ file safety:
     safe_revision: bdbb7c9aed37d5be109e2bbc2c2fc9adc849aa16
   lib/way_of_working/code_of_conduct/contributor_covenant.rb:
     comments:
-    reviewed_by:
-    safe_revision:
+    reviewed_by: timgentry
+    safe_revision: 05b4cd23bbfee89ec82e83c0763b3636c0d1c3af
   lib/way_of_working/code_of_conduct/contributor_covenant/generators/init.rb:
     comments:
-    reviewed_by:
-    safe_revision:
+    reviewed_by: timgentry
+    safe_revision: 05b4cd23bbfee89ec82e83c0763b3636c0d1c3af
   lib/way_of_working/code_of_conduct/contributor_covenant/github_audit_rule.rb:
     comments: Identical to file reviewed in way_of_working-code_of_conduct-contributor_covenant@b2c63ee5cf0f603c0a71813a04946323cc8c37a8
     reviewed_by: shilpigoeldev
@@ -198,20 +198,20 @@ file safety:
     safe_revision: 573e46b243ed291512bf9c0fdaa9048d956ac326
   lib/way_of_working/decision_record/madr.rb:
     comments:
-    reviewed_by:
-    safe_revision:
+    reviewed_by: timgentry
+    safe_revision: a358d6d91594dcacdf45a3c4429f386df1acf861
   lib/way_of_working/decision_record/madr/generators/init.rb:
     comments:
-    reviewed_by:
-    safe_revision:
+    reviewed_by: timgentry
+    safe_revision: a358d6d91594dcacdf45a3c4429f386df1acf861
   lib/way_of_working/decision_record/madr/generators/new.rb:
     comments:
-    reviewed_by:
-    safe_revision:
+    reviewed_by: timgentry
+    safe_revision: a358d6d91594dcacdf45a3c4429f386df1acf861
   lib/way_of_working/decision_record/madr/github_audit_rule.rb:
     comments:
-    reviewed_by:
-    safe_revision:
+    reviewed_by: timgentry
+    safe_revision: a358d6d91594dcacdf45a3c4429f386df1acf861
   lib/way_of_working/decision_record/madr/templates/.github/ISSUE_TEMPLATE/decision-record.md:
     comments: Identical to file reviewed in way_of_working-decision_record-madr@726c543149db70831ba9892789e93f7cb9bf6317
     reviewed_by: shilpigoeldev
@@ -234,28 +234,28 @@ file safety:
     safe_revision: a358d6d91594dcacdf45a3c4429f386df1acf861
   lib/way_of_working/decision_record/madr/templates/docs/way_of_working/decision-records.md:
     comments:
-    reviewed_by:
-    safe_revision:
+    reviewed_by: timgentry
+    safe_revision: a358d6d91594dcacdf45a3c4429f386df1acf861
   lib/way_of_working/git/repo_reader.rb:
     comments:
     reviewed_by: timgentry
-    safe_revision: e136e6fb3abdc99545ef0b8da050b3331a4737fd
+    safe_revision: 0c9e1c025cf51e9bfa28d3a594055006edf9d000
   lib/way_of_working/git/summary_tag.rb:
     comments:
     reviewed_by: brian.shand
     safe_revision: 1cd0f0429c60c0666c1ddb905afbeb3f67a88a0e
   lib/way_of_working/inclusive_language/alex.rb:
     comments:
-    reviewed_by:
-    safe_revision:
+    reviewed_by: timgentry
+    safe_revision: a358d6d91594dcacdf45a3c4429f386df1acf861
   lib/way_of_working/inclusive_language/alex/generators/exec.rb:
     comments: Identical to file reviewed in way_of_working-inclusive_language-alex@cbe4ccee99e97402a6b17a3453d80fde37311328
     reviewed_by: shilpigoeldev
     safe_revision: a358d6d91594dcacdf45a3c4429f386df1acf861
   lib/way_of_working/inclusive_language/alex/generators/init.rb:
     comments:
-    reviewed_by:
-    safe_revision:
+    reviewed_by: timgentry
+    safe_revision: a358d6d91594dcacdf45a3c4429f386df1acf861
   lib/way_of_working/inclusive_language/alex/github_audit_rule.rb:
     comments: Identical to file reviewed in way_of_working-inclusive_language-alex@d340a14df1545bacb5e851ba8687275992e41709
     reviewed_by: shilpigoeldev
@@ -270,8 +270,8 @@ file safety:
     safe_revision: a358d6d91594dcacdf45a3c4429f386df1acf861
   lib/way_of_working/inclusive_language/alex/templates/.github/workflows/inclusive-language.yml:
     comments:
-    reviewed_by:
-    safe_revision:
+    reviewed_by: timgentry
+    safe_revision: a358d6d91594dcacdf45a3c4429f386df1acf861
   lib/way_of_working/inclusive_language/alex/templates/docs/way_of_working/inclusive-language.md:
     comments: Identical to file reviewed in way_of_working-inclusive_language-alex@cbe4ccee99e97402a6b17a3453d80fde37311328
     reviewed_by: timgentry
@@ -282,24 +282,24 @@ file safety:
     safe_revision: bdbb7c9aed37d5be109e2bbc2c2fc9adc849aa16
   lib/way_of_working/pull_request_template/hdi.rb:
     comments:
-    reviewed_by:
-    safe_revision:
+    reviewed_by: timgentry
+    safe_revision: 05b4cd23bbfee89ec82e83c0763b3636c0d1c3af
   lib/way_of_working/pull_request_template/hdi/generators/init.rb:
     comments:
-    reviewed_by:
-    safe_revision:
+    reviewed_by: timgentry
+    safe_revision: 05b4cd23bbfee89ec82e83c0763b3636c0d1c3af
   lib/way_of_working/pull_request_template/hdi/github_audit_rule.rb:
     comments: Identical to file reviewed in way_of_working-pull_request_template-hdi@8a1c4e75959cd233ba1b9f134f792a112c642452
     reviewed_by: shilpigoeldev
     safe_revision: 05b4cd23bbfee89ec82e83c0763b3636c0d1c3af
   lib/way_of_working/pull_request_template/hdi/templates/.github/pull_request_template.md:
     comments:
-    reviewed_by:
-    safe_revision:
+    reviewed_by: timgentry
+    safe_revision: 05b4cd23bbfee89ec82e83c0763b3636c0d1c3af
   lib/way_of_working/pull_request_template/hdi/templates/docs/way_of_working/pull-request-template-and-guidelines.md:
     comments:
-    reviewed_by:
-    safe_revision:
+    reviewed_by: timgentry
+    safe_revision: 05b4cd23bbfee89ec82e83c0763b3636c0d1c3af
   lib/way_of_working/readme_badge.rb:
     comments:
     reviewed_by: shilpigoeldev
@@ -314,8 +314,8 @@ file safety:
     safe_revision: a332d01447a4c74991ee7cf1d4e64a9e6b5d32c8
   lib/way_of_working/readme_badge/paths.rb:
     comments:
-    reviewed_by: shilpigoeldev
-    safe_revision: 573e46b243ed291512bf9c0fdaa9048d956ac326
+    reviewed_by: timgentry
+    safe_revision: 0c9e1c025cf51e9bfa28d3a594055006edf9d000
   lib/way_of_working/readme_badge/templates/README.md:
     comments:
     reviewed_by: timgentry
@@ -350,24 +350,24 @@ file safety:
     safe_revision: a332d01447a4c74991ee7cf1d4e64a9e6b5d32c8
   lib/way_of_working/versioning/semver.rb:
     comments:
-    reviewed_by:
-    safe_revision:
+    reviewed_by: timgentry
+    safe_revision: 05b4cd23bbfee89ec82e83c0763b3636c0d1c3af
   lib/way_of_working/versioning/semver/generators/init.rb:
     comments:
-    reviewed_by:
-    safe_revision:
+    reviewed_by: timgentry
+    safe_revision: 05b4cd23bbfee89ec82e83c0763b3636c0d1c3af
   lib/way_of_working/versioning/semver/github_audit_rule.rb:
     comments:
-    reviewed_by:
-    safe_revision:
+    reviewed_by: timgentry
+    safe_revision: 05b4cd23bbfee89ec82e83c0763b3636c0d1c3af
   lib/way_of_working/versioning/semver/templates/docs/way_of_working/versioning.md:
     comments: Identical to file reviewed in way_of_working-versioning-semver@ffc45545cd82db554cbee17125f2ed5c2c70ea2e
     reviewed_by: shilpigoeldev
     safe_revision: 05b4cd23bbfee89ec82e83c0763b3636c0d1c3af
   lychee.toml:
     comments:
-    reviewed_by:
-    safe_revision:
+    reviewed_by: timgentry
+    safe_revision: 850d1ad013c692beb482edef7210cbb8b2178067
   test/resources/empty_Rakefile:
     comments:
     reviewed_by: timgentry
@@ -398,97 +398,97 @@ file safety:
     safe_revision: 573e46b243ed291512bf9c0fdaa9048d956ac326
   test/way_of_working/audit/github/auditor_test.rb:
     comments:
-    reviewed_by:
-    safe_revision:
+    reviewed_by: timgentry
+    safe_revision: 05b4cd23bbfee89ec82e83c0763b3636c0d1c3af
   test/way_of_working/audit/github/generators/exec_test.rb:
     comments:
-    reviewed_by:
-    safe_revision:
+    reviewed_by: timgentry
+    safe_revision: 05b4cd23bbfee89ec82e83c0763b3636c0d1c3af
   test/way_of_working/audit/github/rule_test.rb:
     comments:
-    reviewed_by:
-    safe_revision:
+    reviewed_by: timgentry
+    safe_revision: 05b4cd23bbfee89ec82e83c0763b3636c0d1c3af
   test/way_of_working/changelog/keepachangelog/generators/init_test.rb:
     comments:
-    reviewed_by:
-    safe_revision:
+    reviewed_by: timgentry
+    safe_revision: a358d6d91594dcacdf45a3c4429f386df1acf861
   test/way_of_working/changelog/keepachangelog/github_audit_rule_test.rb:
     comments:
-    reviewed_by:
-    safe_revision:
+    reviewed_by: timgentry
+    safe_revision: 05b4cd23bbfee89ec82e83c0763b3636c0d1c3af
   test/way_of_working/code_of_conduct/contributor_covenant/generators/init_test.rb:
     comments:
-    reviewed_by:
-    safe_revision:
+    reviewed_by: timgentry
+    safe_revision: 05b4cd23bbfee89ec82e83c0763b3636c0d1c3af
   test/way_of_working/code_of_conduct/contributor_covenant/github_audit_rule_test.rb:
     comments:
-    reviewed_by:
-    safe_revision:
+    reviewed_by: timgentry
+    safe_revision: 05b4cd23bbfee89ec82e83c0763b3636c0d1c3af
   test/way_of_working/decision_record/madr/generators/init_test.rb:
     comments:
-    reviewed_by:
-    safe_revision:
+    reviewed_by: timgentry
+    safe_revision: a358d6d91594dcacdf45a3c4429f386df1acf861
   test/way_of_working/decision_record/madr/generators/new_test.rb:
     comments:
-    reviewed_by:
-    safe_revision:
+    reviewed_by: timgentry
+    safe_revision: a358d6d91594dcacdf45a3c4429f386df1acf861
   test/way_of_working/decision_record/madr/github_audit_rule_test.rb:
     comments:
-    reviewed_by:
-    safe_revision:
+    reviewed_by: timgentry
+    safe_revision: 05b4cd23bbfee89ec82e83c0763b3636c0d1c3af
   test/way_of_working/git/summary_tag_test.rb:
     comments:
     reviewed_by: shilpigoeldev
     safe_revision: a332d01447a4c74991ee7cf1d4e64a9e6b5d32c8
   test/way_of_working/inclusive_language/alex/generators/exec_test.rb:
     comments:
-    reviewed_by:
-    safe_revision:
+    reviewed_by: timgentry
+    safe_revision: a358d6d91594dcacdf45a3c4429f386df1acf861
   test/way_of_working/inclusive_language/alex/generators/init_test.rb:
     comments:
-    reviewed_by:
-    safe_revision:
+    reviewed_by: timgentry
+    safe_revision: a358d6d91594dcacdf45a3c4429f386df1acf861
   test/way_of_working/inclusive_language/alex/github_audit_rule_test.rb:
     comments:
-    reviewed_by:
-    safe_revision:
+    reviewed_by: timgentry
+    safe_revision: 05b4cd23bbfee89ec82e83c0763b3636c0d1c3af
   test/way_of_working/pull_request_template/hdi/generators/init_test.rb:
     comments:
-    reviewed_by:
-    safe_revision:
+    reviewed_by: timgentry
+    safe_revision: 05b4cd23bbfee89ec82e83c0763b3636c0d1c3af
   test/way_of_working/pull_request_template/hdi/github_audit_rule_test.rb:
     comments:
-    reviewed_by:
-    safe_revision:
+    reviewed_by: timgentry
+    safe_revision: 05b4cd23bbfee89ec82e83c0763b3636c0d1c3af
   test/way_of_working/readme_badge/generators/init_test.rb:
     comments:
     reviewed_by: timgentry
     safe_revision: 573e46b243ed291512bf9c0fdaa9048d956ac326
   test/way_of_working/readme_badge/paths_test.rb:
     comments:
-    reviewed_by:
-    safe_revision:
+    reviewed_by: timgentry
+    safe_revision: 0c9e1c025cf51e9bfa28d3a594055006edf9d000
   test/way_of_working/versioning/semver/generators/init_test.rb:
     comments:
-    reviewed_by:
-    safe_revision:
+    reviewed_by: timgentry
+    safe_revision: 05b4cd23bbfee89ec82e83c0763b3636c0d1c3af
   test/way_of_working/versioning/semver/github_audit_rule_test.rb:
     comments:
-    reviewed_by:
-    safe_revision:
+    reviewed_by: timgentry
+    safe_revision: 05b4cd23bbfee89ec82e83c0763b3636c0d1c3af
   test/way_of_working/zeitwerk_gem_loader_test.rb:
     comments:
-    reviewed_by:
-    safe_revision:
+    reviewed_by: timgentry
+    safe_revision: 0c9e1c025cf51e9bfa28d3a594055006edf9d000
   test/way_of_working/zeitwerk_test_loader_test.rb:
     comments:
-    reviewed_by:
-    safe_revision:
+    reviewed_by: timgentry
+    safe_revision: 05b4cd23bbfee89ec82e83c0763b3636c0d1c3af
   test/way_of_working_test.rb:
     comments:
     reviewed_by: timgentry
     safe_revision: f96fc0fbe2d380210ac5a12d04db8140ebd5ea56
   way_of_working.gemspec:
     comments:
-    reviewed_by: shilpigoeldev
-    safe_revision: a332d01447a4c74991ee7cf1d4e64a9e6b5d32c8
+    reviewed_by: timgentry
+    safe_revision: 05b4cd23bbfee89ec82e83c0763b3636c0d1c3af
