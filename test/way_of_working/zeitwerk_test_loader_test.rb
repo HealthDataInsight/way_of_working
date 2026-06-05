@@ -14,7 +14,6 @@ module WayOfWorking
       @loader.inflector = Zeitwerk::GemInflector.new(@root.join('lib/way_of_working.rb'))
       @loader.push_dir(@root.join('test'))
       @loader.ignore(@root.join('test/test_helper.rb'))
-      @loader.ignore(@root.join('test/way_of_working/audit_github_stub_classes.rb'))
       @loader.setup
     end
 

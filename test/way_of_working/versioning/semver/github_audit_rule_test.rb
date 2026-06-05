@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
 require 'test_helper'
-require 'way_of_working/inclusive_language/alex/github_audit_rule'
+require 'way_of_working/versioning/semver/github_audit_rule'
 
 module WayOfWorking
-  module InclusiveLanguage
-    module Alex
+  module Versioning
+    module Semver
       class GithubAuditRuleTest < Minitest::Test
         # The rule registers itself with the (now built-in) GitHub audit registry
         # at load time. Unregister it afterwards so the shared registry doesn't

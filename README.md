@@ -23,16 +23,18 @@ Below is a list of plugins that have been implemented so far:
 
 | Feature               | Plugin                                 | Description                                                                            |
 | --------------------- | -------------------------------------- | ---------------------------------------------------------------------------------------|
-| Audit                 | [audit-github]                         | A framework for rules to check for incorrect content and configuration of GitHub repos |
+| Audit                 | Built-in (audit/github)                | A framework for rules to check for incorrect content and configuration of GitHub repos — bundled, opt in by `require` (see [Built-in Features](#built-in-features)) |
 | Changelog             | Built-in (changelog/keepachangelog)    | Implements [keepachangelog v1.1] — bundled, opt in by `require` (see [Built-in Features](#built-in-features)) |
 | Code Linting          | [code_linting-hdi]                     | Implements a combination of [MegaLinter] and [RuboCop] built on NDRS standards         |
-| Code of Conduct       | [code_of_conduct-contributor_covenant] | Implements [Contributor Covenant v2.1]                                                 |
+| Code of Conduct       | Built-in (code_of_conduct/contributor_covenant) | Implements [Contributor Covenant v2.1] — bundled, opt in by `require` (see [Built-in Features](#built-in-features)) |
 | Decision Records      | Built-in (decision_record/madr)        | Implements [MADR v3] — bundled, opt in by `require` (see [Built-in Features](#built-in-features)) |
 | Inclusive Language    | Built-in (inclusive_language/alex)     | Implements [alex] — bundled, opt in by `require` (see [Built-in Features](#built-in-features)) |
-| Pull Request Template | [pull_request_template-hdi]            | Implements a bespoke PR template                                                       |
-| Versioning            | [versioning-semver]                    | Implements [Semantic Versioning v2.0.0]                                                |
+| Pull Request Template | Built-in (pull_request_template/hdi)   | Implements a bespoke PR template — bundled, opt in by `require` (see [Built-in Features](#built-in-features)) |
+| Versioning            | Built-in (versioning/semver)           | Implements [Semantic Versioning v2.0.0] — bundled, opt in by `require` (see [Built-in Features](#built-in-features)) |
 
 Some features are **Built-in** — they ship inside this gem and are enabled by requiring them (see [Built-in Features](#built-in-features)); the others are separate plugin gems that you add as dependencies.
+
+The standard versions cited above (Contributor Covenant v2.1, MADR v3, and so on) describe the content a feature generates, not the gem's interface. They advance through **minor** releases — see [Versioning Policy](#versioning-policy).
 
 ## Installation
 
@@ -64,6 +66,47 @@ You will need to provide the Code of Conduct `[CONTACT METHOD]`, usually an emai
 
 Some features are bundled with this gem rather than shipped as separate plugins. These built-in features are **opt in**: enable one by requiring it wherever you load Way of Working — for example in your organisation's Way of Working gem, or in your project's `Rakefile`.
 
+#### Audit
+
+Auditing your GitHub repositories against a consistent set of rules catches missing or misconfigured files and repository settings across an organisation, keeping projects aligned with your way of working. Many of the other built-in features register their own rules to check that they have been adopted properly.
+
+This feature provides a registry and auditing tool for GitHub repositories; rules can check for both missing/incorrect files and mis-configuration of the repository itself. Enable it by requiring it:
+
+```ruby
+require 'way_of_working/audit/github'
+```
+
+The audit needs two environment variables:
+
+- `GITHUB_ORGANISATION`: the name of your organisation being scanned (as used in the GitHub URL)
+- `GITHUB_TOKEN`: a PAT token with sufficient permission to access repositories and their configuration
+
+Once required, a subcommand becomes available. By default it runs only against repositories configured as git remotes in your current project:
+
+```bash
+# Audit this project's GitHub repositories
+way_of_working exec audit_github
+```
+
+Flags let you widen or narrow the scope:
+
+```bash
+# Audit every repository in the organisation
+way_of_working exec audit_github --all
+
+# Filter to repositories carrying a topic
+way_of_working exec audit_github --all --topic way-of-working
+
+# Audit one or more repositories by name (implies the whole organisation)
+way_of_working exec audit_github --name structured_store other_repo
+
+# Audit only public repositories
+way_of_working exec audit_github --all --public
+
+# Attempt to automatically fix issues where rules support it
+way_of_working exec audit_github --fix
+```
+
 #### Changelog
 
 Keeping a curated, human-readable changelog helps users and contributors quickly see what has changed between releases without trawling through the commit history.
@@ -80,6 +123,25 @@ Once required, a subcommand becomes available:
 # Add a Keep a Changelog CHANGELOG.md and documentation to your project
 way_of_working init changelog
 ```
+
+#### Code of Conduct
+
+A code of conduct sets clear expectations for acceptable behaviour within a community or project, helping to create a safer, more welcoming and inclusive environment and giving maintainers a basis for addressing inappropriate behaviour.
+
+This feature installs the [Contributor Covenant v2.1] code of conduct along with its accompanying documentation. Enable it by requiring it:
+
+```ruby
+require 'way_of_working/code_of_conduct/contributor_covenant'
+```
+
+Once required, a subcommand becomes available:
+
+```bash
+# Add the Contributor Covenant code of conduct and documentation to your project
+way_of_working init code_of_conduct --contact-method [CONTACT METHOD]
+```
+
+You will need to provide a `[CONTACT METHOD]`, usually an email address, for community leaders to receive reports of unacceptable behavior.
 
 #### Decision Records
 
@@ -121,6 +183,40 @@ way_of_working init inclusive_language
 way_of_working exec inclusive_language
 ```
 
+#### Pull Request Template
+
+A consistent pull request template standardises PR submissions, giving reviewers the context they need, improving review efficiency, and keeping a searchable project history.
+
+This feature installs a bespoke HDI pull request template along with its accompanying guidelines documentation. Enable it by requiring it:
+
+```ruby
+require 'way_of_working/pull_request_template/hdi'
+```
+
+Once required, a subcommand becomes available:
+
+```bash
+# Add the pull request template and documentation to your project
+way_of_working init pull_request_template
+```
+
+#### Versioning
+
+A shared versioning standard makes software changes easy to communicate and releases predictable to manage across projects, so consumers can reason about compatibility at a glance.
+
+This feature documents [Semantic Versioning v2.0.0] as the project's versioning standard. Enable it by requiring it:
+
+```ruby
+require 'way_of_working/versioning/semver'
+```
+
+Once required, a subcommand becomes available:
+
+```bash
+# Add the Semantic Versioning documentation to your project
+way_of_working init versioning
+```
+
 ### Help
 
 More help on using the command line tool is found by using:
@@ -138,9 +234,25 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 When creating plugins, the convention is to create them within the WayOfWorking and feature namespaces. E.g. 
 
+### Versioning Policy
+
+This project follows [Semantic Versioning][Semantic Versioning v2.0.0], but SemVer governs the gem's **public interface** — the CLI commands and their options, the require paths of built-in features, and the plugin registration API — not the content of the artefacts its generators emit.
+
+Consequently:
+
+- Refreshing the standard a feature embeds (e.g. a new Contributor Covenant or MADR version) is **new behaviour → MINOR**.
+- A bug fix in generation is **PATCH**.
+- **MAJOR** is reserved for breaking the interface above (renaming or removing a command or option, moving a require path, or changing the plugin API).
+
+For a standard update drastic enough to surprise existing users, we add a **new variant** under the feature's `category/variant` namespace rather than mutating the existing one, so both coexist and consumers opt in by require path. This keeps the change additive (MINOR) and leaves existing users untouched.
+
+See [ADR-0001](docs/decisions/0001-version-the-gem-interface-not-generated-content.md) for the full rationale and [`CONTRIBUTING.md`](CONTRIBUTING.md) for the version-bump checklist.
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at <https://github.com/HealthDataInsight/way_of_working>. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/HealthDataInsight/way_of_working/blob/main/CODE_OF_CONDUCT.md).
+
+See [`CONTRIBUTING.md`](CONTRIBUTING.md) for development setup, the versioning policy and the release process.
 
 ## License
 
@@ -157,8 +269,4 @@ Everyone interacting in the WayOfWorking project's codebases, issue trackers, ch
 [MegaLinter]: https://megalinter.io/
 [RuboCop]: https://rubocop.org
 [Semantic Versioning v2.0.0]: https://semver.org/spec/v2.0.0.html
-[audit-github]: https://github.com/HealthDataInsight/way_of_working-audit-github
 [code_linting-hdi]: https://github.com/HealthDataInsight/way_of_working-code_linting-hdi
-[code_of_conduct-contributor_covenant]: https://github.com/HealthDataInsight/way_of_working-code_of_conduct-contributor_covenant
-[pull_request_template-hdi]: https://github.com/HealthDataInsight/way_of_working-pull_request_template-hdi
-[versioning-semver]: https://github.com/HealthDataInsight/way_of_working-versioning-semver
