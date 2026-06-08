@@ -202,7 +202,7 @@ way_of_working init pull_request_template
 
 #### Versioning
 
-A shared versioning standard makes software changes easy to communicate and releases predictable to manage across projects, so consumers can reason about compatibility at a glance.
+A shared versioning standard makes software changes clear to communicate and releases predictable to manage across projects, so consumers can reason about compatibility at a glance.
 
 This feature documents [Semantic Versioning v2.0.0] as the project's versioning standard. Enable it by requiring it:
 
