@@ -63,7 +63,7 @@ file safety:
   CHANGELOG.md:
     comments:
     reviewed_by: shilpigoeldev
-    safe_revision: a332d01447a4c74991ee7cf1d4e64a9e6b5d32c8
+    safe_revision: eb6e93b8075a3b5305ebe034967b9a41c253fd31
   CODE_OF_CONDUCT.md:
     comments:
     reviewed_by: timgentry
@@ -82,8 +82,8 @@ file safety:
     safe_revision: 50f34ef4f776c94ead81d272a7ae94b6048dcb03
   README.md:
     comments:
-    reviewed_by: timgentry
-    safe_revision: 703ce590ebf5c0bbb731a95dd6622b6d99c809f9
+    reviewed_by: shilpigoeldev
+    safe_revision: eb6e93b8075a3b5305ebe034967b9a41c253fd31
   Rakefile:
     comments:
     reviewed_by: brian.shand
@@ -158,8 +158,8 @@ file safety:
     safe_revision: a358d6d91594dcacdf45a3c4429f386df1acf861
   lib/way_of_working/changelog/keepachangelog/generators/init.rb:
     comments:
-    reviewed_by:
-    safe_revision:
+    reviewed_by: shilpigoeldev
+    safe_revision: a358d6d91594dcacdf45a3c4429f386df1acf861
   lib/way_of_working/changelog/keepachangelog/github_audit_rule.rb:
     comments: Identical to file reviewed in way_of_working-changelog-keepachangelog@8d28755cd6dce363b605f02a432539c7d6411c33
     reviewed_by: shilpigoeldev
@@ -347,7 +347,7 @@ file safety:
   lib/way_of_working/version.rb:
     comments:
     reviewed_by: shilpigoeldev
-    safe_revision: a332d01447a4c74991ee7cf1d4e64a9e6b5d32c8
+    safe_revision: eb6e93b8075a3b5305ebe034967b9a41c253fd31
   lib/way_of_working/versioning/semver.rb:
     comments:
     reviewed_by: timgentry
