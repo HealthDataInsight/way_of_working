@@ -1,9 +1,10 @@
 ---
 layout: page
+title: Decision Records (Guidance)
 status: REQUIRED
 enforcement: manual
 ---
-# Decision Records
+# Decision Records (Guidance)
 
 ## Purpose
 
