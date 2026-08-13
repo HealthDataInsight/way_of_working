@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- **Config:** added `way_of_working config get`/`set` for persisting values (e.g. the Code of Conduct contact method) in `~/.config/way_of_working/config.yaml`, namespaced by dotted feature keys. `--contact-method` now falls back to the stored value and offers to remember a newly-provided one.
+
 ## [2.1.0] - 2026-06-08
 
 ### Added
