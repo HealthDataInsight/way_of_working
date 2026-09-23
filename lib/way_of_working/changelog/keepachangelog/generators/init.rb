@@ -92,7 +92,7 @@ module WayOfWorking
           end
 
           def change_text(type, description, likely = false)
-            text = "### #{type}\n\n- TODO: #{description}"
+            text = "### #{type}\n\n- TODO: #{description}" # DevSkim: ignore DS176209 -- scaffolded CHANGELOG placeholder text, not a real todo
             text += ' (if any)' unless likely
             text += "\n\n"
             text
