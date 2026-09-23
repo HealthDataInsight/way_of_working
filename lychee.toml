@@ -7,3 +7,8 @@ retry_wait_time = 5
 
 # Per-request timeout (seconds).
 timeout = 20
+
+# Placeholder filename used as illustrative prose in ADR docs, not a real file.
+exclude = [
+  "0XXX-new-title\\.md",
+]
