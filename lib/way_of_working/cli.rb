@@ -2,6 +2,7 @@
 
 require 'thor'
 
+require_relative 'sub_commands/config'
 require_relative 'sub_commands/exec'
 require_relative 'sub_commands/init'
 require_relative 'sub_commands/new'
@@ -9,6 +10,9 @@ require_relative 'sub_commands/new'
 module WayOfWorking
   # This class defines the top level interface
   class Cli < Thor
+    desc 'config [ACTION]', 'Reads or writes values in the way_of_working config file'
+    subcommand 'config', ::WayOfWorking::SubCommands::Config
+
     desc 'exec [COMPONENT]', 'Executes (runs) the specific component'
     subcommand 'exec', ::WayOfWorking::SubCommands::Exec
 
