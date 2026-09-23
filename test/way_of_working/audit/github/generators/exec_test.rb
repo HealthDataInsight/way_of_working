@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'test_helper'
+require 'way_of_working/audit/github'
 
 module WayOfWorking
   module Audit
@@ -51,6 +52,11 @@ module WayOfWorking
             assert generator_class.class_options.key?(:fix)
             assert_equal :boolean, generator_class.class_options[:fix].type
             assert_equal false, generator_class.class_options[:fix].default
+          end
+
+          test 'audit_github command exposes generator options to help' do
+            assert_equal generator_class.class_options,
+                         WayOfWorking::SubCommands::Exec.commands['audit_github'].options
           end
 
           test 'generator has name option' do
