@@ -60,7 +60,21 @@ To add all the Way of Working components to your project, run:
 way_of_working init all --contact-method [CONTACT METHOD]
 ```
 
-You will need to provide the Code of Conduct `[CONTACT METHOD]`, usually an email address, for community leaders to receive reports of unacceptable behavior.
+You will need to provide the Code of Conduct `[CONTACT METHOD]`, usually an email address, for community leaders to receive reports of unacceptable behavior. Once you've provided it, you'll be offered the chance to remember it (see [Config](#config)) so you don't need to pass it again next time.
+
+### Config
+
+Some options, like the Code of Conduct `--contact-method`, are more about you or your organisation than about the specific project you're running the command in. Rather than typing them in every time, `way_of_working` can remember them in `~/.config/way_of_working/config.yaml` (or `$XDG_CONFIG_HOME/way_of_working/config.yaml`):
+
+```bash
+# Store a value once
+way_of_working config set code_of_conduct.contact_method conduct@example.org
+
+# Read it back
+way_of_working config get code_of_conduct.contact_method
+```
+
+Keys are dotted paths namespaced by feature (`code_of_conduct.contact_method`), so unrelated features — a future security contact, say — can store their own values (`security.contact_method`) without clashing. When a feature that supports this looks for an option and it isn't passed on the command line, it falls back to the stored value; if you pass the option explicitly and it's new or different, you'll be asked whether to remember it for next time.
 
 ### Built-in Features
 
@@ -141,7 +155,7 @@ Once required, a subcommand becomes available:
 way_of_working init code_of_conduct --contact-method [CONTACT METHOD]
 ```
 
-You will need to provide a `[CONTACT METHOD]`, usually an email address, for community leaders to receive reports of unacceptable behavior.
+You will need to provide a `[CONTACT METHOD]`, usually an email address, for community leaders to receive reports of unacceptable behavior — or store one under `code_of_conduct.contact_method` (see [Config](#config)) so you don't need to pass it every time.
 
 #### Decision Records
 

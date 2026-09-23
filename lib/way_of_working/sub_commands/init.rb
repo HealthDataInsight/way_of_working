@@ -8,7 +8,7 @@ module WayOfWorking
     class Init < Base
       desc 'all --contact-method [CONTACT METHOD]',
            'This adds all of the available Way of Working components to this project'
-      method_option :contact_method, required: true
+      method_option :contact_method
       def all
         invoke_all
       end
