@@ -6,7 +6,7 @@ module WayOfWorking
   module CodeOfConduct
     # The namespace for this plugin
     module ContributorCovenant
-      # This rule checks for the MegaLinter workflow action and README badge.
+      # This rule checks for a Contributor Covenant code of conduct.
       class GithubAuditRule < ::WayOfWorking::Audit::Github::Rules::Base
         def validate
           @errors << 'No Contributor Covenant code of conduct found' unless code_of_conduct?
