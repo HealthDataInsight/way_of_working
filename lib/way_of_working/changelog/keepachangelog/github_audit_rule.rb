@@ -6,7 +6,7 @@ module WayOfWorking
   module Changelog
     # The namespace for this plugin
     module Keepachangelog
-      # This rule checks for the Pull Request template.
+      # This rule checks for a Keep a Changelog CHANGELOG.md.
       class GithubAuditRule < ::WayOfWorking::Audit::Github::Rules::Base
         def validate
           @errors << 'No Keep a Changelog CHANGELOG.md found' unless keep_a_changelog_found?
