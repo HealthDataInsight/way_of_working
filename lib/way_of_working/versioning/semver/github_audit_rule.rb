@@ -18,17 +18,6 @@ module WayOfWorking
 
         private
 
-        def repo_file_contains_source_file?(path)
-          repo_file_contains?(path, File.read(self.class.source_root.join(path)))
-        end
-
-        def repo_file_contains?(path, text)
-          remote_content = repo_file_contents(path)
-          return false if remote_content.nil?
-
-          remote_content.include?(text)
-        end
-
         def validate_repo_file_contains_source_file(*paths)
           paths.each do |path|
             if repo_file_contents(path).nil?
