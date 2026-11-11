@@ -9,7 +9,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- **Code of Conduct:** upgraded Contributor Covenant 2.1 → 3 via new `contributor_covenant_v3` variant (`require 'way_of_working/code_of_conduct/contributor_covenant_v3'`). The v2.1 `contributor_covenant` variant is unchanged; the GitHub audit rule accepts either version.
 - **Config:** added `way_of_working config get`/`set` for persisting values (e.g. the Code of Conduct contact method) in `~/.config/way_of_working/config.yaml`, namespaced by dotted feature keys. `--contact-method` now falls back to the stored value and offers to remember a newly-provided one.
+
+### Changed
+
+- **Code of Conduct:** this project's own `CODE_OF_CONDUCT.md` now uses Contributor Covenant v3.
 
 ### Fixed
 

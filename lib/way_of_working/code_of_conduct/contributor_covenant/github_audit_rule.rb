@@ -18,7 +18,8 @@ module WayOfWorking
           response = @client.contents(@repo_name, path: 'CODE_OF_CONDUCT.md')
           decoded_content = Base64.decode64(response.content)
 
-          decoded_content.include?('# Contributor Covenant Code of Conduct')
+          # v2.1 heading is "Contributor Covenant Code of Conduct", v3 adds the version ("3.0")
+          decoded_content.match?(/^# Contributor Covenant (\d+(\.\d+)* )?Code of Conduct$/)
         rescue Octokit::NotFound
           false
         end

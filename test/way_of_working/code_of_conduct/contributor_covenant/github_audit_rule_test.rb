@@ -19,6 +19,23 @@ module WayOfWorking
           assert_equal [:way_of_working], GithubAuditRule.tags
         end
       end
+
+      # Kept separate from the registration test above, whose teardown unregisters the rule.
+      class GithubAuditRuleValidationTest < Minitest::Test
+        def test_accepts_v2_1_and_v3_headings_only
+          assert_equal :passed, audit_status('# Contributor Covenant Code of Conduct')
+          assert_equal :passed, audit_status('# Contributor Covenant 3.0 Code of Conduct')
+          assert_equal :failed, audit_status('# Some Other Code of Conduct')
+        end
+
+        private
+
+        def audit_status(heading)
+          client = mock
+          client.stubs(:contents).returns(stub(content: Base64.encode64("#{heading}\n\nText\n")))
+          GithubAuditRule.new(client, 'rule', stub(full_name: 'org/repo'), nil).status
+        end
+      end
     end
   end
 end
