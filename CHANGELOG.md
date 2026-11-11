@@ -12,6 +12,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - **Config:** added `way_of_working config get`/`set` for persisting values (e.g. the Code of Conduct contact method) in `~/.config/way_of_working/config.yaml`, namespaced by dotted feature keys. `--contact-method` now falls back to the stored value and offers to remember a newly-provided one.
 
+### Changed
+
+- **Code of Conduct:** upgraded Contributor Covenant 2.1 → 3 in place; `code_of_conduct/contributor_covenant` now generates v3 and v2.1 is no longer available. The GitHub audit rule now fails repos still on an older version.
+
 ### Fixed
 
 - **CLI:** `--help` now lists the options of generator commands, e.g. `way_of_working exec audit_github --help` shows `--all`, `--fix`, `--name`, `--public` and `--topic`.

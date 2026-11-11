@@ -35,10 +35,10 @@ rationale.
 | Drastic standard upgrade shipped as a **new variant** alongside the existing one | **MINOR** (additive) |
 | Bug fix in generation or generated output | **PATCH** |
 
-For a standard update drastic enough to surprise existing users (e.g. Contributor Covenant
-2.1 → 3, effectively a rewrite), add a **new variant** under the feature's `category/variant`
+For a standard update drastic enough to surprise existing users, add a **new variant** under the feature's `category/variant`
 namespace rather than mutating the existing one. Both variants then coexist and consumers opt in by
-require path — keeping the change additive and leaving existing users untouched.
+require path — keeping the change additive and leaving existing users untouched. Where we deliberately drop the old
+version instead (as with Contributor Covenant 2.1 → 3), upgrade the existing variant in place.
 
 ### Changelog convention
 
@@ -47,7 +47,7 @@ All notable changes are recorded in `CHANGELOG.md` following
 bold feature prefix so each feature's history stays greppable within the single file, e.g.:
 
 ```text
-- **Code of Conduct:** upgraded Contributor Covenant 2.1 → 3 via new `contributor_covenant_v3` variant
+- **Code of Conduct:** upgraded Contributor Covenant 2.1 → 3
 ```
 
 ## Releasing

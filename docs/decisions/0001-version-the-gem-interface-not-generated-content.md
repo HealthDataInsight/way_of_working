@@ -88,5 +88,6 @@ path. This keeps the change additive (MINOR) and leaves existing users untouched
   would undercut the SemVer the gem advocates to its users.
 * Rejected **per-feature version numbers** because re-decoupling versions runs counter to the
   consolidation of features back into the single gem.
-* The concrete Contributor Covenant 2.1 → 3 upgrade is tracked separately; this decision only
-  establishes how it should be versioned when it lands.
+* The Contributor Covenant 2.1 → 3 upgrade deliberately did **not** ship as a new variant: we
+  chose to drop previous versions, so `code_of_conduct/contributor_covenant` was upgraded in place.
+  The require path is unchanged, so this is still a MINOR change.

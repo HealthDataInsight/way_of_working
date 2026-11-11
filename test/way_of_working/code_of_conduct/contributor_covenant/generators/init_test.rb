@@ -54,10 +54,11 @@ module WayOfWorking
             run_generator %w[--contact-method foo@bar.com]
 
             assert_file code_of_conduct_file do |content|
-              assert_match('## Our Pledge', content)
-              refute_match('[INSERT CONTACT METHOD]', content)
+              assert_match('# Contributor Covenant 3.0 Code of Conduct', content)
+              assert_match('Community Moderators at <foo@bar.com>.', content)
+              refute_match('[NOTE:', content)
             end
-            assert_file 'docs/way_of_working/code-of-conduct.md'
+            assert_file 'docs/way_of_working/code-of-conduct.md', %r{version/3/0/}
 
             run_generator %w[--contact-method foo@bar.com], behavior: :revoke
 
