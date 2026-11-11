@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
 
   spec.summary = 'RubyGem for the HDI way of working.'
   # spec.description = "TODO: Write a longer description or delete this line."
-  spec.homepage = 'https://healthdatainsight.github.io/way_of_working'
+  spec.homepage = 'https://github.com/HealthDataInsight/way_of_working#readme'
   spec.license = 'MIT'
   spec.required_ruby_version = '>= 3.1'
 
