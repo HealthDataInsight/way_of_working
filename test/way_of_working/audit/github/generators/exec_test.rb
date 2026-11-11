@@ -66,251 +66,129 @@ module WayOfWorking
           end
 
           test 'prep_audit passes fix option to auditor when false' do
-            # Mock the auditor
-            mock_auditor = mock
-            mock_auditor.stubs(:repositories).returns([])
+            Auditor.expects(:new).with('test_token', 'test_org', false).returns(stub(repositories: []))
 
-            # Expect Auditor to be initialized with fix=false
-            Auditor.expects(:new).with('test_token', 'test_org', false).returns(mock_auditor)
-
-            # Run generator with fix=false (default)
-            generator = generator_class.new([], {}, {})
-            generator.instance_variable_set(:@github_token, 'test_token')
-            generator.instance_variable_set(:@github_organisation, 'test_org')
-            generator.prep_audit
+            build_generator({}).prep_audit
           end
 
           test 'prep_audit passes fix option to auditor when true' do
-            # Mock the auditor
-            mock_auditor = mock
-            mock_auditor.stubs(:repositories).returns([])
+            Auditor.expects(:new).with('test_token', 'test_org', true).returns(stub(repositories: []))
 
-            # Expect Auditor to be initialized with fix=true
-            Auditor.expects(:new).with('test_token', 'test_org', true).returns(mock_auditor)
-
-            # Run generator with fix=true
-            generator = generator_class.new([], { fix: true }, {})
-            generator.instance_variable_set(:@github_token, 'test_token')
-            generator.instance_variable_set(:@github_organisation, 'test_org')
-            generator.prep_audit
+            build_generator(fix: true).prep_audit
           end
 
           test 'filter_all_if_specified filters repositories when all is false' do
-            # Mock the auditor
-            mock_repo1 = stub(name: 'test_repo', archived?: false)
-            mock_repo2 = stub(name: 'other_repo', archived?: false)
-            mock_auditor = mock
-            mock_auditor.stubs(:repositories).returns([mock_repo1, mock_repo2])
-
-            Auditor.stubs(:new).returns(mock_auditor)
-
-            # Run generator with all=false (default)
-            generator = generator_class.new([], {}, {})
-            generator.instance_variable_set(:@github_token, 'test_token')
-            generator.instance_variable_set(:@github_organisation, 'test_org')
-            # Stub the github_organisation_remotes method to return test_repo
+            generator = prepped_generator({}, repo('test_repo'), repo('other_repo'))
             generator.stubs(:github_organisation_remotes).returns(['test_repo'])
-            generator.prep_audit
             generator.filter_all_if_specified
 
-            repositories = generator.instance_variable_get(:@repositories)
             # Should only include test_repo (from git remotes)
-            assert_equal 1, repositories.length
-            assert_equal 'test_repo', repositories.first.name
+            assert_equal ['test_repo'], repository_names(generator)
           end
 
           test 'filter_all_if_specified does not filter repositories when all is true' do
-            # Mock the auditor
-            mock_repo1 = stub(name: 'test_repo', archived?: false)
-            mock_repo2 = stub(name: 'other_repo', archived?: false)
-            mock_auditor = mock
-            mock_auditor.stubs(:repositories).returns([mock_repo1, mock_repo2])
-
-            Auditor.stubs(:new).returns(mock_auditor)
-
-            # Run generator with all=true
-            generator = generator_class.new([], { all: true }, {})
-            generator.instance_variable_set(:@github_token, 'test_token')
-            generator.instance_variable_set(:@github_organisation, 'test_org')
-            generator.prep_audit
+            generator = prepped_generator({ all: true }, repo('test_repo'), repo('other_repo'))
             generator.filter_all_if_specified
 
-            repositories = generator.instance_variable_get(:@repositories)
-            # Should include all repos
-            assert_equal 2, repositories.length
+            assert_equal %w[test_repo other_repo], repository_names(generator)
           end
 
           test 'filter_by_topic_if_specified filters repositories by topic when topic is specified' do
-            # Mock the auditor
-            mock_repo1 = stub(name: 'test_repo', archived?: false, topics: %w[way-of-working ruby])
-            mock_repo2 = stub(name: 'other_repo', archived?: false, topics: ['python'])
-            mock_repo3 = stub(name: 'third_repo', archived?: false, topics: ['way-of-working'])
-            mock_auditor = mock
-            mock_auditor.stubs(:repositories).returns([mock_repo1, mock_repo2, mock_repo3])
-
-            Auditor.stubs(:new).returns(mock_auditor)
-
-            # Run generator with topic filter
-            generator = generator_class.new([], { all: true, topic: 'way-of-working' }, {})
-            generator.instance_variable_set(:@github_token, 'test_token')
-            generator.instance_variable_set(:@github_organisation, 'test_org')
-            generator.prep_audit
+            generator = prepped_generator({ all: true, topic: 'way-of-working' },
+                                          repo('test_repo', topics: %w[way-of-working ruby]),
+                                          repo('other_repo', topics: ['python']),
+                                          repo('third_repo', topics: ['way-of-working']))
             generator.filter_by_topic_if_specified
 
-            repositories = generator.instance_variable_get(:@repositories)
-            # Should only include repos with 'way-of-working' topic
-            assert_equal 2, repositories.length
-            assert_includes repositories.map(&:name), 'test_repo'
-            assert_includes repositories.map(&:name), 'third_repo'
+            assert_equal %w[test_repo third_repo], repository_names(generator)
           end
 
           test 'filter_by_visibility_if_specified filters repositories to only public when public is true' do
-            # Mock the auditor
-            mock_repo1 = stub(name: 'public_repo', archived?: false, private?: false)
-            mock_repo2 = stub(name: 'private_repo', archived?: false, private?: true)
-            mock_repo3 = stub(name: 'another_public_repo', archived?: false, private?: false)
-            mock_auditor = mock
-            mock_auditor.stubs(:repositories).returns([mock_repo1, mock_repo2, mock_repo3])
-
-            Auditor.stubs(:new).returns(mock_auditor)
-
-            # Run generator with public filter
-            generator = generator_class.new([], { all: true, public: true }, {})
-            generator.instance_variable_set(:@github_token, 'test_token')
-            generator.instance_variable_set(:@github_organisation, 'test_org')
-            generator.prep_audit
+            generator = prepped_generator({ all: true, public: true },
+                                          repo('public_repo', private?: false),
+                                          repo('private_repo', private?: true),
+                                          repo('another_public_repo', private?: false))
             generator.filter_by_visibility_if_specified
 
-            repositories = generator.instance_variable_get(:@repositories)
-            # Should only include public repos
-            assert_equal 2, repositories.length
-            assert_includes repositories.map(&:name), 'public_repo'
-            assert_includes repositories.map(&:name), 'another_public_repo'
+            assert_equal %w[public_repo another_public_repo], repository_names(generator)
           end
 
           test 'filter_by_name_array_if_specified filters repositories by name when name is specified' do
-            # Mock the auditor
-            mock_repo1 = stub(name: 'structured_store', archived?: false)
-            mock_repo2 = stub(name: 'other_repo', archived?: false)
-            mock_repo3 = stub(name: 'another_repo', archived?: false)
-            mock_auditor = mock
-            mock_auditor.stubs(:repositories).returns([mock_repo1, mock_repo2, mock_repo3])
-
-            Auditor.stubs(:new).returns(mock_auditor)
-
-            # Run generator with name filter
-            generator = generator_class.new([], { all: true, name: ['structured_store'] }, {})
-            generator.instance_variable_set(:@github_token, 'test_token')
-            generator.instance_variable_set(:@github_organisation, 'test_org')
-            generator.prep_audit
+            generator = prepped_generator({ all: true, name: ['structured_store'] },
+                                          repo('structured_store'), repo('other_repo'), repo('another_repo'))
             generator.filter_by_name_array_if_specified
 
-            repositories = generator.instance_variable_get(:@repositories)
-            # Should only include structured_store
-            assert_equal 1, repositories.length
-            assert_equal 'structured_store', repositories.first.name
+            assert_equal ['structured_store'], repository_names(generator)
           end
 
           test 'filter_all_if_specified does not filter when name is specified without all' do
-            # Mock the auditor
-            mock_repo1 = stub(name: 'structured_store', archived?: false)
-            mock_repo2 = stub(name: 'other_repo', archived?: false)
-            mock_repo3 = stub(name: 'test_repo', archived?: false)
-            mock_auditor = mock
-            mock_auditor.stubs(:repositories).returns([mock_repo1, mock_repo2, mock_repo3])
-
-            Auditor.stubs(:new).returns(mock_auditor)
-
-            # Run generator with name filter only (no --all flag)
-            generator = generator_class.new([], { name: ['structured_store'] }, {})
-            generator.instance_variable_set(:@github_token, 'test_token')
-            generator.instance_variable_set(:@github_organisation, 'test_org')
-            # Stub the github_organisation_remotes method
+            generator = prepped_generator({ name: ['structured_store'] },
+                                          repo('structured_store'), repo('other_repo'), repo('test_repo'))
             generator.stubs(:github_organisation_remotes).returns(['test_repo'])
-            generator.prep_audit
             generator.filter_all_if_specified
 
-            repositories = generator.instance_variable_get(:@repositories)
             # Should include all repos because --name implies --all
-            assert_equal 3, repositories.length
+            assert_equal %w[structured_store other_repo test_repo], repository_names(generator)
           end
 
           test 'filter_by_name_array_if_specified filters repositories by multiple names when multiple names are specified' do
-            # Mock the auditor
-            mock_repo1 = stub(name: 'structured_store', archived?: false)
-            mock_repo2 = stub(name: 'other_repo', archived?: false)
-            mock_repo3 = stub(name: 'another_repo', archived?: false)
-            mock_auditor = mock
-            mock_auditor.stubs(:repositories).returns([mock_repo1, mock_repo2, mock_repo3])
-
-            Auditor.stubs(:new).returns(mock_auditor)
-
-            # Run generator with multiple name filters
-            generator = generator_class.new([], { all: true, name: %w[structured_store another_repo] }, {})
-            generator.instance_variable_set(:@github_token, 'test_token')
-            generator.instance_variable_set(:@github_organisation, 'test_org')
-            generator.prep_audit
+            generator = prepped_generator({ all: true, name: %w[structured_store another_repo] },
+                                          repo('structured_store'), repo('other_repo'), repo('another_repo'))
             generator.filter_by_name_array_if_specified
 
-            repositories = generator.instance_variable_get(:@repositories)
-            # Should only include structured_store and another_repo
-            assert_equal 2, repositories.length
-            assert_includes repositories.map(&:name), 'structured_store'
-            assert_includes repositories.map(&:name), 'another_repo'
+            assert_equal %w[structured_store another_repo], repository_names(generator)
           end
 
           test 'combines topic and public filters when both are specified' do
-            # Mock the auditor
-            mock_repo1 = stub(name: 'public_with_topic', archived?: false, private?: false, topics: ['way-of-working'])
-            mock_repo2 = stub(name: 'private_with_topic', archived?: false, private?: true, topics: ['way-of-working'])
-            mock_repo3 = stub(name: 'public_without_topic', archived?: false, private?: false, topics: ['other'])
-            mock_repo4 = stub(name: 'private_without_topic', archived?: false, private?: true, topics: ['other'])
-            mock_auditor = mock
-            mock_auditor.stubs(:repositories).returns([mock_repo1, mock_repo2, mock_repo3, mock_repo4])
-
-            Auditor.stubs(:new).returns(mock_auditor)
-
-            # Run generator with both topic and public filters
-            generator = generator_class.new([], { all: true, topic: 'way-of-working', public: true }, {})
-            generator.instance_variable_set(:@github_token, 'test_token')
-            generator.instance_variable_set(:@github_organisation, 'test_org')
-            generator.prep_audit
+            generator = prepped_generator({ all: true, topic: 'way-of-working', public: true },
+                                          repo('public_with_topic', private?: false, topics: ['way-of-working']),
+                                          repo('private_with_topic', private?: true, topics: ['way-of-working']),
+                                          repo('public_without_topic', private?: false, topics: ['other']),
+                                          repo('private_without_topic', private?: true, topics: ['other']))
             generator.filter_by_topic_if_specified
             generator.filter_by_visibility_if_specified
 
-            repositories = generator.instance_variable_get(:@repositories)
-            # Should only include public repos with 'way-of-working' topic
-            assert_equal 1, repositories.length
-            assert_equal 'public_with_topic', repositories.first.name
+            assert_equal ['public_with_topic'], repository_names(generator)
           end
 
           test 'combines name, topic and public filters when all are specified' do
-            # Mock the auditor
-            mock_repo1 = stub(name: 'structured_store', archived?: false, private?: false,
-                              topics: ['way-of-working'])
-            mock_repo2 = stub(name: 'other_store', archived?: false, private?: true, topics: ['way-of-working'])
-            mock_repo3 = stub(name: 'structured_store', archived?: false, private?: false, topics: ['other'])
-            mock_repo4 = stub(name: 'public_with_topic', archived?: false, private?: false,
-                              topics: ['way-of-working'])
-            mock_auditor = mock
-            mock_auditor.stubs(:repositories).returns([mock_repo1, mock_repo2, mock_repo3, mock_repo4])
-
-            Auditor.stubs(:new).returns(mock_auditor)
-
-            # Run generator with name, topic and public filters
-            generator = generator_class.new([], { all: true, name: ['structured_store'], topic: 'way-of-working',
-                                                  public: true }, {})
-            generator.instance_variable_set(:@github_token, 'test_token')
-            generator.instance_variable_set(:@github_organisation, 'test_org')
-            generator.prep_audit
+            generator = prepped_generator({ all: true, name: ['structured_store'], topic: 'way-of-working',
+                                            public: true },
+                                          repo('structured_store', private?: false, topics: ['way-of-working']),
+                                          repo('other_store', private?: true, topics: ['way-of-working']),
+                                          repo('structured_store', private?: false, topics: ['other']),
+                                          repo('public_with_topic', private?: false, topics: ['way-of-working']))
             generator.filter_by_name_array_if_specified
             generator.filter_by_topic_if_specified
             generator.filter_by_visibility_if_specified
 
-            repositories = generator.instance_variable_get(:@repositories)
             # Should only include public structured_store with 'way-of-working' topic
-            assert_equal 1, repositories.length
-            assert_equal 'structured_store', repositories.first.name
+            assert_equal ['structured_store'], repository_names(generator)
+          end
+
+          private
+
+          def repo(name, **attributes)
+            stub(name: name, archived?: false, **attributes)
+          end
+
+          def build_generator(options)
+            generator = generator_class.new([], options, {})
+            generator.instance_variable_set(:@github_token, 'test_token')
+            generator.instance_variable_set(:@github_organisation, 'test_org')
+            generator
+          end
+
+          # Returns a generator that has run prep_audit against an auditor stubbed with these repos
+          def prepped_generator(options, *repositories)
+            Auditor.stubs(:new).returns(stub(repositories: repositories))
+            generator = build_generator(options)
+            generator.prep_audit
+            generator
+          end
+
+          def repository_names(generator)
+            generator.instance_variable_get(:@repositories).map(&:name)
           end
         end
       end

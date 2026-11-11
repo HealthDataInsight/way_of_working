@@ -33,7 +33,7 @@ module WayOfWorking
       def load_file
         return {} unless path.exist?
 
-        YAML.load_file(path) || {}
+        YAML.safe_load_file(path) || {}
       end
 
       def save_file(data)

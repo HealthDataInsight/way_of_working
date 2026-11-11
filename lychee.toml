@@ -11,4 +11,7 @@ timeout = 20
 # Placeholder filename used as illustrative prose in ADR docs, not a real file.
 exclude = [
   "0XXX-new-title\\.md",
+  # docs/way_of_working/code-linting/linters.md links megalinter.io ~66 times,
+  # which gets throttled (503) from CI runners.
+  "^https://megalinter\\.io/",
 ]
