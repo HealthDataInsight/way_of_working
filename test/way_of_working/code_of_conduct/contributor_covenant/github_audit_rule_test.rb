@@ -22,8 +22,8 @@ module WayOfWorking
 
       # Kept separate from the registration test above, whose teardown unregisters the rule.
       class GithubAuditRuleValidationTest < Minitest::Test
-        def test_accepts_v2_1_and_v3_headings_only
-          assert_equal :passed, audit_status('# Contributor Covenant Code of Conduct')
+        def test_accepts_v3_headings_only
+          assert_equal :failed, audit_status('# Contributor Covenant Code of Conduct')
           assert_equal :passed, audit_status('# Contributor Covenant 3.0 Code of Conduct')
           assert_equal :failed, audit_status('# Some Other Code of Conduct')
         end

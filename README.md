@@ -26,8 +26,7 @@ Below is a list of plugins that have been implemented so far:
 | Audit                 | Built-in (audit/github)                | A framework for rules to check for incorrect content and configuration of GitHub repos — bundled, opt in by `require` (see [Built-in Features](#built-in-features)) |
 | Changelog             | Built-in (changelog/keepachangelog)    | Implements [keepachangelog v1.1] — bundled, opt in by `require` (see [Built-in Features](#built-in-features)) |
 | Code Linting          | [code_linting-hdi]                     | Implements a combination of [MegaLinter] and [RuboCop] built on NDRS standards         |
-| Code of Conduct       | Built-in (code_of_conduct/contributor_covenant_v3) | Implements [Contributor Covenant v3] — bundled, opt in by `require` (see [Built-in Features](#built-in-features)) |
-| Code of Conduct (v2.1) | Built-in (code_of_conduct/contributor_covenant) | Implements [Contributor Covenant v2.1] — bundled, opt in by `require` (see [Built-in Features](#built-in-features)) |
+| Code of Conduct       | Built-in (code_of_conduct/contributor_covenant) | Implements [Contributor Covenant v3] — bundled, opt in by `require` (see [Built-in Features](#built-in-features)) |
 | Decision Records      | Built-in (decision_record/madr)        | Implements [MADR v3] — bundled, opt in by `require` (see [Built-in Features](#built-in-features)) |
 | Inclusive Language    | Built-in (inclusive_language/alex)     | Implements [alex] — bundled, opt in by `require` (see [Built-in Features](#built-in-features)) |
 | Pull Request Template | Built-in (pull_request_template/hdi)   | Implements a bespoke PR template — bundled, opt in by `require` (see [Built-in Features](#built-in-features)) |
@@ -146,10 +145,10 @@ A code of conduct sets clear expectations for acceptable behaviour within a comm
 This feature installs the [Contributor Covenant v3] code of conduct along with its accompanying documentation. Enable it by requiring it:
 
 ```ruby
-require 'way_of_working/code_of_conduct/contributor_covenant_v3'
+require 'way_of_working/code_of_conduct/contributor_covenant'
 ```
 
-The previous [Contributor Covenant v2.1] variant remains available, for projects not yet ready to move to v3, with `require 'way_of_working/code_of_conduct/contributor_covenant'`. If both are required, v3 is used.
+Previous Contributor Covenant versions (e.g. v2.1) are no longer generated; re-running the generator replaces them with v3.
 
 Once required, a subcommand becomes available:
 
@@ -280,8 +279,6 @@ The gem is available as open source under the terms of the [MIT License](https:/
 Everyone interacting in the WayOfWorking project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/HealthDataInsight/way_of_working/blob/main/CODE_OF_CONDUCT.md).
 
 [alex]:https://alexjs.com
-[Contributor Covenant v2.1]: https://www.contributor-covenant.org/version/2/1/code_of_conduct/
-
 [Contributor Covenant v3]: https://www.contributor-covenant.org/version/3/0/code_of_conduct/
 [keepachangelog v1.1]: https://keepachangelog.com/en/1.1.0/
 [MADR v3]: https://adr.github.io/madr/

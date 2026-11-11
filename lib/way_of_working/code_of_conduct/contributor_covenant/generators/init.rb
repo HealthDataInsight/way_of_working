@@ -22,7 +22,7 @@ module WayOfWorking
           # def download_and_save_code_of_conduct_template
           #   code_of_conduct_file = 'lib/way_of_working/templates/CODE_OF_CONDUCT.md.tt'
 
-          #   get 'https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md',
+          #   get 'https://www.contributor-covenant.org/version/3/0/code_of_conduct/code_of_conduct.md',
           #       code_of_conduct_file
           #   gsub_file code_of_conduct_file, '[INSERT CONTACT METHOD]',
           #             "<<%= contact_method %>>"
