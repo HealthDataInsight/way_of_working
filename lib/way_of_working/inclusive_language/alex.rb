@@ -42,6 +42,8 @@ module WayOfWorking
 
                      This will create:
                          .alexrc
+
+                     and add the workflow badge to the README badge panel, if present
                LONGDESC
     end
   end
