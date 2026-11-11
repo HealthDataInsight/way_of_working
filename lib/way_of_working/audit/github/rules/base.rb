@@ -68,6 +68,17 @@ module WayOfWorking
             nil
           end
 
+          def repo_file_contains_source_file?(path)
+            repo_file_contains?(path, File.read(self.class.source_root.join(path)))
+          end
+
+          def repo_file_contains?(path, text)
+            remote_content = repo_file_contents(path)
+            return false if remote_content.nil?
+
+            remote_content.include?(text)
+          end
+
           # This method returns the content of the README file
           def readme_content
             @readme_content ||=

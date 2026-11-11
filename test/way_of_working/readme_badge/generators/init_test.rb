@@ -9,6 +9,12 @@ module WayOfWorking
         destination WayOfWorking.root.join('tmp/generators')
         setup :prepare_destination
 
+        BADGE_HOLDERS = [
+          "<!-- Way of Working: Main Badge Holder Start -->\n",
+          "<!-- Way of Working: Additional Badge Holder Start -->\n",
+          "<!-- Way of Working: Badge Holder End -->\n"
+        ].freeze
+
         test 'generator runs without errors' do
           assert_nothing_raised do
             run_generator
@@ -19,46 +25,21 @@ module WayOfWorking
           assert_no_file 'README.md'
 
           run_generator
-
-          assert_file 'README.md' do |content|
-            assert_match("<!-- Way of Working: Main Badge Holder Start -->\n", content)
-            assert_match("<!-- Way of Working: Additional Badge Holder Start -->\n", content)
-            assert_match("<!-- Way of Working: Badge Holder End -->\n", content)
-          end
+          assert_badge_holders :assert_match
 
           run_generator [], behavior: :revoke
-
-          assert_file 'README.md' do |content|
-            refute_match("<!-- Way of Working: Main Badge Holder Start -->\n", content)
-            refute_match("<!-- Way of Working: Additional Badge Holder Start -->\n", content)
-            refute_match("<!-- Way of Working: Badge Holder End -->\n", content)
-          end
+          assert_badge_holders :refute_match
         end
 
         test 'Existing README is created and amended' do
           prepare_readme 'test_README.md'
-
-          assert_file 'README.md' do |content|
-            refute_match("<!-- Way of Working: Main Badge Holder Start -->\n", content)
-            refute_match("<!-- Way of Working: Additional Badge Holder Start -->\n", content)
-            refute_match("<!-- Way of Working: Badge Holder End -->\n", content)
-          end
+          assert_badge_holders :refute_match
 
           run_generator
-
-          assert_file 'README.md' do |content|
-            assert_match("<!-- Way of Working: Main Badge Holder Start -->\n", content)
-            assert_match("<!-- Way of Working: Additional Badge Holder Start -->\n", content)
-            assert_match("<!-- Way of Working: Badge Holder End -->\n", content)
-          end
+          assert_badge_holders :assert_match
 
           run_generator [], behavior: :revoke
-
-          assert_file 'README.md' do |content|
-            refute_match("<!-- Way of Working: Main Badge Holder Start -->\n", content)
-            refute_match("<!-- Way of Working: Additional Badge Holder Start -->\n", content)
-            refute_match("<!-- Way of Working: Badge Holder End -->\n", content)
-          end
+          assert_badge_holders :refute_match
         end
 
         test 'Wayof Working documentation is created and revoked' do
@@ -74,6 +55,13 @@ module WayOfWorking
         end
 
         private
+
+        # Calls assertion (:assert_match or :refute_match) for each badge holder comment in README.md
+        def assert_badge_holders(assertion)
+          assert_file 'README.md' do |content|
+            BADGE_HOLDERS.each { |holder| send(assertion, holder, content) }
+          end
+        end
 
         # This method will copy a vanilla Rakefile into the destination folder
         def prepare_readme(filename)

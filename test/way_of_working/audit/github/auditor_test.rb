@@ -27,72 +27,26 @@ module WayOfWorking
         end
 
         def test_audit_passes_fix_to_rules
-          # Create auditor with fix=true
-          auditor = Auditor.new('test_token', 'test_org', true)
-
-          # Mock the client
-          mock_client = mock
-          mock_client.stubs(:get).returns([])
-
-          # Stub the private client method using instance_variable_set
-          auditor.instance_variable_set(:@client, mock_client)
-
-          # Mock repository
-          mock_repo = stub(full_name: 'test_org/test_repo')
-
-          # Register a test rule
-          test_rule_class = Class.new(Rules::Base) do
-            def validate
-              :passed
-            end
-          end
-          Rules::Registry.register(test_rule_class, :test_rule)
-
-          # Capture the rule instance to verify fix parameter
-          rule_instance = nil
-          auditor.audit(mock_repo) do |rule|
-            rule_instance = rule
-          end
-
-          # Verify the rule was created with fix=true
-          assert_equal true, rule_instance.fix
-        ensure
-          # Clean up
-          Rules::Registry.unregister(:test_rule)
+          assert_equal true, audited_rule(fix: true).fix
         end
 
         def test_audit_passes_fix_false_to_rules
-          # Create auditor with fix=false (default)
-          auditor = Auditor.new('test_token', 'test_org', false)
+          assert_equal false, audited_rule(fix: false).fix
+        end
 
-          # Mock the client
-          mock_client = mock
-          mock_client.stubs(:get).returns([])
+        private
 
-          # Stub the private client method using instance_variable_set
-          auditor.instance_variable_set(:@client, mock_client)
+        # Audits a stubbed repo with a single passing rule and returns that rule instance
+        def audited_rule(fix:)
+          auditor = Auditor.new('test_token', 'test_org', fix)
+          auditor.instance_variable_set(:@client, stub(get: []))
 
-          # Mock repository
-          mock_repo = stub(full_name: 'test_org/test_repo')
+          Rules::Registry.register(Class.new(Rules::Base) { def validate = :passed }, :test_rule)
 
-          # Register a test rule
-          test_rule_class = Class.new(Rules::Base) do
-            def validate
-              :passed
-            end
-          end
-          Rules::Registry.register(test_rule_class, :test_rule)
-
-          # Capture the rule instance to verify fix parameter
           rule_instance = nil
-          auditor.audit(mock_repo) do |rule|
-            rule_instance = rule
-          end
-
-          # Verify the rule was created with fix=false
-          assert_equal false, rule_instance.fix
+          auditor.audit(stub(full_name: 'test_org/test_repo')) { |rule| rule_instance = rule }
+          rule_instance
         ensure
-          # Clean up
           Rules::Registry.unregister(:test_rule)
         end
       end

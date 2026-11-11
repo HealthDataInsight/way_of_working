@@ -21,7 +21,7 @@ module WayOfWorking
       Config.set('code_of_conduct.contact_method', 'foo@bar.com')
 
       assert_equal 'foo@bar.com', Config.get('code_of_conduct.contact_method')
-      assert_equal({ 'code_of_conduct' => { 'contact_method' => 'foo@bar.com' } }, YAML.load_file(@config_path))
+      assert_equal({ 'code_of_conduct' => { 'contact_method' => 'foo@bar.com' } }, YAML.safe_load_file(@config_path))
     end
 
     test 'set preserves sibling keys already on disk' do

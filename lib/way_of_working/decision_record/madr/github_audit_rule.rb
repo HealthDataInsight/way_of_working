@@ -27,19 +27,6 @@ module WayOfWorking
 
           @errors << 'No 0000-use-markdown-any-decision-records.md Decision Record found'
         end
-
-        private
-
-        def repo_file_contains_source_file?(path)
-          repo_file_contains?(path, File.read(self.class.source_root.join(path)))
-        end
-
-        def repo_file_contains?(path, text)
-          remote_content = repo_file_contents(path)
-          return false if remote_content.nil?
-
-          remote_content.include?(text)
-        end
       end
 
       ::WayOfWorking::Audit::Github::Rules::Registry.register(
