@@ -5,15 +5,13 @@
 max_retries = 3
 retry_wait_time = 5
 
-# docs/way_of_working/code-linting/linters.md links megalinter.io ~66 times, which
-# gets throttled (429/503) from CI runners. Treat those as alive.
-# ponytail: masks hosts that are genuinely down; switch to per-host rate limiting if that bites.
-accept = ["100..=103", "200..=299", "429", "503"]
-
 # Per-request timeout (seconds).
 timeout = 20
 
 # Placeholder filename used as illustrative prose in ADR docs, not a real file.
 exclude = [
   "0XXX-new-title\\.md",
+  # docs/way_of_working/code-linting/linters.md links megalinter.io ~66 times,
+  # which gets throttled (503) from CI runners.
+  "^https://megalinter\\.io/",
 ]
