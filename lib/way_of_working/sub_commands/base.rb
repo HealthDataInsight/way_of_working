@@ -7,6 +7,10 @@ module WayOfWorking
     # This base class enables subcommands to work correctly with help. See:
     # https://github.com/rails/thor/wiki/Subcommands#subcommands-that-work-correctly-with-help
     class Base < Thor
+      def self.exit_on_failure?
+        true
+      end
+
       def self.banner(command, _namespace = nil, _subcommand = false)
         "#{basename} #{subcommand_prefix} #{command.usage}"
       end
