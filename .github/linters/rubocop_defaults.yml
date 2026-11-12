@@ -18,10 +18,8 @@ Layout/SpaceInsideArrayLiteralBrackets:
   Exclude:
     - "config/**/*.rb"
 
-Rails/Date:
-  Enabled: false
-
-Rails/TimeZone:
+# Not a Rails app: ndr_dev_support enables the Rails cops by default
+Rails:
   Enabled: false
 
 Style/Documentation:

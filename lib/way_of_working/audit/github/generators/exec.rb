@@ -131,7 +131,7 @@ module WayOfWorking
               next if repo.archived?
 
               say
-              say("#{repo.name} #{repo.private? ? '🔒' : ''}", :bold)
+              say("#{repo.name} #{'🔒' if repo.private?}", :bold)
               say("#{repo.description} [#{repo.language}]")
               say(repo.topics.join(' '), :cyan) unless repo.topics.empty?
 
