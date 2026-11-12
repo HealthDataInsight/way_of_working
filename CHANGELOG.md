@@ -20,6 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - **Gem:** the gemspec homepage now points to the README on GitHub instead of the HDI-specific GitHub Pages site.
 - **CLI:** `--help` now lists the options of generator commands, e.g. `way_of_working exec audit_github --help` shows `--all`, `--fix`, `--name`, `--public` and `--topic`.
+- **Zeitwerk:** eager loading (e.g. a Rails app in production) no longer enables the opt-in built-in features; they now load only when explicitly required.
 
 ## [2.1.0] - 2026-06-08
 
