@@ -4,7 +4,6 @@ require 'active_support'
 require 'active_support/core_ext'
 require 'base64'
 require 'octokit'
-require_relative 'registry'
 
 module WayOfWorking
   module Audit
@@ -100,3 +99,7 @@ module WayOfWorking
     end
   end
 end
+
+# Required after Base is defined: registry -> unknown -> Base would otherwise be
+# a circular require when a rule file loads base first.
+require_relative 'registry'

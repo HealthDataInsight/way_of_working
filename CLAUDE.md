@@ -16,7 +16,7 @@ Features add commands by reopening those classes and calling `register(Generator
 
 **Features** follow a `category/variant` namespace (`decision_record/madr`, `code_of_conduct/contributor_covenant`). Each has:
 
-- `<variant>.rb`: requires its generators, registers them with the subcommands and, if the audit feature is loaded, requires its audit rule inside `begin … rescue LoadError`.
+- `<variant>.rb`: requires its generators, registers them with the subcommands and requires its audit rule unguarded, so a broken rule fails loudly.
 - `<variant>/generators/*.rb`: `Thor::Group` + `Thor::Actions` generators whose `source_root` is `<variant>/templates/`. The templates mirror the target project's layout, and files ending `.tt` are ERB templates.
 - `<variant>/github_audit_rule.rb`: a `Audit::Github::Rules::Base` subclass that registers itself with `Audit::Github::Rules::Registry`. It usually checks that the target repo contains the feature's template files verbatim.
 

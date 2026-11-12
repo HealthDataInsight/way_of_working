@@ -18,6 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+- **Audit:** built-in GitHub audit rules are no longer loaded inside `rescue LoadError`, so a rule that fails to load (e.g. a missing dependency) now raises instead of silently disappearing from the audit. `base64` is now a declared dependency.
 - **Gem:** the gemspec homepage now points to the README on GitHub instead of the HDI-specific GitHub Pages site.
 - **CLI:** `--help` now lists the options of generator commands, e.g. `way_of_working exec audit_github --help` shows `--all`, `--fix`, `--name`, `--public` and `--topic`.
 
