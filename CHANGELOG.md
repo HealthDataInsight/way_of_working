@@ -19,6 +19,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+- **CLI:** errors such as an unknown command now exit with status 1 instead of 0, and no longer print a Thor deprecation warning. Scripts that relied on a 0 exit status after an error will now see the failure.
 - **Gem:** the gemspec homepage now points to the README on GitHub instead of the HDI-specific GitHub Pages site.
 - **CLI:** `--help` now lists the options of generator commands, e.g. `way_of_working exec audit_github --help` shows `--all`, `--fix`, `--name`, `--public` and `--topic`.
 
