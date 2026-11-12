@@ -45,7 +45,8 @@ module WayOfWorking
             end
           end
 
-          def validate
+          # Renaming to a predicate would break the plugin rule API (MAJOR version bump)
+          def validate # rubocop:disable Naming/PredicateMethod
             $stdout.puts "Rule#valid? has been deprecated, use \"validate\" in #{self.class.name}"
             valid?
           end
