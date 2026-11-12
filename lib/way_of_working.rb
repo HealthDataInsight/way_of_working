@@ -14,14 +14,9 @@ loader = Zeitwerk::Loader.for_gem
 loader.ignore(File.expand_path('way_of_working/tasks.rb', __dir__))
 # github_audit_rule.rb files are loaded explicitly by their feature file (see
 # readme_badge.rb) and register themselves on load, so keep them out of
-# Zeitwerk's eager-load walk.
-loader.ignore(File.expand_path('way_of_working/changelog/keepachangelog/github_audit_rule.rb', __dir__))
-loader.ignore(File.expand_path('way_of_working/code_of_conduct/contributor_covenant/github_audit_rule.rb', __dir__))
-loader.ignore(File.expand_path('way_of_working/decision_record/madr/github_audit_rule.rb', __dir__))
-loader.ignore(File.expand_path('way_of_working/inclusive_language/alex/github_audit_rule.rb', __dir__))
-loader.ignore(File.expand_path('way_of_working/pull_request_template/hdi/github_audit_rule.rb', __dir__))
-loader.ignore(File.expand_path('way_of_working/readme_badge/github_audit_rule.rb', __dir__))
-loader.ignore(File.expand_path('way_of_working/versioning/semver/github_audit_rule.rb', __dir__))
+# Zeitwerk's eager-load walk. Eager-loading them would register every rule,
+# not just those of the features the user required.
+loader.ignore("#{__dir__}/way_of_working/**/github_audit_rule.rb")
 loader.setup
 
 # This is the namespace for everything associated with the Way of Working

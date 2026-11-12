@@ -22,7 +22,7 @@ Features add commands by reopening those classes and calling `register(Generator
 
 **Opt-in loading:** `require 'way_of_working'` loads only `readme_badge`. Every other built-in feature (including `audit/github`) is enabled with an explicit `require 'way_of_working/<category>/<variant>'`. External plugins are gems named `way_of_working-*`, and `lib/way_of_working.rb` auto-requires their `<name with / for ->/plugin.rb`.
 
-**Zeitwerk:** the gem uses `Zeitwerk::Loader.for_gem`, so file paths must match constant names. A new `github_audit_rule.rb` must be added to the `loader.ignore` list in `lib/way_of_working.rb`, because it depends on the optional audit feature.
+**Zeitwerk:** the gem uses `Zeitwerk::Loader.for_gem`, so file paths must match constant names. `lib/way_of_working.rb` ignores every `github_audit_rule.rb` with a glob, because those files register themselves on load and are required explicitly by their feature.
 `zeitwerk_gem_loader_test.rb` and `zeitwerk_test_loader_test.rb` eager-load `lib/` and `test/` to enforce this. That means test files must declare the constant their path implies.
 
 **Config:** `WayOfWorking::Config` stores values the user chooses to keep in `~/.config/way_of_working/config.yaml` (or under `$XDG_CONFIG_HOME`). Keys are namespaced by feature (`code_of_conduct.contact_method`).
