@@ -23,6 +23,19 @@ loader.ignore(File.expand_path('way_of_working/inclusive_language/alex/github_au
 loader.ignore(File.expand_path('way_of_working/pull_request_template/hdi/github_audit_rule.rb', __dir__))
 loader.ignore(File.expand_path('way_of_working/readme_badge/github_audit_rule.rb', __dir__))
 loader.ignore(File.expand_path('way_of_working/versioning/semver/github_audit_rule.rb', __dir__))
+# Opt-in built-in feature entrypoints reopen the sub commands and register
+# their generators at load time. Exclude them from Zeitwerk so eager loading
+# (e.g. a Rails app in production) does not enable features the host never
+# required. They are only loaded by an explicit `require`.
+%w[
+  audit/github
+  changelog/keepachangelog
+  code_of_conduct/contributor_covenant
+  decision_record/madr
+  inclusive_language/alex
+  pull_request_template/hdi
+  versioning/semver
+].each { |feature| loader.ignore(File.expand_path("way_of_working/#{feature}.rb", __dir__)) }
 loader.setup
 
 # This is the namespace for everything associated with the Way of Working
