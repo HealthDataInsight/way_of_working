@@ -10,6 +10,10 @@ require_relative 'sub_commands/new'
 module WayOfWorking
   # This class defines the top level interface
   class Cli < Thor
+    def self.exit_on_failure?
+      true
+    end
+
     desc 'config [ACTION]', 'Reads or writes values in the way_of_working config file'
     subcommand 'config', ::WayOfWorking::SubCommands::Config
 
