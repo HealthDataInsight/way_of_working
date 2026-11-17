@@ -2,12 +2,8 @@
 
 require_relative 'semver/generators/init'
 
-# If way_of_working-audit-github is used we can add a rule
-begin
-  require 'way_of_working/audit/github/rules/registry'
-  require_relative 'semver/github_audit_rule'
-rescue LoadError # rubocop:disable Lint/SuppressedException
-end
+# Register the GitHub audit rule (the registry is bundled with this gem)
+require_relative 'semver/github_audit_rule'
 
 module WayOfWorking
   module Versioning

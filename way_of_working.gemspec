@@ -38,6 +38,7 @@ Gem::Specification.new do |spec|
   # For more information and examples about making a new gem, check out our
   # guide at: https://bundler.io/guides/creating_gem.html
   spec.add_dependency 'activesupport'
+  spec.add_dependency 'base64' # bundled (not default) gem from Ruby 3.4; used by the audit rules
   spec.add_dependency 'faraday-multipart', '~> 1.0'
   spec.add_dependency 'faraday-retry', '~> 2.2'
   spec.add_dependency 'git', '~> 1.13'
