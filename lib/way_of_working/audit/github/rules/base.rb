@@ -55,6 +55,15 @@ module WayOfWorking
             [:way_of_working]
           end
 
+          # The ID `audit_github --rule` accepts. Defaults to the feature path, e.g.
+          # "versioning/semver". Plugins may override it to give their rules shorter IDs.
+          # Part of the plugin API: changing a rule's ID is a breaking change.
+          def self.rule_id
+            return unless name
+
+            name.delete_prefix('WayOfWorking::').delete_suffix('::GithubAuditRule').underscore
+          end
+
           def tags
             self.class.tags
           end
