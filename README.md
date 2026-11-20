@@ -120,9 +120,10 @@ way_of_working exec audit_github --all --public
 # Attempt to automatically fix issues where rules support it
 way_of_working exec audit_github --fix
 
-# List the rule IDs, then audit (and fix) only some of them
+# List the rule IDs and tags, then audit (and fix) only some of them
 way_of_working exec audit_github --list-rules
 way_of_working exec audit_github --rule versioning/semver changelog/keepachangelog --fix
+way_of_working exec audit_github --tag cis_level1 --fix
 ```
 
 #### Changelog

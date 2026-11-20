@@ -30,24 +30,35 @@ module WayOfWorking
           class_option :rule, type: :array, default: nil,
                               desc: 'Only run (and --fix) these rules (e.g., versioning/semver)'
 
+          class_option :tag, type: :array, default: nil,
+                             desc: 'Only run (and --fix) rules with any of these tags (e.g., cis_level1)'
+
           class_option :list_rules, type: :boolean, default: false,
-                                    desc: 'List the rule IDs that --rule accepts and exit'
+                                    desc: 'List the rule IDs and tags that --rule and --tag accept, and exit'
 
           desc 'This runs the github audit on this project'
 
           def list_rules_if_requested
             return unless options[:list_rules]
 
-            width = rule_ids.keys.map(&:length).max.to_i
-            rule_ids.each { |id, name| say "#{id.ljust(width)}  #{name}" }
+            width = rule_catalogue.keys.map(&:length).max.to_i
+            rule_catalogue.each { |id, (name, tags)| say "#{id.ljust(width)}  #{name} #{tags.inspect}" }
             exit
           end
 
           def check_rule_option
-            unknown = Array(options[:rule]) - rule_ids.keys
+            unknown = Array(options[:rule]) - rule_catalogue.keys
             return if unknown.empty?
 
-            abort(Rainbow("\nUnknown rule: #{unknown.join(', ')}. Valid rules: #{rule_ids.keys.join(', ')}").red)
+            abort(Rainbow("\nUnknown rule: #{unknown.join(', ')}. Valid rules: #{rule_catalogue.keys.join(', ')}").red)
+          end
+
+          def check_tag_option
+            known = rule_catalogue.values.flat_map(&:last).uniq.map(&:to_s)
+            unknown = Array(options[:tag]) - known
+            return if unknown.empty?
+
+            abort(Rainbow("\nUnknown tag: #{unknown.join(', ')}. Valid tags: #{known.join(', ')}").red)
           end
 
           def check_for_github_token_environment_variables
@@ -133,16 +144,18 @@ module WayOfWorking
 
           private
 
-          # Maps each registered rule's ID to its display name
-          def rule_ids
-            @rule_ids ||= Array(Rules::Registry.rules).to_h do |name, klass|
-              [Rules::Registry.id_for(klass, name), name]
+          # Maps each registered rule's ID to its display name and tags.
+          # ponytail: allocate skips initialize (which needs a repo), so tags must not depend on instance state
+          def rule_catalogue
+            @rule_catalogue ||= Array(Rules::Registry.rules).to_h do |name, klass|
+              [Rules::Registry.id_for(klass, name), [name, klass.allocate.tags]]
             end
           end
 
           # ponytail: rules are still built for every repo, only status (the API calls) is skipped
           def rule_selected?(rule)
-            options[:rule].nil? || options[:rule].include?(Rules::Registry.id_for(rule.class, rule.name))
+            (options[:rule].nil? || options[:rule].include?(Rules::Registry.id_for(rule.class, rule.name))) &&
+              (options[:tag].nil? || rule.tags.map(&:to_s).intersect?(options[:tag]))
           end
 
           def report(rule)
