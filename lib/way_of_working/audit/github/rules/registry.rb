@@ -13,16 +13,16 @@ module WayOfWorking
 
             def register(klass, rule_name)
               @rules ||= {}
+              id = id_for(klass, rule_name)
+              clash = @rules.find { |name, other| name != rule_name && id_for(other, name) == id }
+              raise ArgumentError, "Audit rule ID #{id.inspect} is already used by #{clash.last}" if clash
 
               @rules[rule_name] = klass
             end
 
-            # Short, stable ID for a rule class: its feature path, e.g. "versioning/semver".
-            # Anonymous classes (e.g. in tests) fall back to the registered rule name.
+            # The rule's `rule_id`, or its registered name for anonymous classes (e.g. in tests)
             def id_for(klass, rule_name)
-              return rule_name.to_s unless klass.name
-
-              klass.name.delete_prefix('WayOfWorking::').delete_suffix('::GithubAuditRule').underscore
+              klass.rule_id || rule_name.to_s
             end
 
             def unregister(*rule_names)

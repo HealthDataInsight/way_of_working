@@ -257,7 +257,7 @@ When creating plugins, the convention is to create them within the WayOfWorking 
 
 ### Versioning Policy
 
-This project follows [Semantic Versioning][Semantic Versioning v2.0.0], but SemVer governs the gem's **public interface** — the CLI commands and their options, the require paths of built-in features, and the plugin registration API — not the content of the artefacts its generators emit.
+This project follows [Semantic Versioning][Semantic Versioning v2.0.0], but SemVer governs the gem's **public interface** — the CLI commands and their options (including GitHub audit rule IDs), the require paths of built-in features, and the plugin registration API (including `Rules::Base.rule_id`) — not the content of the artefacts its generators emit.
 
 Consequently:
 
