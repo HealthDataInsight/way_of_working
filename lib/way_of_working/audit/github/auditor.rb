@@ -1,3 +1,6 @@
+require 'active_support'
+# Rules (including plugin rules) may use any core extension while they run
+require 'active_support/core_ext'
 require 'octokit'
 require_relative 'rules/registry'
 
