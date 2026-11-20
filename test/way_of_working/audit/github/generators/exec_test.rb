@@ -166,6 +166,45 @@ module WayOfWorking
             assert_equal ['structured_store'], repository_names(generator)
           end
 
+          test 'list_rules prints each rule ID and name, then exits' do
+            out, = capture_io do
+              assert_raises(SystemExit) { build_generator(list_rules: true).list_rules_if_requested }
+            end
+
+            assert_match(/^readme_badge +Project README and Way of Working badge$/, out)
+          end
+
+          test 'check_rule_option aborts on an unknown rule ID' do
+            _, err = capture_io do
+              assert_raises(SystemExit) { build_generator(rule: %w[readme_badge nope]).check_rule_option }
+            end
+
+            assert_match(/Unknown rule: nope\. Valid rules: .*readme_badge/, err)
+          end
+
+          test 'check_rule_option accepts known rule IDs' do
+            assert_nil build_generator(rule: %w[readme_badge]).check_rule_option
+          end
+
+          test 'run_audit only checks the rules named by --rule' do
+            selected = stub(name: 'Selected', tags: [], status: :passed)
+            skipped = stub(name: 'Skipped')
+            skipped.expects(:status).never
+            Rules::Registry.stubs(:id_for).returns('selected/rule', 'skipped/rule')
+
+            generator = build_generator(rule: %w[selected/rule])
+            generator.instance_variable_set(:@repositories,
+                                            [repo('test_repo', private?: false, description: '', language: '',
+                                                               topics: [])])
+            auditor = stub
+            auditor.stubs(:audit).multiple_yields([selected], [skipped])
+            generator.instance_variable_set(:@auditor, auditor)
+
+            out, = capture_io { generator.run_audit }
+
+            assert_match(/Passed Selected/, out)
+          end
+
           private
 
           def repo(name, **attributes)

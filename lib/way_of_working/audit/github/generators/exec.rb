@@ -27,7 +27,28 @@ module WayOfWorking
           class_option :topic, type: :string, default: nil,
                                desc: 'Filter repositories by topic (e.g., way-of-working)'
 
+          class_option :rule, type: :array, default: nil,
+                              desc: 'Only run (and --fix) these rules (e.g., versioning/semver)'
+
+          class_option :list_rules, type: :boolean, default: false,
+                                    desc: 'List the rule IDs that --rule accepts and exit'
+
           desc 'This runs the github audit on this project'
+
+          def list_rules_if_requested
+            return unless options[:list_rules]
+
+            width = rule_ids.keys.map(&:length).max.to_i
+            rule_ids.each { |id, name| say "#{id.ljust(width)}  #{name}" }
+            exit
+          end
+
+          def check_rule_option
+            unknown = Array(options[:rule]) - rule_ids.keys
+            return if unknown.empty?
+
+            abort(Rainbow("\nUnknown rule: #{unknown.join(', ')}. Valid rules: #{rule_ids.keys.join(', ')}").red)
+          end
 
           def check_for_github_token_environment_variables
             @github_token = ENV.fetch('GITHUB_TOKEN', nil)
@@ -96,19 +117,7 @@ module WayOfWorking
           def run_audit
             @audit_ok = true
             unarchived_repos.each do |repo|
-              @auditor.audit(repo) do |rule|
-                case rule.status
-                when :not_applicable
-                  # Do nothing
-                when :passed
-                  say "  ✅ #{rule.tags.inspect} Passed #{rule.name}"
-                when :failed
-                  say "  ❌ #{rule.tags.inspect} Failed #{rule.name}: #{rule.errors.to_sentence}"
-                  @audit_ok = false
-                else
-                  abort(Rainbow("Unknown response #{rule.status.inspect}").red)
-                end
-              end
+              @auditor.audit(repo) { |rule| report(rule) if rule_selected?(rule) }
             end
           end
 
@@ -123,6 +132,32 @@ module WayOfWorking
           end
 
           private
+
+          # Maps each registered rule's ID to its display name
+          def rule_ids
+            @rule_ids ||= Array(Rules::Registry.rules).to_h do |name, klass|
+              [Rules::Registry.id_for(klass, name), name]
+            end
+          end
+
+          # ponytail: rules are still built for every repo, only status (the API calls) is skipped
+          def rule_selected?(rule)
+            options[:rule].nil? || options[:rule].include?(Rules::Registry.id_for(rule.class, rule.name))
+          end
+
+          def report(rule)
+            case rule.status
+            when :not_applicable
+              # Do nothing
+            when :passed
+              say "  ✅ #{rule.tags.inspect} Passed #{rule.name}"
+            when :failed
+              say "  ❌ #{rule.tags.inspect} Failed #{rule.name}: #{rule.errors.to_sentence}"
+              @audit_ok = false
+            else
+              abort(Rainbow("Unknown response #{rule.status.inspect}").red)
+            end
+          end
 
           def unarchived_repos(&block)
             return to_enum(__method__) unless block_given?

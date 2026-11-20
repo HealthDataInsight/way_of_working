@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- **GitHub Audit:** added `--rule` to run (and `--fix`) only the named audit rules, e.g. `--rule versioning/semver`, and `--list-rules` to list the rule IDs.
 - **Config:** added `way_of_working config get`/`set` for persisting values (e.g. the Code of Conduct contact method) in `~/.config/way_of_working/config.yaml`, namespaced by dotted feature keys. `--contact-method` now falls back to the stored value and offers to remember a newly-provided one.
 - **Inclusive Language:** `way_of_working init inclusive_language` now adds its GitHub Actions status badge to the README badge panel (created by `init readme_badge`) when the project has a GitHub remote.
 

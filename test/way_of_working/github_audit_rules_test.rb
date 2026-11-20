@@ -21,6 +21,7 @@ module WayOfWorking
 
         assert_includes ::WayOfWorking::Audit::Github::Rules::Registry.rules.values, rule
         assert_equal [:way_of_working], rule.tags
+        assert_equal feature, ::WayOfWorking::Audit::Github::Rules::Registry.id_for(rule, nil)
       ensure
         # The rules register into a shared registry at load time. Unregister
         # so it doesn't leak between tests, whatever order the suite runs in.
