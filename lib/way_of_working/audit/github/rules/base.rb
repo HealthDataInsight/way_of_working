@@ -1,9 +1,10 @@
 # frozen_string_literal: true
 
+# ponytail: only what Base itself needs. Every command loads this via readme_badge, so
+# Octokit and the rest of ActiveSupport wait for the auditor (auditor.rb).
 require 'active_support'
-require 'active_support/core_ext'
+require 'active_support/core_ext/string/inflections'
 require 'base64'
-require 'octokit'
 
 module WayOfWorking
   module Audit
