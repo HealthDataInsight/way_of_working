@@ -18,6 +18,7 @@ module WayOfWorking
       WayOfWorking::InclusiveLanguage::Alex::Generators::Exec
       sub_commands = WayOfWorking::SubCommands
       puts [sub_commands::Init, sub_commands::New, sub_commands::Exec].flat_map { |c| c.commands.keys }.sort.uniq
+      puts WayOfWorking::Audit::Github::Rules::Registry.rules.keys
     RUBY
 
     def test_eager_load_leaves_opt_in_features_dormant
@@ -25,7 +26,8 @@ module WayOfWorking
                                         chdir: File.expand_path('../..', __dir__))
 
       assert status.success?, err
-      assert_equal %w[all help readme_badge], out.split
+      # Only the default README badge feature registers its commands and audit rule
+      assert_equal ['all', 'help', 'readme_badge', 'Project README and Way of Working badge'], out.lines(chomp: true)
     end
   end
 end
