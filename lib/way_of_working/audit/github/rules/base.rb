@@ -4,7 +4,6 @@ require 'active_support'
 require 'active_support/core_ext'
 require 'base64'
 require 'octokit'
-require_relative 'registry'
 
 module WayOfWorking
   module Audit
@@ -46,13 +45,23 @@ module WayOfWorking
             end
           end
 
-          def validate
+          # Renaming to a predicate would break the plugin rule API (MAJOR version bump)
+          def validate # rubocop:disable Naming/PredicateMethod
             $stdout.puts "Rule#valid? has been deprecated, use \"validate\" in #{self.class.name}"
             valid?
           end
 
           def self.tags
             [:way_of_working]
+          end
+
+          # The ID `audit_github --rule` accepts. Defaults to the feature path, e.g.
+          # "versioning/semver". Plugins may override it to give their rules shorter IDs.
+          # Part of the plugin API: changing a rule's ID is a breaking change.
+          def self.rule_id
+            return unless name
+
+            name.delete_prefix('WayOfWorking::').delete_suffix('::GithubAuditRule').underscore
           end
 
           def tags
@@ -100,3 +109,7 @@ module WayOfWorking
     end
   end
 end
+
+# Required after Base is defined: registry -> unknown -> Base would otherwise be
+# a circular require when a rule file loads base first.
+require_relative 'registry'

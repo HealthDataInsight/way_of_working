@@ -1,6 +1,6 @@
 ---
 name: "Inclusive Language"
-on: push  # yamllint disable-line rule:truthy
+on: push # yamllint disable-line rule:truthy
 
 permissions: read-all
 

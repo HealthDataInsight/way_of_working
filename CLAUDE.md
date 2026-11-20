@@ -16,13 +16,13 @@ Features add commands by reopening those classes and calling `register(Generator
 
 **Features** follow a `category/variant` namespace (`decision_record/madr`, `code_of_conduct/contributor_covenant`). Each has:
 
-- `<variant>.rb`: requires its generators, registers them with the subcommands and, if the audit feature is loaded, requires its audit rule inside `begin … rescue LoadError`.
+- `<variant>.rb`: requires its generators, registers them with the subcommands and requires its audit rule unguarded, so a broken rule fails loudly.
 - `<variant>/generators/*.rb`: `Thor::Group` + `Thor::Actions` generators whose `source_root` is `<variant>/templates/`. The templates mirror the target project's layout, and files ending `.tt` are ERB templates.
 - `<variant>/github_audit_rule.rb`: a `Audit::Github::Rules::Base` subclass that registers itself with `Audit::Github::Rules::Registry`. It usually checks that the target repo contains the feature's template files verbatim.
 
 **Opt-in loading:** `require 'way_of_working'` loads only `readme_badge`. Every other built-in feature (including `audit/github`) is enabled with an explicit `require 'way_of_working/<category>/<variant>'`. External plugins are gems named `way_of_working-*`, and `lib/way_of_working.rb` auto-requires their `<name with / for ->/plugin.rb`.
 
-**Zeitwerk:** the gem uses `Zeitwerk::Loader.for_gem`, so file paths must match constant names. A new `github_audit_rule.rb` must be added to the `loader.ignore` list in `lib/way_of_working.rb`, because it depends on the optional audit feature.
+**Zeitwerk:** the gem uses `Zeitwerk::Loader.for_gem`, so file paths must match constant names. `lib/way_of_working.rb` ignores every `github_audit_rule.rb` with a glob, because those files register themselves on load and are required explicitly by their feature.
 `zeitwerk_gem_loader_test.rb` and `zeitwerk_test_loader_test.rb` eager-load `lib/` and `test/` to enforce this. That means test files must declare the constant their path implies.
 
 **Config:** `WayOfWorking::Config` stores values the user chooses to keep in `~/.config/way_of_working/config.yaml` (or under `$XDG_CONFIG_HOME`). Keys are namespaced by feature (`code_of_conduct.contact_method`).

@@ -8,12 +8,12 @@ gemspec
 # Start debugger with binding.b [https://github.com/ruby/debug]
 # gem 'debug', '>= 1.0.0'
 
-gem 'activesupport', '~> 7.0', '>= 7.0.7.1'
+gem 'activesupport', '~> 8.0.5', '>= 8.0.5.2'
 gem 'bundler', '>= 2.0'
 gem 'minitest', '~> 5.0'
 gem 'mocha', '~> 2.0'
 gem 'ndr_dev_support', '>= 7.3'
-gem 'railties', '~> 7.0'
+gem 'railties', '~> 8.0.5'
 gem 'rake', '~> 13.0'
 
 # Known vulnerability fixes

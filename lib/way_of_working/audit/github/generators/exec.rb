@@ -27,7 +27,39 @@ module WayOfWorking
           class_option :topic, type: :string, default: nil,
                                desc: 'Filter repositories by topic (e.g., way-of-working)'
 
+          class_option :rule, type: :array, default: nil,
+                              desc: 'Only run (and --fix) these rules (e.g., versioning/semver)'
+
+          class_option :tag, type: :array, default: nil,
+                             desc: 'Only run (and --fix) rules with any of these tags (e.g., cis_level1)'
+
+          class_option :list_rules, type: :boolean, default: false,
+                                    desc: 'List the rule IDs and tags that --rule and --tag accept, and exit'
+
           desc 'This runs the github audit on this project'
+
+          def list_rules_if_requested
+            return unless options[:list_rules]
+
+            width = rule_catalogue.keys.map(&:length).max.to_i
+            rule_catalogue.each { |id, (name, tags)| say "#{id.ljust(width)}  #{name} #{tags.inspect}" }
+            exit
+          end
+
+          def check_rule_option
+            unknown = Array(options[:rule]) - rule_catalogue.keys
+            return if unknown.empty?
+
+            abort(Rainbow("\nUnknown rule: #{unknown.join(', ')}. Valid rules: #{rule_catalogue.keys.join(', ')}").red)
+          end
+
+          def check_tag_option
+            known = rule_catalogue.values.flat_map(&:last).uniq.map(&:to_s)
+            unknown = Array(options[:tag]) - known
+            return if unknown.empty?
+
+            abort(Rainbow("\nUnknown tag: #{unknown.join(', ')}. Valid tags: #{known.join(', ')}").red)
+          end
 
           def check_for_github_token_environment_variables
             @github_token = ENV.fetch('GITHUB_TOKEN', nil)
@@ -96,19 +128,7 @@ module WayOfWorking
           def run_audit
             @audit_ok = true
             unarchived_repos.each do |repo|
-              @auditor.audit(repo) do |rule|
-                case rule.status
-                when :not_applicable
-                  # Do nothing
-                when :passed
-                  say "  ✅ #{rule.tags.inspect} Passed #{rule.name}"
-                when :failed
-                  say "  ❌ #{rule.tags.inspect} Failed #{rule.name}: #{rule.errors.to_sentence}"
-                  @audit_ok = false
-                else
-                  abort(Rainbow("Unknown response #{rule.status.inspect}").red)
-                end
-              end
+              @auditor.audit(repo) { |rule| report(rule) if rule_selected?(rule) }
             end
           end
 
@@ -124,6 +144,34 @@ module WayOfWorking
 
           private
 
+          # Maps each registered rule's ID to its display name and tags.
+          # ponytail: allocate skips initialize (which needs a repo), so tags must not depend on instance state
+          def rule_catalogue
+            @rule_catalogue ||= Array(Rules::Registry.rules).to_h do |name, klass|
+              [Rules::Registry.id_for(klass, name), [name, klass.allocate.tags]]
+            end
+          end
+
+          # ponytail: rules are still built for every repo, only status (the API calls) is skipped
+          def rule_selected?(rule)
+            (options[:rule].nil? || options[:rule].include?(Rules::Registry.id_for(rule.class, rule.name))) &&
+              (options[:tag].nil? || rule.tags.map(&:to_s).intersect?(options[:tag]))
+          end
+
+          def report(rule)
+            case rule.status
+            when :not_applicable
+              # Do nothing
+            when :passed
+              say "  ✅ #{rule.tags.inspect} Passed #{rule.name}"
+            when :failed
+              say "  ❌ #{rule.tags.inspect} Failed #{rule.name}: #{rule.errors.to_sentence}"
+              @audit_ok = false
+            else
+              abort(Rainbow("Unknown response #{rule.status.inspect}").red)
+            end
+          end
+
           def unarchived_repos(&block)
             return to_enum(__method__) unless block_given?
 
@@ -131,7 +179,7 @@ module WayOfWorking
               next if repo.archived?
 
               say
-              say("#{repo.name} #{repo.private? ? '🔒' : ''}", :bold)
+              say("#{repo.name} #{'🔒' if repo.private?}", :bold)
               say("#{repo.description} [#{repo.language}]")
               say(repo.topics.join(' '), :cyan) unless repo.topics.empty?
 

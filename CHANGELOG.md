@@ -10,7 +10,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- **GitHub Audit:** added `--rule` and `--tag` to run (and `--fix`) only the named audit rules or rules with a given tag, e.g. `--rule versioning/semver` or `--tag cis_level1`, and `--list-rules` to list the rule IDs and tags. Plugins can give their rules shorter IDs by overriding `Rules::Base.rule_id`.
 - **Config:** added `way_of_working config get`/`set` for persisting values (e.g. the Code of Conduct contact method) in `~/.config/way_of_working/config.yaml`, namespaced by dotted feature keys. `--contact-method` now falls back to the stored value and offers to remember a newly-provided one.
+- **Inclusive Language:** `way_of_working init inclusive_language` now adds its GitHub Actions status badge to the README badge panel (created by `init readme_badge`) when the project has a GitHub remote.
 
 ### Changed
 
@@ -18,6 +20,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+- **Audit:** built-in GitHub audit rules are no longer loaded inside `rescue LoadError`, so a rule that fails to load (e.g. a missing dependency) now raises instead of silently disappearing from the audit. `base64` is now a declared dependency.
+- **CLI:** errors such as an unknown command now exit with status 1 instead of 0, and no longer print a Thor deprecation warning. Scripts that relied on a 0 exit status after an error will now see the failure.
 - **Gem:** the gemspec homepage now points to the README on GitHub instead of the HDI-specific GitHub Pages site.
 - **CLI:** `--help` now lists the options of generator commands, e.g. `way_of_working exec audit_github --help` shows `--all`, `--fix`, `--name`, `--public` and `--topic`.
 - **Zeitwerk:** eager loading (e.g. a Rails app in production) no longer enables the opt-in built-in features; they now load only when explicitly required.

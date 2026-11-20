@@ -166,6 +166,68 @@ module WayOfWorking
             assert_equal ['structured_store'], repository_names(generator)
           end
 
+          test 'list_rules prints each rule ID and name, then exits' do
+            out, = capture_io do
+              assert_raises(SystemExit) { build_generator(list_rules: true).list_rules_if_requested }
+            end
+
+            assert_match(/^readme_badge +Project README and Way of Working badge \[:way_of_working\]$/, out)
+          end
+
+          test 'check_rule_option aborts on an unknown rule ID' do
+            _, err = capture_io do
+              assert_raises(SystemExit) { build_generator(rule: %w[readme_badge nope]).check_rule_option }
+            end
+
+            assert_match(/Unknown rule: nope\. Valid rules: .*readme_badge/, err)
+          end
+
+          test 'check_rule_option accepts known rule IDs' do
+            assert_nil build_generator(rule: %w[readme_badge]).check_rule_option
+          end
+
+          test 'run_audit only checks the rules named by --rule' do
+            selected = stub(name: 'Selected', tags: [], status: :passed)
+            skipped = stub(name: 'Skipped')
+            skipped.expects(:status).never
+            Rules::Registry.stubs(:id_for).returns('selected/rule', 'skipped/rule')
+
+            assert_match(/Passed Selected/, audit_output({ rule: %w[selected/rule] }, selected, skipped))
+          end
+
+          test 'run_audit only checks rules with a tag named by --tag' do
+            selected = stub(name: 'Selected', tags: %i[cis cis_level1], status: :passed)
+            skipped = stub(name: 'Skipped', tags: %i[cis])
+            skipped.expects(:status).never
+
+            assert_match(/Passed Selected/, audit_output({ tag: %w[cis_level1] }, selected, skipped))
+          end
+
+          test 'run_audit requires both --rule and --tag to match' do
+            skipped = stub(name: 'Skipped', tags: %i[way_of_working])
+            skipped.expects(:status).never
+            Rules::Registry.stubs(:id_for).returns('skipped/rule')
+
+            audit_output({ rule: %w[skipped/rule], tag: %w[cis] }, skipped)
+          end
+
+          test 'check_tag_option accepts tags added by an instance-level tags override' do
+            # Like the CIS Benchmark plugin, which adds :cis_level1 in an instance method
+            Rules::Registry.register(Class.new(Rules::Base) { def tags = super << :cis_level1 }, :tagged_rule)
+
+            assert_nil build_generator(tag: %w[way_of_working cis_level1]).check_tag_option
+          ensure
+            Rules::Registry.unregister(:tagged_rule)
+          end
+
+          test 'check_tag_option aborts on an unknown tag' do
+            _, err = capture_io do
+              assert_raises(SystemExit) { build_generator(tag: %w[nope]).check_tag_option }
+            end
+
+            assert_match(/Unknown tag: nope\. Valid tags: .*way_of_working/, err)
+          end
+
           private
 
           def repo(name, **attributes)
@@ -185,6 +247,18 @@ module WayOfWorking
             generator = build_generator(options)
             generator.prep_audit
             generator
+          end
+
+          # Runs the audit over one repo whose auditor yields these rules, and returns the output
+          def audit_output(options, *rules)
+            generator = build_generator(options)
+            generator.instance_variable_set(:@repositories, [repo('test_repo', private?: false, description: '',
+                                                                               language: '', topics: [])])
+            auditor = stub
+            auditor.stubs(:audit).multiple_yields(*rules.map { |rule| [rule] })
+            generator.instance_variable_set(:@auditor, auditor)
+
+            capture_io { generator.run_audit }.first
           end
 
           def repository_names(generator)

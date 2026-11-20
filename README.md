@@ -119,6 +119,11 @@ way_of_working exec audit_github --all --public
 
 # Attempt to automatically fix issues where rules support it
 way_of_working exec audit_github --fix
+
+# List the rule IDs and tags, then audit (and fix) only some of them
+way_of_working exec audit_github --list-rules
+way_of_working exec audit_github --rule versioning/semver changelog/keepachangelog --fix
+way_of_working exec audit_github --tag cis_level1 --fix
 ```
 
 #### Changelog
@@ -252,7 +257,7 @@ When creating plugins, the convention is to create them within the WayOfWorking 
 
 ### Versioning Policy
 
-This project follows [Semantic Versioning][Semantic Versioning v2.0.0], but SemVer governs the gem's **public interface** — the CLI commands and their options, the require paths of built-in features, and the plugin registration API — not the content of the artefacts its generators emit.
+This project follows [Semantic Versioning][Semantic Versioning v2.0.0], but SemVer governs the gem's **public interface** — the CLI commands and their options (including GitHub audit rule IDs), the require paths of built-in features, and the plugin registration API (including `Rules::Base.rule_id`) — not the content of the artefacts its generators emit.
 
 Consequently:
 
