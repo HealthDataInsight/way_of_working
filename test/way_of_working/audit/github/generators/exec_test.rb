@@ -192,13 +192,23 @@ module WayOfWorking
             skipped.expects(:status).never
             Rules::Registry.stubs(:id_for).returns('selected/rule', 'skipped/rule')
 
-            assert_match(/Passed Selected/, audit_output({ rule: %w[selected/rule] }, selected, skipped))
+            assert_match(%r{Passed Selected \(selected/rule\)}, audit_output({ rule: %w[selected/rule] }, selected, skipped))
+          end
+
+          test 'run_audit reports the rule_id a plugin rule overrides' do
+            rule = Class.new(Rules::Base) { def self.rule_id = 'short' }.allocate
+            rule.name = 'Long name'
+            rule.errors = ['broken']
+            rule.stubs(:status).returns(:failed)
+
+            assert_match(/Failed Long name \(short\): broken/, audit_output({}, rule))
           end
 
           test 'run_audit only checks rules with a tag named by --tag' do
             selected = stub(name: 'Selected', tags: %i[cis cis_level1], status: :passed)
             skipped = stub(name: 'Skipped', tags: %i[cis])
             skipped.expects(:status).never
+            Rules::Registry.stubs(:id_for).returns('selected/rule', 'skipped/rule')
 
             assert_match(/Passed Selected/, audit_output({ tag: %w[cis_level1] }, selected, skipped))
           end

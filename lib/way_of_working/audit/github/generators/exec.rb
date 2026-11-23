@@ -128,7 +128,10 @@ module WayOfWorking
           def run_audit
             @audit_ok = true
             unarchived_repos.each do |repo|
-              @auditor.audit(repo) { |rule| report(rule) if rule_selected?(rule) }
+              @auditor.audit(repo) do |rule|
+                id = Rules::Registry.id_for(rule.class, rule.name)
+                report(rule, id) if rule_selected?(rule, id)
+              end
             end
           end
 
@@ -153,19 +156,19 @@ module WayOfWorking
           end
 
           # ponytail: rules are still built for every repo, only status (the API calls) is skipped
-          def rule_selected?(rule)
-            (options[:rule].nil? || options[:rule].include?(Rules::Registry.id_for(rule.class, rule.name))) &&
+          def rule_selected?(rule, id)
+            (options[:rule].nil? || options[:rule].include?(id)) &&
               (options[:tag].nil? || rule.tags.map(&:to_s).intersect?(options[:tag]))
           end
 
-          def report(rule)
+          def report(rule, id)
             case rule.status
             when :not_applicable
               # Do nothing
             when :passed
-              say "  ✅ #{rule.tags.inspect} Passed #{rule.name}"
+              say "  ✅ #{rule.tags.inspect} Passed #{rule.name} (#{id})"
             when :failed
-              say "  ❌ #{rule.tags.inspect} Failed #{rule.name}: #{rule.errors.to_sentence}"
+              say "  ❌ #{rule.tags.inspect} Failed #{rule.name} (#{id}): #{rule.errors.to_sentence}"
               @audit_ok = false
             else
               abort(Rainbow("Unknown response #{rule.status.inspect}").red)
