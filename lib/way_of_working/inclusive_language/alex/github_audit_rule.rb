@@ -6,13 +6,20 @@ module WayOfWorking
   module InclusiveLanguage
     # The namespace for plugin
     module Alex
-      # This rule checks for the Inclusive Language workflow action and README badge.
+      # This rule checks the repo has the Inclusive Language files verbatim and the README badge.
       class GithubAuditRule < ::WayOfWorking::Audit::Github::Rules::Base
-        def validate
-          response = @client.workflows(@repo_name)
+        SOURCE_FILES = %w[
+          .github/workflows/inclusive-language.yml
+          .alexignore
+          .alexrc
+          docs/way_of_working/inclusive-language.md
+        ].freeze
 
-          unless response.workflows.map(&:name).include?('Inclusive Language')
-            @errors << 'No Inclusive Language GitHub Action'
+        source_root WayOfWorking.root.join('lib', 'way_of_working', 'inclusive_language', 'alex', 'templates')
+
+        def validate
+          SOURCE_FILES.each do |path|
+            @errors << "#{path} is missing or does not match the template" unless repo_file_contains_source_file?(path)
           end
 
           @errors << 'Default branch is named "master"' if @repo.default_branch == 'master'
