@@ -246,6 +246,20 @@ More help on using the command line tool is found by using:
 way_of_working help
 ```
 
+### Shell Completion
+
+Tab completion of commands and options is available for bash and zsh. Add the matching line to your shell's startup file:
+
+```bash
+# ~/.bashrc
+eval "$(way_of_working completion bash)"
+
+# ~/.zshrc (after compinit)
+eval "$(way_of_working completion zsh)"
+```
+
+Completions come from the installed commands each time you press Tab, so commands added by plugins appear without regenerating anything.
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
