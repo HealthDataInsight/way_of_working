@@ -14,6 +14,11 @@ module WayOfWorking
       true
     end
 
+    desc 'completion SHELL', 'Prints the bash or zsh completion script, e.g. eval "$(way_of_working completion zsh)"'
+    def completion(shell)
+      puts Completion.script(shell)
+    end
+
     desc 'config [ACTION]', 'Reads or writes values in the way_of_working config file'
     subcommand 'config', ::WayOfWorking::SubCommands::Config
 

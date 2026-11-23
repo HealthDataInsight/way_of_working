@@ -2,4 +2,9 @@
 
 require 'way_of_working'
 
-WayOfWorking::Cli.start(ARGV)
+# Called by the shell completion scripts on every Tab (see WayOfWorking::Completion)
+if ARGV.first == '__complete'
+  puts WayOfWorking::Completion.candidates(ARGV.drop(1))
+else
+  WayOfWorking::Cli.start(ARGV)
+end
