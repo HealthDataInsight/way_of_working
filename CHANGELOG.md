@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- **Inclusive Language:** the GitHub audit rule now checks that the workflow, `.alexignore`, `.alexrc` and documentation files match the templates, instead of only checking for a workflow named "Inclusive Language".
 - **Code of Conduct:** upgraded Contributor Covenant 2.1 → 3 in place; `code_of_conduct/contributor_covenant` now generates v3 and v2.1 is no longer available. The GitHub audit rule now fails repos still on an older version.
 
 ### Fixed
