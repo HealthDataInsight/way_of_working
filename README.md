@@ -21,16 +21,16 @@ There are subcommands that plugins hook into which enable them to add GitHub act
 
 Below is a list of plugins that have been implemented so far:
 
-| Feature               | Plugin                                 | Description                                                                            |
-| --------------------- | -------------------------------------- | ---------------------------------------------------------------------------------------|
-| Audit                 | Built-in (audit/github)                | A framework for rules to check for incorrect content and configuration of GitHub repos — bundled, opt in by `require` (see [Built-in Features](#built-in-features)) |
-| Changelog             | Built-in (changelog/keepachangelog)    | Implements [keepachangelog v1.1] — bundled, opt in by `require` (see [Built-in Features](#built-in-features)) |
-| Code Linting          | [code_linting-hdi]                     | Implements a combination of [MegaLinter] and [RuboCop] built on NDRS standards         |
-| Code of Conduct       | Built-in (code_of_conduct/contributor_covenant) | Implements [Contributor Covenant v3] — bundled, opt in by `require` (see [Built-in Features](#built-in-features)) |
-| Decision Records      | Built-in (decision_record/madr)        | Implements [MADR v3] — bundled, opt in by `require` (see [Built-in Features](#built-in-features)) |
-| Inclusive Language    | Built-in (inclusive_language/alex)     | Implements [alex] — bundled, opt in by `require` (see [Built-in Features](#built-in-features)) |
-| Pull Request Template | Built-in (pull_request_template/hdi)   | Implements a bespoke PR template — bundled, opt in by `require` (see [Built-in Features](#built-in-features)) |
-| Versioning            | Built-in (versioning/semver)           | Implements [Semantic Versioning v2.0.0] — bundled, opt in by `require` (see [Built-in Features](#built-in-features)) |
+| Feature               | Plugin                                          | Description                                                                                                                                                         |
+|-----------------------|-------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Audit                 | Built-in (audit/github)                         | A framework for rules to check for incorrect content and configuration of GitHub repos — bundled, opt in by `require` (see [Built-in Features](#built-in-features)) |
+| Changelog             | Built-in (changelog/keepachangelog)             | Implements [keepachangelog v1.1] — bundled, opt in by `require` (see [Built-in Features](#built-in-features))                                                       |
+| Code Linting          | [code_linting-hdi]                              | Implements a combination of [MegaLinter] and [RuboCop] built on NDRS standards                                                                                      |
+| Code of Conduct       | Built-in (code_of_conduct/contributor_covenant) | Implements [Contributor Covenant v3] — bundled, opt in by `require` (see [Built-in Features](#built-in-features))                                                   |
+| Decision Records      | Built-in (decision_record/madr)                 | Implements [MADR v3] — bundled, opt in by `require` (see [Built-in Features](#built-in-features))                                                                   |
+| Inclusive Language    | Built-in (inclusive_language/alex)              | Implements [alex] — bundled, opt in by `require` (see [Built-in Features](#built-in-features))                                                                      |
+| Pull Request Template | Built-in (pull_request_template/hdi)            | Implements a bespoke PR template — bundled, opt in by `require` (see [Built-in Features](#built-in-features))                                                       |
+| Versioning            | Built-in (versioning/semver)                    | Implements [Semantic Versioning v2.0.0] — bundled, opt in by `require` (see [Built-in Features](#built-in-features))                                                |
 
 Some features are **Built-in** — they ship inside this gem and are enabled by requiring them (see [Built-in Features](#built-in-features)); the others are separate plugin gems that you add as dependencies.
 
