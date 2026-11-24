@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.2.0] - 2026-11-24
+
 ### Added
 
 - **CLI:** added bash and zsh Tab completion of commands and options, including those from plugins. Enable it with `eval "$(way_of_working completion zsh)"` (or `bash`).
@@ -97,7 +99,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Corrected use of relative paths in the rubocop config file
 
-[unreleased]: https://github.com/HealthDataInsight/way_of_working/compare/v2.1.0...HEAD
+[unreleased]: https://github.com/HealthDataInsight/way_of_working/compare/v2.2.0...HEAD
+[2.2.0]: https://github.com/HealthDataInsight/way_of_working/compare/v2.1.0...v2.2.0
 [2.1.0]: https://github.com/HealthDataInsight/way_of_working/compare/v2.0.1...v2.1.0
 [2.0.1]: https://github.com/HealthDataInsight/way_of_working/compare/v2.0.0...v2.0.1
 [2.0.0]: https://github.com/HealthDataInsight/way_of_working/compare/v1.0.0...v2.0.0
