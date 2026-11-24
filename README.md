@@ -74,7 +74,8 @@ way_of_working config set code_of_conduct.contact_method conduct@example.org
 way_of_working config get code_of_conduct.contact_method
 ```
 
-Keys are dotted paths namespaced by feature (`code_of_conduct.contact_method`), so unrelated features — a future security contact, say — can store their own values (`security.contact_method`) without clashing. When a feature that supports this looks for an option and it isn't passed on the command line, it falls back to the stored value; if you pass the option explicitly and it's new or different, you'll be asked whether to remember it for next time.
+Keys are dotted paths namespaced by feature (`code_of_conduct.contact_method`), so unrelated features — a future security contact, say — can store their own values (`security.contact_method`) without clashing.
+When a feature that supports this looks for an option and it isn't passed on the command line, it falls back to the stored value; if you pass the option explicitly and it's new or different, you'll be asked whether to remember it for next time.
 
 ### Built-in Features
 
@@ -163,6 +164,8 @@ way_of_working init code_of_conduct --contact-method [CONTACT METHOD]
 ```
 
 You will need to provide a `[CONTACT METHOD]`, usually an email address, for community leaders to receive reports of unacceptable behavior — or store one under `code_of_conduct.contact_method` (see [Config](#config)) so you don't need to pass it every time.
+
+This project follows its own Contributor Covenant: everyone interacting in the WayOfWorking project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/HealthDataInsight/way_of_working/blob/main/CODE_OF_CONDUCT.md).
 
 #### Decision Records
 
@@ -267,7 +270,7 @@ This RubyGem was created using `bundle gem --exe way_of_working`.
 
 To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
-When creating plugins, the convention is to create them within the WayOfWorking and feature namespaces. E.g. 
+When creating plugins, the convention is to create them within the WayOfWorking and feature namespaces. E.g. the [code_linting-hdi] plugin is the gem `way_of_working-code_linting-hdi`, defines its generators under `WayOfWorking::CodeLinting::Hdi`, and is loaded automatically from `lib/way_of_working/code_linting/hdi/plugin.rb` (the gem name with `-` replaced by `/`).
 
 ### Versioning Policy
 
@@ -292,10 +295,6 @@ See [`CONTRIBUTING.md`](CONTRIBUTING.md) for development setup, the versioning p
 ## License
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
-## Code of Conduct
-
-Everyone interacting in the WayOfWorking project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/HealthDataInsight/way_of_working/blob/main/CODE_OF_CONDUCT.md).
 
 [alex]:https://alexjs.com
 [Contributor Covenant v3]: https://www.contributor-covenant.org/version/3/0/code_of_conduct/
