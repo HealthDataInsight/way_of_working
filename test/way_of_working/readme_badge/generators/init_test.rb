@@ -42,6 +42,21 @@ module WayOfWorking
           assert_badge_holders :refute_match
         end
 
+        test 'Rerunning with a new badge version updates the badge instead of adding another' do
+          WayOfWorking::Configuration.organisation_gem_version = '1.0.0'
+          run_generator
+          WayOfWorking::Configuration.organisation_gem_version = '9.9.9'
+          run_generator
+
+          assert_file 'README.md' do |content|
+            assert_equal 1, content.scan('Main Badge Holder Start').size
+            assert_match 'v9.9.9', content
+            refute_match 'v1.0.0', content
+          end
+        ensure
+          WayOfWorking::Configuration.organisation_gem_version = nil
+        end
+
         test 'Wayof Working documentation is created and revoked' do
           assert_no_file 'docs/way_of_working/readme-badges.md'
 

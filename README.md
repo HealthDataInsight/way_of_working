@@ -1,7 +1,7 @@
 # Way of Working
 
 <!-- Way of Working: Main Badge Holder Start -->
-![Way of Working Badge](https://img.shields.io/badge/Way_of_Working-v2.0.1-%238169e3?labelColor=black)
+![Way of Working Badge](https://img.shields.io/badge/Way_of_Working-v2.2.0-%238169e3?labelColor=black)
 <!-- Way of Working: Additional Badge Holder Start -->
 <!-- Way of Working: Badge Holder End -->
 
@@ -14,23 +14,24 @@
 
 This tool underpins the Way of Working framework, used to describe a consistent, high-quality approach to Software Engineering. It is intended as an opinionated approach supporting rapid development, across numerous projects, by a fungible workforce who can swap between assignments with the minimum friction.
 
-It consists command line tool that uses a modular, plugin-based system to gain functionality, allowing for organisations to pick and choose different solutions for the same feature.
+It consists of a command line tool that uses a modular, plugin-based system to gain functionality, allowing for organisations to pick and choose different solutions for the same feature.
 Organisations can create their own gem which defines the specific plugin dependencies which form their way of working. See the [Way of Working for HDI](https://github.com/HealthDataInsight/way_of_working-for-hdi) as an example.
 
 There are subcommands that plugins hook into which enable them to add GitHub actions, configuration and other files to a project and GitHub pages outlining the tooling choice and thinking behind it.
 
 Below is a list of plugins that have been implemented so far:
 
-| Feature               | Plugin                                 | Description                                                                            |
-| --------------------- | -------------------------------------- | ---------------------------------------------------------------------------------------|
-| Audit                 | Built-in (audit/github)                | A framework for rules to check for incorrect content and configuration of GitHub repos — bundled, opt in by `require` (see [Built-in Features](#built-in-features)) |
-| Changelog             | Built-in (changelog/keepachangelog)    | Implements [keepachangelog v1.1] — bundled, opt in by `require` (see [Built-in Features](#built-in-features)) |
-| Code Linting          | [code_linting-hdi]                     | Implements a combination of [MegaLinter] and [RuboCop] built on NDRS standards         |
-| Code of Conduct       | Built-in (code_of_conduct/contributor_covenant) | Implements [Contributor Covenant v3] — bundled, opt in by `require` (see [Built-in Features](#built-in-features)) |
-| Decision Records      | Built-in (decision_record/madr)        | Implements [MADR v3] — bundled, opt in by `require` (see [Built-in Features](#built-in-features)) |
-| Inclusive Language    | Built-in (inclusive_language/alex)     | Implements [alex] — bundled, opt in by `require` (see [Built-in Features](#built-in-features)) |
-| Pull Request Template | Built-in (pull_request_template/hdi)   | Implements a bespoke PR template — bundled, opt in by `require` (see [Built-in Features](#built-in-features)) |
-| Versioning            | Built-in (versioning/semver)           | Implements [Semantic Versioning v2.0.0] — bundled, opt in by `require` (see [Built-in Features](#built-in-features)) |
+| Feature               | Plugin                                          | Description                                                                                                                                                         |
+|-----------------------|-------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Audit                 | Built-in (audit/github)                         | A framework for rules to check for incorrect content and configuration of GitHub repos — bundled, opt in by `require` (see [Built-in Features](#built-in-features)) |
+| Changelog             | Built-in (changelog/keepachangelog)             | Implements [keepachangelog v1.1] — bundled, opt in by `require` (see [Built-in Features](#built-in-features))                                                       |
+| Code Linting          | [code_linting-hdi]                              | Implements a combination of [MegaLinter] and [RuboCop] built on NDRS standards                                                                                      |
+| Code of Conduct       | Built-in (code_of_conduct/contributor_covenant) | Implements [Contributor Covenant v3] — bundled, opt in by `require` (see [Built-in Features](#built-in-features))                                                   |
+| Decision Records      | Built-in (decision_record/madr)                 | Implements [MADR v3] — bundled, opt in by `require` (see [Built-in Features](#built-in-features))                                                                   |
+| Inclusive Language    | Built-in (inclusive_language/alex)              | Implements [alex] — bundled, opt in by `require` (see [Built-in Features](#built-in-features))                                                                      |
+| Pull Request Template | Built-in (pull_request_template/hdi)            | Implements a bespoke PR template — bundled, opt in by `require` (see [Built-in Features](#built-in-features))                                                       |
+| README Badge          | Built-in (readme_badge)                         | Adds a README badge panel and a Way of Working badge — bundled and always loaded, no `require` needed (see [README Badge](#readme-badge))                           |
+| Versioning            | Built-in (versioning/semver)                    | Implements [Semantic Versioning v2.0.0] — bundled, opt in by `require` (see [Built-in Features](#built-in-features))                                                |
 
 Some features are **Built-in** — they ship inside this gem and are enabled by requiring them (see [Built-in Features](#built-in-features)); the others are separate plugin gems that you add as dependencies.
 
@@ -74,7 +75,19 @@ way_of_working config set code_of_conduct.contact_method conduct@example.org
 way_of_working config get code_of_conduct.contact_method
 ```
 
-Keys are dotted paths namespaced by feature (`code_of_conduct.contact_method`), so unrelated features — a future security contact, say — can store their own values (`security.contact_method`) without clashing. When a feature that supports this looks for an option and it isn't passed on the command line, it falls back to the stored value; if you pass the option explicitly and it's new or different, you'll be asked whether to remember it for next time.
+Keys are dotted paths namespaced by feature (`code_of_conduct.contact_method`), so unrelated features — a future security contact, say — can store their own values (`security.contact_method`) without clashing.
+When a feature that supports this looks for an option and it isn't passed on the command line, it falls back to the stored value; if you pass the option explicitly and it's new or different, you'll be asked whether to remember it for next time.
+
+### README Badge
+
+The README badge panel is a set of HTML comments at the top of your README that other generators find and add their badges to. It also shows a Way of Working badge with the version of the way of working your project has adopted. This feature is always loaded, so no `require` is needed:
+
+```bash
+# Add the badge panel, Way of Working badge and documentation to your project
+way_of_working init readme_badge
+```
+
+Re-running it after upgrading updates the Way of Working badge to the new version. Features such as [Inclusive Language](#inclusive-language) add their own badges to the panel when you initialise them.
 
 ### Built-in Features
 
@@ -262,12 +275,12 @@ Completions come from the installed commands each time you press Tab, so command
 
 ## Development
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+After checking out the repo, run `bin/setup` to install dependencies. Then, run `bundle exec rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
 This RubyGem was created using `bundle gem --exe way_of_working`.
 
 To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
-When creating plugins, the convention is to create them within the WayOfWorking and feature namespaces. E.g. 
+When creating plugins, the convention is to create them within the WayOfWorking and feature namespaces. E.g. the [code_linting-hdi] plugin is the gem `way_of_working-code_linting-hdi`, defines its generators under `WayOfWorking::CodeLinting::Hdi`, and is loaded automatically from `lib/way_of_working/code_linting/hdi/plugin.rb` (the gem name with `-` replaced by `/`).
 
 ### Versioning Policy
 
@@ -292,10 +305,6 @@ See [`CONTRIBUTING.md`](CONTRIBUTING.md) for development setup, the versioning p
 ## License
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
-## Code of Conduct
-
-Everyone interacting in the WayOfWorking project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/HealthDataInsight/way_of_working/blob/main/CODE_OF_CONDUCT.md).
 
 [alex]:https://alexjs.com
 [Contributor Covenant v3]: https://www.contributor-covenant.org/version/3/0/code_of_conduct/

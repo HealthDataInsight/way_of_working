@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.2.0] - 2026-11-25
+
 ### Added
 
 - **CLI:** added bash and zsh Tab completion of commands and options, including those from plugins. Enable it with `eval "$(way_of_working completion zsh)"` (or `bash`).
@@ -22,6 +24,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+- **README Badge:** rerunning `way_of_working init readme_badge` after the badge version or name changes (e.g. after upgrading the gem) now updates the existing badge instead of adding another badge holder to the README.
 - **Audit:** built-in GitHub audit rules are no longer loaded inside `rescue LoadError`, so a rule that fails to load (e.g. a missing dependency) now raises instead of silently disappearing from the audit. `base64` is now a declared dependency.
 - **CLI:** errors such as an unknown command now exit with status 1 instead of 0, and no longer print a Thor deprecation warning. Scripts that relied on a 0 exit status after an error will now see the failure.
 - **CLI:** every command now starts about 0.2s faster: Octokit and the full set of ActiveSupport core extensions are loaded only when the GitHub audit runs, not whenever `way_of_working` is required.
@@ -96,7 +99,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Corrected use of relative paths in the rubocop config file
 
-[unreleased]: https://github.com/HealthDataInsight/way_of_working/compare/v2.1.0...HEAD
+[unreleased]: https://github.com/HealthDataInsight/way_of_working/compare/v2.2.0...HEAD
+[2.2.0]: https://github.com/HealthDataInsight/way_of_working/compare/v2.1.0...v2.2.0
 [2.1.0]: https://github.com/HealthDataInsight/way_of_working/compare/v2.0.1...v2.1.0
 [2.0.1]: https://github.com/HealthDataInsight/way_of_working/compare/v2.0.0...v2.0.1
 [2.0.0]: https://github.com/HealthDataInsight/way_of_working/compare/v1.0.0...v2.0.0
